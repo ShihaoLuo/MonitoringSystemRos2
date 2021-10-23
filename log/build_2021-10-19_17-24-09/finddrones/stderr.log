@@ -1,0 +1,13 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/finddrones/src/finddrones.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/finddrones/src/finddrones.cpp:36:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   36 | int main([01;35m[Kint argc[m[K, char** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/finddrones/src/finddrones.cpp:36:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   36 | int main(int argc, [01;35m[Kchar** argv[m[K)
+      |                    [01;35m[K~~~~~~~^~~~[m[K
+/usr/bin/ld: CMakeFiles/finddrones.dir/src/finddrones.cpp.o: in function `std::thread::thread<void (&)(int const&), int const&, void>(void (&)(int const&), int const&)':
+finddrones.cpp:(.text._ZNSt6threadC2IRFvRKiEJS2_EvEEOT_DpOT0_[_ZNSt6threadC5IRFvRKiEJS2_EvEEOT_DpOT0_]+0x37): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/finddrones.dir/build.make:84：finddrones] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:105：CMakeFiles/finddrones.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/send.cpp
+cstdio
+-
+sys/socket.h
+-
+sys/types.h
+-
+netinet/in.h
+-
+string
+-
+memory.h
+-
+chrono
+-
+arpa/inet.h
+-
+iostream
+-
+

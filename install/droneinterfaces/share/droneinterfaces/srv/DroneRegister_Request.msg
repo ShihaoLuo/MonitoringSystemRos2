@@ -1,0 +1,2 @@
+string dronename
+string ip

@@ -1,0 +1,14 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:132:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid dronenamespace::DroneManager::droneController(std::shared_ptr<droneinterfaces::srv::DroneRegister_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneRegister_Response_<std::allocator<void> > >)[m[K’
+  132 | void [01;31m[KDroneManager[m[K::droneController(const std::shared_ptr<droneinterfaces::srv::DroneRegister::Request> request,
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:54:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid dronenamespace::DroneManager::droneController(std::shared_ptr<droneinterfaces::srv::DroneController_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneController_Response_<std::allocator<void> > >)[m[K’
+   54 |         void [01;36m[KdroneController[m[K(const std::shared_ptr<droneinterfaces::srv::DroneController::Request> request,
+      |              [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:28:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass dronenamespace::DroneManager[m[K’ defined here
+   28 |     class [01;36m[KDroneManager[m[K
+      |           [01;36m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:63：CMakeFiles/dronemanager.dir/src/droneManager.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:111：CMakeFiles/dronemanager.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+make: *** [Makefile:141：all] 错误 2

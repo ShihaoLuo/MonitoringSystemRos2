@@ -1,0 +1,4 @@
+source;share/droneinterfaces/local_setup.bash
+source;share/droneinterfaces/local_setup.dsv
+source;share/droneinterfaces/local_setup.sh
+source;share/droneinterfaces/local_setup.zsh

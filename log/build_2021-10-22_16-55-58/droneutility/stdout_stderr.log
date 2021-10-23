@@ -1,0 +1,26 @@
+[35m[1mScanning dependencies of target drone[0m
+[ 50%] Built target recv
+[ 50%] Built target send
+[ 75%] Built target dronemanager
+[ 87%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+[100%] [32m[1mLinking CXX executable drone[0m
+[100%] Built target drone
+-- Install configuration: ""
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/recv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/send
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/dronemanager
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/drone
+-- Set runtime path of "/home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/drone" to ""
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/package_run_dependencies/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/parent_prefix_path/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/environment/path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.bash
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.sh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.zsh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/package.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/packages/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/cmake/droneutilityConfig.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/cmake/droneutilityConfig-version.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/package.xml

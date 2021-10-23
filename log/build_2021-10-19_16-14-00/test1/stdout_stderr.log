@@ -1,0 +1,24 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+CMake Error at CMakeLists.txt:18 (target_compile_features):
+  target_compile_features The compiler feature "cxx_std_17" is not known to
+  CXX compiler
+
+  "GNU"
+
+  version 9.3.0.
+
+
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring incomplete, errors occurred!
+See also "/home/jakeluo/Documents/MonitoringSystemRos2/build/test1/CMakeFiles/CMakeOutput.log".
+make: *** [Makefile:266：cmake_check_build_system] 错误 1

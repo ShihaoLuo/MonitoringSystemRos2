@@ -1,0 +1,16 @@
+CMake Error at /home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake/get_default_rmw_implementation.cmake:60 (message):
+  Could not find ROS middleware implementation 'NOTFOUND'.  Choose one of the
+  following:
+Call Stack (most recent call first):
+  /home/jakeluo/Software/ros2_rolling/install/rmw_implementation/share/rmw_implementation/cmake/rmw_implementation-extras.cmake:19 (get_default_rmw_implementation)
+  /home/jakeluo/Software/ros2_rolling/install/rmw_implementation/share/rmw_implementation/cmake/rmw_implementationConfig.cmake:41 (include)
+  /home/jakeluo/Software/ros2_rolling/install/rcl/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/jakeluo/Software/ros2_rolling/install/rcl/share/rcl/cmake/rclConfig.cmake:41 (include)
+  /home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake:41 (include)
+  /home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)
+  CMakeLists.txt:10 (find_package)
+
+
+make: *** [Makefile:398：cmake_check_build_system] 错误 1

@@ -1,0 +1,39 @@
+[35m[1mScanning dependencies of target test1[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test1.dir/src/test1.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:[m[K In function ‘[01m[Kvoid handle_udp_receive(int)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:22:28:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   22 |   system_clock::time_point [01;35m[Kt[m[K =  system_clock::now();
+      |                            [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:20:53:[m[K [01;35m[Kwarning: [m[Ktypedef ‘[01m[Kseconds_type[m[K’ locally defined but not used [[01;35m[K-Wunused-local-typedefs[m[K]
+   20 |   typedef std::chrono::duration<int, std::ratio<1>> [01;35m[Kseconds_type[m[K;
+      |                                                     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:44:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   44 |   int server_fd, [01;35m[Kret[m[K;
+      |                  [01;35m[K^~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:45:22:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kser_addr[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   45 |   struct sockaddr_in [01;35m[Kser_addr[m[K;
+      |                      [01;35m[K^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:42:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   42 | int main([01;35m[Kint argc[m[K, char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/test1/src/test1.cpp:42:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   42 | int main(int argc, [01;35m[Kchar ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~^~~~[m[K
+[100%] [32m[1mLinking CXX executable test1[0m
+[100%] Built target test1
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/lib/test1/test1
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/package_run_dependencies/test1
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/parent_prefix_path/test1
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.bash
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.sh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.zsh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/package.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/packages/test1
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/cmake/test1Config.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/cmake/test1Config-version.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/package.xml

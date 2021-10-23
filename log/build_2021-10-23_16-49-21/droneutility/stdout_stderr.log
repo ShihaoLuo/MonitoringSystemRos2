@@ -1,0 +1,54 @@
+[35m[1mScanning dependencies of target dronemanager[0m
+[35m[1mScanning dependencies of target drone[0m
+[ 25%] Built target recv
+[ 50%] Built target send
+[ 62%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+In file included from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::droneController(std::shared_ptr<droneinterfaces::srv::DroneController_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneController_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:183:44:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 7 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+  183 |             RCLCPP_INFO(nh_->get_logger(), [01;35m[K"Send:%s to %s\n, size:%d\n"[m[K, request->cmd.c_str(), request->ip.c_str(), [32m[Kstrlen(request->cmd.c_str())[m[K);
+      |                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                             [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                                           [32m[K|[m[K
+      |                                                                                                                           [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:183:68:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  183 |             RCLCPP_INFO(nh_->get_logger(), "Send:%s to %s\n, size:[01;36m[K%d[m[K\n", request->cmd.c_str(), request->ip.c_str(), strlen(request->cmd.c_str()));
+      |                                                                   [01;36m[K~^[m[K
+      |                                                                    [01;36m[K|[m[K
+      |                                                                    [01;36m[Kint[m[K
+      |                                                                   [32m[K%ld[m[K
+[ 87%] [32m[1mLinking CXX executable drone[0m
+[ 87%] Built target drone
+[100%] [32m[1mLinking CXX executable dronemanager[0m
+[100%] Built target dronemanager
+-- Install configuration: ""
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/recv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/send
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/dronemanager
+-- Set runtime path of "/home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/dronemanager" to ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/drone
+-- Set runtime path of "/home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/lib/droneutility/drone" to ""
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/package_run_dependencies/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/parent_prefix_path/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/environment/path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.bash
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.sh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.zsh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/package.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/ament_index/resource_index/packages/droneutility
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/cmake/droneutilityConfig.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/cmake/droneutilityConfig-version.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/install/droneutility/share/droneutility/package.xml

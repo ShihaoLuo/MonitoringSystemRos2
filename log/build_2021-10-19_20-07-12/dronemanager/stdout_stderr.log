@@ -1,0 +1,58 @@
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/dronemanager/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/build/dronemanager
+[35m[1mScanning dependencies of target scandrone[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/scandrone.dir/src/scandrone.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/dronemanager/src/scandrone.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/dronemanager/src/scandrone.cpp:9:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+    9 | int main([01;35m[Kint argc[m[K, char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/dronemanager/src/scandrone.cpp:9:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+    9 | int main(int argc, [01;35m[Kchar ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~^~~~[m[K
+[100%] [32m[1mLinking CXX executable scandrone[0m
+[100%] Built target scandrone
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/lib/dronemanager/scandrone
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/ament_index/resource_index/package_run_dependencies/dronemanager
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/ament_index/resource_index/parent_prefix_path/dronemanager
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/environment/ament_prefix_path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/environment/ament_prefix_path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/environment/path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/environment/path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/local_setup.bash
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/local_setup.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/local_setup.zsh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/package.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/ament_index/resource_index/packages/dronemanager
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/cmake/dronemanagerConfig.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/cmake/dronemanagerConfig-version.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/dronemanager/share/dronemanager/package.xml

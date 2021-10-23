@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target datamanager[0m
+[ 25%] Built target recv
+[ 50%] Built target send
+[ 75%] Built target drone
+[ 87%] [32mBuilding CXX object CMakeFiles/datamanager.dir/src/dataManager.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:[m[K In member function ‘[01m[Kint droneManager::DroneManager::droneRegister(std::shared_ptr<droneinterfaces::srv::DroneRegister_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneRegister_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:99:20:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Ktimeval timeout[m[K’
+   99 |     struct timeval [01;31m[Ktimeout[m[K;
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:64:20:[m[K [01;36m[Knote: [m[K‘[01m[Ktimeval timeout[m[K’ previously declared here
+   64 |     struct timeval [01;36m[Ktimeout[m[K;
+      |                    [01;36m[K^~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:108:24:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Ksockaddr_in ser_addr[m[K’
+  108 |     struct sockaddr_in [01;31m[Kser_addr[m[K;
+      |                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:73:24:[m[K [01;36m[Knote: [m[K‘[01m[Ksockaddr_in ser_addr[m[K’ previously declared here
+   73 |     struct sockaddr_in [01;36m[Kser_addr[m[K;
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:129:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+  129 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/datamanager.dir/build.make:63：CMakeFiles/datamanager.dir/src/dataManager.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:111：CMakeFiles/datamanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

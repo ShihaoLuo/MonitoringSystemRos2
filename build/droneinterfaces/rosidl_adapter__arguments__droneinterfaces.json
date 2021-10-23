@@ -1,0 +1,7 @@
+{
+  "package_name": "droneinterfaces",
+  "non_idl_tuples": [
+    "/home/jakeluo/Documents/MonitoringSystemRos2/droneinterfaces:srv/DroneRegister.srv",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/droneinterfaces:srv/DroneController.srv"
+  ]
+}

@@ -1,0 +1,54 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found rosidl_default_generators: 1.1.1 (/home/jakeluo/Software/ros2_rolling/install/rosidl_default_generators/share/rosidl_default_generators/cmake)
+CMake Error at /home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+  execute_process(/usr/bin/python3.8 -m rosidl_adapter --package-name
+  droneutility --arguments-file
+  /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility/rosidl_adapter__arguments__droneutility.json
+  --output-dir
+  /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility/rosidl_adapter/droneutility
+  --output-file
+  /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility/rosidl_adapter/droneutility.idls)
+  returned error code 1:
+
+  Traceback (most recent call last):
+
+    File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+      return _run_code(code, main_globals, None,
+    File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+      exec(code, run_globals)
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+      sys.exit(main())
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+      abs_idl_file = convert_to_idl(
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+      return convert_srv_to_idl(
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+      srv = parse_service_string(package_name, input_file.stem, content)
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 856, in parse_service_string
+      request_message = parse_message_string(
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 541, in parse_message_string
+      msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 388, in __init__
+      self.base_type = BaseType(
+    File "/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 205, in __init__
+      raise InvalidResourceName(
+
+  rosidl_adapter.parser.InvalidResourceName: 'droneRegister_Request' is an
+  invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+
+Call Stack (most recent call first):
+  /home/jakeluo/Software/ros2_rolling/install/rosidl_cmake/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+  CMakeLists.txt:35 (rosidl_generate_interfaces)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility/CMakeFiles/CMakeOutput.log".
+See also "/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility/CMakeFiles/CMakeError.log".
+make: *** [Makefile:398：cmake_check_build_system] 错误 1

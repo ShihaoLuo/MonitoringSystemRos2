@@ -1,0 +1,4 @@
+Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility -- -j12 -l12
+Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility' returned '0': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility -- -j12 -l12
+Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility
+Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility' returned '0': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/build/droneutility

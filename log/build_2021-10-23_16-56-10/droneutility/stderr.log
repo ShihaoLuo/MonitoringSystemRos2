@@ -1,0 +1,4 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::droneController(std::shared_ptr<droneinterfaces::srv::DroneController_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneController_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:184:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  184 |             int [01;35m[Kres[m[K = sendto(dronepool[request->ip].cmdsocket, (request->cmd.c_str()), strlen(request->cmd.c_str()), 0, (struct sockaddr *)&dst_addr, len);
+      |                 [01;35m[K^~~[m[K

@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target test1[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test1.dir/src/test1.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test1[0m
+/usr/bin/ld: CMakeFiles/test1.dir/src/test1.cpp.o: in function `std::thread::thread<void (&)(int const&), int&, void>(void (&)(int const&), int&)':
+test1.cpp:(.text._ZNSt6threadC2IRFvRKiEJRiEvEEOT_DpOT0_[_ZNSt6threadC5IRFvRKiEJRiEvEEOT_DpOT0_]+0x37): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/test1.dir/build.make:84：test1] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/test1.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

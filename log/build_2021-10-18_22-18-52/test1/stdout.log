@@ -1,0 +1,21 @@
+[35m[1mScanning dependencies of target test1[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test1.dir/src/test1.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test1[0m
+[100%] Built target test1
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/lib/test1/test1
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/package_run_dependencies/test1
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/parent_prefix_path/test1
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/ament_prefix_path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/ament_prefix_path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/environment/path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.bash
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.zsh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/package.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/ament_index/resource_index/packages/test1
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/cmake/test1Config.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/cmake/test1Config-version.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/install/test1/share/test1/package.xml
