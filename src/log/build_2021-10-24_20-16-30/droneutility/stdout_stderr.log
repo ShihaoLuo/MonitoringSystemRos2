@@ -1,0 +1,20 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found droneinterfaces: 0.0.0 (/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake)
+CMake Error at /home/jakeluo/Software/ros2_rolling/install/ament_cmake_target_dependencies/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+  ament_target_dependencies() the passed package name 'avcodec' was not found
+  before
+Call Stack (most recent call first):
+  CMakeLists.txt:42 (ament_target_dependencies)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/CMakeFiles/CMakeOutput.log".
+See also "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/CMakeFiles/CMakeError.log".
+make: *** [Makefile:310：cmake_check_build_system] 错误 1

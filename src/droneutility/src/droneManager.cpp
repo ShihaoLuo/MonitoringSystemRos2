@@ -5,7 +5,7 @@ using namespace dronenamespace;
 DroneManager::DroneManager()
 {
     nh_ = rclcpp::Node::make_shared("DroneManager");
-    publisher_ = nh_->create_publisher<std_msgs::msg::String>("RecvUdpMsg", 10);
+    // publisher_ = nh_->create_publisher<std_msgs::msg::String>("RecvUdpMsg", 10);
     registerServer_ = nh_->create_service<droneinterfaces::srv::DroneRegister>("DroneRegister", 
         std::bind(&DroneManager::droneRegister, this, std::placeholders::_1, std::placeholders::_2));
     controllerServer_ = nh_->create_service<droneinterfaces::srv::DroneController>("DroneController",
@@ -13,8 +13,7 @@ DroneManager::DroneManager()
 }
 
 // void DroneManager::recvThread()
-// {
-    
+// {  
 //     while(1)
 //     {
 //         recvfrom(resSocket, )
@@ -66,6 +65,8 @@ void DroneManager::droneRegister(const std::shared_ptr<droneinterfaces::srv::Dro
 std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
 {
     drone tmp;
+    char recvbuf[30];
+    socklen_t len = sizeof(struct sockaddr);
     tmp.name = request -> dronename;
     tmp.ip = request -> ip;
     const int send_socket = socket(AF_INET, SOCK_DGRAM, 0);
@@ -76,7 +77,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         return ;
     }
     struct timeval timeout;
-    timeout.tv_sec = 1;
+    timeout.tv_sec = 5;
     timeout.tv_usec = 0;
     if(setsockopt(send_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {
@@ -93,11 +94,11 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     {
         if(bind(send_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in))<0)
         {
-            std::printf("bind port %d faild! Try %d.\n", ser_addr.sin_port, ser_addr.sin_port+1);
+            std::printf("bind port %d faild! Try %d.\n", htons(ser_addr.sin_port), htons(ser_addr.sin_port+1));
             ser_addr.sin_port += 1;
         }else
         {
-            std::printf("bind port %d succeed!\n", ser_addr.sin_port);
+            std::printf("bind port %d succeed!\n", htons(ser_addr.sin_port));
             tmp.sercmdport = ser_addr.sin_port;
             tmp.cmdsocket = send_socket;
             break;
@@ -124,23 +125,83 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     {
         if(bind(video_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in))<0)
         {
-            std::printf("bind port %d faild! Try %d.\n", ser_addr.sin_port, ser_addr.sin_port+1);
+            std::printf("bind port %d faild! Try %d.\n", htons(ser_addr.sin_port), htons(ser_addr.sin_port+1));
             ser_addr.sin_port += 1;
         }else
         {
-            std::printf("bind port %d succeed!\n", ser_addr.sin_port);
+            std::printf("bind port %d succeed!\n", htons(ser_addr.sin_port));
             tmp.servideoport = ser_addr.sin_port;
             tmp.videosocket = video_socket;
             break;
         }
     }
+    struct sockaddr_in dst_addr, client_addr;
+    memset(&dst_addr, 0, sizeof(struct sockaddr_in));
+    memset(recvbuf, 0, 30);
+    dst_addr.sin_family = AF_INET;
+    dst_addr.sin_port = htons(8889);
+    uint32_t ip;
+    inet_pton(AF_INET, request->ip.c_str(), &ip);
+    dst_addr.sin_addr.s_addr = ip;
+    RCLCPP_INFO(nh_->get_logger(), "Send: command to %s\n", tmp.ip.c_str());
+    sendto(send_socket, "command", 7, 0, (struct sockaddr *)&dst_addr, len);
+    int ret = recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
+    if(ret!=-1)
+    {
+        std::printf("ret:%d\n",ret);
+    }else
+    {
+        std::printf("ret:%d, timeout drone registry faild!\n",ret);
+        shutdown(send_socket, SHUT_RDWR);
+        shutdown(video_socket, SHUT_RDWR);
+        printDrone();
+        response->status = -1;
+        return;
+    }
+    memset(&dst_addr, 0, sizeof(struct sockaddr_in));
+    memset(recvbuf, 0, 30);
+    dst_addr.sin_family = AF_INET;
+    dst_addr.sin_port = htons(8889);
+    inet_pton(AF_INET, request->ip.c_str(), &ip);
+    dst_addr.sin_addr.s_addr = ip;
+    RCLCPP_INFO(nh_->get_logger(), "Send: port 8890 %d to %s\n", htons(tmp.servideoport), tmp.ip.c_str());
+    char tmpcmd[20];
+    std::sprintf(tmpcmd, "port 8890 %d", htons(tmp.servideoport));
+    sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
+    recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
+    RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
+
     dronepool[tmp.ip] = tmp;
+    std::thread t(std::bind(&DroneManager::recvVideoThread, this, tmp.ip));
+    t.detach();
     response->status = 1;
-    std::printf("123");
     printDrone();
     return ;
 } 
+
+void DroneManager::recvVideoThread(std::string ip)
+{
+    std::printf("Video of %s start!\n", ip.c_str());
+    int ret;
+    uint8_t buf[2048];
+    // std::printf("videosocket:%d\n", dronepool[ip].videosocket);
+    while (1)
+    {
+        auto l_it = dronepool.find(ip);
+        if(l_it == dronepool.end())
+        {
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "close the video thread of %s.\n",ip.c_str());
+            break;
+        }
+        ret = recvfrom(dronepool[ip].videosocket, &buf, 2048, 0, NULL, NULL);
+        if(ret!=-1)
+        {
+            std::printf("video ret:%d\n",ret);
+        }
+    }
     
+}
+
 void DroneManager::droneController(const std::shared_ptr<droneinterfaces::srv::DroneController::Request> request,
 std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
 {
@@ -203,7 +264,7 @@ void DroneManager::printDrone()
     {
         auto tmp_ = it->second;
         it++;
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "\n----------------\nname     :%s\nip       :%s\ncmdport  :%d\nvideoport:%d\n----------------\n", tmp_.name.c_str(), tmp_.ip.c_str(), tmp_.sercmdport, tmp_.servideoport);
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "\n----------------\nname     :%s\nip       :%s\ncmdport  :%d\nvideoport:%d\n----------------\n", tmp_.name.c_str(), tmp_.ip.c_str(), htons(tmp_.sercmdport), htons(tmp_.servideoport));
     }
 }
 

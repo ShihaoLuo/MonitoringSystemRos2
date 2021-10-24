@@ -13,6 +13,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <map>
+#include "h264decoder.hpp"
+#include <libavcodec/avcodec.h>
+#include <atomic>
+
 
 namespace dronenamespace
 {
@@ -39,8 +43,10 @@ namespace dronenamespace
 
         void spin();
 
-
+void recvVideoThread(std::string ip);
         private:
+        H264Decoder decoder;
+        ConverterRGB24 converter;
         rclcpp::Node::SharedPtr nh_;
         size_t count_;
         rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
@@ -49,7 +55,6 @@ namespace dronenamespace
         std_msgs::msg::String cmd;
         int running = 1;
         std::map<std::string, drone> dronepool;
-
 
         void recvThread();
         

@@ -1,0 +1,11 @@
+/usr/bin/ld: CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: in function `main':
+droneManager.cpp:(.text+0x2069): undefined reference to `H264Decoder::H264Decoder()'
+/usr/bin/ld: droneManager.cpp:(.text+0x2078): undefined reference to `ConverterRGB24::ConverterRGB24()'
+/usr/bin/ld: droneManager.cpp:(.text+0x21b0): undefined reference to `ConverterRGB24::~ConverterRGB24()'
+/usr/bin/ld: droneManager.cpp:(.text+0x21bf): undefined reference to `H264Decoder::~H264Decoder()'
+/usr/bin/ld: droneManager.cpp:(.text+0x225e): undefined reference to `ConverterRGB24::~ConverterRGB24()'
+/usr/bin/ld: droneManager.cpp:(.text+0x2276): undefined reference to `H264Decoder::~H264Decoder()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:137：dronemanager] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

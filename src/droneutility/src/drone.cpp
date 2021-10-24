@@ -26,6 +26,7 @@ Drone::Drone(const char* name_, const char* ip_)
     auto result = client_->async_send_request(request);
     rclcpp::spin_until_future_complete(nh_, result);
     dronestatus = result.get()->status;
+    std::printf("drone status:%d\n", dronestatus);
 }
     
 void Drone::quit()
@@ -42,7 +43,7 @@ int Drone::keyloop()
     std::string res;
     char c[100]={'\0'};
     puts("Reading from keyboard");
-    while(running)
+    while(dronestatus)
     {
         std::cin>>c;
         while(c[size]!='\0')

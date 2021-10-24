@@ -5,7 +5,8 @@
             "includePath": [
                 "${default}",
                 "/opt/ros/rolling/include",
-                "./**"
+                "./**",
+                "${workspaceFolder}/src/droneutility/include"
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",

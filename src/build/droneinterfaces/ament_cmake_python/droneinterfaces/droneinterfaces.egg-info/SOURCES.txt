@@ -1,0 +1,9 @@
+setup.py
+droneinterfaces/__init__.py
+droneinterfaces.egg-info/PKG-INFO
+droneinterfaces.egg-info/SOURCES.txt
+droneinterfaces.egg-info/dependency_links.txt
+droneinterfaces.egg-info/top_level.txt
+droneinterfaces/srv/__init__.py
+droneinterfaces/srv/_drone_controller.py
+droneinterfaces/srv/_drone_register.py
