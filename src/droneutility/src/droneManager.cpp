@@ -25,36 +25,6 @@ void DroneManager::quit()
     DroneManager::running = 0;
 }
 
-int DroneManager::keyloop()
-{
-    char c[100]={'\0'};
-    int size = 0;
-    std::string s;
-    std::thread t(std::bind(&DroneManager::spin, this));
-    t.detach();
-    puts("Reading from keyboard");
-    while(running)
-    {
-        std::cin>>c;
-        if(c[0]=='q')
-        {
-            break;
-        }
-        while(c[size]!='\0')
-        {
-            size +=1 ;
-        }
-        s.assign(c, size+1);
-        memset(c, 0, size+1);
-        size = 0;
-        cmd.data = s;
-        publisher_->publish(cmd);
-    }
-    return 0;
-}
-
-
-
 void DroneManager::spin()
 {
     rclcpp::spin(nh_);
@@ -170,8 +140,8 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
     recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
     RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
-
     dronepool[tmp.ip] = tmp;
+    framepool.emplace(tmp.ip, std::queue<std::vector<unsigned char>>());
     std::thread t(std::bind(&DroneManager::recvVideoThread, this, tmp.ip));
     t.detach();
     response->status = 1;
@@ -182,8 +152,20 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
 void DroneManager::recvVideoThread(std::string ip)
 {
     std::printf("Video of %s start!\n", ip.c_str());
-    int ret;
-    uint8_t buf[2048];
+    H264Decoder decoder;
+    ConverterRGB24 converter;
+    int ret = 0;
+    int datasize = 0;
+    int frame_num = 0;
+    int consumsize = 0;
+    std::vector<unsigned char> framebuffer;
+    std::vector<unsigned char> buffer(1024);
+    cv::Mat m = cv::Mat(720, 960, CV_8UC3);
+    unsigned char buf[14600];
+    unsigned char* datap = &buf[0];
+    droneinterfaces::msg::FrameArray frame_;
+    rclcpp::Publisher<droneinterfaces::msg::FrameArray>::SharedPtr framePublisher_;
+    framePublisher_ = nh_->create_publisher<droneinterfaces::msg::FrameArray>(dronepool[ip].name+"_Framearray", 1);
     // std::printf("videosocket:%d\n", dronepool[ip].videosocket);
     while (1)
     {
@@ -193,13 +175,82 @@ void DroneManager::recvVideoThread(std::string ip)
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "close the video thread of %s.\n",ip.c_str());
             break;
         }
-        ret = recvfrom(dronepool[ip].videosocket, &buf, 2048, 0, NULL, NULL);
-        if(ret!=-1)
+        ret = recvfrom(dronepool[ip].videosocket, datap+datasize, 2048, 0, NULL, NULL);
+        datasize += ret;
+        if(ret > 0 and ret != 1460)
         {
-            std::printf("video ret:%d\n",ret);
+            while(datasize > 0)
+            {
+                try
+                {
+                    consumsize = decoder.parse(datap, datasize);
+                }
+                catch(const std::exception& e)
+                {
+                    RCLCPP_ERROR(nh_->get_logger(), "%s\n", e.what());
+                }
+                datasize -= consumsize;
+                datap += consumsize;
+                if(decoder.is_frame_available())
+                {
+                    try
+                    {
+                        const AVFrame& frame = decoder.decode_frame();
+                        framebuffer.resize(converter.predict_size(frame.width, frame.height));
+                        converter.convert(frame, frame_.framebuf.data());
+                        // cv::cvtColor(m, m, cv::COLOR_RGB2BGR, 3);
+                        // cv::imshow(dronepool[ip].name, m);
+                        // cv::waitKey(0);
+                        // while(framepool[ip].size()>=2)
+                        // {
+                        //     // std::vector<unsigned char>().swap(framepool[ip].front());
+                        //     framepool[ip].pop();
+                        // }
+                        // for(int i = 0; i<2073600; i++)
+                        // {
+                        //     frame_.framebuf[i] = framebuffer[i];
+                        // }
+                        framePublisher_->publish(frame_);
+                        // framepool[ip].push(framebuffer);
+                        // RCLCPP_INFO(nh_->get_logger(),"size of images of %s : %ld\n", dronepool[ip].name.c_str(), framepool[ip].size());
+                    }
+                    catch(const std::exception& e)
+                    {
+                        RCLCPP_ERROR(nh_->get_logger(), "%s\n", e.what());
+                    }
+                    ++frame_num;
+                    // saveFrame(rgbframe, frame_num);
+                }
+            }
+            datap = &buf[0];
         }
     }
     
+}
+
+
+void DroneManager::saveFrame(const AVFrame& frame, int idx)
+{
+    const auto *pFrame = &frame;
+    FILE *pFile;
+    char szFilename[32];
+    int  y;
+    
+    // Open file
+    sprintf(szFilename, "frame%02d.ppm", idx);
+    pFile=fopen(szFilename, "wb");
+    if(pFile==NULL)
+        return;
+    
+    // Write header
+    fprintf(pFile, "P6\n%d %d\n255\n", pFrame->width, pFrame->height);
+    
+    // Write pixel data
+    for(y=0; y<pFrame->height; y++)
+        fwrite(pFrame->data[0]+y*pFrame->linesize[0], 1, pFrame->width*3, pFile);
+    
+    // Close file
+    fclose(pFile);
 }
 
 void DroneManager::droneController(const std::shared_ptr<droneinterfaces::srv::DroneController::Request> request,
@@ -273,6 +324,8 @@ int main(int argc, char** argv)
     rclcpp::init(argc, argv);
     DroneManager dronemanager;
     dronemanager.spin();
+    cv::destroyAllWindows();
     rclcpp::shutdown();
     return 0;
 }
+

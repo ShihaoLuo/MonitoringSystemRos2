@@ -1,4 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:[m[K In member function ‘[01m[Kint droneManager::DroneManager::droneRegister(std::shared_ptr<droneinterfaces::srv::DroneRegister_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneRegister_Response_<std::allocator<void> > >)[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/dataManager.cpp:125:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
-  125 | [01;35m[K}[m[K
-      | [01;35m[K^[m[K

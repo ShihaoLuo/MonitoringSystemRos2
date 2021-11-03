@@ -1,2 +1,0 @@
-Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneinterfaces': /usr/bin/cmake /home/jakeluo/Documents/MonitoringSystemRos2/droneinterfaces -DCMAKE_INSTALL_PREFIX=/home/jakeluo/Documents/MonitoringSystemRos2/install/droneinterfaces
-Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/droneinterfaces' returned '1': /usr/bin/cmake /home/jakeluo/Documents/MonitoringSystemRos2/droneinterfaces -DCMAKE_INSTALL_PREFIX=/home/jakeluo/Documents/MonitoringSystemRos2/install/droneinterfaces

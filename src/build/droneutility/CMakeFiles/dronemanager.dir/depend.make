@@ -4,6 +4,10 @@
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/h264decoder.hpp
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp
+CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
+CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
+CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
 CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp

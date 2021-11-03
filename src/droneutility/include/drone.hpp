@@ -7,13 +7,15 @@
 #include <stdio.h>
 #include "droneinterfaces/srv/drone_register.hpp"
 #include "droneinterfaces/srv/drone_controller.hpp"
+#include "droneinterfaces/msg/frame_array.hpp"
+#include "System.h"
 
 namespace dronenamespace
 {
     class Drone
     {
         public:
-        Drone(const char* name, const char* ip);
+        Drone(const char* name, const char* ip, const char* path_to_vocaulary, const char* path_to_setting);
         
         void quit();
 
@@ -35,8 +37,9 @@ namespace dronenamespace
         rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
         std_msgs::msg::String cmd;
         int running = 1;
-
-        
+        rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription_;
+        const char* path_to_vocaulary;
+        const char* path_to_setting;
     };
 
     

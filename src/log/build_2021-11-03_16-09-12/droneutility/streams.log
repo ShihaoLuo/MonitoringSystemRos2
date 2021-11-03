@@ -1,0 +1,759 @@
+[0.043s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility': CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility:/home/jakeluo/Software/ros2_rolling/install/rosbag2:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression_zstd:/home/jakeluo/Software/ros2_rolling/install/zstd_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_visual_testing_framework:/home/jakeluo/Software/ros2_rolling/install/rviz2:/home/jakeluo/Software/ros2_rolling/install/rviz_default_plugins:/home/jakeluo/Software/ros2_rolling/install/rviz_common:/home/jakeluo/Software/ros2_rolling/install/rosbag2_py:/home/jakeluo/Software/ros2_rolling/install/rosbag2_transport:/home/jakeluo/Software/ros2_rolling/install/rosbag2_performance_benchmarking:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression:/home/jakeluo/Software/ros2_rolling/install/rosbag2_cpp:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage_default_plugins:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage:/home/jakeluo/Software/ros2_rolling/install/image_common:/home/jakeluo/Software/ros2_rolling/install/camera_info_manager:/home/jakeluo/Software/ros2_rolling/install/camera_calibration_parsers:/home/jakeluo/Software/ros2_rolling/install/yaml_cpp_vendor:/home/jakeluo/Software/ros2_rolling/install/ros1_bridge:/home/jakeluo/Software/ros2_rolling/install/interactive_markers:/home/jakeluo/Software/ros2_rolling/install/common_interfaces:/home/jakeluo/Software/ros2_rolling/install/visualization_msgs:/home/jakeluo/Software/ros2_rolling/install/dummy_robot_bringup:/home/jakeluo/Software/ros2_rolling/install/robot_state_publisher:/home/jakeluo/Software/ros2_rolling/install/kdl_parser:/home/jakeluo/Software/ros2_rolling/install/urdf:/home/jakeluo/Software/ros2_rolling/install/urdfdom:/home/jakeluo/Software/ros2_rolling/install/urdf_parser_plugin:/home/jakeluo/Software/ros2_rolling/install/urdfdom_headers:/home/jakeluo/Software/ros2_rolling/install/turtlesim:/home/jakeluo/Software/ros2_rolling/install/geometry2:/home/jakeluo/Software/ros2_rolling/install/tf2_sensor_msgs:/home/jakeluo/Software/ros2_rolling/install/test_tf2:/home/jakeluo/Software/ros2_rolling/install/tf2_kdl:/home/jakeluo/Software/ros2_rolling/install/tf2_geometry_msgs:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen:/home/jakeluo/Software/ros2_rolling/install/tf2_bullet:/home/jakeluo/Software/ros2_rolling/install/tf2_ros:/home/jakeluo/Software/ros2_rolling/install/tf2_py:/home/jakeluo/Software/ros2_rolling/install/tf2_msgs:/home/jakeluo/Software/ros2_rolling/install/test_msgs:/home/jakeluo/Software/ros2_rolling/install/sros2_cmake:/home/jakeluo/Software/ros2_rolling/install/ros2cli_common_extensions:/home/jakeluo/Software/ros2_rolling/install/rqt_py_common:/home/jakeluo/Software/ros2_rolling/install/ros_testing:/home/jakeluo/Software/ros2_rolling/install/ros2cli_test_interfaces:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_cpp:/home/jakeluo/Software/ros2_rolling/install/image_transport:/home/jakeluo/Software/ros2_rolling/install/message_filters:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp:/home/jakeluo/Software/ros2_rolling/install/composition:/home/jakeluo/Software/ros2_rolling/install/laser_geometry:/home/jakeluo/Software/ros2_rolling/install/rclpy:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_action_server:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_action_client:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_cpp:/home/jakeluo/Software/ros2_rolling/install/rclcpp_action:/home/jakeluo/Software/ros2_rolling/install/rcl_action:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_wait_set:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_service:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_async_client:/home/jakeluo/Software/ros2_rolling/install/example_interfaces:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_interfaces:/home/jakeluo/Software/ros2_rolling/install/action_msgs:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs:/home/jakeluo/Software/ros2_rolling/install/ament_lint_common:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_uncrustify:/home/jakeluo/Software/ros2_rolling/install/uncrustify_vendor:/home/jakeluo/Software/ros2_rolling/install/trajectory_msgs:/home/jakeluo/Software/ros2_rolling/install/topic_statistics_demo:/home/jakeluo/Software/ros2_rolling/install/pendulum_control:/home/jakeluo/Software/ros2_rolling/install/tlsf_cpp:/home/jakeluo/Software/ros2_rolling/install/test_tracetools:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_cpp:/home/jakeluo/Software/ros2_rolling/install/rosbag2_test_common:/home/jakeluo/Software/ros2_rolling/install/ros2lifecycle_test_fixtures:/home/jakeluo/Software/ros2_rolling/install/lifecycle:/home/jakeluo/Software/ros2_rolling/install/rclcpp_lifecycle:/home/jakeluo/Software/ros2_rolling/install/logging_demo:/home/jakeluo/Software/ros2_rolling/install/image_tools:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_subscriber:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_composition:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp_native:/home/jakeluo/Software/ros2_rolling/install/rclcpp_components:/home/jakeluo/Software/ros2_rolling/install/intra_process_demo:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_multithreaded_executor:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_timer:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_cbg_executor:/home/jakeluo/Software/ros2_rolling/install/dummy_sensors:/home/jakeluo/Software/ros2_rolling/install/dummy_map_server:/home/jakeluo/Software/ros2_rolling/install/rclcpp:/home/jakeluo/Software/ros2_rolling/install/rcl_lifecycle:/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector:/home/jakeluo/Software/ros2_rolling/install/rcl:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation:/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp:/home/jakeluo/Software/ros2_rolling/install/tracetools:/home/jakeluo/Software/ros2_rolling/install/tlsf:/home/jakeluo/Software/ros2_rolling/install/tinyxml_vendor:/home/jakeluo/Software/ros2_rolling/install/qt_gui_core:/home/jakeluo/Software/ros2_rolling/install/qt_gui_cpp:/home/jakeluo/Software/ros2_rolling/install/pluginlib:/home/jakeluo/Software/ros2_rolling/install/tinyxml2_vendor:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen_kdl:/home/jakeluo/Software/ros2_rolling/install/tf2:/home/jakeluo/Software/ros2_rolling/install/test_security:/home/jakeluo/Software/ros2_rolling/install/test_rmw_implementation:/home/jakeluo/Software/ros2_rolling/install/test_rclcpp:/home/jakeluo/Software/ros2_rolling/install/test_quality_of_service:/home/jakeluo/Software/ros2_rolling/install/test_launch_testing:/home/jakeluo/Software/ros2_rolling/install/test_interface_files:/home/jakeluo/Software/ros2_rolling/install/test_communication:/home/jakeluo/Software/ros2_rolling/install/test_cli_remapping:/home/jakeluo/Software/ros2_rolling/install/test_cli:/home/jakeluo/Software/ros2_rolling/install/qt_gui_app:/home/jakeluo/Software/ros2_rolling/install/qt_gui:/home/jakeluo/Software/ros2_rolling/install/tango_icons_vendor:/home/jakeluo/Software/ros2_rolling/install/stereo_msgs:/home/jakeluo/Software/ros2_rolling/install/std_srvs:/home/jakeluo/Software/ros2_rolling/install/shape_msgs:/home/jakeluo/Software/ros2_rolling/install/map_msgs:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs:/home/jakeluo/Software/ros2_rolling/install/nav_msgs:/home/jakeluo/Software/ros2_rolling/install/diagnostic_msgs:/home/jakeluo/Software/ros2_rolling/install/geometry_msgs:/home/jakeluo/Software/ros2_rolling/install/actionlib_msgs:/home/jakeluo/Software/ros2_rolling/install/std_msgs:/home/jakeluo/Software/ros2_rolling/install/statistics_msgs:/home/jakeluo/Software/ros2_rolling/install/sqlite3_vendor:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_spdlog:/home/jakeluo/Software/ros2_rolling/install/spdlog_vendor:/home/jakeluo/Software/ros2_rolling/install/shared_queues_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering_tests:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering:/home/jakeluo/Software/ros2_rolling/install/rviz_ogre_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_assimp_vendor:/home/jakeluo/Software/ros2_rolling/install/rttest:/home/jakeluo/Software/ros2_rolling/install/rmw_connextddsmicro:/home/jakeluo/Software/ros2_rolling/install/rmw_connextdds:/home/jakeluo/Software/ros2_rolling/install/rmw_connextdds_common:/home/jakeluo/Software/ros2_rolling/install/rti_connext_dds_cmake_module:/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs:/home/jakeluo/Software/ros2_rolling/install/rosbag2_interfaces:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_dynamic_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_shared_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_dds_common:/home/jakeluo/Software/ros2_rolling/install/composition_interfaces:/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces:/home/jakeluo/Software/ros2_rolling/install/pendulum_msgs:/home/jakeluo/Software/ros2_rolling/install/lifecycle_msgs:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces:/home/jakeluo/Software/ros2_rolling/install/rosidl_default_runtime:/home/jakeluo/Software/ros2_rolling/install/rosidl_default_generators:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_cpp:/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser:/home/jakeluo/Software/ros2_rolling/install/rmw:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_interface:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_dds_idl:/home/jakeluo/Software/ros2_rolling/install/rosidl_cmake:/home/jakeluo/Software/ros2_rolling/install/rosidl_parser:/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter:/home/jakeluo/Software/ros2_rolling/install/rosbag2_tests:/home/jakeluo/Software/ros2_rolling/install/ros_environment:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake:/home/jakeluo/Software/ros2_rolling/install/resource_retriever:/home/jakeluo/Software/ros2_rolling/install/class_loader:/home/jakeluo/Software/ros2_rolling/install/rcpputils:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_noop:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface:/home/jakeluo/Software/ros2_rolling/install/rcutils:/home/jakeluo/Software/ros2_rolling/install/qt_gui_py_common:/home/jakeluo/Software/ros2_rolling/install/qt_dotgraph:/home/jakeluo/Software/ros2_rolling/install/python_qt_binding:/home/jakeluo/Software/ros2_rolling/install/launch_testing_ament_cmake:/home/jakeluo/Software/ros2_rolling/install/python_cmake_module:/home/jakeluo/Software/ros2_rolling/install/pybind11_vendor:/home/jakeluo/Software/ros2_rolling/install/performance_test_fixture:/home/jakeluo/Software/ros2_rolling/install/osrf_testing_tools_cpp:/home/jakeluo/Software/ros2_rolling/install/orocos_kdl:/home/jakeluo/Software/ros2_rolling/install/mimick_vendor:/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor:/home/jakeluo/Software/ros2_rolling/install/libcurl_vendor:/home/jakeluo/Software/ros2_rolling/install/keyboard_handler:/home/jakeluo/Software/ros2_rolling/install/cyclonedds:/home/jakeluo/Software/ros2_rolling/install/iceoryx_utils:/home/jakeluo/Software/ros2_rolling/install/iceoryx_posh:/home/jakeluo/Software/ros2_rolling/install/iceoryx_binding_c:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_ros:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gmock:/home/jakeluo/Software/ros2_rolling/install/gmock_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gtest:/home/jakeluo/Software/ros2_rolling/install/gtest_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_google_benchmark:/home/jakeluo/Software/ros2_rolling/install/google_benchmark_vendor:/home/jakeluo/Software/ros2_rolling/install/fastrtps:/home/jakeluo/Software/ros2_rolling/install/foonathan_memory_vendor:/home/jakeluo/Software/ros2_rolling/install/fastrtps_cmake_module:/home/jakeluo/Software/ros2_rolling/install/fastcdr:/home/jakeluo/Software/ros2_rolling/install/eigen3_cmake_module:/home/jakeluo/Software/ros2_rolling/install/console_bridge_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_xmllint:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pyflakes:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pycodestyle:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pep257:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pclint:/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_auto:/home/jakeluo/Software/ros2_rolling/install/ament_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_version:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pytest:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_nose:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_mypy:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_lint_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_flake8:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_cpplint:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_cppcheck:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_copyright:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_clang_tidy:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_clang_format:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_test:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_target_dependencies:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_python:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_dependencies:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_libraries:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_include_directories:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gen_version_h:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_targets:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_link_flags:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_interfaces:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_libraries:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_include_directories:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_definitions:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_core:/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp:/home/jakeluo/Software/ros2_rolling/install/rqt_bag_plugins:/home/jakeluo/Software/ros2_rolling/install/rqt_bag:/home/jakeluo/Software/ros2_rolling/install/ros2bag:/home/jakeluo/Software/ros2_rolling/install/tracetools_test:/home/jakeluo/Software/ros2_rolling/install/tracetools_launch:/home/jakeluo/Software/ros2_rolling/install/topic_monitor:/home/jakeluo/Software/ros2_rolling/install/tf2_tools:/home/jakeluo/Software/ros2_rolling/install/examples_tf2_py:/home/jakeluo/Software/ros2_rolling/install/tf2_ros_py:/home/jakeluo/Software/ros2_rolling/install/sros2:/home/jakeluo/Software/ros2_rolling/install/rqt_topic:/home/jakeluo/Software/ros2_rolling/install/rqt_top:/home/jakeluo/Software/ros2_rolling/install/rqt_srv:/home/jakeluo/Software/ros2_rolling/install/rqt_shell:/home/jakeluo/Software/ros2_rolling/install/rqt_service_caller:/home/jakeluo/Software/ros2_rolling/install/rqt_reconfigure:/home/jakeluo/Software/ros2_rolling/install/rqt_py_console:/home/jakeluo/Software/ros2_rolling/install/rqt_publisher:/home/jakeluo/Software/ros2_rolling/install/rqt_plot:/home/jakeluo/Software/ros2_rolling/install/rqt_action:/home/jakeluo/Software/ros2_rolling/install/rqt_msg:/home/jakeluo/Software/ros2_rolling/install/rqt_console:/home/jakeluo/Software/ros2_rolling/install/rqt:/home/jakeluo/Software/ros2_rolling/install/rqt_graph:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_py:/home/jakeluo/Software/ros2_rolling/install/rqt_gui:/home/jakeluo/Software/ros2_rolling/install/ros2trace:/home/jakeluo/Software/ros2_rolling/install/ros2topic:/home/jakeluo/Software/ros2_rolling/install/ros2test:/home/jakeluo/Software/ros2_rolling/install/ros2component:/home/jakeluo/Software/ros2_rolling/install/ros2param:/home/jakeluo/Software/ros2_rolling/install/ros2lifecycle:/home/jakeluo/Software/ros2_rolling/install/ros2service:/home/jakeluo/Software/ros2_rolling/install/ros2run:/home/jakeluo/Software/ros2_rolling/install/ros2launch:/home/jakeluo/Software/ros2_rolling/install/ros2pkg:/home/jakeluo/Software/ros2_rolling/install/ros2node:/home/jakeluo/Software/ros2_rolling/install/ros2multicast:/home/jakeluo/Software/ros2_rolling/install/ros2interface:/home/jakeluo/Software/ros2_rolling/install/ros2doctor:/home/jakeluo/Software/ros2_rolling/install/ros2action:/home/jakeluo/Software/ros2_rolling/install/ros2cli:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_py:/home/jakeluo/Software/ros2_rolling/install/launch_testing_ros:/home/jakeluo/Software/ros2_rolling/install/launch_ros:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_pointcloud_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_subscriber:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_service:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_action_server:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_action_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_guard_conditions:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_executors:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_py:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_py:/home/jakeluo/Software/ros2_rolling/install/ament_uncrustify:/home/jakeluo/Software/ros2_rolling/install/tracetools_trace:/home/jakeluo/Software/ros2_rolling/install/tracetools_read:/home/jakeluo/Software/ros2_rolling/install/test_launch_ros:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs_py:/home/jakeluo/Software/ros2_rolling/install/rpyutils:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_py:/home/jakeluo/Software/ros2_rolling/install/rosidl_cli:/home/jakeluo/Software/ros2_rolling/install/launch_yaml:/home/jakeluo/Software/ros2_rolling/install/launch_xml:/home/jakeluo/Software/ros2_rolling/install/launch_testing:/home/jakeluo/Software/ros2_rolling/install/launch:/home/jakeluo/Software/ros2_rolling/install/osrf_pycommon:/home/jakeluo/Software/ros2_rolling/install/domain_coordinator:/home/jakeluo/Software/ros2_rolling/install/ament_xmllint:/home/jakeluo/Software/ros2_rolling/install/ament_pyflakes:/home/jakeluo/Software/ros2_rolling/install/ament_pycodestyle:/home/jakeluo/Software/ros2_rolling/install/ament_pep257:/home/jakeluo/Software/ros2_rolling/install/ament_pclint:/home/jakeluo/Software/ros2_rolling/install/ament_package:/home/jakeluo/Software/ros2_rolling/install/ament_mypy:/home/jakeluo/Software/ros2_rolling/install/ament_lint_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_flake8:/home/jakeluo/Software/ros2_rolling/install/ament_copyright:/home/jakeluo/Software/ros2_rolling/install/ament_lint:/home/jakeluo/Software/ros2_rolling/install/ament_index_python:/home/jakeluo/Software/ros2_rolling/install/ament_cpplint:/home/jakeluo/Software/ros2_rolling/install/ament_cppcheck:/home/jakeluo/Software/ros2_rolling/install/ament_clang_tidy:/home/jakeluo/Software/ros2_rolling/install/ament_clang_format LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression_zstd/lib:/home/jakeluo/Software/ros2_rolling/install/zstd_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_default_plugins/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_common/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_transport/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage_default_plugins/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage/lib:/home/jakeluo/Software/ros2_rolling/install/camera_info_manager/lib:/home/jakeluo/Software/ros2_rolling/install/camera_calibration_parsers/lib:/home/jakeluo/Software/ros2_rolling/install/yaml_cpp_vendor/opt/yaml_cpp_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/interactive_markers/lib:/home/jakeluo/Software/ros2_rolling/install/visualization_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/robot_state_publisher/lib:/home/jakeluo/Software/ros2_rolling/install/kdl_parser/lib:/home/jakeluo/Software/ros2_rolling/install/urdf/lib:/home/jakeluo/Software/ros2_rolling/install/urdfdom/lib:/home/jakeluo/Software/ros2_rolling/install/turtlesim/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_ros/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/test_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/ros2cli_test_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/image_transport/lib:/home/jakeluo/Software/ros2_rolling/install/message_filters/lib:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/composition/lib:/home/jakeluo/Software/ros2_rolling/install/laser_geometry/lib:/home/jakeluo/Software/ros2_rolling/install/rclpy/lib:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_action/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_action/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_wait_set/lib:/home/jakeluo/Software/ros2_rolling/install/example_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/trajectory_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_lifecycle/lib:/home/jakeluo/Software/ros2_rolling/install/logging_demo/lib:/home/jakeluo/Software/ros2_rolling/install/image_tools/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_subscriber/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_composition/lib:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp_native/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_components/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_lifecycle/lib:/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/lib:/home/jakeluo/Software/ros2_rolling/install/rcl/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/tracetools/lib:/home/jakeluo/Software/ros2_rolling/install/tlsf/lib:/home/jakeluo/Software/ros2_rolling/install/qt_gui_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen_kdl/lib:/home/jakeluo/Software/ros2_rolling/install/tf2/lib:/home/jakeluo/Software/ros2_rolling/install/stereo_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/std_srvs/lib:/home/jakeluo/Software/ros2_rolling/install/shape_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/map_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/nav_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/diagnostic_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/geometry_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/actionlib_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/std_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_spdlog/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_ogre_vendor/opt/rviz_ogre_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/rttest/lib:/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_dynamic_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_shared_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_dds_common/lib:/home/jakeluo/Software/ros2_rolling/install/composition_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/pendulum_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/lifecycle_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser/lib:/home/jakeluo/Software/ros2_rolling/install/rmw/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/resource_retriever/lib:/home/jakeluo/Software/ros2_rolling/install/class_loader/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_noop/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:/home/jakeluo/Software/ros2_rolling/install/performance_test_fixture/lib:/home/jakeluo/Software/ros2_rolling/install/osrf_testing_tools_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/orocos_kdl/lib:/home/jakeluo/Software/ros2_rolling/install/mimick_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/keyboard_handler/lib:/home/jakeluo/Software/ros2_rolling/install/cyclonedds/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_utils/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_posh/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_binding_c/lib:/home/jakeluo/Software/ros2_rolling/install/google_benchmark_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/fastrtps/lib:/home/jakeluo/Software/ros2_rolling/install/fastcdr/lib:/home/jakeluo/Software/ros2_rolling/install/console_bridge_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12
+[0.090s] -- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+[0.542s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.549s] -- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+[0.633s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[0.636s] -- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+[0.695s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+[0.743s] -- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+[0.771s] -- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+[0.812s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.929s] -- Found droneinterfaces: 0.0.0 (/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake)
+[0.987s] -- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+[1.120s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.121s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.121s] -- Configured cppcheck include dirs: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include;$<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include>
+[1.121s] -- Configured cppcheck exclude dirs and/or files: 
+[1.122s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.122s] -- Configured cpplint exclude dirs and/or files: 
+[1.123s] -- Added test 'lint_cmake' to check CMake code style
+[1.124s] -- Added test 'uncrustify' to check C / C++ code style
+[1.124s] -- Configured uncrustify additional arguments: 
+[1.124s] -- Added test 'xmllint' to check XML markup files
+[1.127s] -- Configuring done
+[1.145s] -- Generating done
+[1.146s] -- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[1.195s] [35m[1mScanning dependencies of target drone[0m
+[1.195s] [35m[1mScanning dependencies of target dronemanager[0m
+[1.223s] [ 50%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[1.223s] [ 50%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+[4.513s] In file included from [01m[K/usr/local/include/pangolin/gl/gl.h:295[m[K,
+[4.513s]                  from [01m[K/usr/local/include/pangolin/handler/handler.h:31[m[K,
+[4.513s]                  from [01m[K/usr/local/include/pangolin/display/widgets.h:32[m[K,
+[4.513s]                  from [01m[K/usr/local/include/pangolin/pangolin.h:40[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[4.513s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[4.514s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlTexture::CopyFrom(const pangolin::GlTexture&)[m[K’:
+[4.514s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:334:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglCopyImageSubDataNV[m[K’ was not declared in this scope
+[4.514s]   334 |     [01;31m[KglCopyImageSubDataNV[m[K(tex.tid, GL_TEXTURE_2D, 0, 0, 0, 0,
+[4.514s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.540s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlRenderBuffer::Reinitialise(GLint, GLint, GLint)[m[K’:
+[4.541s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:508:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteRenderbuffersEXT[m[K’ was not declared in this scope
+[4.541s]   508 |         [01;31m[KglDeleteRenderbuffersEXT[m[K(1, &rbid);
+[4.541s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.559s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:513:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenRenderbuffersEXT[m[K’ was not declared in this scope
+[4.559s]   513 |     [01;31m[KglGenRenderbuffersEXT[m[K(1, &rbid);
+[4.559s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.577s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:514:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindRenderbufferEXT[m[K’ was not declared in this scope
+[4.577s]   514 |     [01;31m[KglBindRenderbufferEXT[m[K(GL_RENDERBUFFER_EXT, rbid);
+[4.577s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.602s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:515:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglRenderbufferStorageEXT[m[K’ was not declared in this scope
+[4.603s]   515 |     [01;31m[KglRenderbufferStorageEXT[m[K(GL_RENDERBUFFER_EXT, internal_format, width, height);
+[4.603s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.627s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In destructor ‘[01m[Kpangolin::GlRenderBuffer::~GlRenderBuffer()[m[K’:
+[4.627s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:522:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteRenderbuffersEXT[m[K’ was not declared in this scope
+[4.628s]   522 |         [01;31m[KglDeleteRenderbuffersEXT[m[K(1, &rbid);
+[4.628s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.651s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In destructor ‘[01m[Kpangolin::GlFramebuffer::~GlFramebuffer()[m[K’:
+[4.651s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:571:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteFramebuffersEXT[m[K’ was not declared in this scope
+[4.651s]   571 |         [01;31m[KglDeleteFramebuffersEXT[m[K(1, &fbid);
+[4.651s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.667s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[4.667s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:578:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+[4.667s]   578 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+[4.667s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.683s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[4.683s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:587:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+[4.683s]   587 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+[4.683s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.700s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[4.700s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:597:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+[4.700s]   597 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+[4.700s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.716s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[4.716s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:608:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+[4.716s]   608 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+[4.716s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.732s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Bind() const[m[K’:
+[4.732s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:619:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+[4.732s]   619 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+[4.732s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.735s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:620:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglDrawBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglDrawBuffer[m[K’?
+[4.735s]   620 |     [01;31m[KglDrawBuffers[m[K( attachments, attachment_buffers );
+[4.736s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[4.736s]       |     [32m[KglDrawBuffer[m[K
+[4.758s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Reinitialise()[m[K’:
+[4.758s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:626:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteFramebuffersEXT[m[K’ was not declared in this scope
+[4.759s]   626 |         [01;31m[KglDeleteFramebuffersEXT[m[K(1, &fbid);
+[4.759s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.775s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:628:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+[4.775s]   628 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+[4.775s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.779s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Unbind() const[m[K’:
+[4.779s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:633:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglDrawBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglDrawBuffer[m[K’?
+[4.779s]   633 |     [01;31m[KglDrawBuffers[m[K( 1, attachment_buffers );
+[4.779s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[4.779s]       |     [32m[KglDrawBuffer[m[K
+[4.794s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:634:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+[4.795s]   634 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, 0);
+[4.795s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.811s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[KGLenum pangolin::GlFramebuffer::AttachColour(pangolin::GlTexture&)[m[K’:
+[4.811s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:642:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+[4.811s]   642 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+[4.811s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.838s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:643:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglFramebufferTexture2DEXT[m[K’ was not declared in this scope
+[4.838s]   643 |     [01;31m[KglFramebufferTexture2DEXT[m[K(GL_FRAMEBUFFER_EXT, color_attachment, GL_TEXTURE_2D, tex.tid, 0);
+[4.838s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.855s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::AttachDepth(pangolin::GlRenderBuffer&)[m[K’:
+[4.855s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:654:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+[4.855s]   654 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+[4.855s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.885s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:656:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglFramebufferRenderbufferEXT[m[K’ was not declared in this scope
+[4.886s]   656 |     [01;31m[KglFramebufferRenderbufferEXT[m[K(GL_FRAMEBUFFER_EXT, GL_DEPTH_ATTACHMENT_EXT, GL_RENDERBUFFER_EXT, rb.rbid);
+[4.886s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.893s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Free()[m[K’:
+[4.893s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:712:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglSelectBuffer[m[K’?
+[4.893s]   712 |         [01;31m[KglDeleteBuffers[m[K(1, &bo);
+[4.893s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.893s]       |         [32m[KglSelectBuffer[m[K
+[4.899s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Reinitialise(pangolin::GlBufferType, GLsizeiptr, GLenum, const void*)[m[K’:
+[4.899s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:729:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+[4.899s]   729 |         [01;31m[KglGenBuffers[m[K(1, &bo);
+[4.899s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[4.899s]       |         [32m[KglReadBuffer[m[K
+[4.902s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:737:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+[4.903s]   737 |     [01;31m[KglBufferData[m[K(buffer_type, size_bytes, data, gluse);
+[4.903s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[4.903s]       |     [32m[KGlBufferData[m[K
+[4.907s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Bind() const[m[K’:
+[4.908s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:743:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindBuffer[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+[4.908s]   743 |     [01;31m[KglBindBuffer[m[K(buffer_type, bo);
+[4.908s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[4.908s]       |     [32m[KglReadBuffer[m[K
+[4.912s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Unbind() const[m[K’:
+[4.913s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:748:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindBuffer[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+[4.913s]   748 |     [01;31m[KglBindBuffer[m[K(buffer_type, 0);
+[4.913s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[4.913s]       |     [32m[KglReadBuffer[m[K
+[4.919s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Upload(const GLvoid*, GLsizeiptr, GLintptr)[m[K’:
+[4.919s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:758:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferSubData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+[4.919s]   758 |     [01;31m[KglBufferSubData[m[K(buffer_type,offset,size_bytes,data);
+[4.920s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.920s]       |     [32m[KGlBufferData[m[K
+[4.931s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Download(GLvoid*, GLsizeiptr, GLintptr) const[m[K’:
+[4.932s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:765:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetBufferSubData[m[K’ was not declared in this scope
+[4.932s]   765 |     [01;31m[KglGetBufferSubData[m[K(buffer_type, offset, size_bytes, data);
+[4.932s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.945s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBuffer::Resize(GLuint)[m[K’:
+[4.945s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:841:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetBufferSubData[m[K’ was not declared in this scope
+[4.945s]   841 |         [01;31m[KglGetBufferSubData[m[K(buffer_type, 0, backup_size_bytes, backup);
+[4.945s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.948s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:842:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+[4.949s]   842 |         [01;31m[KglBufferData[m[K(buffer_type, new_num_elements*GlDataTypeBytes(datatype)*count_per_element, 0, gluse);
+[4.949s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[4.949s]       |         [32m[KGlBufferData[m[K
+[4.955s] [01m[K/usr/local/include/pangolin/gl/gl.hpp:843:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferSubData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+[4.955s]   843 |         [01;31m[KglBufferSubData[m[K(buffer_type, 0, backup_size_bytes, backup);
+[4.955s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.955s]       |         [32m[KGlBufferData[m[K
+[4.992s] In file included from [01m[K/usr/local/include/pangolin/plot/plotter.h:37[m[K,
+[4.992s]                  from [01m[K/usr/local/include/pangolin/pangolin.h:48[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[4.992s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[4.992s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In static member function ‘[01m[Kstatic void pangolin::GlSlUtilities::UseNone()[m[K’:
+[4.993s] [01m[K/usr/local/include/pangolin/gl/glsl.h:242:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+[4.993s]   242 |         [01;31m[KglUseProgram[m[K(0);
+[4.993s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[4.993s]       |         [32m[KGlSlProgram[m[K
+[4.999s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In function ‘[01m[Kbool pangolin::IsLinkSuccessPrintLog(GLhandleARB)[m[K’:
+[4.999s] [01m[K/usr/local/include/pangolin/gl/glsl.h:331:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramiv[m[K’ was not declared in this scope
+[4.999s]   331 |     [01;31m[KglGetProgramiv[m[K(prog, GL_LINK_STATUS, &status);
+[4.999s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.012s] [01m[K/usr/local/include/pangolin/gl/glsl.h:337:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramInfoLog[m[K’ was not declared in this scope
+[5.012s]   337 |         [01;31m[KglGetProgramInfoLog[m[K(prog, PROGRAM_LOG_MAX_LEN, &len, infolog);
+[5.012s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[5.018s] In file included from [01m[K/usr/local/include/pangolin/plot/plotter.h:37[m[K,
+[5.018s]                  from [01m[K/usr/local/include/pangolin/pangolin.h:48[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.018s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.019s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In function ‘[01m[Kbool pangolin::IsCompileSuccessPrintLog(GLhandleARB, const string&, const string&)[m[K’:
+[5.019s] [01m[K/usr/local/include/pangolin/gl/glsl.h:351:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetShaderiv[m[K’ was not declared in this scope; did you mean ‘[01m[KglGetMapiv[m[K’?
+[5.019s]   351 |     [01;31m[KglGetShaderiv[m[K(shader, GL_COMPILE_STATUS, &status);
+[5.019s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[5.019s]       |     [32m[KglGetMapiv[m[K
+[5.030s] [01m[K/usr/local/include/pangolin/gl/glsl.h:357:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetShaderInfoLog[m[K’ was not declared in this scope
+[5.030s]   357 |         [01;31m[KglGetShaderInfoLog[m[K(shader, SHADER_LOG_MAX_LEN, &len, infolog);
+[5.030s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[5.040s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In destructor ‘[01m[Kpangolin::GlSlProgram::~GlSlProgram()[m[K’:
+[5.040s] [01m[K/usr/local/include/pangolin/gl/glsl.h:388:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteProgram[m[K’ was not declared in this scope
+[5.040s]   388 |         [01;31m[KglDeleteProgram[m[K(prog);
+[5.040s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.051s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kbool pangolin::GlSlProgram::AddPreprocessedShader(pangolin::GlSlShaderType, const string&, const string&)[m[K’:
+[5.051s] [01m[K/usr/local/include/pangolin/gl/glsl.h:408:16:[m[K [01;31m[Kerror: [m[K‘[01m[KglCreateProgram[m[K’ was not declared in this scope
+[5.051s]   408 |         prog = [01;31m[KglCreateProgram[m[K();
+[5.051s]       |                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.059s] [01m[K/usr/local/include/pangolin/gl/glsl.h:411:26:[m[K [01;31m[Kerror: [m[K‘[01m[KglCreateShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlVertexShader[m[K’?
+[5.060s]   411 |     GLhandleARB shader = [01;31m[KglCreateShader[m[K(shader_type);
+[5.060s]       |                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.060s]       |                          [32m[KGlSlVertexShader[m[K
+[5.068s] [01m[K/usr/local/include/pangolin/gl/glsl.h:413:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglShaderSource[m[K’ was not declared in this scope
+[5.068s]   413 |     [01;31m[KglShaderSource[m[K(shader, 1, &source, NULL);
+[5.069s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.076s] [01m[K/usr/local/include/pangolin/gl/glsl.h:414:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglCompileShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlComputeShader[m[K’?
+[5.077s]   414 |     [01;31m[KglCompileShader[m[K(shader);
+[5.077s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.077s]       |     [32m[KGlSlComputeShader[m[K
+[5.086s] [01m[K/usr/local/include/pangolin/gl/glsl.h:417:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglAttachShader[m[K’ was not declared in this scope
+[5.086s]   417 |         [01;31m[KglAttachShader[m[K(prog, shader);
+[5.086s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.100s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::ClearShaders()[m[K’:
+[5.100s] [01m[K/usr/local/include/pangolin/gl/glsl.h:511:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDetachShader[m[K’ was not declared in this scope
+[5.100s]   511 |         [01;31m[KglDetachShader[m[K(prog, shaders[i]);
+[5.100s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.108s] [01m[K/usr/local/include/pangolin/gl/glsl.h:512:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlVertexShader[m[K’?
+[5.108s]   512 |         [01;31m[KglDeleteShader[m[K(shaders[i]);
+[5.108s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.109s]       |         [32m[KGlSlVertexShader[m[K
+[5.127s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kbool pangolin::GlSlProgram::Link()[m[K’:
+[5.128s] [01m[K/usr/local/include/pangolin/gl/glsl.h:645:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglLinkProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+[5.128s]   645 |     [01;31m[KglLinkProgram[m[K(prog);
+[5.128s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[5.128s]       |     [32m[KGlSlProgram[m[K
+[5.134s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::Bind()[m[K’:
+[5.134s] [01m[K/usr/local/include/pangolin/gl/glsl.h:652:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+[5.134s]   652 |     [01;31m[KglUseProgram[m[K(prog);
+[5.134s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[5.134s]       |     [32m[KGlSlProgram[m[K
+[5.140s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SaveBind()[m[K’:
+[5.140s] [01m[K/usr/local/include/pangolin/gl/glsl.h:658:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+[5.140s]   658 |     [01;31m[KglUseProgram[m[K(prog);
+[5.140s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[5.140s]       |     [32m[KGlSlProgram[m[K
+[5.145s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::Unbind()[m[K’:
+[5.145s] [01m[K/usr/local/include/pangolin/gl/glsl.h:663:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+[5.146s]   663 |     [01;31m[KglUseProgram[m[K(prev_prog);
+[5.146s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[5.146s]       |     [32m[KGlSlProgram[m[K
+[5.163s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetAttributeHandle(const string&)[m[K’:
+[5.163s] [01m[K/usr/local/include/pangolin/gl/glsl.h:668:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetAttribLocation[m[K’ was not declared in this scope
+[5.163s]   668 |     return [01;31m[KglGetAttribLocation[m[K(prog, name.c_str());
+[5.163s]       |            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[5.183s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetUniformHandle(const string&)[m[K’:
+[5.184s] [01m[K/usr/local/include/pangolin/gl/glsl.h:673:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetUniformLocation[m[K’ was not declared in this scope
+[5.184s]   673 |     return [01;31m[KglGetUniformLocation[m[K(prog, name.c_str());
+[5.184s]       |            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.190s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int)[m[K’:
+[5.190s] [01m[K/usr/local/include/pangolin/gl/glsl.h:678:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform1i[m[K’ was not declared in this scope
+[5.190s]   678 |     [01;31m[KglUniform1i[m[K( GetUniformHandle(name), x);
+[5.190s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.197s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int)[m[K’:
+[5.197s] [01m[K/usr/local/include/pangolin/gl/glsl.h:683:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform2i[m[K’ was not declared in this scope
+[5.197s]   683 |     [01;31m[KglUniform2i[m[K( GetUniformHandle(name), x1, x2);
+[5.197s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.203s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int, int)[m[K’:
+[5.203s] [01m[K/usr/local/include/pangolin/gl/glsl.h:688:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform3i[m[K’ was not declared in this scope
+[5.203s]   688 |     [01;31m[KglUniform3i[m[K( GetUniformHandle(name), x1, x2, x3);
+[5.204s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.210s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int, int, int)[m[K’:
+[5.210s] [01m[K/usr/local/include/pangolin/gl/glsl.h:693:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4i[m[K’ was not declared in this scope
+[5.210s]   693 |     [01;31m[KglUniform4i[m[K( GetUniformHandle(name), x1, x2, x3, x4);
+[5.210s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.217s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float)[m[K’:
+[5.217s] [01m[K/usr/local/include/pangolin/gl/glsl.h:698:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform1f[m[K’ was not declared in this scope
+[5.217s]   698 |     [01;31m[KglUniform1f[m[K( GetUniformHandle(name), f);
+[5.217s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.223s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float)[m[K’:
+[5.224s] [01m[K/usr/local/include/pangolin/gl/glsl.h:703:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform2f[m[K’ was not declared in this scope
+[5.224s]   703 |     [01;31m[KglUniform2f[m[K( GetUniformHandle(name), f1,f2);
+[5.224s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.230s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float, float)[m[K’:
+[5.230s] [01m[K/usr/local/include/pangolin/gl/glsl.h:708:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform3f[m[K’ was not declared in this scope
+[5.230s]   708 |     [01;31m[KglUniform3f[m[K( GetUniformHandle(name), f1,f2,f3);
+[5.230s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.236s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float, float, float)[m[K’:
+[5.236s] [01m[K/usr/local/include/pangolin/gl/glsl.h:713:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4f[m[K’ was not declared in this scope
+[5.236s]   713 |     [01;31m[KglUniform4f[m[K( GetUniformHandle(name), f1,f2,f3,f4);
+[5.236s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.242s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, pangolin::Colour)[m[K’:
+[5.243s] [01m[K/usr/local/include/pangolin/gl/glsl.h:718:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4f[m[K’ was not declared in this scope
+[5.243s]   718 |     [01;31m[KglUniform4f[m[K( GetUniformHandle(name), c.r, c.g, c.b, c.a);
+[5.243s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.256s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, const pangolin::OpenGlMatrix&)[m[K’:
+[5.257s] [01m[K/usr/local/include/pangolin/gl/glsl.h:728:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniformMatrix4fv[m[K’ was not declared in this scope
+[5.257s]   728 |     [01;31m[KglUniformMatrix4fv[m[K( GetUniformHandle(name), 1, GL_FALSE, m);
+[5.257s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[5.276s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::BindPangolinDefaultAttribLocationsAndLink()[m[K’:
+[5.276s] [01m[K/usr/local/include/pangolin/gl/glsl.h:756:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindAttribLocation[m[K’ was not declared in this scope
+[5.276s]   756 |     [01;31m[KglBindAttribLocation[m[K(prog, DEFAULT_LOCATION_POSITION, DEFAULT_NAME_POSITION);
+[5.276s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.283s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetProgramResourceIndex(const string&)[m[K’:
+[5.283s] [01m[K/usr/local/include/pangolin/gl/glsl.h:766:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramResourceIndex[m[K’ was not declared in this scope; did you mean ‘[01m[KGetProgramResourceIndex[m[K’?
+[5.283s]   766 |     return [01;31m[KglGetProgramResourceIndex[m[K(prog, GL_SHADER_STORAGE_BLOCK, name.c_str());
+[5.283s]       |            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.283s]       |            [32m[KGetProgramResourceIndex[m[K
+[5.311s] [01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetShaderStorageBlock(const string&, const int&)[m[K’:
+[5.311s] [01m[K/usr/local/include/pangolin/gl/glsl.h:771:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglShaderStorageBlockBinding[m[K’ was not declared in this scope
+[5.311s]   771 |     [01;31m[KglShaderStorageBlockBinding[m[K(prog, GetProgramResourceIndex(name), bindingIndex);
+[5.311s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.780s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.780s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:[m[K At global scope:
+[5.780s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:74:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[5.780s]    62 | D, D>, Matrix<double,D,D>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+[5.780s]       |                                    [01;35m[K^~~~~~~~~~[m[K
+[5.780s] 
+[5.780s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[5.780s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.781s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.781s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.781s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[5.781s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[5.781s] 
+[5.798s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[5.798s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.798s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.798s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.799s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:82:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[5.799s]    59 | >, Matrix<double, Di, Dj>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+[5.799s]       |                                    [01;35m[K^~~~~~~~~~[m[K
+[5.799s] 
+[5.799s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.799s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.799s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.799s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[5.800s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[5.800s] 
+[5.800s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.800s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:82:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[5.800s]    60 | >, Matrix<double, Dj, Di>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+[5.800s]       |                                    [01;35m[K^~~~~~~~~~[m[K
+[5.800s] 
+[5.800s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[5.800s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.801s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.801s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.801s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.801s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.801s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.801s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.801s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[5.801s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[5.801s] 
+[5.824s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:41[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:36[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[5.824s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[5.824s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/se3quat.h:43:38:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[5.824s]    43 |       EIGEN_MAKE_ALIGNED_OPERATOR_NEW[01;35m[K;[m[K
+[5.824s]       |                                      [01;35m[K^[m[K
+[5.824s]       |                                      [31m[K-[m[K
+[6.102s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.102s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.102s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<3, Eigen::Matrix<double, 3, 1> >[m[K’:
+[6.102s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_sba.h:40:35:[m[K   required from here
+[6.102s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.102s]    62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+[6.102s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.102s] 
+[6.103s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.103s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.103s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.103s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.103s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.103s] 
+[6.123s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.123s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.123s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<6, g2o::SE3Quat>[m[K’:
+[6.123s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:59:33:[m[K   required from here
+[6.123s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.123s]    62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+[6.123s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.124s] 
+[6.124s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.124s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.124s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.124s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.124s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.124s] 
+[6.184s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.184s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.184s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<2, Eigen::Matrix<double, 2, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSE3Expmap>[m[K’:
+[6.184s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:80:35:[m[K   required from here
+[6.185s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.185s]    59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+[6.185s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.185s] 
+[6.185s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.185s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.185s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.185s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.185s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.185s] 
+[6.195s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.195s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.195s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.195s]    60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+[6.195s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.195s] 
+[6.195s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.196s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.196s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.196s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.196s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.196s] 
+[6.237s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.237s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<3, Eigen::Matrix<double, 3, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSE3Expmap>[m[K’:
+[6.237s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:112:41:[m[K   required from here
+[6.237s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.237s]    59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+[6.237s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.237s] 
+[6.237s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.237s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.238s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.238s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.238s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.238s] 
+[6.238s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.238s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.239s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.239s]    60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+[6.239s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.239s] 
+[6.239s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.239s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.239s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.239s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.240s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.240s] 
+[6.384s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.384s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.385s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<7, g2o::Sim3>[m[K’:
+[6.385s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:48:35:[m[K   required from here
+[6.385s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.385s]    62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+[6.385s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.385s] 
+[6.385s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.385s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.385s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.385s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.386s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.386s] 
+[6.408s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.408s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.408s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<7, g2o::Sim3, g2o::VertexSim3Expmap, g2o::VertexSim3Expmap>[m[K’:
+[6.409s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:99:27:[m[K   required from here
+[6.409s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.409s]    59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+[6.409s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.409s] 
+[6.409s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.409s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.409s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.409s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.409s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.410s] 
+[6.410s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.410s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.410s]    60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+[6.410s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.410s] 
+[6.410s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.410s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.411s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.411s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.411s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.411s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.411s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.411s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.411s] 
+[6.441s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.441s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.441s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.442s] /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<2, Eigen::Matrix<double, 2, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSim3Expmap>[m[K’:
+[6.442s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:130:36:[m[K   required from here
+[6.442s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.442s]    59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+[6.442s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.442s] 
+[6.442s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.442s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.443s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.443s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.443s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.443s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.443s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.443s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.443s] 
+[6.453s] In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.453s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.453s] [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+[6.453s]    60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+[6.453s]       |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+[6.453s] 
+[6.453s] In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[6.454s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[6.454s] [01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.454s]   162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+[6.454s]       |                                    [01;36m[K^~~~~~~~~~[m[K
+[6.454s] 
+[7.269s] In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+[7.269s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+[7.269s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+[7.269s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.269s] /usr/include/c++/9/bits/unique_ptr.h: In instantiation of ‘[01m[Ktypename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = ORB_SLAM2::System; _Args = {ORB_SLAM2::System}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<ORB_SLAM2::System>][m[K’:
+[7.269s] [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:13:137:[m[K   required from here
+[7.269s] [01m[K/usr/include/c++/9/bits/unique_ptr.h:857:30:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’
+[7.269s]   857 |     { return unique_ptr<_Tp>([01;31m[Knew _Tp(std::forward<_Args>(__args)...)[m[K); }
+[7.269s]       |                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.269s] In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[7.269s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.269s] [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;36m[Knote: [m[K‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[7.270s]    49 | class [01;36m[KSystem[m[K
+[7.270s]       |       [01;36m[K^~~~~~[m[K
+[7.270s] [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+[7.270s] In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+[7.270s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.270s] [01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.270s]    94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+[7.270s]       |     [01;36m[K^~~~~[m[K
+[7.270s] In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.270s] [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+[7.270s]    49 | class [01;31m[KSystem[m[K
+[7.270s]       |       [01;31m[K^~~~~~[m[K
+[7.270s] In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+[7.270s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[7.270s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.271s] [01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.271s]    94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+[7.271s]       |     [01;36m[K^~~~~[m[K
+[7.271s] In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.271s] [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+[7.271s]    49 | class [01;31m[KSystem[m[K
+[7.271s]       |       [01;31m[K^~~~~~[m[K
+[7.271s] In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+[7.271s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+[7.271s]                  from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[7.271s] [01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.271s]    94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+[7.272s]       |     [01;36m[K^~~~~[m[K
+[10.383s] [ 75%] [32m[1mLinking CXX executable dronemanager[0m
+[10.517s] make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
+[10.517s] make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+[10.517s] make[1]: *** 正在等待未完成的任务....
+[11.003s] [ 75%] Built target dronemanager
+[11.003s] make: *** [Makefile:141：all] 错误 2
+[11.006s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility' returned '2': CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility:/home/jakeluo/Software/ros2_rolling/install/rosbag2:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression_zstd:/home/jakeluo/Software/ros2_rolling/install/zstd_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_visual_testing_framework:/home/jakeluo/Software/ros2_rolling/install/rviz2:/home/jakeluo/Software/ros2_rolling/install/rviz_default_plugins:/home/jakeluo/Software/ros2_rolling/install/rviz_common:/home/jakeluo/Software/ros2_rolling/install/rosbag2_py:/home/jakeluo/Software/ros2_rolling/install/rosbag2_transport:/home/jakeluo/Software/ros2_rolling/install/rosbag2_performance_benchmarking:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression:/home/jakeluo/Software/ros2_rolling/install/rosbag2_cpp:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage_default_plugins:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage:/home/jakeluo/Software/ros2_rolling/install/image_common:/home/jakeluo/Software/ros2_rolling/install/camera_info_manager:/home/jakeluo/Software/ros2_rolling/install/camera_calibration_parsers:/home/jakeluo/Software/ros2_rolling/install/yaml_cpp_vendor:/home/jakeluo/Software/ros2_rolling/install/ros1_bridge:/home/jakeluo/Software/ros2_rolling/install/interactive_markers:/home/jakeluo/Software/ros2_rolling/install/common_interfaces:/home/jakeluo/Software/ros2_rolling/install/visualization_msgs:/home/jakeluo/Software/ros2_rolling/install/dummy_robot_bringup:/home/jakeluo/Software/ros2_rolling/install/robot_state_publisher:/home/jakeluo/Software/ros2_rolling/install/kdl_parser:/home/jakeluo/Software/ros2_rolling/install/urdf:/home/jakeluo/Software/ros2_rolling/install/urdfdom:/home/jakeluo/Software/ros2_rolling/install/urdf_parser_plugin:/home/jakeluo/Software/ros2_rolling/install/urdfdom_headers:/home/jakeluo/Software/ros2_rolling/install/turtlesim:/home/jakeluo/Software/ros2_rolling/install/geometry2:/home/jakeluo/Software/ros2_rolling/install/tf2_sensor_msgs:/home/jakeluo/Software/ros2_rolling/install/test_tf2:/home/jakeluo/Software/ros2_rolling/install/tf2_kdl:/home/jakeluo/Software/ros2_rolling/install/tf2_geometry_msgs:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen:/home/jakeluo/Software/ros2_rolling/install/tf2_bullet:/home/jakeluo/Software/ros2_rolling/install/tf2_ros:/home/jakeluo/Software/ros2_rolling/install/tf2_py:/home/jakeluo/Software/ros2_rolling/install/tf2_msgs:/home/jakeluo/Software/ros2_rolling/install/test_msgs:/home/jakeluo/Software/ros2_rolling/install/sros2_cmake:/home/jakeluo/Software/ros2_rolling/install/ros2cli_common_extensions:/home/jakeluo/Software/ros2_rolling/install/rqt_py_common:/home/jakeluo/Software/ros2_rolling/install/ros_testing:/home/jakeluo/Software/ros2_rolling/install/ros2cli_test_interfaces:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_cpp:/home/jakeluo/Software/ros2_rolling/install/image_transport:/home/jakeluo/Software/ros2_rolling/install/message_filters:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp:/home/jakeluo/Software/ros2_rolling/install/composition:/home/jakeluo/Software/ros2_rolling/install/laser_geometry:/home/jakeluo/Software/ros2_rolling/install/rclpy:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_action_server:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_action_client:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_cpp:/home/jakeluo/Software/ros2_rolling/install/rclcpp_action:/home/jakeluo/Software/ros2_rolling/install/rcl_action:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_wait_set:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_service:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_async_client:/home/jakeluo/Software/ros2_rolling/install/example_interfaces:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_interfaces:/home/jakeluo/Software/ros2_rolling/install/action_msgs:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs:/home/jakeluo/Software/ros2_rolling/install/ament_lint_common:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_uncrustify:/home/jakeluo/Software/ros2_rolling/install/uncrustify_vendor:/home/jakeluo/Software/ros2_rolling/install/trajectory_msgs:/home/jakeluo/Software/ros2_rolling/install/topic_statistics_demo:/home/jakeluo/Software/ros2_rolling/install/pendulum_control:/home/jakeluo/Software/ros2_rolling/install/tlsf_cpp:/home/jakeluo/Software/ros2_rolling/install/test_tracetools:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_cpp:/home/jakeluo/Software/ros2_rolling/install/rosbag2_test_common:/home/jakeluo/Software/ros2_rolling/install/ros2lifecycle_test_fixtures:/home/jakeluo/Software/ros2_rolling/install/lifecycle:/home/jakeluo/Software/ros2_rolling/install/rclcpp_lifecycle:/home/jakeluo/Software/ros2_rolling/install/logging_demo:/home/jakeluo/Software/ros2_rolling/install/image_tools:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_subscriber:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_composition:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp_native:/home/jakeluo/Software/ros2_rolling/install/rclcpp_components:/home/jakeluo/Software/ros2_rolling/install/intra_process_demo:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_multithreaded_executor:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_timer:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_cbg_executor:/home/jakeluo/Software/ros2_rolling/install/dummy_sensors:/home/jakeluo/Software/ros2_rolling/install/dummy_map_server:/home/jakeluo/Software/ros2_rolling/install/rclcpp:/home/jakeluo/Software/ros2_rolling/install/rcl_lifecycle:/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector:/home/jakeluo/Software/ros2_rolling/install/rcl:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation:/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp:/home/jakeluo/Software/ros2_rolling/install/tracetools:/home/jakeluo/Software/ros2_rolling/install/tlsf:/home/jakeluo/Software/ros2_rolling/install/tinyxml_vendor:/home/jakeluo/Software/ros2_rolling/install/qt_gui_core:/home/jakeluo/Software/ros2_rolling/install/qt_gui_cpp:/home/jakeluo/Software/ros2_rolling/install/pluginlib:/home/jakeluo/Software/ros2_rolling/install/tinyxml2_vendor:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen_kdl:/home/jakeluo/Software/ros2_rolling/install/tf2:/home/jakeluo/Software/ros2_rolling/install/test_security:/home/jakeluo/Software/ros2_rolling/install/test_rmw_implementation:/home/jakeluo/Software/ros2_rolling/install/test_rclcpp:/home/jakeluo/Software/ros2_rolling/install/test_quality_of_service:/home/jakeluo/Software/ros2_rolling/install/test_launch_testing:/home/jakeluo/Software/ros2_rolling/install/test_interface_files:/home/jakeluo/Software/ros2_rolling/install/test_communication:/home/jakeluo/Software/ros2_rolling/install/test_cli_remapping:/home/jakeluo/Software/ros2_rolling/install/test_cli:/home/jakeluo/Software/ros2_rolling/install/qt_gui_app:/home/jakeluo/Software/ros2_rolling/install/qt_gui:/home/jakeluo/Software/ros2_rolling/install/tango_icons_vendor:/home/jakeluo/Software/ros2_rolling/install/stereo_msgs:/home/jakeluo/Software/ros2_rolling/install/std_srvs:/home/jakeluo/Software/ros2_rolling/install/shape_msgs:/home/jakeluo/Software/ros2_rolling/install/map_msgs:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs:/home/jakeluo/Software/ros2_rolling/install/nav_msgs:/home/jakeluo/Software/ros2_rolling/install/diagnostic_msgs:/home/jakeluo/Software/ros2_rolling/install/geometry_msgs:/home/jakeluo/Software/ros2_rolling/install/actionlib_msgs:/home/jakeluo/Software/ros2_rolling/install/std_msgs:/home/jakeluo/Software/ros2_rolling/install/statistics_msgs:/home/jakeluo/Software/ros2_rolling/install/sqlite3_vendor:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_spdlog:/home/jakeluo/Software/ros2_rolling/install/spdlog_vendor:/home/jakeluo/Software/ros2_rolling/install/shared_queues_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering_tests:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering:/home/jakeluo/Software/ros2_rolling/install/rviz_ogre_vendor:/home/jakeluo/Software/ros2_rolling/install/rviz_assimp_vendor:/home/jakeluo/Software/ros2_rolling/install/rttest:/home/jakeluo/Software/ros2_rolling/install/rmw_connextddsmicro:/home/jakeluo/Software/ros2_rolling/install/rmw_connextdds:/home/jakeluo/Software/ros2_rolling/install/rmw_connextdds_common:/home/jakeluo/Software/ros2_rolling/install/rti_connext_dds_cmake_module:/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs:/home/jakeluo/Software/ros2_rolling/install/rosbag2_interfaces:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_dynamic_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_shared_cpp:/home/jakeluo/Software/ros2_rolling/install/rmw_dds_common:/home/jakeluo/Software/ros2_rolling/install/composition_interfaces:/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces:/home/jakeluo/Software/ros2_rolling/install/pendulum_msgs:/home/jakeluo/Software/ros2_rolling/install/lifecycle_msgs:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces:/home/jakeluo/Software/ros2_rolling/install/rosidl_default_runtime:/home/jakeluo/Software/ros2_rolling/install/rosidl_default_generators:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_cpp:/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser:/home/jakeluo/Software/ros2_rolling/install/rmw:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_interface:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_cpp:/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_dds_idl:/home/jakeluo/Software/ros2_rolling/install/rosidl_cmake:/home/jakeluo/Software/ros2_rolling/install/rosidl_parser:/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter:/home/jakeluo/Software/ros2_rolling/install/rosbag2_tests:/home/jakeluo/Software/ros2_rolling/install/ros_environment:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake:/home/jakeluo/Software/ros2_rolling/install/resource_retriever:/home/jakeluo/Software/ros2_rolling/install/class_loader:/home/jakeluo/Software/ros2_rolling/install/rcpputils:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_noop:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface:/home/jakeluo/Software/ros2_rolling/install/rcutils:/home/jakeluo/Software/ros2_rolling/install/qt_gui_py_common:/home/jakeluo/Software/ros2_rolling/install/qt_dotgraph:/home/jakeluo/Software/ros2_rolling/install/python_qt_binding:/home/jakeluo/Software/ros2_rolling/install/launch_testing_ament_cmake:/home/jakeluo/Software/ros2_rolling/install/python_cmake_module:/home/jakeluo/Software/ros2_rolling/install/pybind11_vendor:/home/jakeluo/Software/ros2_rolling/install/performance_test_fixture:/home/jakeluo/Software/ros2_rolling/install/osrf_testing_tools_cpp:/home/jakeluo/Software/ros2_rolling/install/orocos_kdl:/home/jakeluo/Software/ros2_rolling/install/mimick_vendor:/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor:/home/jakeluo/Software/ros2_rolling/install/libcurl_vendor:/home/jakeluo/Software/ros2_rolling/install/keyboard_handler:/home/jakeluo/Software/ros2_rolling/install/cyclonedds:/home/jakeluo/Software/ros2_rolling/install/iceoryx_utils:/home/jakeluo/Software/ros2_rolling/install/iceoryx_posh:/home/jakeluo/Software/ros2_rolling/install/iceoryx_binding_c:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_ros:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gmock:/home/jakeluo/Software/ros2_rolling/install/gmock_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gtest:/home/jakeluo/Software/ros2_rolling/install/gtest_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_google_benchmark:/home/jakeluo/Software/ros2_rolling/install/google_benchmark_vendor:/home/jakeluo/Software/ros2_rolling/install/fastrtps:/home/jakeluo/Software/ros2_rolling/install/foonathan_memory_vendor:/home/jakeluo/Software/ros2_rolling/install/fastrtps_cmake_module:/home/jakeluo/Software/ros2_rolling/install/fastcdr:/home/jakeluo/Software/ros2_rolling/install/eigen3_cmake_module:/home/jakeluo/Software/ros2_rolling/install/console_bridge_vendor:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_xmllint:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pyflakes:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pycodestyle:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pep257:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pclint:/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_auto:/home/jakeluo/Software/ros2_rolling/install/ament_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_version:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_pytest:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_nose:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_mypy:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_lint_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_flake8:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_cpplint:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_cppcheck:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_copyright:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_clang_tidy:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_clang_format:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_test:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_target_dependencies:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_python:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_dependencies:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_libraries:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_include_directories:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_gen_version_h:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_targets:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_link_flags:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_interfaces:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_libraries:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_include_directories:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_export_definitions:/home/jakeluo/Software/ros2_rolling/install/ament_cmake_core:/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp:/home/jakeluo/Software/ros2_rolling/install/rqt_bag_plugins:/home/jakeluo/Software/ros2_rolling/install/rqt_bag:/home/jakeluo/Software/ros2_rolling/install/ros2bag:/home/jakeluo/Software/ros2_rolling/install/tracetools_test:/home/jakeluo/Software/ros2_rolling/install/tracetools_launch:/home/jakeluo/Software/ros2_rolling/install/topic_monitor:/home/jakeluo/Software/ros2_rolling/install/tf2_tools:/home/jakeluo/Software/ros2_rolling/install/examples_tf2_py:/home/jakeluo/Software/ros2_rolling/install/tf2_ros_py:/home/jakeluo/Software/ros2_rolling/install/sros2:/home/jakeluo/Software/ros2_rolling/install/rqt_topic:/home/jakeluo/Software/ros2_rolling/install/rqt_top:/home/jakeluo/Software/ros2_rolling/install/rqt_srv:/home/jakeluo/Software/ros2_rolling/install/rqt_shell:/home/jakeluo/Software/ros2_rolling/install/rqt_service_caller:/home/jakeluo/Software/ros2_rolling/install/rqt_reconfigure:/home/jakeluo/Software/ros2_rolling/install/rqt_py_console:/home/jakeluo/Software/ros2_rolling/install/rqt_publisher:/home/jakeluo/Software/ros2_rolling/install/rqt_plot:/home/jakeluo/Software/ros2_rolling/install/rqt_action:/home/jakeluo/Software/ros2_rolling/install/rqt_msg:/home/jakeluo/Software/ros2_rolling/install/rqt_console:/home/jakeluo/Software/ros2_rolling/install/rqt:/home/jakeluo/Software/ros2_rolling/install/rqt_graph:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_py:/home/jakeluo/Software/ros2_rolling/install/rqt_gui:/home/jakeluo/Software/ros2_rolling/install/ros2trace:/home/jakeluo/Software/ros2_rolling/install/ros2topic:/home/jakeluo/Software/ros2_rolling/install/ros2test:/home/jakeluo/Software/ros2_rolling/install/ros2component:/home/jakeluo/Software/ros2_rolling/install/ros2param:/home/jakeluo/Software/ros2_rolling/install/ros2lifecycle:/home/jakeluo/Software/ros2_rolling/install/ros2service:/home/jakeluo/Software/ros2_rolling/install/ros2run:/home/jakeluo/Software/ros2_rolling/install/ros2launch:/home/jakeluo/Software/ros2_rolling/install/ros2pkg:/home/jakeluo/Software/ros2_rolling/install/ros2node:/home/jakeluo/Software/ros2_rolling/install/ros2multicast:/home/jakeluo/Software/ros2_rolling/install/ros2interface:/home/jakeluo/Software/ros2_rolling/install/ros2doctor:/home/jakeluo/Software/ros2_rolling/install/ros2action:/home/jakeluo/Software/ros2_rolling/install/ros2cli:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_py:/home/jakeluo/Software/ros2_rolling/install/launch_testing_ros:/home/jakeluo/Software/ros2_rolling/install/launch_ros:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_pointcloud_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_subscriber:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_service:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_publisher:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_action_server:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_minimal_action_client:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_guard_conditions:/home/jakeluo/Software/ros2_rolling/install/examples_rclpy_executors:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_py:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_py:/home/jakeluo/Software/ros2_rolling/install/ament_uncrustify:/home/jakeluo/Software/ros2_rolling/install/tracetools_trace:/home/jakeluo/Software/ros2_rolling/install/tracetools_read:/home/jakeluo/Software/ros2_rolling/install/test_launch_ros:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs_py:/home/jakeluo/Software/ros2_rolling/install/rpyutils:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_py:/home/jakeluo/Software/ros2_rolling/install/rosidl_cli:/home/jakeluo/Software/ros2_rolling/install/launch_yaml:/home/jakeluo/Software/ros2_rolling/install/launch_xml:/home/jakeluo/Software/ros2_rolling/install/launch_testing:/home/jakeluo/Software/ros2_rolling/install/launch:/home/jakeluo/Software/ros2_rolling/install/osrf_pycommon:/home/jakeluo/Software/ros2_rolling/install/domain_coordinator:/home/jakeluo/Software/ros2_rolling/install/ament_xmllint:/home/jakeluo/Software/ros2_rolling/install/ament_pyflakes:/home/jakeluo/Software/ros2_rolling/install/ament_pycodestyle:/home/jakeluo/Software/ros2_rolling/install/ament_pep257:/home/jakeluo/Software/ros2_rolling/install/ament_pclint:/home/jakeluo/Software/ros2_rolling/install/ament_package:/home/jakeluo/Software/ros2_rolling/install/ament_mypy:/home/jakeluo/Software/ros2_rolling/install/ament_lint_cmake:/home/jakeluo/Software/ros2_rolling/install/ament_flake8:/home/jakeluo/Software/ros2_rolling/install/ament_copyright:/home/jakeluo/Software/ros2_rolling/install/ament_lint:/home/jakeluo/Software/ros2_rolling/install/ament_index_python:/home/jakeluo/Software/ros2_rolling/install/ament_cpplint:/home/jakeluo/Software/ros2_rolling/install/ament_cppcheck:/home/jakeluo/Software/ros2_rolling/install/ament_clang_tidy:/home/jakeluo/Software/ros2_rolling/install/ament_clang_format LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression_zstd/lib:/home/jakeluo/Software/ros2_rolling/install/zstd_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_default_plugins/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_common/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_transport/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_compression/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage_default_plugins/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_storage/lib:/home/jakeluo/Software/ros2_rolling/install/camera_info_manager/lib:/home/jakeluo/Software/ros2_rolling/install/camera_calibration_parsers/lib:/home/jakeluo/Software/ros2_rolling/install/yaml_cpp_vendor/opt/yaml_cpp_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/interactive_markers/lib:/home/jakeluo/Software/ros2_rolling/install/visualization_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/robot_state_publisher/lib:/home/jakeluo/Software/ros2_rolling/install/kdl_parser/lib:/home/jakeluo/Software/ros2_rolling/install/urdf/lib:/home/jakeluo/Software/ros2_rolling/install/urdfdom/lib:/home/jakeluo/Software/ros2_rolling/install/turtlesim/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_ros/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/test_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/ros2cli_test_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/quality_of_service_demo_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/image_transport/lib:/home/jakeluo/Software/ros2_rolling/install/message_filters/lib:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/composition/lib:/home/jakeluo/Software/ros2_rolling/install/laser_geometry/lib:/home/jakeluo/Software/ros2_rolling/install/rclpy/lib:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_action/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_action/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_wait_set/lib:/home/jakeluo/Software/ros2_rolling/install/example_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/action_tutorials_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/trajectory_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rqt_gui_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_lifecycle/lib:/home/jakeluo/Software/ros2_rolling/install/logging_demo/lib:/home/jakeluo/Software/ros2_rolling/install/image_tools/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_subscriber/lib:/home/jakeluo/Software/ros2_rolling/install/examples_rclcpp_minimal_composition/lib:/home/jakeluo/Software/ros2_rolling/install/demo_nodes_cpp_native/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp_components/lib:/home/jakeluo/Software/ros2_rolling/install/rclcpp/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_lifecycle/lib:/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/lib:/home/jakeluo/Software/ros2_rolling/install/rcl/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_implementation/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/tracetools/lib:/home/jakeluo/Software/ros2_rolling/install/tlsf/lib:/home/jakeluo/Software/ros2_rolling/install/qt_gui_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/tf2_eigen_kdl/lib:/home/jakeluo/Software/ros2_rolling/install/tf2/lib:/home/jakeluo/Software/ros2_rolling/install/stereo_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/std_srvs/lib:/home/jakeluo/Software/ros2_rolling/install/shape_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/map_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/sensor_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/nav_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/diagnostic_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/geometry_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/actionlib_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/std_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_spdlog/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_rendering/lib:/home/jakeluo/Software/ros2_rolling/install/rviz_ogre_vendor/opt/rviz_ogre_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/rttest/lib:/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosbag2_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_dynamic_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_fastrtps_shared_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rmw_dds_common/lib:/home/jakeluo/Software/ros2_rolling/install/composition_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/pendulum_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/lifecycle_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser/lib:/home/jakeluo/Software/ros2_rolling/install/rmw/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/resource_retriever/lib:/home/jakeluo/Software/ros2_rolling/install/class_loader/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_noop/lib:/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:/home/jakeluo/Software/ros2_rolling/install/performance_test_fixture/lib:/home/jakeluo/Software/ros2_rolling/install/osrf_testing_tools_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/orocos_kdl/lib:/home/jakeluo/Software/ros2_rolling/install/mimick_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/keyboard_handler/lib:/home/jakeluo/Software/ros2_rolling/install/cyclonedds/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_utils/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_posh/lib:/home/jakeluo/Software/ros2_rolling/install/iceoryx_binding_c/lib:/home/jakeluo/Software/ros2_rolling/install/google_benchmark_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/fastrtps/lib:/home/jakeluo/Software/ros2_rolling/install/fastcdr/lib:/home/jakeluo/Software/ros2_rolling/install/console_bridge_vendor/lib:/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12

@@ -1,0 +1,757 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found droneinterfaces: 0.0.0 (/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake)
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include;$<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[35m[1mScanning dependencies of target drone[0m
+[35m[1mScanning dependencies of target dronemanager[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+In file included from [01m[K/usr/local/include/pangolin/gl/gl.h:295[m[K,
+                 from [01m[K/usr/local/include/pangolin/handler/handler.h:31[m[K,
+                 from [01m[K/usr/local/include/pangolin/display/widgets.h:32[m[K,
+                 from [01m[K/usr/local/include/pangolin/pangolin.h:40[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlTexture::CopyFrom(const pangolin::GlTexture&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:334:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglCopyImageSubDataNV[m[K’ was not declared in this scope
+  334 |     [01;31m[KglCopyImageSubDataNV[m[K(tex.tid, GL_TEXTURE_2D, 0, 0, 0, 0,
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlRenderBuffer::Reinitialise(GLint, GLint, GLint)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:508:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteRenderbuffersEXT[m[K’ was not declared in this scope
+  508 |         [01;31m[KglDeleteRenderbuffersEXT[m[K(1, &rbid);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:513:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenRenderbuffersEXT[m[K’ was not declared in this scope
+  513 |     [01;31m[KglGenRenderbuffersEXT[m[K(1, &rbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:514:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindRenderbufferEXT[m[K’ was not declared in this scope
+  514 |     [01;31m[KglBindRenderbufferEXT[m[K(GL_RENDERBUFFER_EXT, rbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:515:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglRenderbufferStorageEXT[m[K’ was not declared in this scope
+  515 |     [01;31m[KglRenderbufferStorageEXT[m[K(GL_RENDERBUFFER_EXT, internal_format, width, height);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In destructor ‘[01m[Kpangolin::GlRenderBuffer::~GlRenderBuffer()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:522:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteRenderbuffersEXT[m[K’ was not declared in this scope
+  522 |         [01;31m[KglDeleteRenderbuffersEXT[m[K(1, &rbid);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In destructor ‘[01m[Kpangolin::GlFramebuffer::~GlFramebuffer()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:571:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteFramebuffersEXT[m[K’ was not declared in this scope
+  571 |         [01;31m[KglDeleteFramebuffersEXT[m[K(1, &fbid);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:578:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+  578 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:587:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+  587 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:597:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+  597 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In constructor ‘[01m[Kpangolin::GlFramebuffer::GlFramebuffer(pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlTexture&, pangolin::GlRenderBuffer&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:608:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+  608 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Bind() const[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:619:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+  619 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:620:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglDrawBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglDrawBuffer[m[K’?
+  620 |     [01;31m[KglDrawBuffers[m[K( attachments, attachment_buffers );
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KglDrawBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Reinitialise()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:626:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteFramebuffersEXT[m[K’ was not declared in this scope
+  626 |         [01;31m[KglDeleteFramebuffersEXT[m[K(1, &fbid);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:628:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenFramebuffersEXT[m[K’ was not declared in this scope
+  628 |     [01;31m[KglGenFramebuffersEXT[m[K(1, &fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::Unbind() const[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:633:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglDrawBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglDrawBuffer[m[K’?
+  633 |     [01;31m[KglDrawBuffers[m[K( 1, attachment_buffers );
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KglDrawBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:634:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+  634 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, 0);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[KGLenum pangolin::GlFramebuffer::AttachColour(pangolin::GlTexture&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:642:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+  642 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:643:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglFramebufferTexture2DEXT[m[K’ was not declared in this scope
+  643 |     [01;31m[KglFramebufferTexture2DEXT[m[K(GL_FRAMEBUFFER_EXT, color_attachment, GL_TEXTURE_2D, tex.tid, 0);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlFramebuffer::AttachDepth(pangolin::GlRenderBuffer&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:654:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindFramebufferEXT[m[K’ was not declared in this scope
+  654 |     [01;31m[KglBindFramebufferEXT[m[K(GL_FRAMEBUFFER_EXT, fbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:656:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglFramebufferRenderbufferEXT[m[K’ was not declared in this scope
+  656 |     [01;31m[KglFramebufferRenderbufferEXT[m[K(GL_FRAMEBUFFER_EXT, GL_DEPTH_ATTACHMENT_EXT, GL_RENDERBUFFER_EXT, rb.rbid);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Free()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:712:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglSelectBuffer[m[K’?
+  712 |         [01;31m[KglDeleteBuffers[m[K(1, &bo);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[KglSelectBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Reinitialise(pangolin::GlBufferType, GLsizeiptr, GLenum, const void*)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:729:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGenBuffers[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+  729 |         [01;31m[KglGenBuffers[m[K(1, &bo);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KglReadBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:737:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+  737 |     [01;31m[KglBufferData[m[K(buffer_type, size_bytes, data, gluse);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KGlBufferData[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Bind() const[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:743:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindBuffer[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+  743 |     [01;31m[KglBindBuffer[m[K(buffer_type, bo);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KglReadBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Unbind() const[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:748:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindBuffer[m[K’ was not declared in this scope; did you mean ‘[01m[KglReadBuffer[m[K’?
+  748 |     [01;31m[KglBindBuffer[m[K(buffer_type, 0);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KglReadBuffer[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Upload(const GLvoid*, GLsizeiptr, GLintptr)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:758:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferSubData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+  758 |     [01;31m[KglBufferSubData[m[K(buffer_type,offset,size_bytes,data);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |     [32m[KGlBufferData[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBufferData::Download(GLvoid*, GLsizeiptr, GLintptr) const[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:765:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetBufferSubData[m[K’ was not declared in this scope
+  765 |     [01;31m[KglGetBufferSubData[m[K(buffer_type, offset, size_bytes, data);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:[m[K In member function ‘[01m[Kvoid pangolin::GlBuffer::Resize(GLuint)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:841:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetBufferSubData[m[K’ was not declared in this scope
+  841 |         [01;31m[KglGetBufferSubData[m[K(buffer_type, 0, backup_size_bytes, backup);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:842:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+  842 |         [01;31m[KglBufferData[m[K(buffer_type, new_num_elements*GlDataTypeBytes(datatype)*count_per_element, 0, gluse);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KGlBufferData[m[K
+[01m[K/usr/local/include/pangolin/gl/gl.hpp:843:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglBufferSubData[m[K’ was not declared in this scope; did you mean ‘[01m[KGlBufferData[m[K’?
+  843 |         [01;31m[KglBufferSubData[m[K(buffer_type, 0, backup_size_bytes, backup);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[KGlBufferData[m[K
+In file included from [01m[K/usr/local/include/pangolin/plot/plotter.h:37[m[K,
+                 from [01m[K/usr/local/include/pangolin/pangolin.h:48[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In static member function ‘[01m[Kstatic void pangolin::GlSlUtilities::UseNone()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:242:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+  242 |         [01;31m[KglUseProgram[m[K(0);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[KGlSlProgram[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In function ‘[01m[Kbool pangolin::IsLinkSuccessPrintLog(GLhandleARB)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:331:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramiv[m[K’ was not declared in this scope
+  331 |     [01;31m[KglGetProgramiv[m[K(prog, GL_LINK_STATUS, &status);
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:337:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramInfoLog[m[K’ was not declared in this scope
+  337 |         [01;31m[KglGetProgramInfoLog[m[K(prog, PROGRAM_LOG_MAX_LEN, &len, infolog);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/local/include/pangolin/plot/plotter.h:37[m[K,
+                 from [01m[K/usr/local/include/pangolin/pangolin.h:48[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapDrawer.h:27[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In function ‘[01m[Kbool pangolin::IsCompileSuccessPrintLog(GLhandleARB, const string&, const string&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:351:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetShaderiv[m[K’ was not declared in this scope; did you mean ‘[01m[KglGetMapiv[m[K’?
+  351 |     [01;31m[KglGetShaderiv[m[K(shader, GL_COMPILE_STATUS, &status);
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KglGetMapiv[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:357:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetShaderInfoLog[m[K’ was not declared in this scope
+  357 |         [01;31m[KglGetShaderInfoLog[m[K(shader, SHADER_LOG_MAX_LEN, &len, infolog);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In destructor ‘[01m[Kpangolin::GlSlProgram::~GlSlProgram()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:388:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteProgram[m[K’ was not declared in this scope
+  388 |         [01;31m[KglDeleteProgram[m[K(prog);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kbool pangolin::GlSlProgram::AddPreprocessedShader(pangolin::GlSlShaderType, const string&, const string&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:408:16:[m[K [01;31m[Kerror: [m[K‘[01m[KglCreateProgram[m[K’ was not declared in this scope
+  408 |         prog = [01;31m[KglCreateProgram[m[K();
+      |                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:411:26:[m[K [01;31m[Kerror: [m[K‘[01m[KglCreateShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlVertexShader[m[K’?
+  411 |     GLhandleARB shader = [01;31m[KglCreateShader[m[K(shader_type);
+      |                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                          [32m[KGlSlVertexShader[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:413:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglShaderSource[m[K’ was not declared in this scope
+  413 |     [01;31m[KglShaderSource[m[K(shader, 1, &source, NULL);
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:414:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglCompileShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlComputeShader[m[K’?
+  414 |     [01;31m[KglCompileShader[m[K(shader);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |     [32m[KGlSlComputeShader[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:417:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglAttachShader[m[K’ was not declared in this scope
+  417 |         [01;31m[KglAttachShader[m[K(prog, shader);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::ClearShaders()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:511:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDetachShader[m[K’ was not declared in this scope
+  511 |         [01;31m[KglDetachShader[m[K(prog, shaders[i]);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:512:9:[m[K [01;31m[Kerror: [m[K‘[01m[KglDeleteShader[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlVertexShader[m[K’?
+  512 |         [01;31m[KglDeleteShader[m[K(shaders[i]);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+      |         [32m[KGlSlVertexShader[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kbool pangolin::GlSlProgram::Link()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:645:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglLinkProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+  645 |     [01;31m[KglLinkProgram[m[K(prog);
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KGlSlProgram[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::Bind()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:652:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+  652 |     [01;31m[KglUseProgram[m[K(prog);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KGlSlProgram[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SaveBind()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:658:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+  658 |     [01;31m[KglUseProgram[m[K(prog);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KGlSlProgram[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::Unbind()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:663:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUseProgram[m[K’ was not declared in this scope; did you mean ‘[01m[KGlSlProgram[m[K’?
+  663 |     [01;31m[KglUseProgram[m[K(prev_prog);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KGlSlProgram[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetAttributeHandle(const string&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:668:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetAttribLocation[m[K’ was not declared in this scope
+  668 |     return [01;31m[KglGetAttribLocation[m[K(prog, name.c_str());
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetUniformHandle(const string&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:673:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetUniformLocation[m[K’ was not declared in this scope
+  673 |     return [01;31m[KglGetUniformLocation[m[K(prog, name.c_str());
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:678:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform1i[m[K’ was not declared in this scope
+  678 |     [01;31m[KglUniform1i[m[K( GetUniformHandle(name), x);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:683:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform2i[m[K’ was not declared in this scope
+  683 |     [01;31m[KglUniform2i[m[K( GetUniformHandle(name), x1, x2);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int, int)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:688:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform3i[m[K’ was not declared in this scope
+  688 |     [01;31m[KglUniform3i[m[K( GetUniformHandle(name), x1, x2, x3);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, int, int, int, int)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:693:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4i[m[K’ was not declared in this scope
+  693 |     [01;31m[KglUniform4i[m[K( GetUniformHandle(name), x1, x2, x3, x4);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:698:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform1f[m[K’ was not declared in this scope
+  698 |     [01;31m[KglUniform1f[m[K( GetUniformHandle(name), f);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:703:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform2f[m[K’ was not declared in this scope
+  703 |     [01;31m[KglUniform2f[m[K( GetUniformHandle(name), f1,f2);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float, float)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:708:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform3f[m[K’ was not declared in this scope
+  708 |     [01;31m[KglUniform3f[m[K( GetUniformHandle(name), f1,f2,f3);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, float, float, float, float)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:713:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4f[m[K’ was not declared in this scope
+  713 |     [01;31m[KglUniform4f[m[K( GetUniformHandle(name), f1,f2,f3,f4);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, pangolin::Colour)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:718:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniform4f[m[K’ was not declared in this scope
+  718 |     [01;31m[KglUniform4f[m[K( GetUniformHandle(name), c.r, c.g, c.b, c.a);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetUniform(const string&, const pangolin::OpenGlMatrix&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:728:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglUniformMatrix4fv[m[K’ was not declared in this scope
+  728 |     [01;31m[KglUniformMatrix4fv[m[K( GetUniformHandle(name), 1, GL_FALSE, m);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::BindPangolinDefaultAttribLocationsAndLink()[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:756:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglBindAttribLocation[m[K’ was not declared in this scope
+  756 |     [01;31m[KglBindAttribLocation[m[K(prog, DEFAULT_LOCATION_POSITION, DEFAULT_NAME_POSITION);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[KGLint pangolin::GlSlProgram::GetProgramResourceIndex(const string&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:766:12:[m[K [01;31m[Kerror: [m[K‘[01m[KglGetProgramResourceIndex[m[K’ was not declared in this scope; did you mean ‘[01m[KGetProgramResourceIndex[m[K’?
+  766 |     return [01;31m[KglGetProgramResourceIndex[m[K(prog, GL_SHADER_STORAGE_BLOCK, name.c_str());
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |            [32m[KGetProgramResourceIndex[m[K
+[01m[K/usr/local/include/pangolin/gl/glsl.h:[m[K In member function ‘[01m[Kvoid pangolin::GlSlProgram::SetShaderStorageBlock(const string&, const int&)[m[K’:
+[01m[K/usr/local/include/pangolin/gl/glsl.h:771:5:[m[K [01;31m[Kerror: [m[K‘[01m[KglShaderStorageBlockBinding[m[K’ was not declared in this scope
+  771 |     [01;31m[KglShaderStorageBlockBinding[m[K(prog, GetProgramResourceIndex(name), bindingIndex);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:[m[K At global scope:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:74:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   62 | D, D>, Matrix<double,D,D>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+      |                                    [01;35m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:82:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   59 | >, Matrix<double, Di, Dj>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+      |                                    [01;35m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:82:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   60 | >, Matrix<double, Dj, Di>::Flags & [01;35m[KAlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+      |                                    [01;35m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:36[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/se3quat.h:43:38:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+   43 |       EIGEN_MAKE_ALIGNED_OPERATOR_NEW[01;35m[K;[m[K
+      |                                      [01;35m[K^[m[K
+      |                                      [31m[K-[m[K
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<3, Eigen::Matrix<double, 3, 1> >[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_sba.h:40:35:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<6, g2o::SE3Quat>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:59:33:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<2, Eigen::Matrix<double, 2, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSE3Expmap>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:80:35:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<3, Eigen::Matrix<double, 3, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSE3Expmap>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:112:41:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h: In instantiation of ‘[01m[Kclass g2o::BaseVertex<7, g2o::Sim3>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:48:35:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:62:72:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   62 | , D, D>, Matrix<double,D,D>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned >  HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<7, g2o::Sim3, g2o::VertexSim3Expmap, g2o::VertexSim3Expmap>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:99:27:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h: In instantiation of ‘[01m[Kclass g2o::BaseBinaryEdge<2, Eigen::Matrix<double, 2, 1>, g2o::VertexSBAPointXYZ, g2o::VertexSim3Expmap>[m[K’:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:130:36:[m[K   required from here
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:59:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   59 | Dj>, Matrix<double, Di, Dj>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:35[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_binary_edge.h:60:80:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::AlignedBit[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   60 | Di>, Matrix<double, Dj, Di>::[01;35m[KFlags & AlignedBit[m[K ? Aligned : Unaligned > HessianBlockTransposedType;
+      |                              [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/Eigen/Core:363[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/jacobian_workspace.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/optimizable_graph.h:41[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/../core/base_vertex.h:30[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/Eigen/src/Core/util/Constants.h:162:37:[m[K [01;36m[Knote: [m[Kdeclared here
+  162 | IGEN_DEPRECATED const unsigned int [01;36m[KAlignedBit[m[K = 0x80;
+      |                                    [01;36m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/usr/include/c++/9/bits/unique_ptr.h: In instantiation of ‘[01m[Ktypename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = ORB_SLAM2::System; _Args = {ORB_SLAM2::System}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<ORB_SLAM2::System>][m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:13:137:[m[K   required from here
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:857:30:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’
+  857 |     { return unique_ptr<_Tp>([01;31m[Knew _Tp(std::forward<_Args>(__args)...)[m[K); }
+      |                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;36m[Knote: [m[K‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’ is implicitly deleted because the default definition would be ill-formed:
+   49 | class [01;36m[KSystem[m[K
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+   49 | class [01;31m[KSystem[m[K
+      |       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:49:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+   49 | class [01;31m[KSystem[m[K
+      |       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+[ 75%] [32m[1mLinking CXX executable dronemanager[0m
+make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+[ 75%] Built target dronemanager
+make: *** [Makefile:141：all] 错误 2

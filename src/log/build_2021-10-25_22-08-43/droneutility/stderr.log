@@ -1,0 +1,6 @@
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+THR
+    linked by target "dronemanager" in directory /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility
+
+make: *** [Makefile:310：cmake_check_build_system] 错误 1

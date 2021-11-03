@@ -1,0 +1,15 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/threadsafequeue.cpp:[m[K In lambda function:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/threadsafequeue.cpp:32:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+   32 |     data_cond.wait(lk, [this]{return !this->data_queue.empty[01;31m[K{[m[K};});
+      |                                                             [01;31m[K^[m[K
+      |                                                             [32m[K;[m[K
+make[2]: *** [CMakeFiles/threadsafequeue.dir/build.make:63：CMakeFiles/threadsafequeue.dir/src/threadsafequeue.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:136：CMakeFiles/threadsafequeue.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+/usr/bin/ld: CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: in function `dronenamespace::DroneManager::recvVideoThread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+droneManager.cpp:(.text+0x1c29): undefined reference to `ThreadSafeQueue<AVFrame>::push(AVFrame const&)'
+/usr/bin/ld: droneManager.cpp:(.text+0x1d6c): undefined reference to `ThreadSafeQueue<AVFrame>::size() const'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:140：dronemanager] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:109：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

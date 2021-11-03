@@ -1,0 +1,7 @@
+/usr/bin/ld: CMakeFiles/drone.dir/src/drone.cpp.o: undefined reference to symbol '_ZN2cv6String10deallocateEv'
+/usr/bin/ld: /usr/local/lib/libopencv_core.so.3.4: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/drone.dir/build.make:159：drone] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+make: *** [Makefile:141：all] 错误 2

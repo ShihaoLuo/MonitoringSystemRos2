@@ -1,0 +1,15 @@
+In file included from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/MapPoint.h:24[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/FrameDrawer.h:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Viewer.h:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/Tracking.h:28[m[K,
+                 from [01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/KeyFrame.h:25:10:[m[K [01;31m[Kfatal error: [m[KThirdparty/DBoW2/DBoW2/BowVector.h: 没有那个文件或目录
+   25 | #include [01;31m[K"Thirdparty/DBoW2/DBoW2/BowVector.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+make: *** [Makefile:141：all] 错误 2

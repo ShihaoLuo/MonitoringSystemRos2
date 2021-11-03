@@ -1,0 +1,46 @@
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:50:31:[m[K [01;31m[Kerror: [m[K‘[01m[KThreadSafeQueue[m[K’ was not declared in this scope
+   50 |         std::map<std::string, [01;31m[KThreadSafeQueue[m[K<AVFrame>*> imagequeuepool;
+      |                               [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:50:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   50 |         std::map<std::string, ThreadSafeQueue<AVFrame[01;31m[K>[m[K*> imagequeuepool;
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:50:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:50:56:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K>[m[K’ token
+   50 |         std::map<std::string, ThreadSafeQueue<AVFrame>*[01;31m[K>[m[K imagequeuepool;
+      |                                                        [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:72:1:[m[K [01;31m[Kerror: [m[K‘[01m[KThreadSafeQueue[m[K’ does not name a type
+   72 | [01;31m[KThreadSafeQueue[m[K<T>::ThreadSafeQueue(_InputIterator first, _InputIterator last)
+      | [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:81:1:[m[K [01;31m[Kerror: [m[K‘[01m[KThreadSafeQueue[m[K’ does not name a type
+   81 | [01;31m[KThreadSafeQueue[m[K<T>::ThreadSafeQueue(const container_type &c):data_queue(c){}
+      | [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:84:1:[m[K [01;31m[Kerror: [m[K‘[01m[KThreadSafeQueue[m[K’ does not name a type
+   84 | [01;31m[KThreadSafeQueue[m[K<T>::ThreadSafeQueue(std::initializer_list<value_type> list):ThreadSafeQueue(list.begin(), list.end()){}
+      | [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:87:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<[m[K’ token
+   87 | void ThreadSafeQueue[01;31m[K<[m[KT>::push(const value_type& new_value)
+      |                     [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:95:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<[m[K’ token
+   95 | auto ThreadSafeQueue[01;31m[K<[m[KT>::wait_and_pop()
+      |                     [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:105:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<[m[K’ token
+  105 | bool ThreadSafeQueue[01;31m[K<[m[KT>::try_pop(value_type& value)
+      |                     [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:118:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<[m[K’ token
+  118 | auto ThreadSafeQueue[01;31m[K<[m[KT>::empty() const->decltype(data_queue.empty())
+      |                     [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:125:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<[m[K’ token
+  125 | auto ThreadSafeQueue[01;31m[K<[m[KT>::size() const->decltype(data_queue.size())
+      |                     [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::droneRegister(std::shared_ptr<droneinterfaces::srv::DroneRegister_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneRegister_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:247:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimagequeuepool[m[K’ was not declared in this scope
+  247 |     [01;31m[Kimagequeuepool[m[K[tmp.ip] = &tmpqueue;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::recvVideoThread(std::string)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:291:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kimagequeuepool[m[K’ was not declared in this scope
+  291 |                     [01;31m[Kimagequeuepool[m[K[ip] -> push(rgbframe);
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:63：CMakeFiles/dronemanager.dir/src/droneManager.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

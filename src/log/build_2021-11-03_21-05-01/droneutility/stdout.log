@@ -1,0 +1,52 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found droneinterfaces: 0.0.0 (/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake)
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include;$<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[35m[1mScanning dependencies of target ORB_SLAM2[0m
+[35m[1mScanning dependencies of target drone[0m
+[35m[1mScanning dependencies of target dronemanager[0m
+[  8%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/System.cc.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Tracking.cc.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/LocalMapping.cc.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/ORBextractor.cc.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/FrameDrawer.cc.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/MapPoint.cc.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Converter.cc.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/ORBmatcher.cc.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/LoopClosing.cc.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/KeyFrame.cc.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Map.cc.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/MapDrawer.cc.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Optimizer.cc.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/PnPsolver.cc.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Frame.cc.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/KeyFrameDatabase.cc.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Sim3Solver.cc.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Initializer.cc.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/ORB_SLAM2.dir/home/jakeluo/Software/ORB_SLAM2/src/Viewer.cc.o[0m
+[ 91%] [32m[1mLinking CXX executable dronemanager[0m
+[ 91%] Built target dronemanager
+[ 95%] [32m[1mLinking CXX shared library libORB_SLAM2.so[0m
+[ 95%] Built target ORB_SLAM2

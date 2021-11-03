@@ -6,11 +6,14 @@
                 "${default}",
                 "/opt/ros/rolling/include",
                 "./**",
-                "${workspaceFolder}/src/droneutility/include"
+                "${workspaceFolder}/src/droneutility/include/**",
+                "${workspaceFolder}/src/build/**",
+                "/home/jakeluo/Software/ORB_SLAM2/include",
+                "/home/jakeluo/Software/ORB_SLAM2"
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
-            "cppStandard": "c++14",
+            "cppStandard": "c++17",
             "intelliSenseMode": "linux-clang-x64"
         }
     ],

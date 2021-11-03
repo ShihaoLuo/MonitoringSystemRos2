@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target dronemanager[0m
+[ 50%] Built target drone
+[ 75%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid ThreadSafeQueue<T>::push(const value_type&)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:27:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Krint[m[K’?
+   27 |     std::[01;31m[Kprint[m[K("1");
+      |          [01;31m[K^~~~~[m[K
+      |          [32m[Krint[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:29:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Krint[m[K’?
+   29 |     std::[01;31m[Kprint[m[K("2");
+      |          [01;31m[K^~~~~[m[K
+      |          [32m[Krint[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:31:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Krint[m[K’?
+   31 |     std::[01;31m[Kprint[m[K("3");
+      |          [01;31m[K^~~~~[m[K
+      |          [32m[Krint[m[K
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:63：CMakeFiles/dronemanager.dir/src/droneManager.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

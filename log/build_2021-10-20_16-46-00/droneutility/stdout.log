@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target datamanager[0m
-[ 33%] Built target send
-[ 66%] Built target recv
-[ 83%] [32mBuilding CXX object CMakeFiles/datamanager.dir/src/dataManager.cpp.o[0m

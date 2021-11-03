@@ -16,7 +16,11 @@
 #include "h264decoder.hpp"
 #include <libavcodec/avcodec.h>
 #include <atomic>
-
+#include <queue>
+#include "droneinterfaces/msg/frame_array.hpp"
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 namespace dronenamespace
 {
@@ -37,19 +41,17 @@ namespace dronenamespace
         
         void quit();
 
-        int keyloop();
 
         void printDrone();
 
         void spin();
 
-void recvVideoThread(std::string ip);
+        void recvVideoThread(std::string ip);
         private:
-        H264Decoder decoder;
-        ConverterRGB24 converter;
+        std::map<std::string, std::queue<std::vector<unsigned char>>> framepool;
         rclcpp::Node::SharedPtr nh_;
         size_t count_;
-        rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+        // rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
         rclcpp::Service<droneinterfaces::srv::DroneRegister>::SharedPtr registerServer_;
         rclcpp::Service<droneinterfaces::srv::DroneController>::SharedPtr controllerServer_;
         std_msgs::msg::String cmd;
@@ -57,7 +59,8 @@ void recvVideoThread(std::string ip);
         std::map<std::string, drone> dronepool;
 
         void recvThread();
-        
+        void push(AVFrame frame, std::string ip);
+        void saveFrame(const AVFrame &frame, int idx);
         void droneRegister(const std::shared_ptr<droneinterfaces::srv::DroneRegister::Request> request,
         std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response);
         void droneController(const std::shared_ptr<droneinterfaces::srv::DroneController::Request> request,

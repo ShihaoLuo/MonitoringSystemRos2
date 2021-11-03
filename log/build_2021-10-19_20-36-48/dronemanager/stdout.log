@@ -1,3 +1,0 @@
-[35m[1mScanning dependencies of target scandrone[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/scandrone.dir/src/scandrone.cpp.o[0m
-[100%] [32m[1mLinking CXX executable scandrone[0m

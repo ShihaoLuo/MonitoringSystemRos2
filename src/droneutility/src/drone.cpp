@@ -3,12 +3,15 @@
 using namespace dronenamespace;
 
 
-Drone::Drone(const char* name_, const char* ip_)
+Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_, const char* path_to_setting_)
 {
+    path_to_vocaulary = path_to_vocaulary_;
+    path_to_setting = path_to_setting_;
     name = name_;
     ip = ip_;
     nh_ = rclcpp::Node::make_shared(name);
     client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister");
+    // frameSubscription_ = nh_ -> create_subscription<droneinterfaces::msg::FrameArray>(name+"_Framearray", 1, )
     auto request = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
     request->dronename = name;
     request->ip = ip;
@@ -27,6 +30,7 @@ Drone::Drone(const char* name_, const char* ip_)
     rclcpp::spin_until_future_complete(nh_, result);
     dronestatus = result.get()->status;
     std::printf("drone status:%d\n", dronestatus);
+    ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
 }
     
 void Drone::quit()
@@ -102,7 +106,7 @@ void Drone::spin()
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    Drone drone(argv[1], argv[2]);
+    Drone drone(argv[1], argv[2], argv[3], argv[4]);
     drone.spin();
     rclcpp::shutdown();
     return 0;

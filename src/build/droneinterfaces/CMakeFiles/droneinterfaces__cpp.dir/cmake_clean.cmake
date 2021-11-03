@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__cpp"
+  "rosidl_generator_cpp/droneinterfaces/msg/detail/frame_array__builder.hpp"
+  "rosidl_generator_cpp/droneinterfaces/msg/detail/frame_array__struct.hpp"
+  "rosidl_generator_cpp/droneinterfaces/msg/detail/frame_array__traits.hpp"
+  "rosidl_generator_cpp/droneinterfaces/msg/frame_array.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_controller__builder.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_controller__struct.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_controller__traits.hpp"

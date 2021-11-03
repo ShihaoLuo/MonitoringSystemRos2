@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target threadsafequeue[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/threadsafequeue.dir/src/threadsafequeue.cpp.o[0m
+[ 50%] Built target drone
+[ 66%] [32m[1mLinking CXX executable dronemanager[0m

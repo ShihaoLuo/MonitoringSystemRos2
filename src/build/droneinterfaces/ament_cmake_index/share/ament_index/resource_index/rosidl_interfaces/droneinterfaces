@@ -1,3 +1,5 @@
+msg/FrameArray.idl
+msg/FrameArray.msg
 srv/DroneController.idl
 srv/DroneController.srv
 srv/DroneController_Request.msg

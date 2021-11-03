@@ -4,7 +4,8 @@
   "template_dir": "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneRegister.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneController.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneController.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl"
   ],
   "target_dependencies": [
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
@@ -21,6 +22,7 @@
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneRegister.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneController.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneController.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl"
   ]
 }

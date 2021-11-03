@@ -1,4 +1,0 @@
-Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/test1': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/build/test1 -- -j12 -l12
-Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/test1' returned '0': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/build/test1 -- -j12 -l12
-Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/test1': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/build/test1
-Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/build/test1' returned '0': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/build/test1

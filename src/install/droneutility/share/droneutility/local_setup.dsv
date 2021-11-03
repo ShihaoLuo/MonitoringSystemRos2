@@ -1,2 +1,1 @@
-source;share/droneutility/environment/ament_prefix_path.sh
-source;share/droneutility/environment/path.sh
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/ament_cmake_environment_hooks/local_setup.dsv

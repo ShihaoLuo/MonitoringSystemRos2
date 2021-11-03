@@ -1,7 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kint dronenamespace::Drone::keyloop()[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:61:15:[m[K [01;31m[Kerror: [m[KISO C++ forbids comparison between pointer and integer [[01;31m[K-fpermissive[m[K]
-   61 |         if(c==[01;31m[K'q'[m[K)
-      |               [01;31m[K^~~[m[K
-make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:84：CMakeFiles/drone.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

@@ -1,5 +1,0 @@
-[35m[1mScanning dependencies of target datamanager[0m
-[ 50%] Built target recv
-[ 50%] Built target send
-[ 75%] Built target drone
-[ 87%] [32mBuilding CXX object CMakeFiles/datamanager.dir/src/dataManager.cpp.o[0m

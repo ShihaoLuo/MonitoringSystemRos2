@@ -17,9 +17,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include"
+  "/home/jakeluo/Software/ORB_SLAM2/include"
+  "/home/jakeluo/Software/ORB_SLAM2"
+  "/usr/local/include/eigen3"
+  "/usr/include/eigen3"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include"
   "/home/jakeluo/Software/ros2_rolling/install/rclcpp/include"
   "/home/jakeluo/Software/ros2_rolling/install/std_msgs/include"
+  "/usr/local/include/opencv"
   "/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/include"
   "/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/include"
   "/home/jakeluo/Software/ros2_rolling/install/rcl/include"

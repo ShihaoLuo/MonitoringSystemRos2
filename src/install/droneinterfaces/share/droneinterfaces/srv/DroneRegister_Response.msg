@@ -1,2 +1,1 @@
-
-int32 status
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneRegister_Response.msg

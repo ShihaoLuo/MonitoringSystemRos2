@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target threadsafequeue[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/threadsafequeue.dir/src/threadsafequeue.cpp.o[0m
+[ 50%] Built target drone
+[ 66%] [32m[1mLinking CXX executable dronemanager[0m
+[ 83%] [32m[1mLinking CXX static library libthreadsafequeue.a[0m
+[ 83%] Built target threadsafequeue
+/usr/bin/ld: CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: in function `dronenamespace::DroneManager::recvVideoThread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+droneManager.cpp:(.text+0x1c29): undefined reference to `ThreadSafeQueue<AVFrame>::push(AVFrame const&)'
+/usr/bin/ld: droneManager.cpp:(.text+0x1d6c): undefined reference to `ThreadSafeQueue<AVFrame>::size() const'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:140：dronemanager] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:109：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

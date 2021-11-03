@@ -1,8 +1,1 @@
-srv/DroneController.idl
-srv/DroneController.srv
-srv/DroneController_Request.msg
-srv/DroneController_Response.msg
-srv/DroneRegister.idl
-srv/DroneRegister.srv
-srv/DroneRegister_Request.msg
-srv/DroneRegister_Response.msg
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/droneinterfaces

@@ -1,4 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/send.cpp:12:5:[m[K [01;35m[Kwarning: [m[Kfirst argument of ‘[01m[Kint main(char**)[m[K’ should be ‘[01m[Kint[m[K’ [[01;35m[K-Wmain[m[K]
-   12 | int [01;35m[Kmain[m[K(char** argv)
-      |     [01;35m[K^~~~[m[K
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/send.cpp:12:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint main(char**)[m[K’ takes only zero or two arguments [[01;35m[K-Wmain[m[K]

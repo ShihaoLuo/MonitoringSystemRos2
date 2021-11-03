@@ -1,7 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::Drone::registryDrone(const char*, const char*)[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:70:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kname[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-   70 | void Drone::registryDrone([01;35m[Kconst char* name[m[K, const char* ip)
-      |                           [01;35m[K~~~~~~~~~~~~^~~~[m[K
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:70:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kip[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-   70 | void Drone::registryDrone(const char* name, [01;35m[Kconst char* ip[m[K)
-      |                                             [01;35m[K~~~~~~~~~~~~^~[m[K
