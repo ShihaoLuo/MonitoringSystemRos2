@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_c.h

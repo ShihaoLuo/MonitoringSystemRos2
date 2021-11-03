@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

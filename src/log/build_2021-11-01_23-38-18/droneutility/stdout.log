@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target dronemanager[0m
-[ 50%] Built target drone
-[ 75%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
-[100%] [32m[1mLinking CXX executable dronemanager[0m

@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_cpp/droneinterfaces/msg/frame_array.hpp

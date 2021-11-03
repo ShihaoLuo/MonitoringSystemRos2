@@ -1,2 +1,0 @@
-string dronename
-string ip

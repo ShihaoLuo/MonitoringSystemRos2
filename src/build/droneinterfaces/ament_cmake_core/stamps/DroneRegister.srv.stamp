@@ -1,4 +1,0 @@
-string dronename
-string ip
----
-int32 status

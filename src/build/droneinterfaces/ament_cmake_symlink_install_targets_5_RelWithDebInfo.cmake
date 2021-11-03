@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so" "TARGETS" "droneinterfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

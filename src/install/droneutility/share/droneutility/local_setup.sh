@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/ament_cmake_environment_hooks/local_setup.sh

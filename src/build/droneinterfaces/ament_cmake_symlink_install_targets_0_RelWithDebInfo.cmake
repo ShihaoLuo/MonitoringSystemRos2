@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/libdroneinterfaces__rosidl_typesupport_fastrtps_c.so" "TARGETS" "droneinterfaces__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

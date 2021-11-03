@@ -1,5 +1,0 @@
-CMake Error at CMakeLists.txt:43 (target_include_directories):
-  target_include_directories called with invalid arguments
-
-
-make: *** [Makefile:310：cmake_check_build_system] 错误 1

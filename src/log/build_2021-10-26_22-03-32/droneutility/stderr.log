@@ -1,8 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kint dronenamespace::DroneManager::keyloop()[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
-   52 |         [01;31m[Kpublisher_[m[K->publish(cmd);
-      |         [01;31m[K^~~~~~~~~~[m[K
-      |         [32m[Krcl_publisher_t[m[K
-make[2]: *** [CMakeFiles/dronemanager.dir/build.make:63：CMakeFiles/dronemanager.dir/src/droneManager.cpp.o] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

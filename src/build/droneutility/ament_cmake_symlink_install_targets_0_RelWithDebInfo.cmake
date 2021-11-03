@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/dronemanager" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility/drone" "TARGETS" "dronemanager" "drone" "DESTINATION" "lib/droneutility")

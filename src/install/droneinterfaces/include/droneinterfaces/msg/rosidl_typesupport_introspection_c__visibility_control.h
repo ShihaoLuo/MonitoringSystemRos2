@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h

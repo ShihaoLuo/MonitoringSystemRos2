@@ -1,1 +1,0 @@
-/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneRegister_Request.msg
