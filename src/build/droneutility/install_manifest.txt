@@ -2,9 +2,7 @@
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/drone
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/package_run_dependencies/droneutility
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/parent_prefix_path/droneutility
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.sh
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.dsv
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.sh
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.dsv
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.bash
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.sh

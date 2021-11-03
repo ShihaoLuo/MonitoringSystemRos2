@@ -95,9 +95,7 @@
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/FrameArray.msg
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/package_run_dependencies/droneinterfaces
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/parent_prefix_path/droneinterfaces
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.sh
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.dsv
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.sh
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.dsv
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.bash
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.sh
