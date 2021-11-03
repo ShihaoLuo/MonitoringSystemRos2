@@ -1,0 +1,14 @@
+source;share/droneinterfaces/hook/cmake_prefix_path.ps1
+source;share/droneinterfaces/hook/cmake_prefix_path.dsv
+source;share/droneinterfaces/hook/cmake_prefix_path.sh
+source;share/droneinterfaces/hook/ld_library_path_lib.ps1
+source;share/droneinterfaces/hook/ld_library_path_lib.dsv
+source;share/droneinterfaces/hook/ld_library_path_lib.sh
+source;share/droneinterfaces/hook/pythonpath.ps1
+source;share/droneinterfaces/hook/pythonpath.dsv
+source;share/droneinterfaces/hook/pythonpath.sh
+source;share/droneinterfaces/local_setup.bash
+source;share/droneinterfaces/local_setup.dsv
+source;share/droneinterfaces/local_setup.ps1
+source;share/droneinterfaces/local_setup.sh
+source;share/droneinterfaces/local_setup.zsh

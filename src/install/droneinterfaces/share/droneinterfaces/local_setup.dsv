@@ -1,0 +1,4 @@
+source;share/droneinterfaces/environment/ament_prefix_path.sh
+source;share/droneinterfaces/environment/library_path.sh
+source;share/droneinterfaces/environment/path.sh
+source;share/droneinterfaces/environment/pythonpath.sh

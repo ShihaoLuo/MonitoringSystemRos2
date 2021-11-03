@@ -1,0 +1,28 @@
+{
+  "package_name": "droneinterfaces",
+  "output_dir": "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_c/droneinterfaces",
+  "template_dir": "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource",
+  "idl_tuples": [
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneRegister.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneController.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl"
+  ],
+  "target_dependencies": [
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../../../lib/python3.8/site-packages/rosidl_generator_c/__init__.py",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/action__type_support.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/idl.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/idl__functions.c.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/idl__functions.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/idl__struct.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/idl__type_support.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/msg__functions.c.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/msg__functions.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
+    "/home/jakeluo/Software/ros2_rolling/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneRegister.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneController.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl"
+  ]
+}
