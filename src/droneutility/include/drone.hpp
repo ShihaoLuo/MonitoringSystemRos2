@@ -9,13 +9,15 @@
 #include "droneinterfaces/srv/drone_controller.hpp"
 #include "droneinterfaces/msg/frame_array.hpp"
 #include "System.h"
+#include <mutex>
+#include <unistd.h>
 
 namespace dronenamespace
 {
     class Drone
     {
         public:
-        Drone(const char* name, const char* ip, const char* path_to_vocaulary, const char* path_to_setting);
+        Drone(const char* name, const char* ip, const char* path_to_vocaulary_, const char* path_to_setting_);
         
         void quit();
 
@@ -27,6 +29,8 @@ namespace dronenamespace
 
 
         private:
+        std::mutex mx;
+        std::condition_variable cond;
         rclcpp::Node::SharedPtr nh_;
         size_t count_;
         int dronestatus = 0;
@@ -40,6 +44,11 @@ namespace dronenamespace
         rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription_;
         const char* path_to_vocaulary;
         const char* path_to_setting;
+        cv::Mat im = cv::Mat(720, 960, CV_8UC3);
+        double tframe_;
+
+        void frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg);
+        void track(const char* path_to_vocaulary, const char* path_to_setting);
     };
 
     

@@ -1,2 +1,1 @@
-
-string res
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneController_Response.msg

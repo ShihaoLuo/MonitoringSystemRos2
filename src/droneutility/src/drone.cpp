@@ -12,6 +12,7 @@ Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_,
     nh_ = rclcpp::Node::make_shared(name);
     client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister");
     // frameSubscription_ = nh_ -> create_subscription<droneinterfaces::msg::FrameArray>(name+"_Framearray", 1, )
+    controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     auto request = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
     request->dronename = name;
     request->ip = ip;
@@ -30,9 +31,45 @@ Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_,
     rclcpp::spin_until_future_complete(nh_, result);
     dronestatus = result.get()->status;
     std::printf("drone status:%d\n", dronestatus);
-    ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
+    if(dronestatus == 1)
+    {
+        frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
+            name+"_Framearray",
+            1,
+            std::bind(&Drone::frameCallback, this, std::placeholders::_1));
+        std::thread orbSlamThread(std::bind(&Drone::track, this, Drone::path_to_vocaulary, Drone::path_to_setting));
+        orbSlamThread.detach();
+    }
 }
     
+void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
+{
+    memcpy(im.data, msg->framebuf.data(), 2073600);
+    cond.notify_one();
+    auto t = std::chrono::steady_clock::now();
+    tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+    // RCLCPP_INFO(nh_->get_logger(), "receive topic at time: %f\n", tframe_);
+}
+
+void Drone::track(const char* path_to_vocaulary, const char* path_to_setting)
+{
+    ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
+    RCLCPP_INFO(nh_->get_logger(), "track thread start!\n");
+    std::unique_lock<std::mutex> lock(mx);
+    while(running)
+    {
+        // RCLCPP_INFO(nh_->get_logger(), "track thread wait for the frame.\n");
+        cond.wait(lock);
+        // RCLCPP_INFO(nh_->get_logger(), "track thread be notified.\n");
+        // auto t = std::chrono::steady_clock::now();
+        // double t2 = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+        // RCLCPP_INFO(nh_->get_logger(), "check the size of mat: %d\n at tiem: %f", im.cols, t2);
+        slam.TrackMonocular(im, tframe_);
+    }
+    RCLCPP_INFO(nh_->get_logger(), "track thread stop!\n");
+    slam.Shutdown();
+}
+
 void Drone::quit()
 {
     running = 0;
@@ -40,14 +77,13 @@ void Drone::quit()
 
 int Drone::keyloop()
 {
-    controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     auto request = std::make_shared<droneinterfaces::srv::DroneController::Request>();
     int size = 0;
     std::string s;
     std::string res;
     char c[100]={'\0'};
     puts("Reading from keyboard");
-    while(dronestatus)
+    while(dronestatus && running)
     {
         std::cin>>c;
         while(c[size]!='\0')
@@ -60,21 +96,23 @@ int Drone::keyloop()
         request->ip = ip;
         auto result = controllerClient_->async_send_request(request);
         RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-        rclcpp::spin_until_future_complete(nh_, result);
+        // rclcpp::spin_until_future_complete(nh_, result);
         res = result.get()->res;
         
         if(c[0] =='q')
         {
             RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s to close node with ip(%s), result: %s\n", s.c_str(), ip.c_str(), res.c_str());
             memset(c, 0, size+1);
+            quit();
+            cond.notify_all();
             break;
         }else
         {
             RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
             memset(c, 0, size+1);
-        }
-        
+        } 
     }
+    RCLCPP_INFO(nh_->get_logger(), "close the keyloop thread.\n");
     return 0;
 }
 
@@ -93,8 +131,9 @@ void Drone::spin()
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s started.", name.c_str());
         // std::thread t(std::bind(&Drone::keyloop, this));
         // t.detach();
-        // rclcpp::spin(nh_);
-        Drone::keyloop();
+        std::thread keyloopT(std::bind(&Drone::keyloop, this));
+        keyloopT.detach();
+        rclcpp::spin(nh_);
 
     }else{
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s not started.", name.c_str());

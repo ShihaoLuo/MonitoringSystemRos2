@@ -1,1 +1,1 @@
-uint8[2073600] framebuf
+/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/FrameArray.msg

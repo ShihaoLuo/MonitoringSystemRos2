@@ -167,6 +167,7 @@ void DroneManager::recvVideoThread(std::string ip)
     rclcpp::Publisher<droneinterfaces::msg::FrameArray>::SharedPtr framePublisher_;
     framePublisher_ = nh_->create_publisher<droneinterfaces::msg::FrameArray>(dronepool[ip].name+"_Framearray", 1);
     // std::printf("videosocket:%d\n", dronepool[ip].videosocket);
+    AVFrame frame;
     while (1)
     {
         auto l_it = dronepool.find(ip);
@@ -195,9 +196,8 @@ void DroneManager::recvVideoThread(std::string ip)
                 {
                     try
                     {
-                        const AVFrame& frame = decoder.decode_frame();
-                        framebuffer.resize(converter.predict_size(frame.width, frame.height));
-                        converter.convert(frame, frame_.framebuf.data());
+                        framebuffer.resize(converter.predict_size(960, 720));
+                        converter.convert(decoder.decode_frame(), frame_.framebuf.data());
                         // cv::cvtColor(m, m, cv::COLOR_RGB2BGR, 3);
                         // cv::imshow(dronepool[ip].name, m);
                         // cv::waitKey(0);

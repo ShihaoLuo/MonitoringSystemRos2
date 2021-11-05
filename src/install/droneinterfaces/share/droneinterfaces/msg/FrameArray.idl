@@ -1,13 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from droneinterfaces/msg/FrameArray.msg
-// generated code does not contain a copyright notice
-
-
-module droneinterfaces {
-  module msg {
-    typedef uint8 uint8__2073600[2073600];
-    struct FrameArray {
-      uint8__2073600 framebuf;
-    };
-  };
-};
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl
