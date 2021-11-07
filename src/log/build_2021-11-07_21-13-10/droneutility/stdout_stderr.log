@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target drone[0m
+[ 50%] Built target dronemanager
+[ 75%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In constructor ‘[01m[Kdronenamespace::Drone::Drone(const char*, const char*, const char*, const char*)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:73:17:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+   73 | void Drone::quit[01;31m[K([m[K)
+      |                 [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:79:19:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+   79 | int Drone::keyloop[01;31m[K([m[K)
+      |                   [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:128:17:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+  128 | void Drone::spin[01;31m[K([m[K)
+      |                 [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:147:1:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  147 | [01;31m[K{[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:153:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  153 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:7:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+    7 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

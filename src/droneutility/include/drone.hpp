@@ -29,6 +29,7 @@ namespace dronenamespace
 
 
         private:
+        ORB_SLAM2::System* pSlam;
         std::mutex mx;
         std::condition_variable cond;
         rclcpp::Node::SharedPtr nh_;

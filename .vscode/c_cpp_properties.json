@@ -9,7 +9,9 @@
                 "${workspaceFolder}/src/droneutility/include/**",
                 "${workspaceFolder}/src/build/**",
                 "/home/jakeluo/Software/ORB_SLAM2/include",
-                "/home/jakeluo/Software/ORB_SLAM2"
+                "/home/jakeluo/Software/ORB_SLAM2",
+                "${workspaceFolder}/src/droneutility/include",
+                "/usr/local/include/eigen3"
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",

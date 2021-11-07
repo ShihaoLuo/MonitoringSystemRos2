@@ -47,7 +47,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         return ;
     }
     struct timeval timeout;
-    timeout.tv_sec = 5;
+    timeout.tv_sec = 1;
     timeout.tv_usec = 0;
     if(setsockopt(send_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {
@@ -119,6 +119,25 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     if(ret!=-1)
     {
         std::printf("ret:%d\n",ret);
+        memset(&dst_addr, 0, sizeof(struct sockaddr_in));
+        memset(recvbuf, 0, 30);
+        dst_addr.sin_family = AF_INET;
+        dst_addr.sin_port = htons(8889);
+        inet_pton(AF_INET, request->ip.c_str(), &ip);
+        dst_addr.sin_addr.s_addr = ip;
+        RCLCPP_INFO(nh_->get_logger(), "Send: port 8890 %d to %s\n", htons(tmp.servideoport), tmp.ip.c_str());
+        char tmpcmd[20];
+        std::sprintf(tmpcmd, "port 8890 %d", htons(tmp.servideoport));
+        sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
+        recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
+        RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
+        dronepool[tmp.ip] = tmp;
+        framepool.emplace(tmp.ip, std::queue<std::vector<unsigned char>>());
+        std::thread t(std::bind(&DroneManager::recvVideoThread, this, tmp.ip));
+        t.detach();
+        response->status = 1;
+        printDrone();
+        return ;
     }else
     {
         std::printf("ret:%d, timeout drone registry faild!\n",ret);
@@ -128,29 +147,12 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         response->status = -1;
         return;
     }
-    memset(&dst_addr, 0, sizeof(struct sockaddr_in));
-    memset(recvbuf, 0, 30);
-    dst_addr.sin_family = AF_INET;
-    dst_addr.sin_port = htons(8889);
-    inet_pton(AF_INET, request->ip.c_str(), &ip);
-    dst_addr.sin_addr.s_addr = ip;
-    RCLCPP_INFO(nh_->get_logger(), "Send: port 8890 %d to %s\n", htons(tmp.servideoport), tmp.ip.c_str());
-    char tmpcmd[20];
-    std::sprintf(tmpcmd, "port 8890 %d", htons(tmp.servideoport));
-    sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
-    recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
-    RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
-    dronepool[tmp.ip] = tmp;
-    framepool.emplace(tmp.ip, std::queue<std::vector<unsigned char>>());
-    std::thread t(std::bind(&DroneManager::recvVideoThread, this, tmp.ip));
-    t.detach();
-    response->status = 1;
-    printDrone();
-    return ;
 } 
 
 void DroneManager::recvVideoThread(std::string ip)
 {
+    ORB_SLAM2::System slam("/home/jakeluo/Software/ORB_SLAM2/orbslamconfig/ORBvoc.txt", 
+    "/home/jakeluo/Software/ORB_SLAM2/orbslamconfig/tello.yaml", ORB_SLAM2::System::MONOCULAR, true);
     std::printf("Video of %s start!\n", ip.c_str());
     H264Decoder decoder;
     ConverterRGB24 converter;
@@ -165,18 +167,18 @@ void DroneManager::recvVideoThread(std::string ip)
     unsigned char* datap = &buf[0];
     droneinterfaces::msg::FrameArray frame_;
     rclcpp::Publisher<droneinterfaces::msg::FrameArray>::SharedPtr framePublisher_;
-    framePublisher_ = nh_->create_publisher<droneinterfaces::msg::FrameArray>(dronepool[ip].name+"_Framearray", 1);
+    // framePublisher_ = nh_->create_publisher<droneinterfaces::msg::FrameArray>(dronepool[ip].name+"_Framearray", 1);
     // std::printf("videosocket:%d\n", dronepool[ip].videosocket);
-    AVFrame frame;
+    int videosocket_ = dronepool[ip].videosocket;
     while (1)
     {
-        auto l_it = dronepool.find(ip);
-        if(l_it == dronepool.end())
-        {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "close the video thread of %s.\n",ip.c_str());
-            break;
-        }
-        ret = recvfrom(dronepool[ip].videosocket, datap+datasize, 2048, 0, NULL, NULL);
+        // auto l_it = dronepool.find(ip);
+        // if(l_it == dronepool.end())
+        // {
+        //     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "close the video thread of %s.\n",ip.c_str());
+        //     break;
+        // }
+        ret = recvfrom(videosocket_, datap+datasize, 2048, 0, NULL, NULL);
         datasize += ret;
         if(ret > 0 and ret != 1460)
         {
@@ -197,7 +199,11 @@ void DroneManager::recvVideoThread(std::string ip)
                     try
                     {
                         framebuffer.resize(converter.predict_size(960, 720));
-                        converter.convert(decoder.decode_frame(), frame_.framebuf.data());
+                        converter.convert(decoder.decode_frame(), im.data);
+                        // memcpy(im.data, msg->framebuf.data(), 2073600)
+                        auto t = std::chrono::steady_clock::now();
+                        tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+                        slam.TrackMonocular(im, tframe_);
                         // cv::cvtColor(m, m, cv::COLOR_RGB2BGR, 3);
                         // cv::imshow(dronepool[ip].name, m);
                         // cv::waitKey(0);
@@ -210,7 +216,7 @@ void DroneManager::recvVideoThread(std::string ip)
                         // {
                         //     frame_.framebuf[i] = framebuffer[i];
                         // }
-                        framePublisher_->publish(frame_);
+                        // framePublisher_->publish(frame_);
                         // framepool[ip].push(framebuffer);
                         // RCLCPP_INFO(nh_->get_logger(),"size of images of %s : %ld\n", dronepool[ip].name.c_str(), framepool[ip].size());
                     }
@@ -225,7 +231,7 @@ void DroneManager::recvVideoThread(std::string ip)
             datap = &buf[0];
         }
     }
-    
+    slam.Shutdown();
 }
 
 

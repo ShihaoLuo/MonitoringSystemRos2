@@ -25,7 +25,9 @@ find_package(std_msgs REQUIRED)
 find_package(droneinterfaces REQUIRED)
 find_package(OpenCV 3.0 REQUIRED)
 find_package(Pangolin 0.5 REQUIRED)
-find_package(Eigen3 REQUIRED)
+find_package( PkgConfig )
+pkg_check_modules( EIGEN3 REQUIRED eigen3 )
+include_directories( ${EIGEN3_INCLUDE_DIRS} )
 find_package(OpenGL REQUIRED)
 
 INCLUDE_DIRECTORIES(
@@ -58,7 +60,13 @@ target_link_libraries(
   dronemanager
   h264decoderlib 
   ${FFMPEG_LIBRARIES} 
+  ${EIGEN3_LIBS} 
+  ${Pangolin_LIBRARIES}
+  ${OpenGL_LIBRARY}
   ${OpenCV_LIBS} 
+  ${ORB_SLAM2_PATH}/Thirdparty/DBoW2/lib/libDBoW2.so 
+  ${ORB_SLAM2_PATH}/Thirdparty/g2o/lib/libg2o.so
+  ${ORB_SLAM2_PATH}/lib/libORB_SLAM2.so
 )
 
 target_link_libraries(

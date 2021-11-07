@@ -31,48 +31,49 @@ Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_,
     rclcpp::spin_until_future_complete(nh_, result);
     dronestatus = result.get()->status;
     std::printf("drone status:%d\n", dronestatus);
-    if(dronestatus == 1)
-    {
-        frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
-            name+"_Framearray",
-            1,
-            std::bind(&Drone::frameCallback, this, std::placeholders::_1));
-        std::thread orbSlamThread(std::bind(&Drone::track, this, Drone::path_to_vocaulary, Drone::path_to_setting));
-        orbSlamThread.detach();
-    }
+//     if(dronestatus == 1)
+//     {
+//         frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
+//             name+"_Framearray",
+//             1,
+//             std::bind(&Drone::frameCallback, this, std::placeholders::_1));
+//         // std::thread orbSlamThread(std::bind(&Drone::track, this, Drone::path_to_vocaulary, Drone::path_to_setting));
+//         // orbSlamThread.detach();
+//     }
 }
     
-void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
-{
-    memcpy(im.data, msg->framebuf.data(), 2073600);
-    cond.notify_one();
-    auto t = std::chrono::steady_clock::now();
-    tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
-    // RCLCPP_INFO(nh_->get_logger(), "receive topic at time: %f\n", tframe_);
-}
+// void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
+// {
+//     memcpy(im.data, msg->framebuf.data(), 2073600);
+//     // cond.notify_one();
+//     auto t = std::chrono::steady_clock::now();
+//     tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+//     RCLCPP_INFO(nh_->get_logger(), "receive topic at time: %f\n", tframe_);
+// }
 
-void Drone::track(const char* path_to_vocaulary, const char* path_to_setting)
-{
-    ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
-    RCLCPP_INFO(nh_->get_logger(), "track thread start!\n");
-    std::unique_lock<std::mutex> lock(mx);
-    while(running)
-    {
-        // RCLCPP_INFO(nh_->get_logger(), "track thread wait for the frame.\n");
-        cond.wait(lock);
-        // RCLCPP_INFO(nh_->get_logger(), "track thread be notified.\n");
-        // auto t = std::chrono::steady_clock::now();
-        // double t2 = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
-        // RCLCPP_INFO(nh_->get_logger(), "check the size of mat: %d\n at tiem: %f", im.cols, t2);
-        slam.TrackMonocular(im, tframe_);
-    }
-    RCLCPP_INFO(nh_->get_logger(), "track thread stop!\n");
-    slam.Shutdown();
-}
+// void Drone::track(const char* path_to_vocaulary, const char* path_to_setting)
+// {
+//     ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
+//     RCLCPP_INFO(nh_->get_logger(), "track thread start!\n");
+//     std::unique_lock<std::mutex> lock(mx);
+//     while(running)
+//     {
+//         // RCLCPP_INFO(nh_->get_logger(), "track thread wait for the frame.\n");
+//         cond.wait(lock);
+//         // RCLCPP_INFO(nh_->get_logger(), "track thread be notified.\n");
+//         // auto t = std::chrono::steady_clock::now();
+//         // double t2 = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+//         // RCLCPP_INFO(nh_->get_logger(), "check the size of mat: %d\n at tiem: %f", im.cols, t2);
+//         slam.TrackMonocular(im, tframe_);
+//     }
+//     RCLCPP_INFO(nh_->get_logger(), "track thread stop!\n");
+//     slam.Shutdown();
+// }
 
 void Drone::quit()
 {
     running = 0;
+    dronestatus = -1;
 }
 
 int Drone::keyloop()
