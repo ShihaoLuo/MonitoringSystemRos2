@@ -1,0 +1,7 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::recvVideoThread(std::string)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:178:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KpreT[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  178 |             auto  [01;35m[KpreT[m[K = curT;
+      |                   [01;35m[K^~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:172:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KcurT[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  172 |     auto  [01;35m[KcurT[m[K = std::chrono::time_point_cast<std::chrono::duration<double>>(std::chrono::steady_clock::now()).time_since_epoch().count();
+      |           [01;35m[K^~~~[m[K

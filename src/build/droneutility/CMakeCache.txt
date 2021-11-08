@@ -49,6 +49,12 @@ AVUTIL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libavutil.so
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -397,6 +403,9 @@ ament_uncrustify_BIN:FILEPATH=/home/jakeluo/Software/ros2_rolling/install/ament_
 //Path to a program.
 ament_xmllint_BIN:FILEPATH=/home/jakeluo/Software/ros2_rolling/install/ament_xmllint/bin/ament_xmllint
 
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
+
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/cmake
 
@@ -525,6 +534,8 @@ yaml_DIR:PATH=/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -713,6 +724,8 @@ EIGEN3_eigen3_INCLUDEDIR:INTERNAL=
 EIGEN3_eigen3_LIBDIR:INTERNAL=
 EIGEN3_eigen3_PREFIX:INTERNAL=
 EIGEN3_eigen3_VERSION:INTERNAL=
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][c ][v1.71.0()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.4.3(3.0)]
 //Details about finding OpenGL
@@ -752,5 +765,7 @@ _Python3_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
 __AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=1
 __pkg_config_arguments_EIGEN3:INTERNAL=REQUIRED;eigen3
 __pkg_config_checked_EIGEN3:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=
 

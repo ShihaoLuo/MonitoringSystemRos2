@@ -1,0 +1,534 @@
+[35m[1mScanning dependencies of target drone[0m
+[ 50%] Built target dronemanager
+[ 75%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+In file included from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:41[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/Tracking.h:32[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:35[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/se3quat.h:43:38:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+   43 |       EIGEN_MAKE_ALIGNED_OPERATOR_NEW[01;35m[K;[m[K
+      |                                      [01;35m[K^[m[K
+      |                                      [31m[K-[m[K
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/usr/include/c++/9/functional: In instantiation of ‘[01m[Kstd::_Bind<_Functor(_Bound_args ...)>::_Bind(_Functor&&, _Args&& ...) [with _Args = {dronenamespace::Drone*, const std::_Placeholder<1>&, ORB_SLAM2::System&}; _Functor = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _Bound_args = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’:
+[01m[K/usr/include/c++/9/functional:811:38:[m[K   required from ‘[01m[Ktypename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...) [with _Func = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _BoundArgs = {dronenamespace::Drone*, const std::_Placeholder<1>&, ORB_SLAM2::System&}; typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:55:79:[m[K   required from here
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::tuple(dronenamespace::Drone*, const std::_Placeholder<1>&, ORB_SLAM2::System&)[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;31m[K)[m[K
+      |                                                                      [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:808:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>())) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<tuple<_Tail ...>&&>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Args2 ...>&&)[m[K’
+  808 |  explicit [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |           [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:808:11:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  ‘[01m[KORB_SLAM2::System[m[K’ is not derived from ‘[01m[Kstd::tuple<_Tail ...>[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:793:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>()) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<tuple<_Tail ...>&&>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Args2 ...>&&)[m[K’
+  793 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:793:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  ‘[01m[KORB_SLAM2::System[m[K’ is not derived from ‘[01m[Kstd::tuple<_Tail ...>[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:778:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyConvertibleTuple<_UElements ...>())) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<const tuple<_Tail ...>&>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Args2 ...>&)[m[K’
+  778 |  explicit [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |           [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:778:11:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  ‘[01m[KORB_SLAM2::System[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Tail ...>[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:763:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyConvertibleTuple<_UElements ...>()) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<const tuple<_Tail ...>&>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Args2 ...>&)[m[K’
+  763 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:763:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  ‘[01m[KORB_SLAM2::System[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Tail ...>[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:751:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc> std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, std::tuple<_Elements>&&)[m[K’
+  751 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a, tuple&& __in)
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:751:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::forward<dronenamespace::Drone*>((* & __args#0))[m[K’ (type ‘[01m[Kdronenamespace::Drone*[m[K’) to type ‘[01m[Kstd::allocator_arg_t[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:747:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc> std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const std::tuple<_Elements>&)[m[K’
+  747 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a, const tuple& __in)
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:747:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::forward<dronenamespace::Drone*>((* & __args#0))[m[K’ (type ‘[01m[Kdronenamespace::Drone*[m[K’) to type ‘[01m[Kstd::allocator_arg_t[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:741:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class ... _UElements, typename std::enable_if<(std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>())), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, _UElements&& ...)[m[K’
+  741 |  explicit [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |           [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:741:11:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:740:21:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  740 |         bool>::type=[01;31m[Kfalse[m[K>
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:730:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class ... _UElements, typename std::enable_if<(std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, _UElements&& ...)[m[K’
+  730 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:730:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:729:21:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  729 |         bool>::type=[01;31m[Ktrue[m[K>
+      |                     [01;31m[K^~~~[m[K
+[01m[K/usr/include/c++/9/tuple:720:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, typename std::enable_if<(std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ConstructibleTuple<Drone*, _Placeholder<1>, System>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ImplicitlyConvertibleTuple<Drone*, _Placeholder<1>, System>())), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const _Elements& ...)[m[K’
+  720 |  explicit [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |           [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:720:11:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 3 provided
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:709:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc, class _Dummy, typename std::enable_if<(std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ConstructibleTuple<Drone*, _Placeholder<1>, System>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ImplicitlyConvertibleTuple<Drone*, _Placeholder<1>, System>()), bool>::type <anonymous> > std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&, const _Elements& ...)[m[K’
+  709 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a,
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:709:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 3 provided
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:699:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Alloc> std::tuple<_Elements>::tuple(std::allocator_arg_t, const _Alloc&)[m[K’
+  699 |  [01;36m[Ktuple[m[K(allocator_arg_t __tag, const _Alloc& __a)
+      |  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:699:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:693:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>())) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<tuple<_Tps ...>&&>()), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(std::tuple<_Args1 ...>&&)[m[K’
+  693 |         explicit constexpr [01;36m[Ktuple[m[K(tuple<_UElements...>&& __in)
+      |                            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:693:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kdronenamespace::Drone*[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:682:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>()) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<tuple<_Tps ...>&&>()), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(std::tuple<_Args1 ...>&&)[m[K’
+  682 |         constexpr [01;36m[Ktuple[m[K(tuple<_UElements...>&& __in)
+      |                   [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:682:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kdronenamespace::Drone*[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:670:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyConvertibleTuple<_UElements ...>())) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<const tuple<_Tps ...>&>()), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const std::tuple<_Args1 ...>&)[m[K’
+  670 |         explicit constexpr [01;36m[Ktuple[m[K(const tuple<_UElements...>& __in)
+      |                            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:670:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Kdronenamespace::Drone*[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:658:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMCT<_UElements ...>::_ImplicitlyConvertibleTuple<_UElements ...>()) && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TNTC<_Dummy>::_NonNestedTuple<const tuple<_Tps ...>&>()), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const std::tuple<_Args1 ...>&)[m[K’
+  658 |         constexpr [01;36m[Ktuple[m[K(const tuple<_UElements...>& __in)
+      |                   [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:658:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Kdronenamespace::Drone*[m[K’
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:642:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::tuple<_Elements>::tuple(std::tuple<_Elements>&&) [with _Elements = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+  642 |       constexpr [01;36m[Ktuple[m[K(tuple&&) = default;
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:642:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/c++/9/tuple:637:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>())) && (3 >= 1)), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(_UElements&& ...)[m[K’
+  637 |         explicit constexpr [01;36m[Ktuple[m[K(_UElements&&... __elements)
+      |                            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:637:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:636:21:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  636 |         bool>::type=[01;31m[Kfalse[m[K>
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:626:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _UElements, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_MoveConstructibleTuple<_UElements ...>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TMC<_UElements ...>::_ImplicitlyMoveConvertibleTuple<_UElements ...>()) && (3 >= 1)), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(_UElements&& ...)[m[K’
+  626 |         constexpr [01;36m[Ktuple[m[K(_UElements&&... __elements)
+      |                   [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:626:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:625:21:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  625 |         bool>::type=[01;31m[Ktrue[m[K>
+      |                     [01;31m[K^~~~[m[K
+[01m[K/usr/include/c++/9/tuple:599:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ConstructibleTuple<Drone*, _Placeholder<1>, System>() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ImplicitlyConvertibleTuple<Drone*, _Placeholder<1>, System>())) && (3 >= 1)), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const _Elements& ...)[m[K’
+  599 |       explicit constexpr [01;36m[Ktuple[m[K(const _Elements&... __elements)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:599:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:598:28:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  598 |                bool>::type=[01;31m[Kfalse[m[K>
+      |                            [01;31m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:588:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dummy, typename std::enable_if<((std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ConstructibleTuple<Drone*, _Placeholder<1>, System>() && std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TCC<_Dummy>::_ImplicitlyConvertibleTuple<Drone*, _Placeholder<1>, System>()) && (3 >= 1)), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple(const _Elements& ...)[m[K’
+  588 |         constexpr [01;36m[Ktuple[m[K(const _Elements&... __elements)
+      |                   [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:588:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/9/tuple:587:28:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+  587 |                bool>::type=[01;31m[Ktrue[m[K>
+      |                            [01;31m[K^~~~[m[K
+[01m[K/usr/include/c++/9/tuple:571:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dummy, typename std::enable_if<(std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TC2<_Dummy>::_DefaultConstructibleTuple() && (! std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TC2<_Dummy>::_ImplicitlyDefaultConstructibleTuple())), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple()[m[K’
+  571 |       explicit constexpr [01;36m[Ktuple[m[K()
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:571:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:561:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dummy, typename std::enable_if<std::tuple<dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System>::_TC2<_Dummy>::_ImplicitlyDefaultConstructibleTuple(), bool>::type <anonymous> > constexpr std::tuple<_Elements>::tuple()[m[K’
+  561 |       constexpr [01;36m[Ktuple[m[K()
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:561:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:467:70:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+  467 |  : _M_f(std::move(__f)), _M_bound_args(std::forward<_Args>(__args)...[01;36m[K)[m[K
+      |                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/usr/include/c++/9/tuple: In instantiation of ‘[01m[Kconstexpr std::_Head_base<_Idx, _Head, false>::_Head_base(_UHead&&) [with _UHead = ORB_SLAM2::System; long unsigned int _Idx = 2; _Head = ORB_SLAM2::System][m[K’:
+[01m[K/usr/include/c++/9/tuple:231:42:[m[K   recursively required from ‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(std::_Tuple_impl<_Idx, _Head, _Tail ...>&&) [with long unsigned int _Idx = 1; _Head = std::_Placeholder<1>; _Tail = {ORB_SLAM2::System}][m[K’
+[01m[K/usr/include/c++/9/tuple:231:42:[m[K   required from ‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(std::_Tuple_impl<_Idx, _Head, _Tail ...>&&) [with long unsigned int _Idx = 0; _Head = dronenamespace::Drone*; _Tail = {std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+[01m[K/usr/include/c++/9/tuple:642:17:[m[K   required from ‘[01m[Kstd::_Bind<_Functor(_Bound_args ...)>::_Bind(std::_Bind<_Functor(_Bound_args ...)>&&) [with _Functor = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _Bound_args = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/subscription_factory.hpp:95:3:[m[K   required from ‘[01m[Krclcpp::SubscriptionFactory rclcpp::create_subscription_factory(CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<ROSMessageType> >) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:122:63:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::detail::create_subscription(NodeParametersT&, NodeTopicsT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeParametersT = rclcpp::Node; NodeTopicsT = rclcpp::Node; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:191:76:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::create_subscription(NodeT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeT = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/node_impl.hpp:99:47:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:55:80:[m[K   required from here
+[01m[K/usr/include/c++/9/tuple:133:42:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’
+  133 |  : _M_head_impl(std::forward<_UHead>(__h)[01;31m[K)[m[K { }
+      |                                          [01;31m[K^[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;36m[Knote: [m[K‘[01m[KORB_SLAM2::System::System(ORB_SLAM2::System&&)[m[K’ is implicitly deleted because the default definition would be ill-formed:
+   55 | class [01;36m[KSystem[m[K
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+   55 | class [01;31m[KSystem[m[K
+      |       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/usr/include/c++/9/functional: In instantiation of ‘[01m[Kstd::_Bind<_Functor(_Bound_args ...)>::_Bind(std::_Bind<_Functor(_Bound_args ...)>&&) [with _Functor = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _Bound_args = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’:
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/subscription_factory.hpp:95:3:[m[K   required from ‘[01m[Krclcpp::SubscriptionFactory rclcpp::create_subscription_factory(CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<ROSMessageType> >) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:122:63:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::detail::create_subscription(NodeParametersT&, NodeTopicsT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeParametersT = rclcpp::Node; NodeTopicsT = rclcpp::Node; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:191:76:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::create_subscription(NodeT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeT = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/node_impl.hpp:99:47:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:55:80:[m[K   required from here
+[01m[K/usr/include/c++/9/functional:473:78:[m[K [01;36m[Knote: [m[Ksynthesized method ‘[01m[Kconstexpr std::tuple<_Elements>::tuple(std::tuple<_Elements>&&) [with _Elements = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’ first required here
+  473 |       : _M_f(std::move(__b._M_f)), _M_bound_args(std::move(__b._M_bound_args)[01;36m[K)[m[K
+      |                                                                              [01;36m[K^[m[K
+In file included from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/subscription_base.hpp:29[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/callback_group.hpp:26[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_subscription_callback.hpp: In instantiation of ‘[01m[Krclcpp::AnySubscriptionCallback<MessageT, AllocatorT> rclcpp::AnySubscriptionCallback<MessageT, AllocatorT>::set(CallbackT) [with CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’:
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/subscription_factory.hpp:95:3:[m[K   required from ‘[01m[Krclcpp::SubscriptionFactory rclcpp::create_subscription_factory(CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<ROSMessageType> >) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:122:63:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::detail::create_subscription(NodeParametersT&, NodeTopicsT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeParametersT = rclcpp::Node; NodeTopicsT = rclcpp::Node; ROSMessageType = droneinterfaces::msg::FrameArray_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/create_subscription.hpp:191:76:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::create_subscription(NodeT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; NodeT = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/node_impl.hpp:99:47:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = droneinterfaces::msg::FrameArray_<std::allocator<void> >; CallbackT = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<droneinterfaces::msg::FrameArray_<std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<droneinterfaces::msg::FrameArray_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:55:80:[m[K   required from here
+[01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_subscription_callback.hpp:400:27:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::_Bind<_Functor(_Bound_args ...)>::_Bind(const std::_Bind<_Functor(_Bound_args ...)>&) [with _Functor = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _Bound_args = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+  400 |       callback_variant_ = [01;31m[Kstatic_cast<typename scbth::callback_type>(callback)[m[K;
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:470:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::_Bind<_Functor(_Bound_args ...)>::_Bind(const std::_Bind<_Functor(_Bound_args ...)>&) [with _Functor = void (dronenamespace::Drone::*)(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&); _Bound_args = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  470 |       [01;36m[K_Bind[m[K(const _Bind&) = default;
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/functional:470:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::tuple<_Elements>::tuple(const std::tuple<_Elements>&) [with _Elements = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:640:17:[m[K [01;36m[Knote: [m[K‘[01m[Kconstexpr std::tuple<_Elements>::tuple(const std::tuple<_Elements>&) [with _Elements = {dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System}][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  640 |       constexpr [01;36m[Ktuple[m[K(const tuple&) = default;
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:640:17:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 0; _Head = dronenamespace::Drone*; _Tail = {std::_Placeholder<1>, ORB_SLAM2::System}][m[K’
+[01m[K/usr/include/c++/9/tuple:220:17:[m[K [01;36m[Knote: [m[K‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 0; _Head = dronenamespace::Drone*; _Tail = {std::_Placeholder<1>, ORB_SLAM2::System}][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  220 |       constexpr [01;36m[K_Tuple_impl[m[K(const _Tuple_impl&) = default;
+      |                 [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:220:17:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 1; _Head = std::_Placeholder<1>; _Tail = {ORB_SLAM2::System}][m[K’
+[01m[K/usr/include/c++/9/tuple:220:17:[m[K [01;36m[Knote: [m[K‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 1; _Head = std::_Placeholder<1>; _Tail = {ORB_SLAM2::System}][m[K’ is implicitly deleted because the default definition would be ill-formed:
+[01m[K/usr/include/c++/9/tuple:220:17:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head>&) [with long unsigned int _Idx = 2; _Head = ORB_SLAM2::System][m[K’
+[01m[K/usr/include/c++/9/tuple:351:17:[m[K [01;36m[Knote: [m[K‘[01m[Kconstexpr std::_Tuple_impl<_Idx, _Head>::_Tuple_impl(const std::_Tuple_impl<_Idx, _Head>&) [with long unsigned int _Idx = 2; _Head = ORB_SLAM2::System][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  351 |       constexpr [01;36m[K_Tuple_impl[m[K(const _Tuple_impl&) = default;
+      |                 [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:351:17:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kconstexpr std::_Head_base<_Idx, _Head, false>::_Head_base(const std::_Head_base<_Idx, _Head, false>&) [with long unsigned int _Idx = 2; _Head = ORB_SLAM2::System][m[K’
+[01m[K/usr/include/c++/9/tuple:128:17:[m[K [01;36m[Knote: [m[K‘[01m[Kconstexpr std::_Head_base<_Idx, _Head, false>::_Head_base(const std::_Head_base<_Idx, _Head, false>&) [with long unsigned int _Idx = 2; _Head = ORB_SLAM2::System][m[K’ is implicitly deleted because the default definition would be ill-formed:
+  128 |       constexpr [01;36m[K_Head_base[m[K(const _Head_base&) = default;
+      |                 [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:128:17:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KORB_SLAM2::System::System(const ORB_SLAM2::System&)[m[K’
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;36m[Knote: [m[K‘[01m[KORB_SLAM2::System::System(const ORB_SLAM2::System&)[m[K’ is implicitly deleted because the default definition would be ill-formed:
+   55 | class [01;36m[KSystem[m[K
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:55:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Kstd::mutex::mutex(const std::mutex&)[m[K’
+   55 | class [01;31m[KSystem[m[K
+      |       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:43[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_mutex.h:94:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   94 |     [01;36m[Kmutex[m[K(const mutex&) = delete;
+      |     [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/future:48[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/std_function.h:668:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::function<_Res(_ArgTypes ...)>::function(_Functor) [with _Functor = std::_Bind<void (dronenamespace::Drone::*(dronenamespace::Drone*, std::_Placeholder<1>, ORB_SLAM2::System))(std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&)>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {std::shared_ptr<droneinterfaces::msg::FrameArray_<std::allocator<void> > >, ORB_SLAM2::System&}][m[K’
+  668 |       function([01;36m[K_Functor __f[m[K)
+      |                [01;36m[K~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/drone.dir/build.make:63：CMakeFiles/drone.dir/src/drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

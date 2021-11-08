@@ -90,9 +90,9 @@ dronemanager: /usr/local/lib/libopencv_shape.so.3.4.3
 dronemanager: /usr/local/lib/libopencv_stitching.so.3.4.3
 dronemanager: /usr/local/lib/libopencv_superres.so.3.4.3
 dronemanager: /usr/local/lib/libopencv_videostab.so.3.4.3
-dronemanager: /home/jakeluo/Software/ORB_SLAM2/Thirdparty/DBoW2/lib/libDBoW2.so
-dronemanager: /home/jakeluo/Software/ORB_SLAM2/Thirdparty/g2o/lib/libg2o.so
-dronemanager: /home/jakeluo/Software/ORB_SLAM2/lib/libORB_SLAM2.so
+dronemanager: /home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/DBoW2/lib/libDBoW2.so
+dronemanager: /home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/lib/libg2o.so
+dronemanager: /home/jakeluo/Documents/ORBSLAM_MapSave/lib/libORB_SLAM2.so
 dronemanager: /home/jakeluo/Software/ros2_rolling/install/rclcpp/lib/librclcpp.so
 dronemanager: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so
 dronemanager: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_c.so

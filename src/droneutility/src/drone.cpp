@@ -3,10 +3,8 @@
 using namespace dronenamespace;
 
 
-Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_, const char* path_to_setting_)
+Drone::Drone(const char* name_, const char* ip_)
 {
-    path_to_vocaulary = path_to_vocaulary_;
-    path_to_setting = path_to_setting_;
     name = name_;
     ip = ip_;
     nh_ = rclcpp::Node::make_shared(name);
@@ -31,29 +29,60 @@ Drone::Drone(const char* name_, const char* ip_, const char* path_to_vocaulary_,
     rclcpp::spin_until_future_complete(nh_, result);
     dronestatus = result.get()->status;
     std::printf("drone status:%d\n", dronestatus);
-//     if(dronestatus == 1)
-//     {
-//         frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
-//             name+"_Framearray",
-//             1,
-//             std::bind(&Drone::frameCallback, this, std::placeholders::_1));
-//         // std::thread orbSlamThread(std::bind(&Drone::track, this, Drone::path_to_vocaulary, Drone::path_to_setting));
-//         // orbSlamThread.detach();
-//     }
+    if(dronestatus == 1)
+    {
+        const string &strSettingPath = "setting.yaml";
+        cv::FileStorage fSettings(strSettingPath, cv::FileStorage::READ);
+        if(!fSettings.isOpened())
+        {
+            cerr << "Failed to open setting file at: " << strSettingPath << endl;
+            exit(-1);
+        }
+        const string strORBvoc = fSettings["Orb_Vocabulary"];
+        const string strCamSet = fSettings["Cam_Setting"];
+        int ReuseMap = fSettings["is_ReuseMap"];
+        const string strMapPath = fSettings["ReuseMap"];
+        bool bReuseMap = false;
+        if (1 == ReuseMap)
+            bReuseMap = true;
+    
+        pSlam = new ORB_SLAM2::System(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR,true, bReuseMap,strMapPath);
+        frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
+            name+"_Framearray",
+            1,
+            std::bind(&Drone::frameCallback, this, std::placeholders::_1));
+        // std::thread orbSlamThread(std::bind(&Drone::track, this, Drone::path_to_vocaulary, Drone::path_to_setting));
+        // orbSlamThread.detach();
+    }
 }
     
-// void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
-// {
-//     memcpy(im.data, msg->framebuf.data(), 2073600);
-//     // cond.notify_one();
-//     auto t = std::chrono::steady_clock::now();
-//     tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
-//     RCLCPP_INFO(nh_->get_logger(), "receive topic at time: %f\n", tframe_);
-// }
+void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
+{
+    memcpy(im.data, msg->framebuf.data(), 2073600);
+    // cond.notify_one();
+    auto t = std::chrono::steady_clock::now();
+    tframe_ = std::chrono::time_point_cast<std::chrono::duration<double>>(t).time_since_epoch().count();
+    // RCLCPP_INFO(nh_->get_logger(), "receive topic at time: %f\n", tframe_);
+    pSlam->TrackMonocular(im, tframe_);
+}
 
 // void Drone::track(const char* path_to_vocaulary, const char* path_to_setting)
 // {
-//     ORB_SLAM2::System slam(path_to_vocaulary, path_to_setting, ORB_SLAM2::System::MONOCULAR, true);
+//     const string &strSettingPath = "setting.yaml";
+//     cv::FileStorage fSettings(strSettingPath, cv::FileStorage::READ);
+//     if(!fSettings.isOpened())
+//     {
+//         cerr << "Failed to open setting file at: " << strSettingPath << endl;
+//         exit(-1);
+//     }
+//     const string strORBvoc = fSettings["Orb_Vocabulary"];
+//     const string strCamSet = fSettings["Cam_Setting"];
+//     int ReuseMap = fSettings["is_ReuseMap"];
+//     const string strMapPath = fSettings["ReuseMap"];
+//     bool bReuseMap = false;
+//     if (1 == ReuseMap)
+//         bReuseMap = true;
+//     ORB_SLAM2::System slam(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR,true, bReuseMap,strMapPath);
 //     RCLCPP_INFO(nh_->get_logger(), "track thread start!\n");
 //     std::unique_lock<std::mutex> lock(mx);
 //     while(running)
@@ -74,6 +103,7 @@ void Drone::quit()
 {
     running = 0;
     dronestatus = -1;
+    pSlam -> Shutdown();
 }
 
 int Drone::keyloop()
@@ -146,7 +176,7 @@ void Drone::spin()
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    Drone drone(argv[1], argv[2], argv[3], argv[4]);
+    Drone drone(argv[1], argv[2]);
     drone.spin();
     rclcpp::shutdown();
     return 0;

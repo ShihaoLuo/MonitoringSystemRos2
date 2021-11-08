@@ -1,0 +1,12 @@
+In file included from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:41[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/Tracking.h:32[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/include/System.h:35[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:11[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/g2o/g2o/types/se3quat.h:43:38:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+   43 |       EIGEN_MAKE_ALIGNED_OPERATOR_NEW[01;35m[K;[m[K
+      |                                      [01;35m[K^[m[K
+      |                                      [31m[K-[m[K

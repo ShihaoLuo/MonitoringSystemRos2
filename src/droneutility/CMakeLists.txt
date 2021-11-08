@@ -29,17 +29,21 @@ find_package( PkgConfig )
 pkg_check_modules( EIGEN3 REQUIRED eigen3 )
 include_directories( ${EIGEN3_INCLUDE_DIRS} )
 find_package(OpenGL REQUIRED)
+find_package(Boost REQUIRED)
+
+# set(ORB_SLAM2_PATH /home/jakeluo/Software/ORB_SLAM2)
+set(ORB_SLAM2_PATH /home/jakeluo/Documents/ORBSLAM_MapSave)
 
 INCLUDE_DIRECTORIES(
 ${CMAKE_SOURCE_DIR}/include 
-/home/jakeluo/Software/ORB_SLAM2/include 
-/home/jakeluo/Software/ORB_SLAM2
+${ORB_SLAM2_PATH}/include
+${ORB_SLAM2_PATH}
 /usr/local/include/eigen3
 ${Pangolin_INCLUDE_DIRS}
 ${EIGEN3_INCLUDE_DIR}
 ${OPENGL_INCLUDE_DIRS})
 
-set(ORB_SLAM2_PATH /home/jakeluo/Software/ORB_SLAM2)
+
 
 LINK_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
 

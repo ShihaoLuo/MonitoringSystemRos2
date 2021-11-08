@@ -1,0 +1,21 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# The Settings of ORB-SLAM2 Monocular. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# the Orb Vocabulary File Path. Either .bin File or .txt File is Ok.
+  
+Orb_Vocabulary: ORBvoc.bin
+
+# the Camera Setting File Path. 
+
+Cam_Setting: tello.yaml
+
+# Whether Run the ORB-SLAM2 System Using the Exsiting Map File (0 for no , 1 for yes).
+
+is_ReuseMap: 1
+
+# the Exsiting Map File Path (if the above item is 0, this is unnessesary)
+
+ReuseMap: Slam_latest_Map.bin

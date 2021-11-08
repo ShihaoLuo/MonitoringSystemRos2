@@ -1,0 +1,17 @@
+[35m[1mScanning dependencies of target dronemanager[0m
+[ 50%] Built target drone
+[ 75%] [32mBuilding CXX object CMakeFiles/dronemanager.dir/src/droneManager.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::DroneManager::recvVideoThread(std::string)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:171:103:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KORB_SLAM2::System::System(const string&, const string&, ORB_SLAM2::System::eSensor, bool, bool&, const string&)[m[K’
+  171 | amSet,ORB_SLAM2::System::MONOCULAR,true, bReuseMap,strMapPath[01;31m[K)[m[K;
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneManager.hpp:24[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:1[m[K:
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:62:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KORB_SLAM2::System::System(const string&, const string&, ORB_SLAM2::System::eSensor, bool)[m[K’
+   62 |     [01;36m[KSystem[m[K(const string &strVocFile, const string &strSettingsFile, const eSensor sensor, const bool bUseViewer = true);
+      |     [01;36m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Software/ORB_SLAM2/include/System.h:62:5:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+make[2]: *** [CMakeFiles/dronemanager.dir/build.make:63：CMakeFiles/dronemanager.dir/src/droneManager.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

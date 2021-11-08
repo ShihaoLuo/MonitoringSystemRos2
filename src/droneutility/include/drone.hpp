@@ -17,7 +17,7 @@ namespace dronenamespace
     class Drone
     {
         public:
-        Drone(const char* name, const char* ip, const char* path_to_vocaulary_, const char* path_to_setting_);
+        Drone(const char* name, const char* IplConvKernel);
         
         void quit();
 
@@ -43,8 +43,6 @@ namespace dronenamespace
         std_msgs::msg::String cmd;
         int running = 1;
         rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription_;
-        const char* path_to_vocaulary;
-        const char* path_to_setting;
         cv::Mat im = cv::Mat(720, 960, CV_8UC3);
         double tframe_;
 
