@@ -1,0 +1,112 @@
+{
+	"BUILD_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/gui_autogen",
+	"CMAKE_BINARY_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/gui_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/gui_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"DEFAULT_RMW_IMPLEMENTATION=rmw_cyclonedds_cpp",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_WIDGETS_LIB",
+		"RCUTILS_ENABLE_FAULT_INJECTION"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt",
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt",
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include",
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rclcpp/include",
+		"/home/jakeluo/Software/ros2_rolling/install/std_msgs/include",
+		"/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/include",
+		"/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcl/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces/include",
+		"/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcutils/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_interface/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcpputils/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_cpp/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser/include",
+		"/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rmw/include",
+		"/home/jakeluo/Software/ros2_rolling/install/tracetools/include",
+		"/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/include",
+		"/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/include",
+		"/usr/local/include/opencv",
+		"/usr/include",
+		"/usr/local/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/gui_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp",
+			"MU"
+		],
+		[
+			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

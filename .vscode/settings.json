@@ -71,6 +71,8 @@
         "cassert": "cpp",
         "any": "cpp",
         "regex": "cpp",
-        "*.idl": "cpp"
+        "*.idl": "cpp",
+        "qgraphicsscene": "cpp",
+        "qscrollbar": "cpp"
     }
 }

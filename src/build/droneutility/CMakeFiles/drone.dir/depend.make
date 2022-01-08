@@ -6,7 +6,11 @@ CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRo
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
+CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
+CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
+CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
 CMakeFiles/drone.dir/src/drone.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp

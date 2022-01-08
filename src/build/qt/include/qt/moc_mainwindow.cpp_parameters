@@ -1,0 +1,12 @@
+-I/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include
+-I/usr/include/x86_64-linux-gnu/qt5
+-I/usr/include/x86_64-linux-gnu/qt5/QtWidgets
+-I/usr/include/x86_64-linux-gnu/qt5/QtGui
+-I/usr/include/x86_64-linux-gnu/qt5/QtCore
+-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+-I/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt
+-I/home/jakeluo/Documents/MonitoringSystemRos2/src/qt
+-I/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt
+-o
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h

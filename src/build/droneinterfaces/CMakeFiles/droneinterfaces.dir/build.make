@@ -59,7 +59,11 @@ CMakeFiles/droneinterfaces: rosidl_cmake/srv/DroneRegister_Response.msg
 CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneController.srv
 CMakeFiles/droneinterfaces: rosidl_cmake/srv/DroneController_Request.msg
 CMakeFiles/droneinterfaces: rosidl_cmake/srv/DroneController_Response.msg
+CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DronePoolStatus.srv
+CMakeFiles/droneinterfaces: rosidl_cmake/srv/DronePoolStatus_Request.msg
+CMakeFiles/droneinterfaces: rosidl_cmake/srv/DronePoolStatus_Response.msg
 CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/FrameArray.msg
+CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/PositionArray.msg
 
 
 droneinterfaces: CMakeFiles/droneinterfaces

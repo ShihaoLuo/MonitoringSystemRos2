@@ -1,0 +1,11 @@
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/install/strip.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/install/local.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/install.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/list_install_components.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/rebuild_cache.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/edit_cache.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/test.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/qt_uninstall.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/uninstall.dir
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui_autogen.dir

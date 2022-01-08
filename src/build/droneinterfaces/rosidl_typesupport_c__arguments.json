@@ -5,7 +5,9 @@
   "idl_tuples": [
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneRegister.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneController.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DronePoolStatus.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/PositionArray.idl"
   ],
   "target_dependencies": [
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib/rosidl_typesupport_c/rosidl_typesupport_c",
@@ -16,6 +18,8 @@
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneRegister.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneController.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DronePoolStatus.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/PositionArray.idl"
   ]
 }

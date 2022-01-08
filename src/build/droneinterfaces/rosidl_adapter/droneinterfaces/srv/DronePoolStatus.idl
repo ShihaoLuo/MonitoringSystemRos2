@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from droneinterfaces/srv/DronePoolStatus.srv
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module srv {
+    struct DronePoolStatus_Request {
+      boolean flag;
+    };
+    struct DronePoolStatus_Response {
+      sequence<string, 5> dronenames;
+    };
+  };
+};

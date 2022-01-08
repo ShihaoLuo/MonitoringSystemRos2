@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "droneinterfaces/srv/drone_register.hpp"
 #include "droneinterfaces/srv/drone_controller.hpp"
+// #include "droneinterfaces/srv/drone_pool_status.hpp"
 #include <memory>
 #include <map>
 #include <sys/socket.h>
@@ -54,9 +55,9 @@ namespace dronenamespace
         std::map<std::string, std::queue<std::vector<unsigned char>>> framepool;
         rclcpp::Node::SharedPtr nh_;
         size_t count_;
-        // rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
         rclcpp::Service<droneinterfaces::srv::DroneRegister>::SharedPtr registerServer_;
         rclcpp::Service<droneinterfaces::srv::DroneController>::SharedPtr controllerServer_;
+        // rclcpp::Service<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronepoolstatusServer_;
         std_msgs::msg::String cmd;
         int running = 1;
         std::map<std::string, drone> dronepool;
@@ -68,6 +69,8 @@ namespace dronenamespace
         std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response);
         void droneController(const std::shared_ptr<droneinterfaces::srv::DroneController::Request> request,
         std::shared_ptr<droneinterfaces::srv::DroneController::Response> response);
+        // void dronePoolStatus(const std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Request> request,
+        // std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Response> response);
     };
 
 }

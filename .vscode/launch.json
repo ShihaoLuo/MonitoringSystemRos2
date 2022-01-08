@@ -8,7 +8,7 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/dronemanager",
+            "program": "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/drone",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

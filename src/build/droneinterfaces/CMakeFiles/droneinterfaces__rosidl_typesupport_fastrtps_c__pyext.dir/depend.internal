@@ -100,10 +100,16 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gene
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__type_support.h
+ rosidl_generator_c/droneinterfaces/msg/detail/position_array__functions.h
+ rosidl_generator_c/droneinterfaces/msg/detail/position_array__struct.h
+ rosidl_generator_c/droneinterfaces/msg/detail/position_array__type_support.h
  rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__type_support.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__functions.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__struct.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__type_support.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__type_support.h

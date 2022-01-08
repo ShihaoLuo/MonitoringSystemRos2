@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from droneinterfaces/msg/PositionArray.msg
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module msg {
+    typedef float float__4[4];
+    struct PositionArray {
+      float__4 position;
+
+      float time;
+    };
+  };
+};

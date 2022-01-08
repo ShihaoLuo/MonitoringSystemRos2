@@ -15,7 +15,9 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/DroneRegister.srv"
   "srv/DroneController.srv"
+  "srv/DronePoolStatus.srv"
   "msg/FrameArray.msg"
+  "msg/PositionArray.msg"
 )
 
 

@@ -3,6 +3,8 @@
   "non_idl_tuples": [
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneRegister.srv",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneController.srv",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/FrameArray.msg"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DronePoolStatus.srv",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/FrameArray.msg",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/PositionArray.msg"
   ]
 }
