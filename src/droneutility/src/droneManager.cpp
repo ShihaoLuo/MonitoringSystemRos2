@@ -152,6 +152,11 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         t.detach();
         response->status = 1;
         printDrone();
+        std::sprintf(tmpcmd, "setfps middle");
+        sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
+        RCLCPP_INFO(nh_->get_logger(), "Send: setfps low to %s\n", tmp.ip.c_str());
+        recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
+        RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
         return ;
     }else
     {

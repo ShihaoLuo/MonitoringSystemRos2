@@ -149,8 +149,8 @@ void Drone::spin()
     if(dronestatus == 1)
     {
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s started.", name.c_str());
-        // std::thread keyloopT(std::bind(&Drone::keyloop, this));
-        // keyloopT.detach();
+        std::thread keyloopT(std::bind(&Drone::keyloop, this));
+        keyloopT.detach();
         rclcpp::spin(nh_);
 
     }else{
