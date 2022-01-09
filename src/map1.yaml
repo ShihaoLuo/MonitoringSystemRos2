@@ -1,0 +1,13 @@
+%YAML:1.0
+---
+mappointsFile: "map1.mappoints"
+nMappoints: 11634
+keyframesFile: "map1.keyframes"
+nKeyframes: 317
+featuresFile: "map1.features"
+nFeatures: 319936
+Options: 2
+Options descriptions: [ FEATURES_FILE_NOT_DELIMITED ]
+cameraMatrices:
+   - { fx:9.2117102050781250e+02, fy:9.1901800537109375e+02,
+       cx:4.5989999389648438e+02, cy:3.5123999023437500e+02 }

@@ -60,7 +60,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         return ;
     }
     struct timeval timeout;
-    timeout.tv_sec = 5;
+    timeout.tv_sec = 1;
     timeout.tv_usec = 0;
     if(setsockopt(send_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {
@@ -150,13 +150,13 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         framepool.emplace(tmp.ip, std::queue<std::vector<unsigned char>>());
         std::thread t(std::bind(&DroneManager::recvVideoThread, this, tmp.ip));
         t.detach();
-        response->status = 1;
         printDrone();
-        std::sprintf(tmpcmd, "setfps middle");
+        std::sprintf(tmpcmd, "streamoff");
         sendto(send_socket, tmpcmd, strlen(tmpcmd), 0, (struct sockaddr *)&dst_addr, len);
-        RCLCPP_INFO(nh_->get_logger(), "Send: setfps low to %s\n", tmp.ip.c_str());
+        RCLCPP_INFO(nh_->get_logger(), "Send: streamoff to %s\n", tmp.ip.c_str());
         recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
         RCLCPP_INFO(nh_->get_logger(), "Res: %s\n", recvbuf);
+        response->status = 1;
         return ;
     }else
     {

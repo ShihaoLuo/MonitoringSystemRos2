@@ -13,6 +13,7 @@
 #include <mutex>
 #include <unistd.h>
 #include <eigen3/Eigen/Geometry>
+#include <Osmap.h>
 
 namespace dronenamespace
 {
@@ -54,8 +55,8 @@ namespace dronenamespace
         Eigen::Matrix<float, 4, 4> Tcal, TO;
         Eigen::Vector4f position;
         float height_offset = 1800;
-        float scale = 600.0/0.1432;
-
+        float scale = 360.0/0.1432;
+        ORB_SLAM2::Osmap *osmap;
         void frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg);
         void track(const char* path_to_vocaulary, const char* path_to_setting);
     };

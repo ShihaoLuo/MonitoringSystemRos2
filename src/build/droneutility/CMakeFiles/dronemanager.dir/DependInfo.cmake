@@ -18,8 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include/eigen3"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include"
-  "/home/jakeluo/Documents/ORBSLAM_MapSave/include"
-  "/home/jakeluo/Documents/ORBSLAM_MapSave"
+  "/home/jakeluo/Documents/ORB_SLAM2/include"
+  "/home/jakeluo/Documents/ORB_SLAM2"
   "/usr/include/eigen3"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include"
   "/home/jakeluo/Software/ros2_rolling/install/rclcpp/include"

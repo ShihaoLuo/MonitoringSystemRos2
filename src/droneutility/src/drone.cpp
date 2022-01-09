@@ -5,7 +5,7 @@ using namespace dronenamespace;
 
 Drone::Drone(const char* name_, const char* ip_)
 {
-    Tcal << 1,0,0,0, 0,cos(13*3.1415926/180),-sin(13*3.1415926/180),0, 0,sin(13*3.1415926/180),cos(13*3.1415926/180),0, 0,0,0,1;
+    Tcal << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
     oTW <<0,0,1,0,  -1,0,0,0,  0,-1,0,0,  0,0,0,1;
     name = name_;
     ip = ip_;
@@ -48,7 +48,11 @@ Drone::Drone(const char* name_, const char* ip_)
         if (1 == ReuseMap)
             bReuseMap = true;
     
-        pSlam = new ORB_SLAM2::System(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR, 1, bReuseMap,strMapPath);
+        pSlam = new ORB_SLAM2::System(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR, 1);
+        pSlam -> ActivateLocalizationMode();
+        osmap = new ORB_SLAM2::Osmap(*pSlam);
+        pose = pSlam->TrackMonocular(im, tframe_);
+        osmap->mapLoad("map1.yaml");
         frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
             name+"_Framearray",
             1,
@@ -112,12 +116,6 @@ int Drone::keyloop()
         }
         s.assign(c, size+1);
         size = 0;
-        request->cmd=s;
-        request->ip = ip;
-        auto result = controllerClient_->async_send_request(request);
-        RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-        // rclcpp::spin_until_future_complete(nh_, result);
-        res = result.get()->res;
         
         if(c[0] =='q')
         {
@@ -126,8 +124,24 @@ int Drone::keyloop()
             quit();
             cond.notify_all();
             break;
+        }else if(c[0] == 's' && c[1] == 's')
+        {
+            RCLCPP_INFO(nh_->get_logger(), "save map\n");
+            osmap->mapSave("map1.yaml", true);
+            memset(c, 0, size+1);
+        }else if(c[0] == 'l' && c[1] == 'l')
+        {
+            RCLCPP_INFO(nh_->get_logger(), "save map\n");
+            osmap->mapLoad("map1.yaml");
+            memset(c, 0, size+1);
         }else
         {
+            request->cmd=s;
+            request->ip = ip;
+            auto result = controllerClient_->async_send_request(request);
+            RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
+            // rclcpp::spin_until_future_complete(nh_, result);
+            res = result.get()->res;
             RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
             memset(c, 0, size+1);
         } 

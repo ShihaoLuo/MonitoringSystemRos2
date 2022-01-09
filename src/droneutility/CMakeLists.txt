@@ -31,8 +31,8 @@ include_directories( ${EIGEN3_INCLUDE_DIRS} )
 find_package(OpenGL REQUIRED)
 find_package(Boost REQUIRED)
 
-# set(ORB_SLAM2_PATH /home/jakeluo/Software/ORB_SLAM2)
-set(ORB_SLAM2_PATH /home/jakeluo/Documents/ORBSLAM_MapSave)
+set(ORB_SLAM2_PATH /home/jakeluo/Documents/ORB_SLAM2)
+# set(ORB_SLAM2_PATH /home/jakeluo/Documents/ORBSLAM_MapSave)
 
 INCLUDE_DIRECTORIES(
 ${CMAKE_SOURCE_DIR}/include 

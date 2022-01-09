@@ -6,7 +6,7 @@
 
 # the Orb Vocabulary File Path. Either .bin File or .txt File is Ok.
   
-Orb_Vocabulary: ORBvoc.bin
+Orb_Vocabulary: ORBvoc.txt
 
 # the Camera Setting File Path. 
 
