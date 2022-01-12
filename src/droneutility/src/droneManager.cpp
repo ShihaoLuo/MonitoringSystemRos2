@@ -292,7 +292,18 @@ std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
             RCLCPP_INFO(nh_->get_logger(), "new dronoepool:\n");
             DroneManager::printDrone();
             response->res="ok";
-
+        }else if(request->cmd[0] == '~'){
+            struct sockaddr_in dst_addr, client_addr;
+            memset(&dst_addr, 0, sizeof(struct sockaddr_in));
+            memset(recvbuf, 0, 30);
+            dst_addr.sin_family = AF_INET;
+            dst_addr.sin_port = htons(8889);
+            uint32_t ip;
+            inet_pton(AF_INET, request->ip.c_str(), &ip);
+            dst_addr.sin_addr.s_addr = ip;
+            RCLCPP_INFO(nh_->get_logger(), "Send: %s to %s\n", (request->cmd.substr(1,request->cmd.size()).c_str()), dronepool[request->ip].name.c_str());
+            sendto(dronepool[request->ip].cmdsocket, (request->cmd.substr(1,request->cmd.size()).c_str()), strlen(request->cmd.c_str()), 0, (struct sockaddr *)&dst_addr, len);
+            response->res="send rc.";
         }else{
             struct sockaddr_in dst_addr, client_addr;
             memset(&dst_addr, 0, sizeof(struct sockaddr_in));

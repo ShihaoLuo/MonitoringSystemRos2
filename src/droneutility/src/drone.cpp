@@ -5,6 +5,10 @@ using namespace dronenamespace;
 
 Drone::Drone(const char* name_, const char* ip_)
 {
+    dronepidp = new PID(0.005, 0.00075, 0.0005);
+    dronepidp->setLimits(-100.0, 100.0);
+    dronepidr = new PID(0.005, 0.00075, 0.0005);
+    dronepidr->setLimits(-100.0, 100.0);
     auto opt1 = rclcpp::SubscriptionOptions();
     opt1.callback_group = callbackgroup1;
     auto opt3 = rclcpp::PublisherOptions();
@@ -18,6 +22,7 @@ Drone::Drone(const char* name_, const char* ip_)
     callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister",
         rmw_qos_profile_default, callbackgroup1);
     positionPublisher_ = nh_->create_publisher<droneinterfaces::msg::PositionArray>(name+"_Positionarray", 1,
@@ -26,7 +31,7 @@ Drone::Drone(const char* name_, const char* ip_)
         rmw_qos_profile_default, callbackgroup2);
     auto request = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
     goToPointServer_ = nh_->create_service<droneinterfaces::srv::GoToPoint>(name+"_GoToPoint", std::bind(&Drone::gotopoint, this, std::placeholders::_1, std::placeholders::_2),
-        rmw_qos_profile_default, callbackgroup2);
+        rmw_qos_profile_default, callbackgroup4);
     request->dronename = name;
     request->ip = ip;
     typedef std::chrono::duration<int> sec;
@@ -78,14 +83,33 @@ void Drone::gotopoint(const std::shared_ptr<droneinterfaces::srv::GoToPoint::Req
         std::shared_ptr<droneinterfaces::srv::GoToPoint::Response> response)
 {
     goalPoint = Eigen::Map<Eigen::Vector4f>(request->goal.data());
+    float oP=0, oR=0;
+    string s = "rc 999 999 999 999";
+    auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
+    request2->ip = ip;
+    dronepidp->reset();
+    dronepidr->reset();
     while((goalPoint-position).norm()>200)
     {
         // std::cout<<(goalPoint-position).norm()<<std::endl;
-        usleep(100000);
+        oP = dronepidp->pid_control(goalPoint[0], position[0]);
+        oR = dronepidr->pid_control(goalPoint[1], position[1]);
+        std::sprintf(s.data(), "~rc %d %d 0 0", int(-oR), int(oP));
+        request2->cmd = s;
+        auto result = controllerClient_->async_send_request(request2);
+        auto res = result.get()->res;
+        // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+        // RCLCPP_INFO(nh_->get_logger(), "output:%f goal:%f position:%f", o, goalPoint[0], position[0]);
+        usleep(30000);
     }
+
     // std::cout<<goalPoint<<std::endl;
     // std::cout<<position<<std::endl;
     RCLCPP_INFO(nh_->get_logger(), "arrive %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2]);
+    std::sprintf(request2->cmd.data(), "~rc 0 0 0 0");
+    auto result = controllerClient_->async_send_request(request2);
+    auto res = result.get()->res;
+    // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
     response->res = true;
     // std::cout<<"gotopoint thread stop"<<std::endl;
 }
@@ -126,6 +150,8 @@ void Drone::quit()
     timer_->cancel();
     delete pSlam;
     delete osmap;
+    delete dronepidp;
+    delete dronepidr;
     dronestatus = -1;
 }
 

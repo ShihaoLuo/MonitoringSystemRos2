@@ -66,7 +66,8 @@ namespace dronenamespace
         void track(const char* path_to_vocaulary, const char* path_to_setting);
         void gotopoint(const std::shared_ptr<droneinterfaces::srv::GoToPoint::Request> request,
         std::shared_ptr<droneinterfaces::srv::GoToPoint::Response> response);
-        rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3;
+        rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4;
+        PID *dronepidp, *dronepidr;
     };
 
     

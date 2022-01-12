@@ -1,150 +1,54 @@
 #include "pid.hpp"
-#include <ctime>
 
-
-PID::PID(float* Input, float* Output, float* Setpoint,
-        float Kp, float Ki, float Kd, int POn, int ControllerDirection)
+PID::PID():kp(0), ki(0), kd(0), target(0), actual(0), intergral(0), Minintergral(-30000), Maxintergral(30000)
 {
-    myOutput = Output;
-    myInput = Input;
-    mySetpoint = Setpoint;
-    inAuto = false;
-
-    PID::SetOutputLimits(0, 255);				//default output limit corresponds to
-												//the arduino pwm limits
-
-    SampleTime = 100;							//default Controller Sample Time is 0.1 seconds
-
-    PID::SetControllerDirection(ControllerDirection);
-    PID::SetTunings(Kp, Ki, Kd, POn);
-
-    lastTime = time(nullptr)-SampleTime;
+   e = target - actual;
+   e_pre = e;
 }
 
-bool PID::Compute()
+PID::PID(float p, float i, float d):kp(p), ki(i), kd(d), target(0), actual(0), intergral(0), Minintergral(-30000), Maxintergral(30000)
 {
-   if(!inAuto) return false;
-   unsigned long now = time(nullptr);
-   unsigned long timeChange = (now - lastTime);
-   if(timeChange>=SampleTime)
-   {
-      /*Compute all the working error variables*/
-      float input = *myInput;
-      float error = *mySetpoint - input;
-      float dInput = (input - lastInput);
-      outputSum+= (ki * error);
-
-      /*Add Proportional on Measurement, if P_ON_M is specified*/
-      if(!pOnE) outputSum-= kp * dInput;
-
-      if(outputSum > outMax) outputSum= outMax;
-      else if(outputSum < outMin) outputSum= outMin;
-
-      /*Add Proportional on Error, if P_ON_E is specified*/
-	   float output;
-      if(pOnE) output = kp * error;
-      else output = 0;
-
-      /*Compute Rest of PID Output*/
-      output += outputSum - kd * dInput;
-
-	    if(output > outMax) output = outMax;
-      else if(output < outMin) output = outMin;
-	    *myOutput = output;
-
-      /*Remember some variables for next time*/
-      lastInput = input;
-      lastTime = now;
-	    return true;
-   }
-   else return false;
+   e = target - actual;
+   e_pre = e;
 }
 
-void PID::SetTunings(float Kp, float Ki, float Kd, int POn)
+PID::~PID(){}
+
+void PID::reset()
 {
-   if (Kp<0 || Ki<0 || Kd<0) return;
-
-   pOn = POn;
-   pOnE = POn == P_ON_E;
-
-   dispKp = Kp; dispKi = Ki; dispKd = Kd;
-
-   float SampleTimeInSec = ((float)SampleTime)/1000;
-   kp = Kp;
-   ki = Ki * SampleTimeInSec;
-   kd = Kd / SampleTimeInSec;
-
-  if(controllerDirection ==REVERSE)
-   {
-      kp = (0 - kp);
-      ki = (0 - ki);
-      kd = (0 - kd);
-   }
+   intergral = 0;
+   e = 0;
+   e_pre = e;
 }
 
-void PID::SetTunings(float Kp, float Ki, float Kd){
-    SetTunings(Kp, Ki, Kd, pOn); 
-}
-
-void PID::SetSampleTime(int NewSampleTime)
+float PID::pid_control(float tar, float act)
 {
-   if (NewSampleTime > 0)
-   {
-      float ratio  = (float)NewSampleTime
-                      / (float)SampleTime;
-      ki *= ratio;
-      kd /= ratio;
-      SampleTime = (unsigned long)NewSampleTime;
-   }
+   float u;
+   target = tar;
+   actual = act;
+   e = target - actual;
+   intergral += e;
+   if(intergral > 30000) intergral = Maxintergral;
+   if(intergral < -30000) intergral = Minintergral;
+   u = kp*e+ki*intergral+kd*(e-e_pre);
+   if(u > Maxout) 
+      u = Maxout;
+   if(u < Minout) 
+      u = Minout;
+   e_pre = e;
+   std::cout<<"intergral:"<<intergral<<std::endl;
+   return u;
 }
 
-void PID::SetOutputLimits(float Min, float Max)
+void PID::setLimits(float min, float max)
 {
-   if(Min >= Max) return;
-   outMin = Min;
-   outMax = Max;
-
-   if(inAuto)
-   {
-	   if(*myOutput > outMax) *myOutput = outMax;
-	   else if(*myOutput < outMin) *myOutput = outMin;
-
-	   if(outputSum > outMax) outputSum= outMax;
-	   else if(outputSum < outMin) outputSum= outMin;
-   }
+   Minout = min;
+   Maxout = max;
 }
 
-void PID::SetMode(int Mode)
+void PID::setPID(float p, float i, float d)
 {
-    bool newAuto = (Mode == AUTOMATIC);
-    if(newAuto && !inAuto)
-    {  /*we just went from manual to auto*/
-        PID::Initialize();
-    }
-    inAuto = newAuto;
+   kp = p;
+   ki = i;
+   kd = d;
 }
-
-void PID::Initialize()
-{
-   outputSum = *myOutput;
-   lastInput = *myInput;
-   if(outputSum > outMax) outputSum = outMax;
-   else if(outputSum < outMin) outputSum = outMin;
-}
-
-void PID::SetControllerDirection(int Direction)
-{
-   if(inAuto && Direction !=controllerDirection)
-   {
-	    kp = (0 - kp);
-      ki = (0 - ki);
-      kd = (0 - kd);
-   }
-   controllerDirection = Direction;
-}
-
-float PID::GetKp(){ return  dispKp; }
-float PID::GetKi(){ return  dispKi;}
-float PID::GetKd(){ return  dispKd;}
-int PID::GetMode(){ return  inAuto ? AUTOMATIC : MANUAL;}
-int PID::GetDirection(){ return controllerDirection;}
