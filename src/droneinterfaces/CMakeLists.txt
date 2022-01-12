@@ -18,6 +18,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/DronePoolStatus.srv"
   "msg/FrameArray.msg"
   "msg/PositionArray.msg"
+  "srv/GoToPoint.srv"
 )
 
 

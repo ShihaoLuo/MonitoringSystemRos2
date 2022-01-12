@@ -5,13 +5,18 @@ using namespace dronenamespace;
 DroneManager::DroneManager()
 {
     nh_ = rclcpp::Node::make_shared("DroneManager");
+    callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
     // publisher_ = nh_->create_publisher<std_msgs::msg::String>("RecvUdpMsg", 10);
     registerServer_ = nh_->create_service<droneinterfaces::srv::DroneRegister>("DroneRegister", 
-        std::bind(&DroneManager::droneRegister, this, std::placeholders::_1, std::placeholders::_2));
+        std::bind(&DroneManager::droneRegister, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup1);
     controllerServer_ = nh_->create_service<droneinterfaces::srv::DroneController>("DroneController",
-        std::bind(&DroneManager::droneController, this, std::placeholders::_1, std::placeholders::_2));
-//     dronepoolstatusServer_ = nh_->create_service<droneinterfaces::srv::DronePoolStatus>("DronePoolStatus",
-//         std::bind(&DroneManager::dronePoolStatus, this, std::placeholders::_1, std::placeholders::_2));
+        std::bind(&DroneManager::droneController, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup2);
+    dronepoolstatusServer_ = nh_->create_service<droneinterfaces::srv::DronePoolStatus>("DronePoolStatus",
+        std::bind(&DroneManager::dronePoolStatus, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup1);
 }
 
 // void DroneManager::recvThread()
@@ -29,20 +34,25 @@ void DroneManager::quit()
 
 void DroneManager::spin()
 {
-    rclcpp::spin(nh_);
+    rclcpp::executors::MultiThreadedExecutor exector_;
+    exector_.add_node(nh_);
+    exector_.spin();
+    // rclcpp::spin(nh_);
 }
 
-// void DroneManager::dronePoolStatus(const std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Request> request,
-// std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Response> response)
-// {
-//     rosidl_runtime_cpp::BoundedVector<std::__cxx11::basic_string<char, std::char_traits<char>, 
-//     std::allocator<char>>, 5UL, std::allocator<std::string>> tmp;
-//     for(auto it = dronepool.begin(); it != dronepool.end(); it++)
-//     {
-//         tmp.push_back(it->first);
-//     }
-//     response->set__dronenames(tmp);
-// };
+void DroneManager::dronePoolStatus(const std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Request> request,
+std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Response> response)
+{
+    rosidl_runtime_cpp::BoundedVector<std::__cxx11::basic_string<char, std::char_traits<char>, 
+    std::allocator<char>>, 5UL, std::allocator<std::string>> tmp, tmpip;
+    for(auto it = dronepool.begin(); it != dronepool.end(); it++)
+    {
+        tmp.push_back(it->second.name);
+        tmpip.push_back(it->second.ip);
+    }
+    response->set__dronenames(tmp);
+    response->set__droneips(tmpip);
+};
 
 void DroneManager::droneRegister(const std::shared_ptr<droneinterfaces::srv::DroneRegister::Request> request,
 std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
@@ -60,7 +70,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
         return ;
     }
     struct timeval timeout;
-    timeout.tv_sec = 1;
+    timeout.tv_sec = 10;
     timeout.tv_usec = 0;
     if(setsockopt(send_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {

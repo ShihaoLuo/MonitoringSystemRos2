@@ -1,2 +1,2 @@
 float32[4] position
-float32 time
+int64 time

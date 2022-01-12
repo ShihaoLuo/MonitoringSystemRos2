@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Drone Panel</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButtonland1">
@@ -849,11 +849,86 @@ switch</string>
       <height>600</height>
      </rect>
     </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditt1goal">
+    <property name="geometry">
+     <rect>
+      <x>2130</x>
+      <y>660</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditt2goal">
+    <property name="geometry">
+     <rect>
+      <x>2430</x>
+      <y>660</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtont1goalpoint">
+    <property name="geometry">
+     <rect>
+      <x>1990</x>
+      <y>660</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T1 goal point</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtont2goalpoint">
+    <property name="geometry">
+     <rect>
+      <x>2290</x>
+      <y>660</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T2 goal point</string>
     </property>
    </widget>
    <zorder>img1</zorder>
@@ -895,6 +970,10 @@ switch</string>
    <zorder>pushButtonstreamswitch1</zorder>
    <zorder>pushButtonstreamswitch2</zorder>
    <zorder>imgp</zorder>
+   <zorder>lineEditt1goal</zorder>
+   <zorder>lineEditt2goal</zorder>
+   <zorder>pushButtont1goalpoint</zorder>
+   <zorder>pushButtont2goalpoint</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

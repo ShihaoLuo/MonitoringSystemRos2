@@ -49,7 +49,7 @@ LINK_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
 
 
 add_executable(dronemanager src/droneManager.cpp)
-add_executable(drone src/drone.cpp)
+add_executable(drone src/drone.cpp src/pid.cpp)
 
 target_include_directories(dronemanager PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

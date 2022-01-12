@@ -5,15 +5,28 @@ using namespace dronenamespace;
 
 Drone::Drone(const char* name_, const char* ip_)
 {
+    auto opt1 = rclcpp::SubscriptionOptions();
+    opt1.callback_group = callbackgroup1;
+    auto opt3 = rclcpp::PublisherOptions();
+    opt3.callback_group = callbackgroup3;
+    // callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     Tcal << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
     oTW <<0,0,1,0,  -1,0,0,0,  0,-1,0,0,  0,0,0,1;
     name = name_;
     ip = ip_;
     nh_ = rclcpp::Node::make_shared(name);
-    client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister");
-    positionPublisher_ = nh_->create_publisher<droneinterfaces::msg::PositionArray>(name+"_Positionarray", 1);
-    controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
+    callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister",
+        rmw_qos_profile_default, callbackgroup1);
+    positionPublisher_ = nh_->create_publisher<droneinterfaces::msg::PositionArray>(name+"_Positionarray", 1,
+        opt3);
+    controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController",
+        rmw_qos_profile_default, callbackgroup2);
     auto request = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
+    goToPointServer_ = nh_->create_service<droneinterfaces::srv::GoToPoint>(name+"_GoToPoint", std::bind(&Drone::gotopoint, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup2);
     request->dronename = name;
     request->ip = ip;
     typedef std::chrono::duration<int> sec;
@@ -56,12 +69,30 @@ Drone::Drone(const char* name_, const char* ip_)
         frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
             name+"_Framearray",
             1,
-            std::bind(&Drone::frameCallback, this, std::placeholders::_1));
+            std::bind(&Drone::frameCallback, this, std::placeholders::_1), opt1);
     }
 }
     
+
+void Drone::gotopoint(const std::shared_ptr<droneinterfaces::srv::GoToPoint::Request> request,
+        std::shared_ptr<droneinterfaces::srv::GoToPoint::Response> response)
+{
+    goalPoint = Eigen::Map<Eigen::Vector4f>(request->goal.data());
+    while((goalPoint-position).norm()>200)
+    {
+        // std::cout<<(goalPoint-position).norm()<<std::endl;
+        usleep(100000);
+    }
+    // std::cout<<goalPoint<<std::endl;
+    // std::cout<<position<<std::endl;
+    RCLCPP_INFO(nh_->get_logger(), "arrive %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2]);
+    response->res = true;
+    // std::cout<<"gotopoint thread stop"<<std::endl;
+}
+
 void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
+    // RCLCPP_INFO(nh_->get_logger(), "frame callback");
     memcpy(im.data, msg->framebuf.data(), 2073600);
     // cond.notify_one();
     auto t = std::chrono::steady_clock::now();
@@ -91,10 +122,11 @@ void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 void Drone::quit()
 {
     running = 0;
-    dronestatus = -1;
     pSlam -> Shutdown();
     timer_->cancel();
-    delete[] pSlam;
+    delete pSlam;
+    delete osmap;
+    dronestatus = -1;
 }
 
 int Drone::keyloop()
@@ -138,25 +170,25 @@ int Drone::keyloop()
         {
             request->cmd=s;
             request->ip = ip;
-            auto result = controllerClient_->async_send_request(request);
-            RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-            // rclcpp::spin_until_future_complete(nh_, result);
-            res = result.get()->res;
-            RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+            // auto result = controllerClient_->async_send_request(request);
+            // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
+            // // rclcpp::spin_until_future_complete(nh_, result);
+            // res = result.get()->res;
+            // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+            // memset(c, 0, size+1);
+            auto response_received_callback = [this](ServiceResponseFuture future){
+                auto result = future.get();
+                std::string res = "-"+result.get()->res;
+                RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+            };
+            auto future_result = controllerClient_ -> async_send_request(request, response_received_callback);
             memset(c, 0, size+1);
         } 
+        usleep(200000);
     }
     RCLCPP_INFO(nh_->get_logger(), "close the keyloop thread.\n");
     return 0;
 }
-
-// void Drone::droneControl()
-// {
-//     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
-//     auto request = std::make_shared<droneinterfaces::srv::DroneController::Request>();
-//     std::thread t(std::bind(&Drone::keyloop, this));
-//     t.detach();
-// }
 
 void Drone::spin()
 {
@@ -165,8 +197,11 @@ void Drone::spin()
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s started.", name.c_str());
         std::thread keyloopT(std::bind(&Drone::keyloop, this));
         keyloopT.detach();
-        rclcpp::spin(nh_);
-
+        // rclcpp::spin(nh_);
+        rclcpp::executors::MultiThreadedExecutor exector_;
+        exector_.add_node(nh_);
+        exector_.spin();
+        
     }else{
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s not started.", name.c_str());
     }
@@ -179,7 +214,5 @@ int main(int argc, char** argv)
     rclcpp::init(argc, argv);
     Drone drone(argv[1], argv[2]);
     drone.spin();
-    rclcpp::shutdown();
-    drone.quit();
     return 0;
 }

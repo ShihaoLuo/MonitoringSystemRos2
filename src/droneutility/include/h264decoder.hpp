@@ -21,6 +21,7 @@ mechanisms of boost::python.
 #include <stdexcept>
 #include <utility>
 
+
 struct AVCodecContext;
 struct AVFrame;
 struct AVCodec;
