@@ -100,6 +100,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 // Include directives for member types
 // Member `dronenames`
+// Member `droneips`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -121,7 +122,7 @@ void droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspe
   droneinterfaces__srv__DronePoolStatus_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspection_c__DronePoolStatus_Response_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspection_c__DronePoolStatus_Response_message_member_array[2] = {
   {
     "dronenames",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -136,13 +137,28 @@ static rosidl_typesupport_introspection_c__MessageMember droneinterfaces__srv__D
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "droneips",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    5,  // array size
+    true,  // is upper bound
+    offsetof(droneinterfaces__srv__DronePoolStatus_Response, droneips),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspection_c__DronePoolStatus_Response_message_members = {
   "droneinterfaces__srv",  // message namespace
   "DronePoolStatus_Response",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(droneinterfaces__srv__DronePoolStatus_Response),
   droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspection_c__DronePoolStatus_Response_message_member_array,  // message members
   droneinterfaces__srv__DronePoolStatus_Response__rosidl_typesupport_introspection_c__DronePoolStatus_Response_init_function,  // function to initialize message memory (memory has to be allocated)

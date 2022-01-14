@@ -1,11 +1,18 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.c.o"
   "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.c.o"
   "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/position_array__functions.c.o"
   "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__functions.c.o"
   "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__functions.c.o"
   "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o"
+  "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o"
   "libdroneinterfaces__rosidl_generator_c.pdb"
   "libdroneinterfaces__rosidl_generator_c.so"
+  "rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.c"
+  "rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.h"
+  "rosidl_generator_c/droneinterfaces/action/detail/go_point__struct.h"
+  "rosidl_generator_c/droneinterfaces/action/detail/go_point__type_support.h"
+  "rosidl_generator_c/droneinterfaces/action/go_point.h"
   "rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.c"
   "rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.h"
   "rosidl_generator_c/droneinterfaces/msg/detail/frame_array__struct.h"
@@ -28,9 +35,14 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.h"
   "rosidl_generator_c/droneinterfaces/srv/detail/drone_register__struct.h"
   "rosidl_generator_c/droneinterfaces/srv/detail/drone_register__type_support.h"
+  "rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c"
+  "rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.h"
+  "rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__struct.h"
+  "rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__type_support.h"
   "rosidl_generator_c/droneinterfaces/srv/drone_controller.h"
   "rosidl_generator_c/droneinterfaces/srv/drone_pool_status.h"
   "rosidl_generator_c/droneinterfaces/srv/drone_register.h"
+  "rosidl_generator_c/droneinterfaces/srv/go_to_point.h"
 )
 
 # Per-language clean rules from dependency scanning.

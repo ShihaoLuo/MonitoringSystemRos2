@@ -21,7 +21,7 @@ extern "C"
 typedef struct droneinterfaces__msg__PositionArray
 {
   float position[4];
-  float time;
+  int64_t time;
 } droneinterfaces__msg__PositionArray;
 
 // Struct for a sequence of droneinterfaces__msg__PositionArray.

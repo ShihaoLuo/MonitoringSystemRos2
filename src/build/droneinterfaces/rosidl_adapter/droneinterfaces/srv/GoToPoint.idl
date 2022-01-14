@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from droneinterfaces/srv/GoToPoint.srv
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module srv {
+    typedef float float__4[4];
+    struct GoToPoint_Request {
+      float__4 goal;
+    };
+    struct GoToPoint_Response {
+      boolean res;
+    };
+  };
+};

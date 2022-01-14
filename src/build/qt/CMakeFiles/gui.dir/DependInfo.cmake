@@ -34,6 +34,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/x86_64-linux-gnu/qt5/QtCore"
   "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rclcpp_action/include"
   "/home/jakeluo/Software/ros2_rolling/install/rclcpp/include"
   "/home/jakeluo/Software/ros2_rolling/install/std_msgs/include"
   "/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/include"
@@ -57,6 +58,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/jakeluo/Software/ros2_rolling/install/tracetools/include"
   "/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/include"
   "/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/action_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rcl_action/include"
   "/usr/local/include/opencv"
   )
 

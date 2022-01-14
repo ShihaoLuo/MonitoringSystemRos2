@@ -25,8 +25,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/include"
   "/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include"
   "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_interface/include"
+  "/home/jakeluo/Software/ros2_rolling/install/action_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/include"
+  "/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/include"
   "/home/jakeluo/Software/ros2_rolling/install/rcutils/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/include"
   "/home/jakeluo/Software/ros2_rolling/install/rcpputils/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_cpp/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/include"
+  "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/include"
   )
 
 # Targets to which this target links.

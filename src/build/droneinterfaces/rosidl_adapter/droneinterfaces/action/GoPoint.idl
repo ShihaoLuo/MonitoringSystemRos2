@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from droneinterfaces/action/GoPoint.action
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module action {
+    typedef float float__4[4];
+    @verbatim (language="comment", text=
+      "Goal")
+    struct GoPoint_Goal {
+      float__4 goal;
+    };
+    struct GoPoint_Result {
+      @verbatim (language="comment", text=
+        "Result")
+      boolean arrived;
+    };
+    struct GoPoint_Feedback {
+      @verbatim (language="comment", text=
+        "Feedback")
+      float distance;
+    };
+  };
+};

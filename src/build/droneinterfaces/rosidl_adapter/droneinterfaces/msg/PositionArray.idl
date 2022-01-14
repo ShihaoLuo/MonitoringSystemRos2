@@ -9,7 +9,7 @@ module droneinterfaces {
     struct PositionArray {
       float__4 position;
 
-      float time;
+      int64 time;
     };
   };
 };

@@ -62,12 +62,12 @@ class PositionArray(metaclass=Metaclass_PositionArray):
 
     _fields_and_field_types = {
         'position': 'float[4]',
-        'time': 'float',
+        'time': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 4),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -79,7 +79,7 @@ class PositionArray(metaclass=Metaclass_PositionArray):
         else:
             self.position = numpy.array(kwargs.get('position'), dtype=numpy.float32)
             assert self.position.shape == (4, )
-        self.time = kwargs.get('time', float())
+        self.time = kwargs.get('time', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -161,8 +161,8 @@ class PositionArray(metaclass=Metaclass_PositionArray):
     def time(self, value):
         if __debug__:
             assert \
-                isinstance(value, float), \
-                "The 'time' field must be of type 'float'"
-            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
-                "The 'time' field must be a float in [-3.402823e+38, 3.402823e+38]"
+                isinstance(value, int), \
+                "The 'time' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'time' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._time = value

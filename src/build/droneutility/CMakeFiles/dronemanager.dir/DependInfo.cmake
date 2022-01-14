@@ -46,6 +46,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/jakeluo/Software/ros2_rolling/install/tracetools/include"
   "/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/include"
   "/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/action_msgs/include"
+  "/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/include"
   )
 
 # Targets to which this target links.

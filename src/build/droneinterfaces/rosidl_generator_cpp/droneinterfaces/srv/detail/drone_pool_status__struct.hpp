@@ -161,12 +161,21 @@ struct DronePoolStatus_Response_
   using _dronenames_type =
     rosidl_runtime_cpp::BoundedVector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, 5, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>>;
   _dronenames_type dronenames;
+  using _droneips_type =
+    rosidl_runtime_cpp::BoundedVector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, 5, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>>;
+  _droneips_type droneips;
 
   // setters for named parameter idiom
   Type & set__dronenames(
     const rosidl_runtime_cpp::BoundedVector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, 5, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> & _arg)
   {
     this->dronenames = _arg;
+    return *this;
+  }
+  Type & set__droneips(
+    const rosidl_runtime_cpp::BoundedVector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, 5, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> & _arg)
+  {
+    this->droneips = _arg;
     return *this;
   }
 
@@ -213,6 +222,9 @@ struct DronePoolStatus_Response_
   bool operator==(const DronePoolStatus_Response_ & other) const
   {
     if (this->dronenames != other.dronenames) {
+      return false;
+    }
+    if (this->droneips != other.droneips) {
       return false;
     }
     return true;

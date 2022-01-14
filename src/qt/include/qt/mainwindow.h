@@ -24,6 +24,8 @@
 #include <QPen>
 #include <mutex>
 #include <QMouseEvent>
+#include "droneinterfaces/action/go_point.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -64,6 +66,10 @@ public slots:
     void clickButtondown202();
     void setGoalPoint1();
     void setGoalPoint2();
+    void sendGoal1();
+    // void sendGoal2();
+    void cancelGoal1();
+    // void cancelGoal2();
 
 private:
     Ui::MainWindow *ui;
@@ -80,13 +86,14 @@ private:
     rclcpp::Subscription<droneinterfaces::msg::PositionArray>::SharedPtr positionSubscription1_, positionSubscription2_;
     rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
     rclcpp::Client<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronePoolStatusClient_;
-    rclcpp::Client<droneinterfaces::srv::GoToPoint>::SharedPtr goToPointClient1_, goToPointClient2_;
+    rclcpp_action::Client<droneinterfaces::action::GoPoint>::SharedPtr goPointActionClient1_, goPointActionClient2_;
     void frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg);
     void frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg);
     void positionCallback1(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void spin();
     void checkDrones();
+
     std::string ip1 = "127.0.0.1";
     std::string ip2 = "127.0.0.1";
     bool stream1 = false;
@@ -94,11 +101,18 @@ private:
     QScrollBar *plaintext1scrollbar;
     QScrollBar *plaintext2scrollbar;
     std::array<float, 4UL> p1, p2;
-    std::array<float, 4UL> goalPosition = {0,0,1800,0};
+    std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
     int64_t ptime1=0, ptime2=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;
     std::shared_ptr<droneinterfaces::srv::GoToPoint_Request>  goToPointRequest;
     int goalPointFlag = 0;
+    bool actionGoalStatus1 = 0;
+    void goal_response_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr go_handle);
+    void feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr,
+        const std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback);
+    void result_callback(const rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::WrappedResult &result);
+    std::shared_future<std::shared_ptr<rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>>> goal_handle_future;
+    rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4;
 };
 
 #endif // MAINWINDOW_H

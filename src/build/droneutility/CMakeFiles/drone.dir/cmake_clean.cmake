@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drone.dir/src/drone.cpp.o"
+  "CMakeFiles/drone.dir/src/pid.cpp.o"
   "drone"
   "drone.pdb"
 )

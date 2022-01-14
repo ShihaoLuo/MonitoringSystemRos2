@@ -82,8 +82,8 @@ bool droneinterfaces__msg__position_array__convert_from_py(PyObject * _pymsg, vo
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->time = (float)PyFloat_AS_DOUBLE(field);
+    assert(PyLong_Check(field));
+    ros_message->time = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -128,7 +128,7 @@ PyObject * droneinterfaces__msg__position_array__convert_to_py(void * raw_ros_me
   }
   {  // time
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->time);
+    field = PyLong_FromLongLong(ros_message->time);
     {
       int rc = PyObject_SetAttrString(_pymessage, "time", field);
       Py_DECREF(field);

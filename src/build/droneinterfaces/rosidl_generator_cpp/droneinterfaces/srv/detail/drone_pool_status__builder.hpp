@@ -62,16 +62,32 @@ namespace srv
 namespace builder
 {
 
+class Init_DronePoolStatus_Response_droneips
+{
+public:
+  explicit Init_DronePoolStatus_Response_droneips(::droneinterfaces::srv::DronePoolStatus_Response & msg)
+  : msg_(msg)
+  {}
+  ::droneinterfaces::srv::DronePoolStatus_Response droneips(::droneinterfaces::srv::DronePoolStatus_Response::_droneips_type arg)
+  {
+    msg_.droneips = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::droneinterfaces::srv::DronePoolStatus_Response msg_;
+};
+
 class Init_DronePoolStatus_Response_dronenames
 {
 public:
   Init_DronePoolStatus_Response_dronenames()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::droneinterfaces::srv::DronePoolStatus_Response dronenames(::droneinterfaces::srv::DronePoolStatus_Response::_dronenames_type arg)
+  Init_DronePoolStatus_Response_droneips dronenames(::droneinterfaces::srv::DronePoolStatus_Response::_dronenames_type arg)
   {
     msg_.dronenames = std::move(arg);
-    return std::move(msg_);
+    return Init_DronePoolStatus_Response_droneips(msg_);
   }
 
 private:

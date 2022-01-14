@@ -181,7 +181,34 @@ void resize_function__DronePoolStatus_Response__dronenames(void * untyped_member
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember DronePoolStatus_Response_message_member_array[1] = {
+size_t size_function__DronePoolStatus_Response__droneips(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<std::string> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__DronePoolStatus_Response__droneips(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<std::string> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__DronePoolStatus_Response__droneips(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<std::string> *>(untyped_member);
+  return &member[index];
+}
+
+void resize_function__DronePoolStatus_Response__droneips(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<std::string> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember DronePoolStatus_Response_message_member_array[2] = {
   {
     "dronenames",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -196,13 +223,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember DronePoolStat
     get_const_function__DronePoolStatus_Response__dronenames,  // get_const(index) function pointer
     get_function__DronePoolStatus_Response__dronenames,  // get(index) function pointer
     resize_function__DronePoolStatus_Response__dronenames  // resize(index) function pointer
+  },
+  {
+    "droneips",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    5,  // array size
+    true,  // is upper bound
+    offsetof(droneinterfaces::srv::DronePoolStatus_Response, droneips),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__DronePoolStatus_Response__droneips,  // size() function pointer
+    get_const_function__DronePoolStatus_Response__droneips,  // get_const(index) function pointer
+    get_function__DronePoolStatus_Response__droneips,  // get(index) function pointer
+    resize_function__DronePoolStatus_Response__droneips  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers DronePoolStatus_Response_message_members = {
   "droneinterfaces::srv",  // message namespace
   "DronePoolStatus_Response",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(droneinterfaces::srv::DronePoolStatus_Response),
   DronePoolStatus_Response_message_member_array,  // message members
   DronePoolStatus_Response_init_function,  // function to initialize message memory (memory has to be allocated)

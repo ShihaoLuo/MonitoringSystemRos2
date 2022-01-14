@@ -10,6 +10,8 @@ module droneinterfaces {
     };
     struct DronePoolStatus_Response {
       sequence<string, 5> dronenames;
+
+      sequence<string, 5> droneips;
     };
   };
 };

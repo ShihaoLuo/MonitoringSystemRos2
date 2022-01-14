@@ -122,13 +122,41 @@ CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c -o CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.s
 
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o: CMakeFiles/droneinterfaces__python.dir/flags.make
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o: rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c
+
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c > CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.i
+
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c -o CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.s
+
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o: CMakeFiles/droneinterfaces__python.dir/flags.make
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o: rosidl_generator_py/droneinterfaces/action/_go_point_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/action/_go_point_s.c
+
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/action/_go_point_s.c > CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.i
+
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/action/_go_point_s.c -o CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.s
+
 # Object files for target droneinterfaces__python
 droneinterfaces__python_OBJECTS = \
 "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_drone_register_s.c.o" \
 "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_drone_controller_s.c.o" \
 "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_drone_pool_status_s.c.o" \
 "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_frame_array_s.c.o" \
-"CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.o"
+"CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.o" \
+"CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o" \
+"CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o"
 
 # External object files for target droneinterfaces__python
 droneinterfaces__python_EXTERNAL_OBJECTS =
@@ -138,16 +166,39 @@ rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/dr
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_drone_pool_status_s.c.o
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_frame_array_s.c.o
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.o
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/build.make
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: libdroneinterfaces__rosidl_generator_c.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: libdroneinterfaces__rosidl_typesupport_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/cmake/../../../lib/libaction_msgs__python.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/share/unique_identifier_msgs/cmake/../../../lib/libunique_identifier_msgs__python.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_generator_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_generator_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib/librosidl_typesupport_c.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib/librosidl_runtime_c.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rcpputils/lib/librcpputils.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: /home/jakeluo/Software/ros2_rolling/install/rcutils/lib/librcutils.so
 rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so: CMakeFiles/droneinterfaces__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library rosidl_generator_py/droneinterfaces/libdroneinterfaces__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/droneinterfaces__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

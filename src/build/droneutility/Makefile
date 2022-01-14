@@ -273,6 +273,33 @@ src/droneManager.cpp.s:
 	$(MAKE) -f CMakeFiles/dronemanager.dir/build.make CMakeFiles/dronemanager.dir/src/droneManager.cpp.s
 .PHONY : src/droneManager.cpp.s
 
+src/pid.o: src/pid.cpp.o
+
+.PHONY : src/pid.o
+
+# target to build an object file
+src/pid.cpp.o:
+	$(MAKE) -f CMakeFiles/drone.dir/build.make CMakeFiles/drone.dir/src/pid.cpp.o
+.PHONY : src/pid.cpp.o
+
+src/pid.i: src/pid.cpp.i
+
+.PHONY : src/pid.i
+
+# target to preprocess a source file
+src/pid.cpp.i:
+	$(MAKE) -f CMakeFiles/drone.dir/build.make CMakeFiles/drone.dir/src/pid.cpp.i
+.PHONY : src/pid.cpp.i
+
+src/pid.s: src/pid.cpp.s
+
+.PHONY : src/pid.s
+
+# target to generate assembly for a file
+src/pid.cpp.s:
+	$(MAKE) -f CMakeFiles/drone.dir/build.make CMakeFiles/drone.dir/src/pid.cpp.s
+.PHONY : src/pid.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +323,9 @@ help:
 	@echo "... src/droneManager.o"
 	@echo "... src/droneManager.i"
 	@echo "... src/droneManager.s"
+	@echo "... src/pid.o"
+	@echo "... src/pid.i"
+	@echo "... src/pid.s"
 .PHONY : help
 
 

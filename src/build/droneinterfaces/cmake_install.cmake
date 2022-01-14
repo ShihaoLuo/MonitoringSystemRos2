@@ -53,7 +53,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_generator_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_generator_c.so"
-         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
+         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_generator_c.so")
@@ -76,7 +76,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
+         OLD_RPATH "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces:/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so")
@@ -99,7 +99,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
+         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_c.so")
@@ -122,7 +122,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_cpp.so"
-         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:"
+         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_introspection_cpp.so")
@@ -145,7 +145,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_cpp.so"
-         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
+         OLD_RPATH "/home/jakeluo/Software/ros2_rolling/install/action_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib:/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib:/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib:/home/jakeluo/Software/ros2_rolling/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdroneinterfaces__rosidl_typesupport_cpp.so")

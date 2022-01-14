@@ -931,6 +931,42 @@ switch</string>
      <string>T2 goal point</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonsendgoal1">
+    <property name="geometry">
+     <rect>
+      <x>1990</x>
+      <y>690</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T1 Send goal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtoncancelgoal1">
+    <property name="geometry">
+     <rect>
+      <x>2130</x>
+      <y>690</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T1 cancel goal</string>
+    </property>
+   </widget>
    <zorder>img1</zorder>
    <zorder>pushButtonland1</zorder>
    <zorder>img2</zorder>
@@ -974,6 +1010,8 @@ switch</string>
    <zorder>lineEditt2goal</zorder>
    <zorder>pushButtont1goalpoint</zorder>
    <zorder>pushButtont2goalpoint</zorder>
+   <zorder>pushButtonsendgoal1</zorder>
+   <zorder>pushButtoncancelgoal1</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

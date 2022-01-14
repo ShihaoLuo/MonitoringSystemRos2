@@ -130,6 +130,24 @@ inline void to_flow_style_yaml(
       }
       out << "]";
     }
+    out << ", ";
+  }
+
+  // member: droneips
+  {
+    if (msg.droneips.size() == 0) {
+      out << "droneips: []";
+    } else {
+      out << "droneips: [";
+      size_t pending_items = msg.droneips.size();
+      for (auto item : msg.droneips) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -148,6 +166,26 @@ inline void to_block_style_yaml(
     } else {
       out << "dronenames:\n";
       for (auto item : msg.dronenames) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: droneips
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.droneips.size() == 0) {
+      out << "droneips: []\n";
+    } else {
+      out << "droneips:\n";
+      for (auto item : msg.droneips) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

@@ -64,6 +64,12 @@ public:
     QPushButton *pushButtonstreamswitch1;
     QPushButton *pushButtonstreamswitch2;
     QLabel *imgp;
+    QLineEdit *lineEditt1goal;
+    QLineEdit *lineEditt2goal;
+    QPushButton *pushButtont1goalpoint;
+    QPushButton *pushButtont2goalpoint;
+    QPushButton *pushButtonsendgoal1;
+    QPushButton *pushButtoncancelgoal1;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -286,7 +292,34 @@ public:
         imgp = new QLabel(centralwidget);
         imgp->setObjectName(QString::fromUtf8("imgp"));
         imgp->setGeometry(QRect(1990, 50, 600, 600));
+        imgp->setMouseTracking(false);
         imgp->setFrameShape(QFrame::Box);
+        lineEditt1goal = new QLineEdit(centralwidget);
+        lineEditt1goal->setObjectName(QString::fromUtf8("lineEditt1goal"));
+        lineEditt1goal->setGeometry(QRect(2130, 660, 131, 25));
+        lineEditt1goal->setFont(font);
+        lineEditt1goal->setMouseTracking(false);
+        lineEditt2goal = new QLineEdit(centralwidget);
+        lineEditt2goal->setObjectName(QString::fromUtf8("lineEditt2goal"));
+        lineEditt2goal->setGeometry(QRect(2430, 660, 131, 25));
+        lineEditt2goal->setFont(font);
+        lineEditt2goal->setMouseTracking(false);
+        pushButtont1goalpoint = new QPushButton(centralwidget);
+        pushButtont1goalpoint->setObjectName(QString::fromUtf8("pushButtont1goalpoint"));
+        pushButtont1goalpoint->setGeometry(QRect(1990, 660, 131, 25));
+        pushButtont1goalpoint->setFont(font);
+        pushButtont2goalpoint = new QPushButton(centralwidget);
+        pushButtont2goalpoint->setObjectName(QString::fromUtf8("pushButtont2goalpoint"));
+        pushButtont2goalpoint->setGeometry(QRect(2290, 660, 131, 25));
+        pushButtont2goalpoint->setFont(font);
+        pushButtonsendgoal1 = new QPushButton(centralwidget);
+        pushButtonsendgoal1->setObjectName(QString::fromUtf8("pushButtonsendgoal1"));
+        pushButtonsendgoal1->setGeometry(QRect(1990, 690, 131, 25));
+        pushButtonsendgoal1->setFont(font);
+        pushButtoncancelgoal1 = new QPushButton(centralwidget);
+        pushButtoncancelgoal1->setObjectName(QString::fromUtf8("pushButtoncancelgoal1"));
+        pushButtoncancelgoal1->setGeometry(QRect(2130, 690, 121, 25));
+        pushButtoncancelgoal1->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         img1->raise();
         pushButtonland1->raise();
@@ -327,6 +360,12 @@ public:
         pushButtonstreamswitch1->raise();
         pushButtonstreamswitch2->raise();
         imgp->raise();
+        lineEditt1goal->raise();
+        lineEditt2goal->raise();
+        pushButtont1goalpoint->raise();
+        pushButtont2goalpoint->raise();
+        pushButtonsendgoal1->raise();
+        pushButtoncancelgoal1->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -338,7 +377,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Drone Panel", nullptr));
         pushButtonland1->setText(QApplication::translate("MainWindow", "land", nullptr));
         img1->setText(QString());
         img2->setText(QString());
@@ -388,6 +427,10 @@ public:
         pushButtonstreamswitch2->setText(QApplication::translate("MainWindow", "stream\n"
 "switch", nullptr));
         imgp->setText(QString());
+        pushButtont1goalpoint->setText(QApplication::translate("MainWindow", "T1 goal point", nullptr));
+        pushButtont2goalpoint->setText(QApplication::translate("MainWindow", "T2 goal point", nullptr));
+        pushButtonsendgoal1->setText(QApplication::translate("MainWindow", "T1 Send goal", nullptr));
+        pushButtoncancelgoal1->setText(QApplication::translate("MainWindow", "T1 cancel goal", nullptr));
     } // retranslateUi
 
 };

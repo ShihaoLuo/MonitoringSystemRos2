@@ -15,6 +15,7 @@ find_package(droneinterfaces REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Boost REQUIRED)
 find_package(OpenCV 3.0 REQUIRED)
+find_package(rclcpp_action REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -53,7 +54,7 @@ add_executable(gui
 )
 
 
-ament_target_dependencies(gui rclcpp Boost rclcpp std_msgs droneinterfaces)
+ament_target_dependencies(gui rclcpp Boost rclcpp std_msgs droneinterfaces rclcpp_action)
 
 
 target_link_libraries(gui

@@ -7,7 +7,18 @@
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneController.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DronePoolStatus.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/PositionArray.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/PositionArray.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/GoToPoint.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:action/GoPoint.idl"
+  ],
+  "ros_interface_dependencies": [
+    "action_msgs:/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/srv/CancelGoal.idl",
+    "builtin_interfaces:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/msg/Time.idl",
+    "unique_identifier_msgs:/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "target_dependencies": [
     "/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
@@ -20,6 +31,15 @@
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneController.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DronePoolStatus.idl",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/FrameArray.idl",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/PositionArray.idl"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/PositionArray.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/GoToPoint.idl",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/action/GoPoint.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/srv/CancelGoal.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/msg/Duration.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/share/builtin_interfaces/msg/Time.idl",
+    "/home/jakeluo/Software/ros2_rolling/install/unique_identifier_msgs/share/unique_identifier_msgs/msg/UUID.idl"
   ]
 }

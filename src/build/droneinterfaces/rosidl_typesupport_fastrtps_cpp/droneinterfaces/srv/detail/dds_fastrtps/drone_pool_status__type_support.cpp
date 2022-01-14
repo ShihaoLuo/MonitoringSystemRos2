@@ -243,6 +243,17 @@ cdr_serialize(
       cdr << ros_message.dronenames[i];
     }
   }
+  // Member: droneips
+  {
+    size_t size = ros_message.droneips.size();
+    if (size > 5) {
+      throw std::runtime_error("array size exceeds upper bound");
+    }
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; i++) {
+      cdr << ros_message.droneips[i];
+    }
+  }
   return true;
 }
 
@@ -260,6 +271,17 @@ cdr_deserialize(
     ros_message.dronenames.resize(size);
     for (size_t i = 0; i < size; i++) {
       cdr >> ros_message.dronenames[i];
+    }
+  }
+
+  // Member: droneips
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    ros_message.droneips.resize(size);
+    for (size_t i = 0; i < size; i++) {
+      cdr >> ros_message.droneips[i];
     }
   }
 
@@ -294,6 +316,21 @@ get_serialized_size(
         (ros_message.dronenames[index].size() + 1);
     }
   }
+  // Member: droneips
+  {
+    size_t array_size = ros_message.droneips.size();
+    if (array_size > 5) {
+      throw std::runtime_error("array size exceeds upper bound");
+    }
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (ros_message.droneips[index].size() + 1);
+    }
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -317,6 +354,22 @@ max_serialized_size_DronePoolStatus_Response(
 
 
   // Member: dronenames
+  {
+    size_t array_size = 5;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: droneips
   {
     size_t array_size = 5;
     is_plain = false;

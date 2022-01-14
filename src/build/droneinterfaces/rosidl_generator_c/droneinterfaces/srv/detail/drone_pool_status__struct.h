@@ -38,6 +38,7 @@ typedef struct droneinterfaces__srv__DronePoolStatus_Request__Sequence
 
 // Include directives for member types
 // Member 'dronenames'
+// Member 'droneips'
 #include "rosidl_runtime_c/string.h"
 
 // constants for array fields with an upper bound
@@ -46,11 +47,17 @@ enum
 {
   droneinterfaces__srv__DronePoolStatus_Response__dronenames__MAX_SIZE = 5
 };
+// droneips
+enum
+{
+  droneinterfaces__srv__DronePoolStatus_Response__droneips__MAX_SIZE = 5
+};
 
 // Struct defined in srv/DronePoolStatus in the package droneinterfaces.
 typedef struct droneinterfaces__srv__DronePoolStatus_Response
 {
   rosidl_runtime_c__String__Sequence dronenames;
+  rosidl_runtime_c__String__Sequence droneips;
 } droneinterfaces__srv__DronePoolStatus_Response;
 
 // Struct for a sequence of droneinterfaces__srv__DronePoolStatus_Response.

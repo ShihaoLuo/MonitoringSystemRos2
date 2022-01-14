@@ -49,7 +49,7 @@ static rosidl_typesupport_introspection_c__MessageMember droneinterfaces__msg__P
   },
   {
     "time",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

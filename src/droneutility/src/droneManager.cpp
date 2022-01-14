@@ -301,7 +301,7 @@ std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
             uint32_t ip;
             inet_pton(AF_INET, request->ip.c_str(), &ip);
             dst_addr.sin_addr.s_addr = ip;
-            RCLCPP_INFO(nh_->get_logger(), "Send: %s to %s\n", (request->cmd.substr(1,request->cmd.size()).c_str()), dronepool[request->ip].name.c_str());
+            // RCLCPP_INFO(nh_->get_logger(), "Send: %s to %s\n", (request->cmd.substr(1,request->cmd.size()).c_str()), dronepool[request->ip].name.c_str());
             sendto(dronepool[request->ip].cmdsocket, (request->cmd.substr(1,request->cmd.size()).c_str()), strlen(request->cmd.c_str()), 0, (struct sockaddr *)&dst_addr, len);
             response->res="send rc.";
         }else{

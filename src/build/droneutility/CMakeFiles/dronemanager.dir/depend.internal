@@ -12,10 +12,14 @@ CMakeFiles/dronemanager.dir/src/droneManager.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
  /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/include/builtin_interfaces/msg/detail/duration__builder.hpp
  /home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/include/builtin_interfaces/msg/detail/duration__struct.hpp

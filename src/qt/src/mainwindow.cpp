@@ -5,30 +5,45 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-
     dronePoolStatusRequest = std::make_shared<droneinterfaces::srv::DronePoolStatus::Request>();
     goToPointRequest = std::make_shared<droneinterfaces::srv::GoToPoint::Request>();
     dronePoolStatusRequest->flag = true;
     nh_ = rclcpp::Node::make_shared("gui");
+    callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    goPointActionClient1_ = rclcpp_action::create_client<droneinterfaces::action::GoPoint>(
+        nh_->get_node_base_interface(),
+        nh_->get_node_graph_interface(),
+        nh_->get_node_logging_interface(),
+        nh_->get_node_waitables_interface(),
+        "t1_GoToPointAction",
+        callbackgroup1
+    );
+    auto opt2 = rclcpp::SubscriptionOptions();
+    opt2.callback_group = callbackgroup2;
     frameSubscription1_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
         "t1_Framearray",
         1,
-        std::bind(&MainWindow::frameCallback1, this, std::placeholders::_1));
+        std::bind(&MainWindow::frameCallback1, this, std::placeholders::_1), opt2);
+    auto opt3 = rclcpp::SubscriptionOptions();
+    opt2.callback_group = callbackgroup3;
     frameSubscription2_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
         "t2_Framearray",
         1,
-        std::bind(&MainWindow::frameCallback2, this, std::placeholders::_1));
+        std::bind(&MainWindow::frameCallback2, this, std::placeholders::_1), opt3);
+    auto opt4 = rclcpp::SubscriptionOptions();
+    opt2.callback_group = callbackgroup4;
     positionSubscription1_ = nh_->create_subscription<droneinterfaces::msg::PositionArray>(
         "t1_Positionarray",
         1,
-        std::bind(&MainWindow::positionCallback1, this, std::placeholders::_1));
+        std::bind(&MainWindow::positionCallback1, this, std::placeholders::_1), opt4);
     positionSubscription2_ = nh_->create_subscription<droneinterfaces::msg::PositionArray>(
         "t2_Positionarray",
         1,
-        std::bind(&MainWindow::positionCallback2, this, std::placeholders::_1));
+        std::bind(&MainWindow::positionCallback2, this, std::placeholders::_1), opt4);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
-    goToPointClient1_ = nh_->create_client<droneinterfaces::srv::GoToPoint>("t1_GoToPoint");
-    goToPointClient2_ = nh_->create_client<droneinterfaces::srv::GoToPoint>("t2_GoToPoint");
     dronePoolStatusClient_ = nh_->create_client<droneinterfaces::srv::DronePoolStatus>("DronePoolStatus");
     exector_ = new rclcpp::executors::MultiThreadedExecutor();
     exector_->add_node(nh_);
@@ -64,6 +79,96 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtondown202, SIGNAL(clicked()), this, SLOT(clickButtondown202()));
     connect(ui->pushButtont1goalpoint, SIGNAL(clicked()), this, SLOT(setGoalPoint1()));
     connect(ui->pushButtont2goalpoint, SIGNAL(clicked()), this, SLOT(setGoalPoint2()));
+    connect(ui->pushButtonsendgoal1, SIGNAL(clicked()), this, SLOT(sendGoal1()));
+    connect(ui->pushButtoncancelgoal1, SIGNAL(clicked()), this, SLOT(cancelGoal1()));
+}
+
+void MainWindow::cancelGoal1()
+{
+    if(actionGoalStatus1 == false)
+    {
+        RCLCPP_ERROR(nh_->get_logger(), "Go point action 1 is not executing!");
+    }else{
+        rclcpp::Rate loop_rate(2);
+        if(!goPointActionClient1_)
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action client 1 not actived.");
+            return;
+        }
+        while(!goal_handle_future.valid())
+        {
+            RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+            loop_rate.sleep();
+        }
+        goPointActionClient1_->async_cancel_goal(goal_handle_future.get());
+        actionGoalStatus1 = false;
+    }
+}
+
+void MainWindow::sendGoal1()
+{
+    if(actionGoalStatus1 == true)
+    {
+        RCLCPP_ERROR(nh_->get_logger(), "Go point action 1 is executing!");
+    }else{
+        if(!goPointActionClient1_)
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action client 1 not actived.");
+            actionGoalStatus1 = false;
+            return;
+        }
+        if(!goPointActionClient1_->wait_for_action_server(std::chrono::seconds(10)))
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action server not available after waiting.");
+            actionGoalStatus1 = false;
+            return;
+        }
+        actionGoalStatus1 = true;
+        auto goal = droneinterfaces::action::GoPoint::Goal();
+        goal.set__goal(goalPosition1);
+        RCLCPP_INFO(nh_->get_logger(), "Sending goal");
+        auto send_goal_options = rclcpp_action::Client<droneinterfaces::action::GoPoint>::SendGoalOptions();
+        send_goal_options.goal_response_callback = std::bind(&MainWindow::goal_response_callback, this, std::placeholders::_1);
+        send_goal_options.feedback_callback = std::bind(&MainWindow::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
+        send_goal_options.result_callback = std::bind(&MainWindow::result_callback, this, std::placeholders::_1);
+        goal_handle_future = goPointActionClient1_->async_send_goal(goal, send_goal_options);
+    }
+    
+}
+
+void MainWindow::goal_response_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr goal_handle)
+{
+    if(!goal_handle)
+    {
+        RCLCPP_INFO(nh_->get_logger(), "Goal is rejected.");
+    }else{
+        RCLCPP_INFO(nh_->get_logger(), "Goal is accepted.");
+    }
+}
+
+void MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr,
+    const std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback)
+{
+    RCLCPP_INFO(nh_->get_logger(), "Current distance to goal is: %f", feedback->distance);
+}
+
+void MainWindow::result_callback(const rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::WrappedResult &result)
+{
+    switch (result.code) 
+    {
+        case rclcpp_action::ResultCode::SUCCEEDED:
+            break;
+        case rclcpp_action::ResultCode::ABORTED:
+            RCLCPP_ERROR(nh_->get_logger(), "Goal was aborted");
+            return;
+        case rclcpp_action::ResultCode::CANCELED:
+            RCLCPP_ERROR(nh_->get_logger(), "Goal was canceled");
+            return;
+        default:
+            RCLCPP_ERROR(nh_->get_logger(), "Unknown result code");
+            return;
+    }
+    RCLCPP_INFO(nh_->get_logger(), "Result received: %d", result.result->arrived);
 }
 
 void MainWindow::setGoalPoint1()
@@ -103,26 +208,16 @@ void MainWindow::mousePressEvent(QMouseEvent* event)
     {
         if(goalPointFlag==1)
         {
-            QString tmp = QString::number(goalPosition[0])+" "+QString::number(goalPosition[1])+"\n";
+            goalPosition1[1] = goalPosition[1];
+            goalPosition1[0] = goalPosition[0];
+            QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
             ui->lineEditt1goal->setText(tmp);
-            // std::cout<<goalPosition[0]<<goalPosition[1]<<goalPosition[2]<<goalPosition[3]<<std::endl;
-            memcpy(goToPointRequest->goal.data(), goalPosition.data(), 16);
-            auto gotopoint_response_received_callback = [this](ServiceResponseFutureGoToPoint future){
-                auto result = future.get()->res;
-                // std::cout<<"gotopoint responee:"<<result<<std::endl;
-            };
-            auto future_result = goToPointClient1_ -> async_send_request(goToPointRequest, gotopoint_response_received_callback);
         } else if(goalPointFlag==2)
         {
-            QString tmp = QString::number(goalPosition[0])+" "+QString::number(goalPosition[1])+"\n";
+            goalPosition2[1] = goalPosition[1];
+            goalPosition2[0] = goalPosition[0];
+            QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
             ui->lineEditt2goal->setText(tmp);
-            // std::cout<<goalPosition[0]<<goalPosition[1]<<goalPosition[2]<<goalPosition[3]<<std::endl;
-            memcpy(goToPointRequest->goal.data(), goalPosition.data(), 16);
-            auto gotopoint_response_received_callback = [this](ServiceResponseFutureGoToPoint future){
-                auto result = future.get()->res;
-                std::cout<<"gotopoint responee:"<<result<<std::endl;
-            };
-            auto future_result = goToPointClient2_ -> async_send_request(goToPointRequest, gotopoint_response_received_callback);
         }
     }
 }

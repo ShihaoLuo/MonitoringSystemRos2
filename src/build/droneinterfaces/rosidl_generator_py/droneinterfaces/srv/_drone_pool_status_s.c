@@ -195,6 +195,51 @@ bool droneinterfaces__srv__drone_pool_status__response__convert_from_py(PyObject
     }
     Py_DECREF(field);
   }
+  {  // droneips
+    PyObject * field = PyObject_GetAttrString(_pymsg, "droneips");
+    if (!field) {
+      return false;
+    }
+    {
+      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'droneips'");
+      if (!seq_field) {
+        Py_DECREF(field);
+        return false;
+      }
+      Py_ssize_t size = PySequence_Size(field);
+      if (-1 == size) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+      if (!rosidl_runtime_c__String__Sequence__init(&(ros_message->droneips), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create String__Sequence ros_message");
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+      rosidl_runtime_c__String * dest = ros_message->droneips.data;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
+        if (!item) {
+          Py_DECREF(seq_field);
+          Py_DECREF(field);
+          return false;
+        }
+        assert(PyUnicode_Check(item));
+        PyObject * encoded_item = PyUnicode_AsUTF8String(item);
+        if (!encoded_item) {
+          Py_DECREF(seq_field);
+          Py_DECREF(field);
+          return false;
+        }
+        rosidl_runtime_c__String__assign(&dest[i], PyBytes_AS_STRING(encoded_item));
+        Py_DECREF(encoded_item);
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -237,6 +282,32 @@ PyObject * droneinterfaces__srv__drone_pool_status__response__convert_to_py(void
     assert(PySequence_Check(field));
     {
       int rc = PyObject_SetAttrString(_pymessage, "dronenames", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // droneips
+    PyObject * field = NULL;
+    size_t size = ros_message->droneips.size;
+    rosidl_runtime_c__String * src = ros_message->droneips.data;
+    field = PyList_New(size);
+    if (!field) {
+      return NULL;
+    }
+    for (size_t i = 0; i < size; ++i) {
+      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "strict");
+      if (!decoded_item) {
+        return NULL;
+      }
+      int rc = PyList_SetItem(field, i, decoded_item);
+      (void)rc;
+      assert(rc == 0);
+    }
+    assert(PySequence_Check(field));
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "droneips", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

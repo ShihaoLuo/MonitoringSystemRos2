@@ -38,7 +38,7 @@ struct PositionArray_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       std::fill<typename std::array<float, 4>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
-      this->time = 0.0f;
+      this->time = 0ll;
     }
   }
 
@@ -49,7 +49,7 @@ struct PositionArray_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       std::fill<typename std::array<float, 4>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
-      this->time = 0.0f;
+      this->time = 0ll;
     }
   }
 
@@ -58,7 +58,7 @@ struct PositionArray_
     std::array<float, 4>;
   _position_type position;
   using _time_type =
-    float;
+    int64_t;
   _time_type time;
 
   // setters for named parameter idiom
@@ -69,7 +69,7 @@ struct PositionArray_
     return *this;
   }
   Type & set__time(
-    const float & _arg)
+    const int64_t & _arg)
   {
     this->time = _arg;
     return *this;

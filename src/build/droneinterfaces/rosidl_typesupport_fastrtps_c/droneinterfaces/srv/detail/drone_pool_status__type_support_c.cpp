@@ -213,8 +213,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // dronenames
-#include "rosidl_runtime_c/string_functions.h"  // dronenames
+#include "rosidl_runtime_c/string.h"  // droneips, dronenames
+#include "rosidl_runtime_c/string_functions.h"  // droneips, dronenames
 
 // forward declare type support functions
 
@@ -234,6 +234,29 @@ static bool _DronePoolStatus_Response__cdr_serialize(
   {
     size_t size = ros_message->dronenames.size;
     auto array_ptr = ros_message->dronenames.data;
+    if (size > 5) {
+      fprintf(stderr, "array size exceeds upper bound\n");
+      return false;
+    }
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      const rosidl_runtime_c__String * str = &array_ptr[i];
+      if (str->capacity == 0 || str->capacity <= str->size) {
+        fprintf(stderr, "string capacity not greater than size\n");
+        return false;
+      }
+      if (str->data[str->size] != '\0') {
+        fprintf(stderr, "string not null-terminated\n");
+        return false;
+      }
+      cdr << str->data;
+    }
+  }
+
+  // Field name: droneips
+  {
+    size_t size = ros_message->droneips.size;
+    auto array_ptr = ros_message->droneips.data;
     if (size > 5) {
       fprintf(stderr, "array size exceeds upper bound\n");
       return false;
@@ -295,6 +318,36 @@ static bool _DronePoolStatus_Response__cdr_deserialize(
     }
   }
 
+  // Field name: droneips
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->droneips.data) {
+      rosidl_runtime_c__String__Sequence__fini(&ros_message->droneips);
+    }
+    if (!rosidl_runtime_c__String__Sequence__init(&ros_message->droneips, size)) {
+      fprintf(stderr, "failed to create array for field 'droneips'");
+      return false;
+    }
+    auto array_ptr = ros_message->droneips.data;
+    for (size_t i = 0; i < size; ++i) {
+      std::string tmp;
+      cdr >> tmp;
+      auto & ros_i = array_ptr[i];
+      if (!ros_i.data) {
+        rosidl_runtime_c__String__init(&ros_i);
+      }
+      bool succeeded = rosidl_runtime_c__String__assign(
+        &ros_i,
+        tmp.c_str());
+      if (!succeeded) {
+        fprintf(stderr, "failed to assign string into field 'droneips'\n");
+        return false;
+      }
+    }
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -316,6 +369,18 @@ size_t get_serialized_size_droneinterfaces__srv__DronePoolStatus_Response(
   {
     size_t array_size = ros_message->dronenames.size;
     auto array_ptr = ros_message->dronenames.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        (array_ptr[index].size + 1);
+    }
+  }
+  // field.name droneips
+  {
+    size_t array_size = ros_message->droneips.size;
+    auto array_ptr = ros_message->droneips.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     for (size_t index = 0; index < array_size; ++index) {
@@ -352,6 +417,21 @@ size_t max_serialized_size_droneinterfaces__srv__DronePoolStatus_Response(
   is_plain = true;
 
   // member: dronenames
+  {
+    size_t array_size = 5;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: droneips
   {
     size_t array_size = 5;
     is_plain = false;

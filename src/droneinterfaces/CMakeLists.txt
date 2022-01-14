@@ -19,6 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/FrameArray.msg"
   "msg/PositionArray.msg"
   "srv/GoToPoint.srv"
+  "action/GoPoint.action"
 )
 
 

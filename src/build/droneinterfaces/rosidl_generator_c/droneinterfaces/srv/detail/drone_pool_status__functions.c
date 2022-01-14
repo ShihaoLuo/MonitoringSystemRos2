@@ -149,6 +149,7 @@ droneinterfaces__srv__DronePoolStatus_Request__Sequence__destroy(droneinterfaces
 
 // Include directives for member types
 // Member `dronenames`
+// Member `droneips`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -159,6 +160,11 @@ droneinterfaces__srv__DronePoolStatus_Response__init(droneinterfaces__srv__Drone
   }
   // dronenames
   if (!rosidl_runtime_c__String__Sequence__init(&msg->dronenames, 0)) {
+    droneinterfaces__srv__DronePoolStatus_Response__fini(msg);
+    return false;
+  }
+  // droneips
+  if (!rosidl_runtime_c__String__Sequence__init(&msg->droneips, 0)) {
     droneinterfaces__srv__DronePoolStatus_Response__fini(msg);
     return false;
   }
@@ -173,6 +179,8 @@ droneinterfaces__srv__DronePoolStatus_Response__fini(droneinterfaces__srv__Drone
   }
   // dronenames
   rosidl_runtime_c__String__Sequence__fini(&msg->dronenames);
+  // droneips
+  rosidl_runtime_c__String__Sequence__fini(&msg->droneips);
 }
 
 droneinterfaces__srv__DronePoolStatus_Response *
