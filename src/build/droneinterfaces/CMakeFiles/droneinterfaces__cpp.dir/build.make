@@ -73,10 +73,10 @@ CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/positi
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__builder.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__struct.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__traits.hpp
-CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/go_to_point.hpp
-CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__builder.hpp
-CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__struct.hpp
-CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__traits.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/drone_shut_down.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/go_point.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/detail/go_point__builder.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/detail/go_point__struct.hpp
@@ -103,7 +103,7 @@ rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/dron
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/srv/DronePoolStatus.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/msg/FrameArray.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/msg/PositionArray.idl
-rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/srv/GoToPoint.idl
+rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/srv/DroneShutDown.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/action/GoPoint.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
@@ -172,17 +172,17 @@ rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__struct.hpp: rosi
 rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__traits.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__traits.hpp
 
-rosidl_generator_cpp/droneinterfaces/srv/go_to_point.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/go_to_point.hpp
+rosidl_generator_cpp/droneinterfaces/srv/drone_shut_down.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/drone_shut_down.hpp
 
-rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__builder.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__builder.hpp
+rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__builder.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
 
-rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__struct.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__struct.hpp
+rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__struct.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
 
-rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__traits.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__traits.hpp
+rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__traits.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
 
 rosidl_generator_cpp/droneinterfaces/action/go_point.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/action/go_point.hpp
@@ -217,10 +217,10 @@ droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/position_array.hp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__builder.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__struct.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/position_array__traits.hpp
-droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/go_to_point.hpp
-droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__builder.hpp
-droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__struct.hpp
-droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__traits.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/drone_shut_down.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/go_point.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/detail/go_point__builder.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/action/detail/go_point__struct.hpp

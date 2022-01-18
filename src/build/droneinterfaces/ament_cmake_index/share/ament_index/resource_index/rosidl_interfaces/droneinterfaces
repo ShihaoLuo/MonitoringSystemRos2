@@ -16,7 +16,7 @@ srv/DroneRegister.idl
 srv/DroneRegister.srv
 srv/DroneRegister_Request.msg
 srv/DroneRegister_Response.msg
-srv/GoToPoint.idl
-srv/GoToPoint.srv
-srv/GoToPoint_Request.msg
-srv/GoToPoint_Response.msg
+srv/DroneShutDown.idl
+srv/DroneShutDown.srv
+srv/DroneShutDown_Request.msg
+srv/DroneShutDown_Response.msg

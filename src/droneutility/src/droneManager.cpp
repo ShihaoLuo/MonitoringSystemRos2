@@ -52,7 +52,7 @@ std::shared_ptr<droneinterfaces::srv::DronePoolStatus::Response> response)
     }
     response->set__dronenames(tmp);
     response->set__droneips(tmpip);
-};
+}
 
 void DroneManager::droneRegister(const std::shared_ptr<droneinterfaces::srv::DroneRegister::Request> request,
 std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
@@ -72,6 +72,8 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     struct timeval timeout;
     timeout.tv_sec = 10;
     timeout.tv_usec = 0;
+    int reuse=1;
+    setsockopt(send_socket, SOL_SOCKET, SO_REUSEADDR,(const void *)&reuse , sizeof(int));
     if(setsockopt(send_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {
         std::printf("set timeout faild!\n");
@@ -81,22 +83,14 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     struct sockaddr_in ser_addr;
     memset(&ser_addr, 0, sizeof(struct sockaddr_in));
     ser_addr.sin_family = AF_INET;
-    ser_addr.sin_port = htons(9001);
+    if(tmp.name == "t1")
+        ser_addr.sin_port = htons(9001);
+    else 
+        ser_addr.sin_port = htons(9002);
     ser_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    while(1)
-    {
-        if(bind(send_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in))<0)
-        {
-            std::printf("bind port %d faild! Try %d.\n", htons(ser_addr.sin_port), htons(ser_addr.sin_port+1));
-            ser_addr.sin_port += 1;
-        }else
-        {
-            std::printf("bind port %d succeed!\n", htons(ser_addr.sin_port));
-            tmp.sercmdport = ser_addr.sin_port;
-            tmp.cmdsocket = send_socket;
-            break;
-        }
-    }
+    tmp.sercmdport = ser_addr.sin_port;
+    bind(send_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in));
+    tmp.cmdsocket = send_socket;
     const int video_socket = socket(AF_INET, SOCK_DGRAM, 0);
     if(video_socket < 0)
     {
@@ -106,6 +100,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     }
     timeout.tv_sec = 1;
     timeout.tv_usec = 0;
+    setsockopt(video_socket, SOL_SOCKET, SO_REUSEADDR,(const void *)&reuse , sizeof(int));
     if(setsockopt(video_socket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout))<0)
     {
         std::printf("set timeout faild!\n");
@@ -114,22 +109,14 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     }
     memset(&ser_addr, 0, sizeof(struct sockaddr_in));
     ser_addr.sin_family = AF_INET;
-    ser_addr.sin_port = htons(19001);
+    if(tmp.name == "t1")
+        ser_addr.sin_port = htons(19001);
+    else 
+        ser_addr.sin_port = htons(19002);
+    tmp.servideoport = ser_addr.sin_port;
     ser_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    while(1)
-    {
-        if(bind(video_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in))<0)
-        {
-            std::printf("bind port %d faild! Try %d.\n", htons(ser_addr.sin_port), htons(ser_addr.sin_port+1));
-            ser_addr.sin_port += 1;
-        }else
-        {
-            std::printf("bind port %d succeed!\n", htons(ser_addr.sin_port));
-            tmp.servideoport = ser_addr.sin_port;
-            tmp.videosocket = video_socket;
-            break;
-        }
-    }
+    bind(video_socket, (struct sockaddr*)&ser_addr, sizeof(struct sockaddr_in));
+    tmp.videosocket = video_socket;
     struct sockaddr_in dst_addr, client_addr;
     memset(&dst_addr, 0, sizeof(struct sockaddr_in));
     memset(recvbuf, 0, 30);
@@ -293,7 +280,7 @@ std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
             DroneManager::printDrone();
             response->res="ok";
         }else if(request->cmd[0] == '~'){
-            struct sockaddr_in dst_addr, client_addr;
+            struct sockaddr_in dst_addr;
             memset(&dst_addr, 0, sizeof(struct sockaddr_in));
             memset(recvbuf, 0, 30);
             dst_addr.sin_family = AF_INET;

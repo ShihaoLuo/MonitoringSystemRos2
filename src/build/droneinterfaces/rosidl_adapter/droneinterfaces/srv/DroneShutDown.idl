@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from droneinterfaces/srv/DroneShutDown.srv
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module srv {
+    struct DroneShutDown_Request {
+      string dronename;
+
+      string ip;
+
+      boolean shutdown;
+    };
+    struct DroneShutDown_Response {
+      boolean res;
+    };
+  };
+};

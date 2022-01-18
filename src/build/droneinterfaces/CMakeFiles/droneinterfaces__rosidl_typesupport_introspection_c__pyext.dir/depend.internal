@@ -118,6 +118,6 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__type_support.h
- rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.h
- rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__struct.h
- rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__type_support.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__struct.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__type_support.h

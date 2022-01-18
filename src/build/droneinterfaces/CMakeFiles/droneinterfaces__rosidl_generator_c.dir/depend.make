@@ -88,15 +88,18 @@ CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinter
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.h
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_register__struct.h
 
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/allocator.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/macros.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/testing/fault_injection.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/types/rcutils_ret.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/visibility_control.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/visibility_control_macros.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/visibility_control.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.h
-CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__struct.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/allocator.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/macros.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/testing/fault_injection.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/types/rcutils_ret.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/visibility_control.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rcutils/include/rcutils/visibility_control_macros.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/string.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/string_functions.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/visibility_control.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__struct.h
 

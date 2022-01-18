@@ -70,6 +70,12 @@ public:
     QPushButton *pushButtont2goalpoint;
     QPushButton *pushButtonsendgoal1;
     QPushButton *pushButtoncancelgoal1;
+    QPushButton *pushButtonconnect1;
+    QPushButton *pushButtonshutdown1;
+    QPushButton *pushButtonshutdown2;
+    QPushButton *pushButtonconnect2;
+    QPushButton *pushButtoncancelgoal2;
+    QPushButton *pushButtonsendgoal2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -320,6 +326,30 @@ public:
         pushButtoncancelgoal1->setObjectName(QString::fromUtf8("pushButtoncancelgoal1"));
         pushButtoncancelgoal1->setGeometry(QRect(2130, 690, 121, 25));
         pushButtoncancelgoal1->setFont(font);
+        pushButtonconnect1 = new QPushButton(centralwidget);
+        pushButtonconnect1->setObjectName(QString::fromUtf8("pushButtonconnect1"));
+        pushButtonconnect1->setGeometry(QRect(610, 20, 101, 25));
+        pushButtonconnect1->setFont(font);
+        pushButtonshutdown1 = new QPushButton(centralwidget);
+        pushButtonshutdown1->setObjectName(QString::fromUtf8("pushButtonshutdown1"));
+        pushButtonshutdown1->setGeometry(QRect(730, 20, 101, 25));
+        pushButtonshutdown1->setFont(font);
+        pushButtonshutdown2 = new QPushButton(centralwidget);
+        pushButtonshutdown2->setObjectName(QString::fromUtf8("pushButtonshutdown2"));
+        pushButtonshutdown2->setGeometry(QRect(1730, 20, 101, 25));
+        pushButtonshutdown2->setFont(font);
+        pushButtonconnect2 = new QPushButton(centralwidget);
+        pushButtonconnect2->setObjectName(QString::fromUtf8("pushButtonconnect2"));
+        pushButtonconnect2->setGeometry(QRect(1610, 20, 101, 25));
+        pushButtonconnect2->setFont(font);
+        pushButtoncancelgoal2 = new QPushButton(centralwidget);
+        pushButtoncancelgoal2->setObjectName(QString::fromUtf8("pushButtoncancelgoal2"));
+        pushButtoncancelgoal2->setGeometry(QRect(2430, 690, 121, 25));
+        pushButtoncancelgoal2->setFont(font);
+        pushButtonsendgoal2 = new QPushButton(centralwidget);
+        pushButtonsendgoal2->setObjectName(QString::fromUtf8("pushButtonsendgoal2"));
+        pushButtonsendgoal2->setGeometry(QRect(2290, 690, 131, 25));
+        pushButtonsendgoal2->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         img1->raise();
         pushButtonland1->raise();
@@ -366,6 +396,12 @@ public:
         pushButtont2goalpoint->raise();
         pushButtonsendgoal1->raise();
         pushButtoncancelgoal1->raise();
+        pushButtonconnect1->raise();
+        pushButtonshutdown1->raise();
+        pushButtonshutdown2->raise();
+        pushButtonconnect2->raise();
+        pushButtoncancelgoal2->raise();
+        pushButtonsendgoal2->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -418,9 +454,9 @@ public:
         pushButton1_33->setText(QApplication::translate("MainWindow", "back10", nullptr));
         label1->setText(QApplication::translate("MainWindow", "drone t1", nullptr));
         label2->setText(QApplication::translate("MainWindow", "drone t2", nullptr));
-        lineEdit1->setText(QApplication::translate("MainWindow", "192.168.1.", nullptr));
+        lineEdit1->setText(QApplication::translate("MainWindow", "192.168.1.100", nullptr));
         lineEdit1->setPlaceholderText(QApplication::translate("MainWindow", "t1 ip address", nullptr));
-        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.1.", nullptr));
+        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.1.102", nullptr));
         lineEdit2->setPlaceholderText(QApplication::translate("MainWindow", "t2 ip address", nullptr));
         pushButtonstreamswitch1->setText(QApplication::translate("MainWindow", "stream\n"
 "switch", nullptr));
@@ -431,6 +467,12 @@ public:
         pushButtont2goalpoint->setText(QApplication::translate("MainWindow", "T2 goal point", nullptr));
         pushButtonsendgoal1->setText(QApplication::translate("MainWindow", "T1 Send goal", nullptr));
         pushButtoncancelgoal1->setText(QApplication::translate("MainWindow", "T1 cancel goal", nullptr));
+        pushButtonconnect1->setText(QApplication::translate("MainWindow", "connect", nullptr));
+        pushButtonshutdown1->setText(QApplication::translate("MainWindow", "shutdown", nullptr));
+        pushButtonshutdown2->setText(QApplication::translate("MainWindow", "shutdown", nullptr));
+        pushButtonconnect2->setText(QApplication::translate("MainWindow", "connect", nullptr));
+        pushButtoncancelgoal2->setText(QApplication::translate("MainWindow", "T2 cancel goal", nullptr));
+        pushButtonsendgoal2->setText(QApplication::translate("MainWindow", "T2 Send goal", nullptr));
     } // retranslateUi
 
 };

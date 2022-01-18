@@ -6,13 +6,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     dronePoolStatusRequest = std::make_shared<droneinterfaces::srv::DronePoolStatus::Request>();
-    goToPointRequest = std::make_shared<droneinterfaces::srv::GoToPoint::Request>();
+    // goToPointRequest = std::make_shared<droneinterfaces::srv::GoToPoint::Request>();
     dronePoolStatusRequest->flag = true;
     nh_ = rclcpp::Node::make_shared("gui");
     callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup5 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     goPointActionClient1_ = rclcpp_action::create_client<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
         nh_->get_node_graph_interface(),
@@ -20,6 +21,14 @@ MainWindow::MainWindow(QWidget *parent)
         nh_->get_node_waitables_interface(),
         "t1_GoToPointAction",
         callbackgroup1
+    );
+    goPointActionClient2_ = rclcpp_action::create_client<droneinterfaces::action::GoPoint>(
+        nh_->get_node_base_interface(),
+        nh_->get_node_graph_interface(),
+        nh_->get_node_logging_interface(),
+        nh_->get_node_waitables_interface(),
+        "t2_GoToPointAction",
+        callbackgroup5
     );
     auto opt2 = rclcpp::SubscriptionOptions();
     opt2.callback_group = callbackgroup2;
@@ -44,12 +53,18 @@ MainWindow::MainWindow(QWidget *parent)
         1,
         std::bind(&MainWindow::positionCallback2, this, std::placeholders::_1), opt4);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
+    droneShutDownClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_ShutDown");
+    droneConnectClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_Connect");
+    droneShutDownClient2_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t2_ShutDown");
+    droneConnectClient2_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t2_Connect");
     dronePoolStatusClient_ = nh_->create_client<droneinterfaces::srv::DronePoolStatus>("DronePoolStatus");
     exector_ = new rclcpp::executors::MultiThreadedExecutor();
     exector_->add_node(nh_);
     ui->setupUi(this);
     ui->plainTextEdit1->moveCursor(QTextCursor::End);
     ui->plainTextEdit2->moveCursor(QTextCursor::End);
+    ip1 = ui->lineEdit1->text().toStdString();
+    ip2 = ui->lineEdit2->text().toStdString();
     im = cv::imread("/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/coordination600x600.png", 1);
     qimagep = mat2qim(im);
     ui->imgp->setPixmap(QPixmap::fromImage(qimagep));
@@ -58,9 +73,10 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, std::bind(&MainWindow::spin, this));
     timer->start(50);
-    QTimer *timer1 = new QTimer(this);
-    connect(timer1, &QTimer::timeout, std::bind(&MainWindow::checkDrones, this));
-    timer1->start(2000);
+    ui->pushButtonshutdown1->setDisabled(true);
+    ui->pushButtonshutdown2->setDisabled(true);
+    disableAllButton1();
+    disableAllButton2();
     connect(ui->pushButtontakeoff1, SIGNAL(clicked()), this, SLOT(clickButtonTakeoff1()));
     connect(ui->pushButtontakeoff2, SIGNAL(clicked()), this, SLOT(clickButtonTakeoff2()));
     connect(ui->lineEdit1, SIGNAL(editingFinished()), this, SLOT(updateT1IP()));
@@ -81,6 +97,203 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtont2goalpoint, SIGNAL(clicked()), this, SLOT(setGoalPoint2()));
     connect(ui->pushButtonsendgoal1, SIGNAL(clicked()), this, SLOT(sendGoal1()));
     connect(ui->pushButtoncancelgoal1, SIGNAL(clicked()), this, SLOT(cancelGoal1()));
+    connect(ui->pushButtonconnect1, SIGNAL(clicked()), this, SLOT(droneConnect1()));
+    connect(ui->pushButtonshutdown1, SIGNAL(clicked()), this, SLOT(droneShutDown1()));
+    connect(ui->pushButtonsendgoal2, SIGNAL(clicked()), this, SLOT(sendGoal2()));
+    connect(ui->pushButtoncancelgoal2, SIGNAL(clicked()), this, SLOT(cancelGoal2()));
+    connect(ui->pushButtonconnect2, SIGNAL(clicked()), this, SLOT(droneConnect2()));
+    connect(ui->pushButtonshutdown2, SIGNAL(clicked()), this, SLOT(droneShutDown2()));
+}
+
+void MainWindow::disableAllButton1()
+{
+    ui->pushButtontakeoff1->setDisabled(true);
+    ui->pushButtonland1->setDisabled(true);
+    ui->pushButtonstreamswitch1->setDisabled(true);
+    ui->pushButtonup1001->setDisabled(true);
+    ui->pushButtonup201->setDisabled(true);
+    ui->pushButtondown1001->setDisabled(true);
+    ui->pushButtondown201->setDisabled(true);
+    ui->pushButtont1goalpoint->setDisabled(true);
+    ui->pushButtonsendgoal1->setDisabled(true);
+    ui->pushButtoncancelgoal1->setDisabled(true);
+}
+
+void MainWindow::disableAllButton2()
+{
+    ui->pushButtontakeoff2->setDisabled(true);
+    ui->pushButtonland2->setDisabled(true);
+    ui->pushButtonstreamswitch2->setDisabled(true);
+    ui->pushButtonup1002->setDisabled(true);
+    ui->pushButtonup202->setDisabled(true);
+    ui->pushButtondown1002->setDisabled(true);
+    ui->pushButtondown202->setDisabled(true);
+    ui->pushButtont2goalpoint->setDisabled(true);
+    ui->pushButtonsendgoal2->setDisabled(true);
+    ui->pushButtoncancelgoal2->setDisabled(true);
+}
+
+void MainWindow::enableAllButton1()
+{
+    ui->pushButtontakeoff1->setEnabled(true);
+    ui->pushButtonland1->setEnabled(true);
+    ui->pushButtonstreamswitch1->setEnabled(true);
+    ui->pushButtonup1001->setEnabled(true);
+    ui->pushButtonup201->setEnabled(true);
+    ui->pushButtondown1001->setEnabled(true);
+    ui->pushButtondown201->setEnabled(true);
+    ui->pushButtont1goalpoint->setEnabled(true);
+    ui->pushButtonsendgoal1->setEnabled(true);
+    ui->pushButtoncancelgoal1->setEnabled(true);
+}
+
+void MainWindow::enableAllButton2()
+{
+    ui->pushButtontakeoff2->setEnabled(true);
+    ui->pushButtonland2->setEnabled(true);
+    ui->pushButtonstreamswitch2->setEnabled(true);
+    ui->pushButtonup1002->setEnabled(true);
+    ui->pushButtonup202->setEnabled(true);
+    ui->pushButtondown1002->setEnabled(true);
+    ui->pushButtondown202->setEnabled(true);
+    ui->pushButtont2goalpoint->setEnabled(true);
+    ui->pushButtonsendgoal2->setEnabled(true);
+    ui->pushButtoncancelgoal2->setEnabled(true);
+}
+
+void MainWindow::droneShutDown1()
+{
+    if(connectFlag1 == true)
+    {
+        if(actionGoalStatus1 == true)
+        {
+            rclcpp::Rate loop_rate(2);
+            if(!goPointActionClient1_)
+            {
+                RCLCPP_INFO(nh_->get_logger(), "Go point action client 1 not actived.");
+                return;
+            }
+            while(!goal_handle_future.valid())
+            {
+                RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+                loop_rate.sleep();
+            }
+            goPointActionClient1_->async_cancel_goal(goal_handle_future.get());
+            actionGoalStatus1 = false;
+        }
+        ui->pushButtonshutdown1->setDisabled(true);
+        auto request = std::make_shared<droneinterfaces::srv::DroneShutDown::Request>();
+        request->shutdown = false;
+        auto response_received_callback = [this](ServiceResponseFuture3 future){
+        auto result = future.get();
+        if(result->res == true){
+            connectFlag1 = false;
+            disableAllButton1();
+            ui->pushButtonshutdown1->setDisabled(true);
+            ui->pushButtonconnect1->setEnabled(true);
+        }else
+        {
+            ui->pushButtonshutdown1->setEnabled(true);
+            enableAllButton1();
+        }
+        };
+        auto future_result = droneShutDownClient1_ -> async_send_request(request, response_received_callback);
+    }
+}
+
+void MainWindow::droneShutDown2()
+{
+    if(actionGoalStatus2 == true)
+    {
+        rclcpp::Rate loop_rate(2);
+        if(!goPointActionClient2_)
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action client 1 not actived.");
+            return;
+        }
+        while(!goal_handle_future.valid())
+        {
+            RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+            loop_rate.sleep();
+        }
+        goPointActionClient2_->async_cancel_goal(goal_handle_future.get());
+        actionGoalStatus2 = false;
+    }
+    if(connectFlag2 == true)
+    {
+        ui->pushButtonshutdown2->setDisabled(true);
+        auto request = std::make_shared<droneinterfaces::srv::DroneShutDown::Request>();
+        request->shutdown = false;
+        auto response_received_callback = [this](ServiceResponseFuture3 future){
+            std::cout<<"get shutdown result"<<std::endl;
+            auto result = future.get();
+            if(result->res == true){
+                connectFlag2 = false;
+                disableAllButton2();
+                ui->pushButtonshutdown2->setDisabled(true);
+                ui->pushButtonconnect2->setEnabled(true);
+            }else
+            {
+                ui->pushButtonshutdown2->setEnabled(true);
+                enableAllButton2();
+            }
+        };
+        auto future_result = droneShutDownClient2_ -> async_send_request(request, response_received_callback);
+    }
+}
+
+void MainWindow::droneConnect1()
+{
+    if(connectFlag1 == false)
+    {
+        ui->pushButtonconnect1->setDisabled(true);
+        auto request = std::make_shared<droneinterfaces::srv::DroneShutDown::Request>();
+        request->shutdown = false;
+        request->set__dronename("t1");
+        request->set__ip(ip1);
+        auto response_received_callback = [this](ServiceResponseFuture3 future){
+            auto result = future.get();
+            if(result->res == true){
+                connectFlag1 = true;
+                ui->pushButtonconnect1->setDisabled(true);
+                sleep(2);
+                enableAllButton1();
+                ui->pushButtonshutdown1->setEnabled(true);
+            }else
+            {
+                disableAllButton1();
+                ui->pushButtonconnect1->setEnabled(true);
+            }
+        };
+        auto future_result = droneConnectClient1_ -> async_send_request(request, response_received_callback);
+    }
+}
+
+void MainWindow::droneConnect2()
+{
+    if(connectFlag2 == false)
+    {
+        ui->pushButtonconnect2->setDisabled(true);
+        auto request = std::make_shared<droneinterfaces::srv::DroneShutDown::Request>();
+        request->shutdown = false;
+        request->set__dronename("t2");
+        request->set__ip(ip2);
+        auto response_received_callback = [this](ServiceResponseFuture3 future){
+        auto result = future.get();
+        if(result->res == true){
+            connectFlag2 = true;
+            ui->pushButtonconnect2->setDisabled(true);
+            sleep(2);
+            enableAllButton2();
+            ui->pushButtonshutdown2->setEnabled(true);
+        }else
+        {
+            disableAllButton2();
+            ui->pushButtonconnect2->setEnabled(true);
+        }
+        };
+        auto future_result = droneConnectClient2_ -> async_send_request(request, response_received_callback);
+    }
 }
 
 void MainWindow::cancelGoal1()
@@ -132,6 +345,59 @@ void MainWindow::sendGoal1()
         send_goal_options.feedback_callback = std::bind(&MainWindow::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
         send_goal_options.result_callback = std::bind(&MainWindow::result_callback, this, std::placeholders::_1);
         goal_handle_future = goPointActionClient1_->async_send_goal(goal, send_goal_options);
+    }
+    
+}
+
+void MainWindow::cancelGoal2()
+{
+    if(actionGoalStatus2 == false)
+    {
+        RCLCPP_ERROR(nh_->get_logger(), "Go point action 2 is not executing!");
+    }else{
+        rclcpp::Rate loop_rate(2);
+        if(!goPointActionClient2_)
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action client 2 not actived.");
+            return;
+        }
+        while(!goal_handle_future.valid())
+        {
+            RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+            loop_rate.sleep();
+        }
+        goPointActionClient2_->async_cancel_goal(goal_handle_future.get());
+        actionGoalStatus2 = false;
+    }
+}
+
+void MainWindow::sendGoal2()
+{
+    if(actionGoalStatus2 == true)
+    {
+        RCLCPP_ERROR(nh_->get_logger(), "Go point action 2 is executing!");
+    }else{
+        if(!goPointActionClient2_)
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action client 2 not actived.");
+            actionGoalStatus2 = false;
+            return;
+        }
+        if(!goPointActionClient2_->wait_for_action_server(std::chrono::seconds(10)))
+        {
+            RCLCPP_INFO(nh_->get_logger(), "Go point action server not available after waiting.");
+            actionGoalStatus2 = false;
+            return;
+        }
+        actionGoalStatus2 = true;
+        auto goal = droneinterfaces::action::GoPoint::Goal();
+        goal.set__goal(goalPosition2);
+        RCLCPP_INFO(nh_->get_logger(), "Sending goal");
+        auto send_goal_options = rclcpp_action::Client<droneinterfaces::action::GoPoint>::SendGoalOptions();
+        send_goal_options.goal_response_callback = std::bind(&MainWindow::goal_response_callback, this, std::placeholders::_1);
+        send_goal_options.feedback_callback = std::bind(&MainWindow::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
+        send_goal_options.result_callback = std::bind(&MainWindow::result_callback, this, std::placeholders::_1);
+        goal_handle_future = goPointActionClient2_->async_send_goal(goal, send_goal_options);
     }
     
 }
@@ -222,37 +488,37 @@ void MainWindow::mousePressEvent(QMouseEvent* event)
     }
 }
 
-void MainWindow::checkDrones()
-{
-    // RCLCPP_INFO(nh_->get_logger(), "Result: dronepool\n");
-    // auto result = controllerClient_->async_send_request(request);
-    // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-    // // rclcpp::spin_until_future_complete(nh_, result);
-    // res = result.get()->res;
-    // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-    // memset(c, 0, size+1);
-    auto response_received_callback = [this](ServiceResponseFuture2 future){
-        auto result = future.get();
-        // std::string res = "-"+result.get()->res;
-        // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-        int size = result.get()->dronenames.size();
-        for(int i = 0; i< size; i++)
-        {
-            // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->dronenames[i].c_str());
-            // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->droneips[i].c_str());
-            if(result->dronenames[i]=="t1")
-            {
-                ui->lineEdit1->setText(QString::fromStdString(result->droneips[i]));
-                ip1 = ui->lineEdit1->text().toStdString();
-            }else if(result->dronenames[i]=="t2")
-            {
-                ui->lineEdit2->setText(QString::fromStdString(result->droneips[i]));
-                ip2 = ui->lineEdit2->text().toStdString();
-            }
-        }
-    };
-    auto future_result = dronePoolStatusClient_ -> async_send_request(dronePoolStatusRequest, response_received_callback);
-}
+// void MainWindow::checkDrones()
+// {
+//     // RCLCPP_INFO(nh_->get_logger(), "Result: dronepool\n");
+//     // auto result = controllerClient_->async_send_request(request);
+//     // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
+//     // // rclcpp::spin_until_future_complete(nh_, result);
+//     // res = result.get()->res;
+//     // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+//     // memset(c, 0, size+1);
+//     auto response_received_callback = [this](ServiceResponseFuture2 future){
+//         auto result = future.get();
+//         // std::string res = "-"+result.get()->res;
+//         // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+//         int size = result.get()->dronenames.size();
+//         for(int i = 0; i< size; i++)
+//         {
+//             // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->dronenames[i].c_str());
+//             // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->droneips[i].c_str());
+//             if(result->dronenames[i]=="t1")
+//             {
+//                 ui->lineEdit1->setText(QString::fromStdString(result->droneips[i]));
+//                 ip1 = ui->lineEdit1->text().toStdString();
+//             }else if(result->dronenames[i]=="t2")
+//             {
+//                 ui->lineEdit2->setText(QString::fromStdString(result->droneips[i]));
+//                 ip2 = ui->lineEdit2->text().toStdString();
+//             }
+//         }
+//     };
+//     auto future_result = dronePoolStatusClient_ -> async_send_request(dronePoolStatusRequest, response_received_callback);
+// }
 
 void MainWindow::positionCallback1(const droneinterfaces::msg::PositionArray::SharedPtr msg)
 {

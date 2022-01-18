@@ -649,10 +649,11 @@ CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_
  rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_register__struct.h
-CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c.o
- /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c
+CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_drone_shut_down_s.c.o
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_shut_down_s.c
  /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/primitives_sequence.h
- /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/primitives_sequence_functions.h
+ /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/string.h
+ /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/string_functions.h
  /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/include/rosidl_runtime_c/visibility_control.h
  /usr/include/python3.8/Python.h
  /usr/include/python3.8/abstract.h
@@ -754,5 +755,5 @@ CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/srv/_
  /usr/include/python3.8/warnings.h
  /usr/include/python3.8/weakrefobject.h
  rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
- rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__functions.h
- rosidl_generator_c/droneinterfaces/srv/detail/go_to_point__struct.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__struct.h

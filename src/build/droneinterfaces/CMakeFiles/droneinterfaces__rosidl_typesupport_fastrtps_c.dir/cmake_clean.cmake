@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_controller__type_support_c.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_pool_status__type_support_c.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_register__type_support_c.cpp.o"
-  "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/go_to_point__type_support_c.cpp.o"
+  "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_shut_down__type_support_c.cpp.o"
   "libdroneinterfaces__rosidl_typesupport_fastrtps_c.pdb"
   "libdroneinterfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/droneinterfaces/action/detail/go_point__rosidl_typesupport_fastrtps_c.h"
@@ -20,8 +20,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_pool_status__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_register__type_support_c.cpp"
-  "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_fastrtps_c.h"
-  "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/go_to_point__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/droneinterfaces/srv/detail/drone_shut_down__type_support_c.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

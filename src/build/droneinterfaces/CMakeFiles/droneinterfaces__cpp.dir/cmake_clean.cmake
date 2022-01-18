@@ -21,13 +21,13 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_register__builder.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_register__struct.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_register__traits.hpp"
-  "rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__builder.hpp"
-  "rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__struct.hpp"
-  "rosidl_generator_cpp/droneinterfaces/srv/detail/go_to_point__traits.hpp"
+  "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__builder.hpp"
+  "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__struct.hpp"
+  "rosidl_generator_cpp/droneinterfaces/srv/detail/drone_shut_down__traits.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/drone_controller.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/drone_pool_status.hpp"
   "rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp"
-  "rosidl_generator_cpp/droneinterfaces/srv/go_to_point.hpp"
+  "rosidl_generator_cpp/droneinterfaces/srv/drone_shut_down.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

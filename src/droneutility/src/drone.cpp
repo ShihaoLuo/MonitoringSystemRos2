@@ -6,23 +6,17 @@ using namespace dronenamespace;
 Drone::Drone(const char* name_, const char* ip_)
 {
     name = name_;
+    ip = ip_;
     nh_ = rclcpp::Node::make_shared(name);
-    dronepidp = new PID(0.03, 0.0005, 0.002);
-    dronepidp->setLimits(-50.0, 50.0);
-    dronepidr = new PID(0.03, 0.0005, 0.002);
-    dronepidr->setLimits(-50.0, 50.0);
     callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
-    auto opt1 = rclcpp::SubscriptionOptions();
-    opt1.callback_group = callbackgroup1;
     auto opt3 = rclcpp::PublisherOptions();
     opt3.callback_group = callbackgroup3;
     // callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     Tcal << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
     oTW <<0,0,1,0,  -1,0,0,0,  0,-1,0,0,  0,0,0,1;
-    ip = ip_;
     goToPointActionServer_ = rclcpp_action::create_server<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
         nh_->get_node_clock_interface(),
@@ -33,17 +27,32 @@ Drone::Drone(const char* name_, const char* ip_)
         std::bind(&Drone::handle_cancel, this, std::placeholders::_1),
         std::bind(&Drone::handle_accepted, this, std::placeholders::_1),
         rcl_action_server_get_default_options(), callbackgroup4);
+    auto opt1 = rclcpp::SubscriptionOptions();
+    opt1.callback_group = callbackgroup1;
+    frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
+        name+"_Framearray",
+        1,
+        std::bind(&Drone::frameCallback, this, std::placeholders::_1), opt1);
     client_ = nh_->create_client<droneinterfaces::srv::DroneRegister>("DroneRegister",
         rmw_qos_profile_default, callbackgroup1);
     positionPublisher_ = nh_->create_publisher<droneinterfaces::msg::PositionArray>(name+"_Positionarray", 1,
         opt3);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController",
         rmw_qos_profile_default, callbackgroup2);
-    auto request = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
-    // goToPointServer_ = nh_->create_service<droneinterfaces::srv::GoToPoint>(name+"_GoToPoint", std::bind(&Drone::gotopoint, this, std::placeholders::_1, std::placeholders::_2),
-    //     rmw_qos_profile_default, callbackgroup4);
-    request->dronename = name;
-    request->ip = ip;
+    droneShutDownServer_ = nh_->create_service<droneinterfaces::srv::DroneShutDown>(name+"_ShutDown", std::bind(&Drone::shutdown, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup4);
+    droneConnectServer_ = nh_->create_service<droneinterfaces::srv::DroneShutDown>(name+"_Connect", std::bind(&Drone::connect, this, std::placeholders::_1, std::placeholders::_2),
+        rmw_qos_profile_default, callbackgroup4);
+}
+
+void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+        std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response)
+{
+    name = request->dronename;
+    ip = request->ip;
+    auto request2 = std::make_shared<droneinterfaces::srv::DroneRegister::Request>();
+    request2->dronename = name;
+    request2->ip = ip;
     typedef std::chrono::duration<int> sec;
     sec ones(1);
     while(!client_->wait_for_service(ones))
@@ -55,8 +64,7 @@ Drone::Drone(const char* name_, const char* ip_)
         }
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
     }
-    auto result = client_->async_send_request(request);
-    rclcpp::spin_until_future_complete(nh_, result);
+    auto result = client_->async_send_request(request2);
     dronestatus = result.get()->status;
     std::printf("drone status:%d\n", dronestatus);
     if(dronestatus == 1)
@@ -81,10 +89,13 @@ Drone::Drone(const char* name_, const char* ip_)
         osmap = new ORB_SLAM2::Osmap(*pSlam);
         pose = pSlam->TrackMonocular(im, tframe_);
         osmap->mapLoad("map1.yaml");
-        frameSubscription_ = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
-            name+"_Framearray",
-            1,
-            std::bind(&Drone::frameCallback, this, std::placeholders::_1), opt1);
+        dronepidp = new PID(0.03, 0.0005, 0.002);
+        dronepidp->setLimits(-50.0, 50.0);
+        dronepidr = new PID(0.03, 0.0005, 0.002);
+        dronepidr->setLimits(-50.0, 50.0);
+        response->set__res(true);
+    }else{
+        response->set__res(false);
     }
 }
 
@@ -175,39 +186,19 @@ void Drone::handle_accepted(const std::shared_ptr<rclcpp_action::ServerGoalHandl
     std::thread{std::bind(&Drone::execute, this, std::placeholders::_1), goal_handle}.detach();
 }
 
-// void Drone::gotopoint(const std::shared_ptr<droneinterfaces::srv::GoToPoint::Request> request,
-//         std::shared_ptr<droneinterfaces::srv::GoToPoint::Response> response)
-// {
-//     goalPoint = Eigen::Map<Eigen::Vector4f>(request->goal.data());
-//     float oP=0, oR=0;
-//     string s = "rc 999 999 999 999";
-//     auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
-//     request2->ip = ip;
-//     dronepidp->reset();
-//     dronepidr->reset();
-//     while((goalPoint-position).norm()>200)
-//     {
-//         // std::cout<<(goalPoint-position).norm()<<std::endl;
-//         oP = dronepidp->pid_control(goalPoint[0], position[0]);
-//         oR = dronepidr->pid_control(goalPoint[1], position[1]);
-//         std::sprintf(s.data(), "~rc %d %d 0 0", int(-oR), int(oP));
-//         request2->cmd = s;
-//         auto result = controllerClient_->async_send_request(request2);
-//         auto res = result.get()->res;
-//         // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-//         // RCLCPP_INFO(nh_->get_logger(), "output:%f goal:%f position:%f", o, goalPoint[0], position[0]);
-//         usleep(30000);
-//     }
-//     // std::cout<<goalPoint<<std::endl;
-//     // std::cout<<position<<std::endl;
-//     RCLCPP_INFO(nh_->get_logger(), "arrive %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2]);
-//     std::sprintf(request2->cmd.data(), "~rc 0 0 0 0");
-//     auto result = controllerClient_->async_send_request(request2);
-//     auto res = result.get()->res;
-//     // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-//     response->res = true;
-//     // std::cout<<"gotopoint thread stop"<<std::endl;
-// }
+void Drone::shutdown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+        std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response)
+{
+    auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
+    request2->cmd = "q";
+    request2->ip = ip;
+    auto result = controllerClient_->async_send_request(request2);
+    RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", request2->cmd.c_str());
+    auto res = result.get()->res;
+    RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+    response->set__res(true);
+    quit();
+}
 
 void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
@@ -242,90 +233,80 @@ void Drone::quit()
 {
     running = 0;
     pSlam -> Shutdown();
-    timer_->cancel();
-    delete pSlam;
-    delete osmap;
-    delete dronepidp;
-    delete dronepidr;
+    osmap -> ~Osmap();
+    dronepidp -> ~PID();
+    dronepidr -> ~PID();
     dronestatus = -1;
 }
 
-int Drone::keyloop()
-{
-    auto request = std::make_shared<droneinterfaces::srv::DroneController::Request>();
-    int size = 0;
-    std::string s;
-    std::string res;
-    char c[100]={'\0'};
-    puts("Reading from keyboard");
-    while(dronestatus && running)
-    {
-        std::cin>>c;
-        while(c[size]!='\0')
-        {
-            if(c[size]=='_')
-                c[size]=' ';
-            size +=1 ;
-        }
-        s.assign(c, size+1);
-        size = 0;
-        
-        if(c[0] =='q')
-        {
-            RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s to close node with ip(%s), result: %s\n", s.c_str(), ip.c_str(), res.c_str());
-            memset(c, 0, size+1);
-            quit();
-            cond.notify_all();
-            break;
-        }else if(c[0] == 's' && c[1] == 's')
-        {
-            RCLCPP_INFO(nh_->get_logger(), "save map\n");
-            osmap->mapSave("map1.yaml", true);
-            memset(c, 0, size+1);
-        }else if(c[0] == 'l' && c[1] == 'l')
-        {
-            RCLCPP_INFO(nh_->get_logger(), "save map\n");
-            osmap->mapLoad("map1.yaml");
-            memset(c, 0, size+1);
-        }else
-        {
-            request->cmd=s;
-            request->ip = ip;
-            // auto result = controllerClient_->async_send_request(request);
-            // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-            // // rclcpp::spin_until_future_complete(nh_, result);
-            // res = result.get()->res;
-            // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-            // memset(c, 0, size+1);
-            auto response_received_callback = [this](ServiceResponseFuture future){
-                auto result = future.get();
-                std::string res = "-"+result.get()->res;
-                RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-            };
-            auto future_result = controllerClient_ -> async_send_request(request, response_received_callback);
-            memset(c, 0, size+1);
-        } 
-        usleep(200000);
-    }
-    RCLCPP_INFO(nh_->get_logger(), "close the keyloop thread.\n");
-    return 0;
-}
+// int Drone::keyloop()
+// {
+//     auto request = std::make_shared<droneinterfaces::srv::DroneController::Request>();
+//     int size = 0;
+//     std::string s;
+//     std::string res;
+//     char c[100]={'\0'};
+//     puts("Reading from keyboard");
+//     while(dronestatus && running)
+//     {
+//         std::cin>>c;
+//         while(c[size]!='\0')
+//         {
+//             if(c[size]=='_')
+//                 c[size]=' ';
+//             size +=1 ;
+//         }
+//         s.assign(c, size+1);
+//         size = 0;      
+//         if(c[0] =='q')
+//         {
+//             RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s to close node with ip(%s), result: %s\n", s.c_str(), ip.c_str(), res.c_str());
+//             memset(c, 0, size+1);
+//             quit();
+//             break;
+//         }else if(c[0] == 's' && c[1] == 's')
+//         {
+//             RCLCPP_INFO(nh_->get_logger(), "save map\n");
+//             osmap->mapSave("map1.yaml", true);
+//             memset(c, 0, size+1);
+//         }else if(c[0] == 'l' && c[1] == 'l')
+//         {
+//             RCLCPP_INFO(nh_->get_logger(), "save map\n");
+//             osmap->mapLoad("map1.yaml");
+//             memset(c, 0, size+1);
+//         }else
+//         {
+//             request->cmd=s;
+//             request->ip = ip;
+//             // auto result = controllerClient_->async_send_request(request);
+//             // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
+//             // // rclcpp::spin_until_future_complete(nh_, result);
+//             // res = result.get()->res;
+//             // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+//             // memset(c, 0, size+1);
+//             auto response_received_callback = [this](ServiceResponseFuture future){
+//                 auto result = future.get();
+//                 std::string res = "-"+result.get()->res;
+//                 RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
+//             };
+//             auto future_result = controllerClient_ -> async_send_request(request, response_received_callback);
+//             memset(c, 0, size+1);
+//         } 
+//         usleep(200000);
+//     }
+//     RCLCPP_INFO(nh_->get_logger(), "close the keyloop thread.\n");
+//     return 0;
+// }
 
 void Drone::spin()
 {
-    if(dronestatus == 1)
-    {
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s started.", name.c_str());
-        std::thread keyloopT(std::bind(&Drone::keyloop, this));
-        keyloopT.detach();
-        // rclcpp::spin(nh_);
-        rclcpp::executors::MultiThreadedExecutor exector_;
-        exector_.add_node(nh_);
-        exector_.spin();
-        
-    }else{
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s not started.", name.c_str());
-    }
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "drone node-%s started.", name.c_str());
+    // std::thread keyloopT(std::bind(&Drone::keyloop, this));
+    // keyloopT.detach();
+    // rclcpp::spin(nh_);
+    rclcpp::executors::MultiThreadedExecutor exector_;
+    exector_.add_node(nh_);
+    exector_.spin();
 }
     
 

@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_controller__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_pool_status__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_register__type_support.cpp.o"
-  "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/go_to_point__type_support.cpp.o"
+  "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_shut_down__type_support.cpp.o"
   "libdroneinterfaces__rosidl_typesupport_introspection_cpp.pdb"
   "libdroneinterfaces__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_cpp.hpp"
@@ -20,8 +20,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_pool_status__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_register__type_support.cpp"
-  "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_introspection_cpp.hpp"
-  "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/go_to_point__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/droneinterfaces/srv/detail/drone_shut_down__type_support.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

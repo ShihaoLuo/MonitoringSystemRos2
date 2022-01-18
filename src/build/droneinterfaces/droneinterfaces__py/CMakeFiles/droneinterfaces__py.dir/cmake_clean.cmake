@@ -17,8 +17,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/droneinterfaces/srv/_drone_pool_status_s.c"
   "../rosidl_generator_py/droneinterfaces/srv/_drone_register.py"
   "../rosidl_generator_py/droneinterfaces/srv/_drone_register_s.c"
-  "../rosidl_generator_py/droneinterfaces/srv/_go_to_point.py"
-  "../rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c"
+  "../rosidl_generator_py/droneinterfaces/srv/_drone_shut_down.py"
+  "../rosidl_generator_py/droneinterfaces/srv/_drone_shut_down_s.c"
   "CMakeFiles/droneinterfaces__py"
 )
 

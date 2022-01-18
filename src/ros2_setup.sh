@@ -1,3 +1,3 @@
 #!/bin/sh
 ros2_setup
-. install/local_setup.sh
+. /home/jakeluo/Documents/MonitoringSystemRos2/src/install/local_setup.sh

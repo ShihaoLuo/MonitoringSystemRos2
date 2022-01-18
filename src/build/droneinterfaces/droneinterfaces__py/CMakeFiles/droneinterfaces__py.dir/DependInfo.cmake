@@ -22,8 +22,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_pool_status_s.c" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_register.py" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_register_s.c" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
-  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point.py" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
-  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_go_to_point_s.c" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
+  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_shut_down.py" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
+  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/srv/_drone_shut_down_s.c" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c"
   )
 
 

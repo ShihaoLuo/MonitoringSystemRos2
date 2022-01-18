@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_controller__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_controller__type_support.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp.o"
-  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o"
+  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -45,7 +45,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_controller__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp"
-  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp"
+  "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp"
   )
 
 

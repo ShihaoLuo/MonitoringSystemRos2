@@ -31,8 +31,8 @@ droneinterfaces/msg/frame_array.hpp
 /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneinterfaces/msg/frame_array.hpp
 droneinterfaces/msg/position_array.hpp
 /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneinterfaces/msg/position_array.hpp
-droneinterfaces/srv/go_to_point.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneinterfaces/srv/go_to_point.hpp
+droneinterfaces/srv/drone_shut_down.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneinterfaces/srv/drone_shut_down.hpp
 droneinterfaces/action/go_point.hpp
 /home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/droneinterfaces/action/go_point.hpp
 System.h
@@ -298,9 +298,9 @@ string
 type_traits
 -
 
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__builder.hpp
-droneinterfaces/srv/detail/go_to_point__struct.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/droneinterfaces/srv/detail/go_to_point__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
 rosidl_runtime_cpp/message_initialization.hpp
 -
 algorithm
@@ -308,7 +308,7 @@ algorithm
 utility
 -
 
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
 rosidl_runtime_cpp/bounded_vector.hpp
 -
 rosidl_runtime_cpp/message_initialization.hpp
@@ -324,9 +324,9 @@ string
 vector
 -
 
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__traits.hpp
-droneinterfaces/srv/detail/go_to_point__struct.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/droneinterfaces/srv/detail/go_to_point__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
 stdint.h
 -
 rosidl_runtime_cpp/traits.hpp
@@ -354,13 +354,13 @@ droneinterfaces/srv/detail/drone_register__builder.hpp
 droneinterfaces/srv/detail/drone_register__traits.hpp
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/drone_register__traits.hpp
 
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/go_to_point.hpp
-droneinterfaces/srv/detail/go_to_point__struct.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/go_to_point__struct.hpp
-droneinterfaces/srv/detail/go_to_point__builder.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/go_to_point__builder.hpp
-droneinterfaces/srv/detail/go_to_point__traits.hpp
-/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/go_to_point__traits.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
+droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
 
 /home/jakeluo/Documents/ORB_SLAM2/Thirdparty/DBoW2/DBoW2/BowVector.h
 iostream

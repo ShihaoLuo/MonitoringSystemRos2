@@ -10,7 +10,7 @@
 #include "droneinterfaces/srv/drone_controller.hpp"
 #include "droneinterfaces/msg/frame_array.hpp"
 #include "droneinterfaces/msg/position_array.hpp"
-#include "droneinterfaces/srv/go_to_point.hpp"
+#include "droneinterfaces/srv/drone_shut_down.hpp"
 #include "droneinterfaces/action/go_point.hpp"
 #include "System.h"
 #include <mutex>
@@ -32,17 +32,16 @@ namespace dronenamespace
 
         // void droneControl();
         
-        int keyloop();
+        // int keyloop();
 
         void spin();
 
 
         private:
         ORB_SLAM2::System* pSlam;
-        std::mutex mx;
-        std::condition_variable cond;
+        // std::mutex mx;
+        // std::condition_variable cond;
         rclcpp::Node::SharedPtr nh_;
-        rclcpp::TimerBase::SharedPtr timer_;
         size_t count_;
         int dronestatus = 0;
         std::string name;
@@ -50,7 +49,8 @@ namespace dronenamespace
         rclcpp::Publisher<droneinterfaces::msg::PositionArray>::SharedPtr positionPublisher_;
         rclcpp::Client<droneinterfaces::srv::DroneRegister>::SharedPtr client_;
         rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
-        rclcpp::Service<droneinterfaces::srv::GoToPoint>::SharedPtr goToPointServer_;
+        rclcpp::Service<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownServer_;
+        rclcpp::Service<droneinterfaces::srv::DroneShutDown>::SharedPtr droneConnectServer_;
         droneinterfaces::msg::PositionArray positionarray_;
         std_msgs::msg::String cmd;
         int running = 1;
@@ -67,8 +67,10 @@ namespace dronenamespace
         ORB_SLAM2::Osmap *osmap;
         void frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg);
         void track(const char* path_to_vocaulary, const char* path_to_setting);
-        // void gotopoint(const std::shared_ptr<droneinterfaces::srv::GoToPoint::Request> request,
-        // std::shared_ptr<droneinterfaces::srv::GoToPoint::Response> response);
+        void shutdown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+            std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response);
+        void connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+            std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response);
         rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4;
         PID *dronepidp, *dronepidr;
         rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID & uuid,

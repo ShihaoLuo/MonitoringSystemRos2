@@ -68,7 +68,7 @@ rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: ros
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/srv/DronePoolStatus.idl
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/msg/FrameArray.idl
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/msg/PositionArray.idl
-rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/srv/GoToPoint.idl
+rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/srv/DroneShutDown.idl
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/action/GoPoint.idl
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
@@ -92,8 +92,8 @@ rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp: rosidl
 rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp: rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp
 
-rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp: rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp
+rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp: rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp
 
 rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp: rosidl_typesupport_cpp/droneinterfaces/srv/drone_register__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp
@@ -163,18 +163,18 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp -o CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp.s
 
-CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o: rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp
+CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o: rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp
 
-CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp > CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.i
+CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp > CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.i
 
-CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp -o CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.s
+CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp -o CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.s
 
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp.o: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp.o: rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp
@@ -196,7 +196,7 @@ droneinterfaces__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp.o" \
-"CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o" \
+"CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp.o"
 
 # External object files for target droneinterfaces__rosidl_typesupport_cpp
@@ -207,7 +207,7 @@ libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosid
 libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp.o
-libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp.o
+libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/build.make
 libdroneinterfaces__rosidl_typesupport_cpp.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
@@ -250,7 +250,7 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesuppor
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/srv/drone_pool_status__type_support.cpp
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp
-CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/srv/go_to_point__type_support.cpp
+CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/srv/drone_shut_down__type_support.cpp
 CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp
 	cd /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/depend

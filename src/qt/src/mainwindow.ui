@@ -726,7 +726,7 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="ip">192.168.1.</string>
+     <string extracomment="ip">192.168.1.100</string>
     </property>
     <property name="placeholderText">
      <string>t1 ip address</string>
@@ -742,7 +742,7 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="ip">192.168.1.</string>
+     <string extracomment="ip">192.168.1.102</string>
     </property>
     <property name="placeholderText">
      <string>t2 ip address</string>
@@ -967,6 +967,114 @@ switch</string>
      <string>T1 cancel goal</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonconnect1">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>connect</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonshutdown1">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>shutdown</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonshutdown2">
+    <property name="geometry">
+     <rect>
+      <x>1730</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>shutdown</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonconnect2">
+    <property name="geometry">
+     <rect>
+      <x>1610</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>connect</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtoncancelgoal2">
+    <property name="geometry">
+     <rect>
+      <x>2430</x>
+      <y>690</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T2 cancel goal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonsendgoal2">
+    <property name="geometry">
+     <rect>
+      <x>2290</x>
+      <y>690</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>T2 Send goal</string>
+    </property>
+   </widget>
    <zorder>img1</zorder>
    <zorder>pushButtonland1</zorder>
    <zorder>img2</zorder>
@@ -1012,6 +1120,12 @@ switch</string>
    <zorder>pushButtont2goalpoint</zorder>
    <zorder>pushButtonsendgoal1</zorder>
    <zorder>pushButtoncancelgoal1</zorder>
+   <zorder>pushButtonconnect1</zorder>
+   <zorder>pushButtonshutdown1</zorder>
+   <zorder>pushButtonshutdown2</zorder>
+   <zorder>pushButtonconnect2</zorder>
+   <zorder>pushButtoncancelgoal2</zorder>
+   <zorder>pushButtonsendgoal2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
