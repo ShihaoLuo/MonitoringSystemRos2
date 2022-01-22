@@ -1,0 +1,13 @@
+%YAML:1.0
+---
+mappointsFile: "0122.mappoints"
+nMappoints: 37438
+keyframesFile: "0122.keyframes"
+nKeyframes: 1078
+featuresFile: "0122.features"
+nFeatures: 1086003
+Options: 2
+Options descriptions: [ FEATURES_FILE_NOT_DELIMITED ]
+cameraMatrices:
+   - { fx:9.2117102050781250e+02, fy:9.1901800537109375e+02,
+       cx:4.5989999389648438e+02, cy:3.5123999023437500e+02 }

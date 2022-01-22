@@ -12,6 +12,8 @@
 #include "droneinterfaces/msg/position_array.hpp"
 #include "droneinterfaces/srv/drone_shut_down.hpp"
 #include "droneinterfaces/action/go_point.hpp"
+#include "droneinterfaces/srv/drone_map.hpp"
+// #include "droneinterfaces/srv/drone_slam.hpp"
 #include "System.h"
 #include <mutex>
 #include <unistd.h>
@@ -38,6 +40,7 @@ namespace dronenamespace
 
 
         private:
+        bool slamMode = false;
         ORB_SLAM2::System* pSlam;
         // std::mutex mx;
         // std::condition_variable cond;
@@ -51,6 +54,8 @@ namespace dronenamespace
         rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
         rclcpp::Service<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownServer_;
         rclcpp::Service<droneinterfaces::srv::DroneShutDown>::SharedPtr droneConnectServer_;
+        rclcpp::Service<droneinterfaces::srv::DroneMap>::SharedPtr droneMapServer_;
+        // rclcpp::Service<droneinterfaces::srv::DroneSlam>::SharedPtr droneSlamServer_;
         droneinterfaces::msg::PositionArray positionarray_;
         std_msgs::msg::String cmd;
         int running = 1;
@@ -62,17 +67,21 @@ namespace dronenamespace
         Eigen::Matrix<float, 4, 4> TCW, T, Tco, Toc, oTW, TWc;
         Eigen::Matrix<float, 4, 4> Tcal, TO;
         Eigen::Vector4f position = {0, 0, 0, 0}, goalPoint = {0, 0, 0, 0};
-        float height_offset = 1800;
-        float scale = 360.0/0.1432;
+        float height_offset = 1736;
+        float scale = 8556;
         ORB_SLAM2::Osmap *osmap;
         void frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg);
         void track(const char* path_to_vocaulary, const char* path_to_setting);
-        void shutdown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+        void shutDown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
             std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response);
+        void saveMap(const std::shared_ptr<droneinterfaces::srv::DroneMap::Request> request,
+            std::shared_ptr<droneinterfaces::srv::DroneMap::Response> response);
+        // void slam(const std::shared_ptr<droneinterfaces::srv::DroneSlam::Request> request,
+        //     std::shared_ptr<droneinterfaces::srv::DroneSlam::Response> response);
         void connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
             std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response);
         rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4;
-        PID *dronepidp, *dronepidr;
+        PID *dronepidp, *dronepidr, *dronepidc, *dronepidy;
         rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID & uuid,
             std::shared_ptr<const droneinterfaces::action::GoPoint::Goal> goal);
         rclcpp_action::CancelResponse handle_cancel(const std::shared_ptr<rclcpp_action::ServerGoalHandle

@@ -52,3 +52,9 @@ void PID::setPID(float p, float i, float d)
    ki = i;
    kd = d;
 }
+
+void PID::setIntergralLimits(float min, float max)
+{
+   Maxintergral = max;
+   Minintergral = min;
+}

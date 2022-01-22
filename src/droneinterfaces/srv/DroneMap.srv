@@ -1,0 +1,5 @@
+string dronename
+string ip
+string mapname
+---
+bool res

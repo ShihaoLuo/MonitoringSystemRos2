@@ -130,6 +130,10 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
     int ret = recvfrom(send_socket, recvbuf, sizeof(recvbuf), 0, (struct sockaddr*)&client_addr, &len);
     if(ret!=-1)
     {
+        if(tmp.name == "t1")
+            t1VideoThreadFlag = 1;
+        else 
+            t2VideoThreadFlag = 1;
         std::printf("ret:%d\n",ret);
         memset(&dst_addr, 0, sizeof(struct sockaddr_in));
         memset(recvbuf, 0, 30);
@@ -168,7 +172,7 @@ std::shared_ptr<droneinterfaces::srv::DroneRegister::Response> response)
 
 void DroneManager::recvVideoThread(std::string ip)
 {
-    RCLCPP_INFO(nh_->get_logger(), "Video thread of %s start!\n", ip.c_str());
+    RCLCPP_INFO(nh_->get_logger(), "Video thread %d of %s start!\n", getpid(), ip.c_str());
     H264Decoder decoder;
     ConverterRGB24 converter;
     int ret = 0;
@@ -183,8 +187,14 @@ void DroneManager::recvVideoThread(std::string ip)
     droneinterfaces::msg::FrameArray frame_;
     auto framePublisher_ = nh_->create_publisher<droneinterfaces::msg::FrameArray>(dronepool[ip].name+"_Framearray", 1);
     int videosocket_ = dronepool[ip].videosocket;
-    while (1)
+    bool *flag;
+    if(dronepool[ip].name == "t1")
+        flag = &t1VideoThreadFlag;
+    else 
+        flag = &t2VideoThreadFlag;
+    while (*flag)
     {
+        // RCLCPP_INFO(nh_->get_logger(), "Video thread %d alive!\n", getpid());
         ret = recvfrom(videosocket_, datap+datasize, 2048, 0, NULL, NULL);
         datasize += ret;
         if(ret > 0 and ret != 1460)
@@ -222,7 +232,6 @@ void DroneManager::recvVideoThread(std::string ip)
             datap = &buf[0];
         }
     }
-    // slam.Shutdown();
 }
 
 
@@ -263,6 +272,10 @@ std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
     }else{
         if(request->cmd[0] == 'q')
         {
+            if(dronepool[request->ip].name == "t1")
+                t1VideoThreadFlag = 0;
+            else 
+                t2VideoThreadFlag = 0;
             RCLCPP_INFO(nh_->get_logger(), "Node with ip(%s) deleted.", request->ip.c_str());
             shutdown(dronepool[request->ip].cmdsocket, SHUT_RDWR);
             shutdown(dronepool[request->ip].videosocket, SHUT_RDWR);
@@ -276,6 +289,7 @@ std::shared_ptr<droneinterfaces::srv::DroneController::Response> response)
                     ++it;
                 }
             }
+
             RCLCPP_INFO(nh_->get_logger(), "new dronoepool:\n");
             DroneManager::printDrone();
             response->res="ok";

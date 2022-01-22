@@ -10,6 +10,7 @@ public:
     PID(float p, float i, float d);
     float pid_control(float tar, float act);
     void setLimits(float min, float max);
+    void setIntergralLimits(float min, float max);
     void setPID(float p, float i, float d);
     void reset();
 };

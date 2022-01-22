@@ -22,6 +22,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <unistd.h>
 // #include "System.h"
 
 namespace dronenamespace
@@ -50,6 +51,7 @@ namespace dronenamespace
 
         void recvVideoThread(std::string ip);
         private:
+        bool t1VideoThreadFlag = 0, t2VideoThreadFlag = 0;
         cv::Mat im = cv::Mat(720, 960, CV_8UC3);
         double tframe_;
         std::map<std::string, std::queue<std::vector<unsigned char>>> framepool;

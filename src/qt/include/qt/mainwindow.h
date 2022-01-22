@@ -12,10 +12,11 @@
 #include "droneinterfaces/srv/drone_controller.hpp"
 #include "droneinterfaces/msg/frame_array.hpp"
 #include "droneinterfaces/msg/position_array.hpp"
+#include "droneinterfaces/srv/drone_map.hpp"
 #include <thread>
 #include <functional>
 #include "droneinterfaces/srv/drone_pool_status.hpp"
-// #include "droneinterfaces/srv/go_to_point.hpp"
+#include "droneinterfaces/srv/drone_slam.hpp"
 #include <chrono>
 #include <QTimer>
 #include <QScrollBar>
@@ -28,6 +29,8 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "droneinterfaces/srv/drone_shut_down.hpp"
 #include <unistd.h>
+#include <QDial>
+#include <QSlider>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -78,6 +81,12 @@ public slots:
     void droneShutDown1();
     void droneConnect2();
     void droneShutDown2();
+    void orientation1();
+    void orientation2();
+    void goalHeight1();
+    void goalHeight2();
+    void saveMap();
+    // void slam();
 
 private:
     Ui::MainWindow *ui;
@@ -102,6 +111,8 @@ private:
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneConnectClient1_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownClient2_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneConnectClient2_;
+    rclcpp::Client<droneinterfaces::srv::DroneMap>::SharedPtr droneSaveMapClient_;
+    // rclcpp::Client<droneinterfaces::srv::DroneSlam>::SharedPtr droneSlamClient_;
     rclcpp_action::Client<droneinterfaces::action::GoPoint>::SharedPtr goPointActionClient1_, goPointActionClient2_;
     void frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg);
     void frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg);
@@ -127,7 +138,7 @@ private:
     void feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr,
         const std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback);
     void result_callback(const rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::WrappedResult &result);
-    std::shared_future<std::shared_ptr<rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>>> goal_handle_future;
+    std::shared_future<std::shared_ptr<rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>>> goal_handle_future1, goal_handle_future2;
     rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4, callbackgroup5;
 };
 

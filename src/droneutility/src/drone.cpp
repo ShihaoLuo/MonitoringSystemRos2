@@ -39,14 +39,46 @@ Drone::Drone(const char* name_, const char* ip_)
         opt3);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController",
         rmw_qos_profile_default, callbackgroup2);
-    droneShutDownServer_ = nh_->create_service<droneinterfaces::srv::DroneShutDown>(name+"_ShutDown", std::bind(&Drone::shutdown, this, std::placeholders::_1, std::placeholders::_2),
+    droneShutDownServer_ = nh_->create_service<droneinterfaces::srv::DroneShutDown>(name+"_ShutDown", std::bind(&Drone::shutDown, this, std::placeholders::_1, std::placeholders::_2),
         rmw_qos_profile_default, callbackgroup4);
     droneConnectServer_ = nh_->create_service<droneinterfaces::srv::DroneShutDown>(name+"_Connect", std::bind(&Drone::connect, this, std::placeholders::_1, std::placeholders::_2),
         rmw_qos_profile_default, callbackgroup4);
+    droneMapServer_ = nh_->create_service<droneinterfaces::srv::DroneMap>(name+"_SaveMap", std::bind(&Drone::saveMap, this, std::placeholders::_1, std::placeholders::_2));
+    // droneSlamServer_ = nh_->create_service<droneinterfaces::srv::DroneSlam>(name+"_Slam", std::bind(&Drone::slam, this, std::placeholders::_1, std::placeholders::_2));
+}
+
+// void Drone::slam(const std::shared_ptr<droneinterfaces::srv::DroneSlam::Request> request,
+//     std::shared_ptr<droneinterfaces::srv::DroneSlam::Response> response)
+// {
+//     if(slamMode == 0)
+//     {
+//         RCLCPP_INFO(nh_->get_logger(), "slam mode\n");
+//         pSlam->DeactivateLocalizationMode();
+//         pSlam->TrackMonocular(im, tframe_);
+//         slamMode = true;
+//         response->set__res(true);
+//     }else
+//     {
+//         slamMode = false;
+//         RCLCPP_INFO(nh_->get_logger(), "localization mode\n");
+//         pSlam->ActivateLocalizationMode();
+//         pSlam->TrackMonocular(im, tframe_);
+//         response->set__res(false);
+//     }
+// }
+
+
+void Drone::saveMap(const std::shared_ptr<droneinterfaces::srv::DroneMap::Request> request,
+    std::shared_ptr<droneinterfaces::srv::DroneMap::Response> response)
+{
+    auto tmp = request->mapname;
+    RCLCPP_INFO(nh_->get_logger(), "save map %s\n", tmp);
+    osmap->mapSave(tmp+".yaml", true);
+    response->set__res(true);
 }
 
 void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
-        std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response)
+    std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response)
 {
     name = request->dronename;
     ip = request->ip;
@@ -83,16 +115,21 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         bool bReuseMap = false;
         if (1 == ReuseMap)
             bReuseMap = true;
-    
         pSlam = new ORB_SLAM2::System(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR, 1);
         pSlam -> ActivateLocalizationMode();
         osmap = new ORB_SLAM2::Osmap(*pSlam);
         pose = pSlam->TrackMonocular(im, tframe_);
-        osmap->mapLoad("map1.yaml");
+        osmap->mapLoad("0122.yaml");
+        // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
-        dronepidp->setLimits(-50.0, 50.0);
+        dronepidp->setLimits(-30.0, 30.0);
         dronepidr = new PID(0.03, 0.0005, 0.002);
-        dronepidr->setLimits(-50.0, 50.0);
+        dronepidr->setLimits(-30.0, 30.0);
+        dronepidc = new PID(0.05, 0.0007, 0.001);
+        dronepidc->setLimits(-30.0, 30.0);
+        dronepidy = new PID(50, 0.3, 0.15);
+        dronepidy->setLimits(-20.0, 20.0);
+        dronepidy->setIntergralLimits(-100, 100);
         response->set__res(true);
     }else{
         response->set__res(false);
@@ -104,7 +141,7 @@ rclcpp_action::GoalResponse Drone::handle_goal(
     std::shared_ptr<const droneinterfaces::action::GoPoint::Goal> goal)
 {
     goalPoint = Eigen::Map<Eigen::Vector4f>((float*)goal->goal.data());
-    RCLCPP_INFO(nh_->get_logger(), "Received goal request: %f %f", goal->goal[0], goal->goal[1]);
+    RCLCPP_INFO(nh_->get_logger(), "Received goal request: %f %f %f %f", goal->goal[0], goal->goal[1], goal->goal[2], goal->goal[3]);
     (void)uuid;
     // Let's reject sequences that are over 9000
     if (goalPoint.norm()>6000) {
@@ -132,10 +169,12 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
     auto & distance = feedback->distance;
     goalPoint = Eigen::Map<Eigen::Vector4f>((float*)goal->goal.data());
     distance = goalPoint.norm();
-    float oP=0, oR=0, oScale=0;
+    float oP=0, oR=0, oC=0, oY=0, oScale=0;
     string s = "~rc 000 000 000 000";
     dronepidp->reset();
     dronepidr->reset();
+    dronepidc->reset();
+    dronepidy->reset();
     auto result = std::make_shared<droneinterfaces::action::GoPoint::Result>();
     auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
     request2->ip = ip;
@@ -157,14 +196,27 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
             RCLCPP_INFO(nh_->get_logger(), "Go point action canceled.");
             return;
         }
+        RCLCPP_INFO(nh_->get_logger(), "goal: %f %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2], goalPoint[3]);
         oP = dronepidp->pid_control(goalPoint[0], position[0]);
         oR = dronepidr->pid_control(goalPoint[1], position[1]);
-        oScale = std::sqrt((oP*oP+oR*oR)/2500);
-        if(oScale<1) oScale = 1;
-        std::cout<<oScale<<std::endl;
+        oC = dronepidc->pid_control(goalPoint[2], position[2]);
+        oScale = std::sqrt((oP*oP+oR*oR+oC*oC)/900);
+        if(oScale<1)
+        {
+            oScale = 1;
+            oY = dronepidy->pid_control(goalPoint[3], position[3]);
+            
+        }else
+        {
+            oY = 0.0;
+        }
+        // std::cout<<oScale<<std::endl;
         oP = oP/oScale;
         oR = oR/oScale;
-        std::sprintf(s.data(), "~rc %d %d 0 0", int(-oR), int(oP));
+        oC = oC/oScale;
+
+        std::sprintf(s.data(), "~rc %d %d %d %d", static_cast<int>(-oR), static_cast<int>(oP), static_cast<int>(oC), static_cast<int>(-oY));
+        // std::sprintf(s.data(), "~rc 0 0 %d %d", static_cast<int>(oC), static_cast<int>(-oY));
         RCLCPP_INFO(nh_->get_logger(), "send cmd: %s", s.c_str());
         request2->cmd = s;
         auto result2 = controllerClient_->async_send_request(request2);
@@ -186,7 +238,7 @@ void Drone::handle_accepted(const std::shared_ptr<rclcpp_action::ServerGoalHandl
     std::thread{std::bind(&Drone::execute, this, std::placeholders::_1), goal_handle}.detach();
 }
 
-void Drone::shutdown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
+void Drone::shutDown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request,
         std::shared_ptr<droneinterfaces::srv::DroneShutDown::Response> response)
 {
     auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
@@ -236,6 +288,7 @@ void Drone::quit()
     osmap -> ~Osmap();
     dronepidp -> ~PID();
     dronepidr -> ~PID();
+    dronepidc -> ~PID();
     dronestatus = -1;
 }
 
@@ -271,7 +324,7 @@ void Drone::quit()
 //             memset(c, 0, size+1);
 //         }else if(c[0] == 'l' && c[1] == 'l')
 //         {
-//             RCLCPP_INFO(nh_->get_logger(), "save map\n");
+//             RCLCPP_INFO(nh_->get_logger(), "load map\n");
 //             osmap->mapLoad("map1.yaml");
 //             memset(c, 0, size+1);
 //         }else
