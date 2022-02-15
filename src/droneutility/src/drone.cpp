@@ -16,6 +16,7 @@ Drone::Drone(const char* name_, const char* ip_)
     opt3.callback_group = callbackgroup3;
     // callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     Tcal << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
+    TcalZ << cos(10*3.1415926/180),0,sin(10*3.1415926/180),0, 0,1,0,0, -sin(10*3.1415926/180),0,cos(10*3.1415926/180),0, 0,0,0,1;
     oTW <<0,0,1,0,  -1,0,0,0,  0,-1,0,0,  0,0,0,1;
     goToPointActionServer_ = rclcpp_action::create_server<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
@@ -107,6 +108,7 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         {
             cerr << "Failed to open setting file at: " << strSettingPath << endl;
             exit(-1);
+        
         }
         const string strORBvoc = fSettings["Orb_Vocabulary"];
         const string strCamSet = fSettings["Cam_Setting"];
@@ -116,10 +118,11 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         if (1 == ReuseMap)
             bReuseMap = true;
         pSlam = new ORB_SLAM2::System(strORBvoc,strCamSet,ORB_SLAM2::System::MONOCULAR, 1);
-        pSlam -> ActivateLocalizationMode();
         osmap = new ORB_SLAM2::Osmap(*pSlam);
         pose = pSlam->TrackMonocular(im, tframe_);
-        osmap->mapLoad("0122.yaml");
+        if(bReuseMap)
+            osmap->mapLoad("0215.yaml");
+            pSlam -> ActivateLocalizationMode();
         // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
         dronepidp->setLimits(-30.0, 30.0);
@@ -267,10 +270,12 @@ void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
         pose.at<float>(1, 0), pose.at<float>(1, 1), pose.at<float>(1, 2), pose.at<float>(1, 3),
         pose.at<float>(2, 0), pose.at<float>(2, 1), pose.at<float>(2, 2), pose.at<float>(2, 3),
         pose.at<float>(3, 0), pose.at<float>(3, 1), pose.at<float>(3, 2), pose.at<float>(3, 3);
-        Tco = TCW*Tcal;
+        Tco = TCW*Tcal*TcalZ;
         Toc = Tco.inverse();
         position << Toc(2,3), -Toc(0,3), -Toc(1,3);
         position *= scale;
+        position(0) += 360;
+        position(1) -= 1230;
         position(2) += height_offset;
         position(3) = atan2(Toc(2,0), Toc(0,0));
         std::array<float, 4UL> tmp = {position(0),position(1),position(2), position(3)};

@@ -65,10 +65,10 @@ namespace dronenamespace
         cv::Mat pose;
         double tframe_;
         Eigen::Matrix<float, 4, 4> TCW, T, Tco, Toc, oTW, TWc;
-        Eigen::Matrix<float, 4, 4> Tcal, TO;
+        Eigen::Matrix<float, 4, 4> Tcal, TO, TcalZ;
         Eigen::Vector4f position = {0, 0, 0, 0}, goalPoint = {0, 0, 0, 0};
         float height_offset = 1736;
-        float scale = 8556;
+        float scale = 8556/4/1.5;
         ORB_SLAM2::Osmap *osmap;
         void frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg);
         void track(const char* path_to_vocaulary, const char* path_to_setting);

@@ -742,7 +742,7 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="ip">192.168.1.102</string>
+     <string extracomment="ip">192.168.1.101</string>
     </property>
     <property name="placeholderText">
      <string>t2 ip address</string>
