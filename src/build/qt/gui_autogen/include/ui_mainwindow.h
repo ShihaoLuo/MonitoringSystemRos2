@@ -11,11 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDial>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -76,13 +78,21 @@ public:
     QPushButton *pushButtonconnect2;
     QPushButton *pushButtoncancelgoal2;
     QPushButton *pushButtonsendgoal2;
+    QDial *dial1;
+    QLineEdit *lineEditt1_ori_height;
+    QLineEdit *lineEditt2_ori_height;
+    QDial *dial2;
+    QSlider *verticalSlider1;
+    QSlider *verticalSlider2;
+    QPushButton *pushButtonsavemap;
+    QLineEdit *lineEditmap;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(2600, 1100);
+        MainWindow->resize(2600, 1102);
         QSizePolicy sizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -302,12 +312,12 @@ public:
         imgp->setFrameShape(QFrame::Box);
         lineEditt1goal = new QLineEdit(centralwidget);
         lineEditt1goal->setObjectName(QString::fromUtf8("lineEditt1goal"));
-        lineEditt1goal->setGeometry(QRect(2130, 660, 131, 25));
+        lineEditt1goal->setGeometry(QRect(2130, 660, 141, 25));
         lineEditt1goal->setFont(font);
         lineEditt1goal->setMouseTracking(false);
         lineEditt2goal = new QLineEdit(centralwidget);
         lineEditt2goal->setObjectName(QString::fromUtf8("lineEditt2goal"));
-        lineEditt2goal->setGeometry(QRect(2430, 660, 131, 25));
+        lineEditt2goal->setGeometry(QRect(2430, 660, 141, 25));
         lineEditt2goal->setFont(font);
         lineEditt2goal->setMouseTracking(false);
         pushButtont1goalpoint = new QPushButton(centralwidget);
@@ -324,7 +334,7 @@ public:
         pushButtonsendgoal1->setFont(font);
         pushButtoncancelgoal1 = new QPushButton(centralwidget);
         pushButtoncancelgoal1->setObjectName(QString::fromUtf8("pushButtoncancelgoal1"));
-        pushButtoncancelgoal1->setGeometry(QRect(2130, 690, 121, 25));
+        pushButtoncancelgoal1->setGeometry(QRect(2130, 690, 131, 25));
         pushButtoncancelgoal1->setFont(font);
         pushButtonconnect1 = new QPushButton(centralwidget);
         pushButtonconnect1->setObjectName(QString::fromUtf8("pushButtonconnect1"));
@@ -344,12 +354,62 @@ public:
         pushButtonconnect2->setFont(font);
         pushButtoncancelgoal2 = new QPushButton(centralwidget);
         pushButtoncancelgoal2->setObjectName(QString::fromUtf8("pushButtoncancelgoal2"));
-        pushButtoncancelgoal2->setGeometry(QRect(2430, 690, 121, 25));
+        pushButtoncancelgoal2->setGeometry(QRect(2430, 690, 131, 25));
         pushButtoncancelgoal2->setFont(font);
         pushButtonsendgoal2 = new QPushButton(centralwidget);
         pushButtonsendgoal2->setObjectName(QString::fromUtf8("pushButtonsendgoal2"));
         pushButtonsendgoal2->setGeometry(QRect(2290, 690, 131, 25));
         pushButtonsendgoal2->setFont(font);
+        dial1 = new QDial(centralwidget);
+        dial1->setObjectName(QString::fromUtf8("dial1"));
+        dial1->setGeometry(QRect(1990, 760, 191, 161));
+        dial1->setMinimum(-180);
+        dial1->setMaximum(180);
+        dial1->setSingleStep(45);
+        dial1->setPageStep(8);
+        dial1->setWrapping(true);
+        dial1->setNotchesVisible(true);
+        lineEditt1_ori_height = new QLineEdit(centralwidget);
+        lineEditt1_ori_height->setObjectName(QString::fromUtf8("lineEditt1_ori_height"));
+        lineEditt1_ori_height->setGeometry(QRect(2010, 720, 141, 25));
+        lineEditt1_ori_height->setFont(font);
+        lineEditt1_ori_height->setMouseTracking(false);
+        lineEditt2_ori_height = new QLineEdit(centralwidget);
+        lineEditt2_ori_height->setObjectName(QString::fromUtf8("lineEditt2_ori_height"));
+        lineEditt2_ori_height->setGeometry(QRect(2310, 720, 141, 25));
+        lineEditt2_ori_height->setFont(font);
+        lineEditt2_ori_height->setMouseTracking(false);
+        dial2 = new QDial(centralwidget);
+        dial2->setObjectName(QString::fromUtf8("dial2"));
+        dial2->setGeometry(QRect(2290, 760, 191, 161));
+        dial2->setMinimum(-180);
+        dial2->setMaximum(180);
+        dial2->setSingleStep(45);
+        dial2->setPageStep(8);
+        dial2->setWrapping(true);
+        dial2->setNotchesVisible(true);
+        verticalSlider1 = new QSlider(centralwidget);
+        verticalSlider1->setObjectName(QString::fromUtf8("verticalSlider1"));
+        verticalSlider1->setGeometry(QRect(2180, 730, 51, 191));
+        verticalSlider1->setMaximum(2000);
+        verticalSlider1->setValue(1800);
+        verticalSlider1->setOrientation(Qt::Vertical);
+        verticalSlider1->setTickPosition(QSlider::NoTicks);
+        verticalSlider2 = new QSlider(centralwidget);
+        verticalSlider2->setObjectName(QString::fromUtf8("verticalSlider2"));
+        verticalSlider2->setGeometry(QRect(2480, 730, 51, 191));
+        verticalSlider2->setMaximum(2000);
+        verticalSlider2->setValue(1800);
+        verticalSlider2->setOrientation(Qt::Vertical);
+        verticalSlider2->setTickPosition(QSlider::NoTicks);
+        pushButtonsavemap = new QPushButton(centralwidget);
+        pushButtonsavemap->setObjectName(QString::fromUtf8("pushButtonsavemap"));
+        pushButtonsavemap->setGeometry(QRect(1990, 10, 111, 31));
+        pushButtonsavemap->setFont(font);
+        lineEditmap = new QLineEdit(centralwidget);
+        lineEditmap->setObjectName(QString::fromUtf8("lineEditmap"));
+        lineEditmap->setGeometry(QRect(2110, 10, 161, 31));
+        lineEditmap->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         img1->raise();
         pushButtonland1->raise();
@@ -402,6 +462,14 @@ public:
         pushButtonconnect2->raise();
         pushButtoncancelgoal2->raise();
         pushButtonsendgoal2->raise();
+        dial1->raise();
+        lineEditt1_ori_height->raise();
+        lineEditt2_ori_height->raise();
+        dial2->raise();
+        verticalSlider1->raise();
+        verticalSlider2->raise();
+        pushButtonsavemap->raise();
+        lineEditmap->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -456,13 +524,15 @@ public:
         label2->setText(QApplication::translate("MainWindow", "drone t2", nullptr));
         lineEdit1->setText(QApplication::translate("MainWindow", "192.168.1.100", nullptr));
         lineEdit1->setPlaceholderText(QApplication::translate("MainWindow", "t1 ip address", nullptr));
-        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.1.102", nullptr));
+        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.1.101", nullptr));
         lineEdit2->setPlaceholderText(QApplication::translate("MainWindow", "t2 ip address", nullptr));
         pushButtonstreamswitch1->setText(QApplication::translate("MainWindow", "stream\n"
 "switch", nullptr));
         pushButtonstreamswitch2->setText(QApplication::translate("MainWindow", "stream\n"
 "switch", nullptr));
         imgp->setText(QString());
+        lineEditt1goal->setText(QApplication::translate("MainWindow", "0 0", nullptr));
+        lineEditt2goal->setText(QApplication::translate("MainWindow", "0 0", nullptr));
         pushButtont1goalpoint->setText(QApplication::translate("MainWindow", "T1 goal point", nullptr));
         pushButtont2goalpoint->setText(QApplication::translate("MainWindow", "T2 goal point", nullptr));
         pushButtonsendgoal1->setText(QApplication::translate("MainWindow", "T1 Send goal", nullptr));
@@ -473,6 +543,9 @@ public:
         pushButtonconnect2->setText(QApplication::translate("MainWindow", "connect", nullptr));
         pushButtoncancelgoal2->setText(QApplication::translate("MainWindow", "T2 cancel goal", nullptr));
         pushButtonsendgoal2->setText(QApplication::translate("MainWindow", "T2 Send goal", nullptr));
+        lineEditt1_ori_height->setText(QApplication::translate("MainWindow", "1800 0", nullptr));
+        lineEditt2_ori_height->setText(QApplication::translate("MainWindow", "1800 0", nullptr));
+        pushButtonsavemap->setText(QApplication::translate("MainWindow", "Save Map", nullptr));
     } // retranslateUi
 
 };

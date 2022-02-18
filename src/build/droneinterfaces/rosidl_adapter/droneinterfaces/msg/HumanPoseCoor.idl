@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from droneinterfaces/msg/HumanPoseCoor.msg
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module msg {
+    typedef int32 int32__10[10];
+    struct HumanPoseCoor {
+      int32__10 coordinate;
+    };
+  };
+};

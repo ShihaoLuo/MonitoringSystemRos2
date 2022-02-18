@@ -1,0 +1,3 @@
+[console_scripts]
+estimater = humanpose.estimater:main
+

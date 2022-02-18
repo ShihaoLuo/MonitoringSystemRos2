@@ -385,8 +385,17 @@ ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneShutDown.idl" "DESTINATION" "share/droneinterfaces/srv")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneShutDown.idl" "DESTINATION" "share/droneinterfaces/srv")
 
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/HumanPoseCoor.idl" "DESTINATION" "share/droneinterfaces/msg")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/HumanPoseCoor.idl" "DESTINATION" "share/droneinterfaces/msg")
+
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/action/GoPoint.idl" "DESTINATION" "share/droneinterfaces/action")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/action/GoPoint.idl" "DESTINATION" "share/droneinterfaces/action")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneMap.idl" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneMap.idl" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneSlam.idl" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/srv/DroneSlam.idl" "DESTINATION" "share/droneinterfaces/srv")
 
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneRegister.srv" "DESTINATION" "share/droneinterfaces/srv")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneRegister.srv" "DESTINATION" "share/droneinterfaces/srv")
@@ -430,8 +439,29 @@ ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneShutDown_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneShutDown_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
 
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/HumanPoseCoor.msg" "DESTINATION" "share/droneinterfaces/msg")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/HumanPoseCoor.msg" "DESTINATION" "share/droneinterfaces/msg")
+
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/action/GoPoint.action" "DESTINATION" "share/droneinterfaces/action")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/action/GoPoint.action" "DESTINATION" "share/droneinterfaces/action")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneMap.srv" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneMap.srv" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneMap_Request.msg" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneMap_Request.msg" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneMap_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneMap_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneSlam.srv" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneSlam.srv" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneSlam_Request.msg" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneSlam_Request.msg" "DESTINATION" "share/droneinterfaces/srv")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneSlam_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_cmake/srv/DroneSlam_Response.msg" "DESTINATION" "share/droneinterfaces/srv")
 
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/droneinterfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/droneinterfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

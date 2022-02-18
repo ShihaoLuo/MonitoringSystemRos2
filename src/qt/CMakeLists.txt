@@ -50,6 +50,7 @@ add_executable(gui
   src/main.cpp
   src/mainwindow.cpp
   src/mainwindow.ui
+  src/2DMovementKalmanFilter.cpp
   ${header_SRC} 
 )
 

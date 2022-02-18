@@ -4,4 +4,7 @@
 /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/FrameArray.idl
 /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/PositionArray.idl
 /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneShutDown.idl
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:msg/HumanPoseCoor.idl
 /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:action/GoPoint.idl
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneMap.idl
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces:srv/DroneSlam.idl

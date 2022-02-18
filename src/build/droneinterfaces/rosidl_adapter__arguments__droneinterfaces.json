@@ -7,6 +7,9 @@
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/FrameArray.msg",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/PositionArray.msg",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneShutDown.srv",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:action/GoPoint.action"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/HumanPoseCoor.msg",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:action/GoPoint.action",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneMap.srv",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneSlam.srv"
   ]
 }

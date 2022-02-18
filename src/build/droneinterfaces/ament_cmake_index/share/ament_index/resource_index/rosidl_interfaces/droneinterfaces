@@ -2,12 +2,18 @@ action/GoPoint.action
 action/GoPoint.idl
 msg/FrameArray.idl
 msg/FrameArray.msg
+msg/HumanPoseCoor.idl
+msg/HumanPoseCoor.msg
 msg/PositionArray.idl
 msg/PositionArray.msg
 srv/DroneController.idl
 srv/DroneController.srv
 srv/DroneController_Request.msg
 srv/DroneController_Response.msg
+srv/DroneMap.idl
+srv/DroneMap.srv
+srv/DroneMap_Request.msg
+srv/DroneMap_Response.msg
 srv/DronePoolStatus.idl
 srv/DronePoolStatus.srv
 srv/DronePoolStatus_Request.msg
@@ -20,3 +26,7 @@ srv/DroneShutDown.idl
 srv/DroneShutDown.srv
 srv/DroneShutDown_Request.msg
 srv/DroneShutDown_Response.msg
+srv/DroneSlam.idl
+srv/DroneSlam.srv
+srv/DroneSlam_Request.msg
+srv/DroneSlam_Response.msg

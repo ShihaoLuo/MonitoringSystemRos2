@@ -71,7 +71,10 @@ rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__ro
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/msg/FrameArray.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/msg/PositionArray.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/srv/DroneShutDown.idl
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/msg/HumanPoseCoor.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/action/GoPoint.idl
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/srv/DroneMap.idl
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: rosidl_adapter/droneinterfaces/srv/DroneSlam.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl
@@ -97,8 +100,17 @@ rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__ro
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c
@@ -118,8 +130,17 @@ rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__ty
 rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c
 
+rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c
+
 rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c
+
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c
+
+rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c
 
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c.o: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c.o: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c
@@ -199,9 +220,22 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c.s
 
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c > CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.i
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.s
+
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o: rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c
 
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.i: cmake_force
@@ -212,6 +246,32 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.s
 
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c > CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.i
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.s
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c > CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.i
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c -o CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.s
+
 # Object files for target droneinterfaces__rosidl_typesupport_introspection_c
 droneinterfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c.o" \
@@ -220,7 +280,10 @@ droneinterfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__type_support.c.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__type_support.c.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c.o" \
-"CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o"
+"CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o" \
+"CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o" \
+"CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o" \
+"CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o"
 
 # External object files for target droneinterfaces__rosidl_typesupport_introspection_c
 droneinterfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -231,7 +294,10 @@ libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinter
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__type_support.c.o
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__type_support.c.o
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c.o
+libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o
+libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c.o
+libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c.o
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/build.make
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: libdroneinterfaces__rosidl_generator_c.so
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_c.so
@@ -257,7 +323,7 @@ libdroneinterfaces__rosidl_typesupport_introspection_c.so: /home/jakeluo/Softwar
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib/librosidl_runtime_c.so
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: /home/jakeluo/Software/ros2_rolling/install/rcutils/lib/librcutils.so
 libdroneinterfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libdroneinterfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C shared library libdroneinterfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -275,14 +341,20 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosid
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_c.h
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_c.h
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_c.h
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_c.h
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_c.h
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_c.h
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_register__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_controller__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_pool_status__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_shut_down__type_support.c
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c
 CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_map__type_support.c
+CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/droneinterfaces/srv/detail/drone_slam__type_support.c
 	cd /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/depend
 

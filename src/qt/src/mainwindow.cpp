@@ -5,6 +5,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    int location[2] = {0, 0};
+    kalmanFilter = new TwoDMovementKalmanFilter(1/24, location, 500, 30);
     goalPosition = {0, 0, 1800, 0};
     goalPosition1 = goalPosition;
     goalPosition2 = goalPosition;
@@ -17,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     callbackgroup5 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup6 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     goPointActionClient1_ = rclcpp_action::create_client<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
         nh_->get_node_graph_interface(),
@@ -46,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
         1,
         std::bind(&MainWindow::frameCallback2, this, std::placeholders::_1), opt3);
     auto opt4 = rclcpp::SubscriptionOptions();
-    opt2.callback_group = callbackgroup4;
+    opt4.callback_group = callbackgroup4;
     positionSubscription1_ = nh_->create_subscription<droneinterfaces::msg::PositionArray>(
         "t1_Positionarray",
         1,
@@ -55,6 +58,16 @@ MainWindow::MainWindow(QWidget *parent)
         "t2_Positionarray",
         1,
         std::bind(&MainWindow::positionCallback2, this, std::placeholders::_1), opt4);
+    auto opt6 = rclcpp::SubscriptionOptions();
+    opt6.callback_group = callbackgroup6;
+    humanPoseSubscription1_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
+        "t1_HumanPose",
+        1,
+        std::bind(&MainWindow::humanposeCallback1, this, std::placeholders::_1), opt6);
+    humanPoseSubscription2_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
+        "t2_HumanPose",
+        1,
+        std::bind(&MainWindow::humanposeCallback2, this, std::placeholders::_1), opt6);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     droneShutDownClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_ShutDown");
     droneConnectClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_Connect");
@@ -116,25 +129,15 @@ MainWindow::MainWindow(QWidget *parent)
     // connect(ui->pushButtonslam, SIGNAL(clicked()), this, SLOT(slam()));
 }
 
-// void MainWindow::slam()
-// {
-//     auto request = std::make_shared<droneinterfaces::srv::DroneSlam::Request>();
-//     auto response_received_callback = [this](std::shared_future<std::shared_ptr<droneinterfaces::srv::DroneSlam_Response>> future)
-//     {
-//         auto result = future.get()->res;
-//         if(result == true)
-//         {
-//             RCLCPP_INFO(nh_->get_logger(), "Slam Mode.\n");
-//             ui->pushButtonslam->setStyleSheet("background-color: rgb(0, 100, 30)");
-//         }else
-//         {
-//             RCLCPP_INFO(nh_->get_logger(), "Localization Mode.\n");
-//             ui->pushButtonslam->setStyleSheet("");
-//         }
-        
-//     };
-//     auto future_result = droneSlamClient_ -> async_send_request(request, response_received_callback);
-// }
+void MainWindow::humanposeCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+{   
+    humanPoseCoor1 = msg->coordinate;
+}
+
+void MainWindow::humanposeCallback2(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+{   
+    humanPoseCoor2 = msg->coordinate;
+}
 
 void MainWindow::saveMap()
 {
@@ -770,6 +773,7 @@ void MainWindow::clickButtonup202()
 
 MainWindow::~MainWindow()
 {
+    delete kalmanFilter;
     delete ui;
 }
 
@@ -938,6 +942,9 @@ void MainWindow::updateFrame2()
 void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im1.data, msg->framebuf.data(), 2073600);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 10, cv::Scalar(0, 255, 255), cv::FILLED);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 10, cv::Scalar(0, 255, 170), cv::FILLED);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 10, cv::Scalar(0, 255, 85), cv::FILLED);
     qimage1 = mat2qim(im1);
     updateFrame1();
 }
@@ -945,6 +952,9 @@ void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPt
 void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im2.data, msg->framebuf.data(), 2073600);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[0], humanPoseCoor2[1]), 10, cv::Scalar(0, 255, 255), cv::FILLED);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[2], humanPoseCoor2[3]), 10, cv::Scalar(0, 255, 170), cv::FILLED);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[4], humanPoseCoor2[5]), 10, cv::Scalar(0, 255, 85), cv::FILLED);
     qimage2 = mat2qim(im2);
     updateFrame2();
 }

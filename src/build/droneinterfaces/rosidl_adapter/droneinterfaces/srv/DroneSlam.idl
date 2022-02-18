@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from droneinterfaces/srv/DroneSlam.srv
+// generated code does not contain a copyright notice
+
+
+module droneinterfaces {
+  module srv {
+    struct DroneSlam_Request {
+      string dronename;
+
+      string ip;
+    };
+    struct DroneSlam_Response {
+      boolean res;
+    };
+  };
+};

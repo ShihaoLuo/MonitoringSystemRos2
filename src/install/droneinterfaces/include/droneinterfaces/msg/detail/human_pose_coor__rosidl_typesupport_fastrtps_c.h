@@ -1,0 +1,1 @@
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_fastrtps_c/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_fastrtps_c.h

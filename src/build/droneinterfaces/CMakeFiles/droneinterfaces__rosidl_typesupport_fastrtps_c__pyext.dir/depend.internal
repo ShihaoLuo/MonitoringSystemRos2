@@ -105,6 +105,9 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gene
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__type_support.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__functions.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__struct.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__type_support.h
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__type_support.h
@@ -112,6 +115,9 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gene
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__type_support.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_map__functions.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_map__struct.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_map__type_support.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__type_support.h
@@ -121,3 +127,6 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gene
  rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__struct.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_shut_down__type_support.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__struct.h
+ rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__type_support.h

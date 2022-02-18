@@ -13,6 +13,7 @@
 #include "droneinterfaces/msg/frame_array.hpp"
 #include "droneinterfaces/msg/position_array.hpp"
 #include "droneinterfaces/srv/drone_map.hpp"
+#include "droneinterfaces/msg/human_pose_coor.hpp"
 #include <thread>
 #include <functional>
 #include "droneinterfaces/srv/drone_pool_status.hpp"
@@ -31,6 +32,7 @@
 #include <unistd.h>
 #include <QDial>
 #include <QSlider>
+#include "2DMovementKalmanFilter.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -89,6 +91,7 @@ public slots:
     // void slam();
 
 private:
+    TwoDMovementKalmanFilter* kalmanFilter;
     Ui::MainWindow *ui;
     cv::Mat im1 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im2 = cv::Mat(720, 960, CV_8UC3);
@@ -105,6 +108,7 @@ private:
     rclcpp::executors::MultiThreadedExecutor *exector_;
     rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription1_, frameSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::PositionArray>::SharedPtr positionSubscription1_, positionSubscription2_;
+    rclcpp::Subscription<droneinterfaces::msg::HumanPoseCoor>::SharedPtr humanPoseSubscription1_, humanPoseSubscription2_;
     rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
     rclcpp::Client<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronePoolStatusClient_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownClient1_;
@@ -118,6 +122,8 @@ private:
     void frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg);
     void positionCallback1(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg);
+    void humanposeCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg);
+    void humanposeCallback2(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg);
     void spin();
     // void checkDrones();
 
@@ -129,6 +135,8 @@ private:
     QScrollBar *plaintext2scrollbar;
     std::array<float, 4UL> p1, p2;
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
+    std::array<int, 10UL> humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, 
+        humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
     int64_t ptime1=0, ptime2=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;
     // std::shared_ptr<droneinterfaces::srv::GoToPoint_Request>  goToPointRequest;
@@ -139,7 +147,7 @@ private:
         const std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback);
     void result_callback(const rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::WrappedResult &result);
     std::shared_future<std::shared_ptr<rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>>> goal_handle_future1, goal_handle_future2;
-    rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4, callbackgroup5;
+    rclcpp::CallbackGroup::SharedPtr callbackgroup1, callbackgroup2, callbackgroup3, callbackgroup4, callbackgroup5, callbackgroup6;
 };
 
 #endif // MAINWINDOW_H

@@ -12,14 +12,21 @@ CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp
@@ -29,10 +36,16 @@ CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h
  /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
  /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
  /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__functions.h
@@ -518,18 +531,25 @@ CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDial
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdial.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/2DMovementKalmanFilter.cpp
 CMakeFiles/gui.dir/src/main.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__struct.hpp
@@ -538,14 +558,21 @@ CMakeFiles/gui.dir/src/main.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp
@@ -555,10 +582,16 @@ CMakeFiles/gui.dir/src/main.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h
  /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
  /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp
  /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
@@ -1050,16 +1083,20 @@ CMakeFiles/gui.dir/src/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDial
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdial.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -1072,14 +1109,21 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp
@@ -1089,10 +1133,16 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__builder.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__traits.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
  /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+ /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h
  /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
  /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp
  /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
@@ -1593,6 +1643,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDial
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
@@ -1600,6 +1651,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPlainTextEdit
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
@@ -1607,6 +1659,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdial.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
@@ -1616,6 +1669,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h
