@@ -1,0 +1,20 @@
+[0.241s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humanpose': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/python3.8/site-packages:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../build/humanpose build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humanpose/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humanpose/install.log --single-version-externally-managed
+[0.447s] running egg_info
+[0.447s] writing ../build/humanpose/humanpose.egg-info/PKG-INFO
+[0.447s] writing dependency_links to ../build/humanpose/humanpose.egg-info/dependency_links.txt
+[0.447s] writing entry points to ../build/humanpose/humanpose.egg-info/entry_points.txt
+[0.448s] writing requirements to ../build/humanpose/humanpose.egg-info/requires.txt
+[0.448s] writing top-level names to ../build/humanpose/humanpose.egg-info/top_level.txt
+[2.466s] writing manifest file '../build/humanpose/humanpose.egg-info/SOURCES.txt'
+[2.466s] running build
+[2.466s] running build_py
+[2.467s] running install
+[2.468s] running install_lib
+[2.470s] running install_data
+[2.470s] running install_egg_info
+[2.470s] removing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/python3.8/site-packages/humanpose-0.0.0-py3.8.egg-info' (and everything under it)
+[2.471s] Copying ../build/humanpose/humanpose.egg-info to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/python3.8/site-packages/humanpose-0.0.0-py3.8.egg-info
+[2.471s] running install_scripts
+[2.485s] Installing estimater script to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/humanpose
+[2.485s] writing list of installed files to '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humanpose/install.log'
+[2.503s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humanpose' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/python3.8/site-packages:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../build/humanpose build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humanpose/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humanpose/install.log --single-version-externally-managed

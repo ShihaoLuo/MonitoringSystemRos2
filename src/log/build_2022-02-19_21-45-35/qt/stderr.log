@@ -1,0 +1,47 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:504:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  504 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:9[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:958:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  958 |     RCLCPP_INFO(nh_->get_logger(), [01;35m[K"vx vy: %d %d\n"[m[K,kalmanHeadPos[1], kalmanHeadPos[3]);
+      |                                    [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:958:45:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  958 |     RCLCPP_INFO(nh_->get_logger(), "vx vy: [01;36m[K%d[m[K %d\n",kalmanHeadPos[1], kalmanHeadPos[3]);
+      |                                            [01;36m[K~^[m[K
+      |                                             [01;36m[K|[m[K
+      |                                             [01;36m[Kint[m[K
+      |                                            [32m[K%f[m[K
+In file included from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:9[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:958:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+  958 |     RCLCPP_INFO(nh_->get_logger(), [01;35m[K"vx vy: %d %d\n"[m[K,kalmanHeadPos[1], kalmanHeadPos[3]);
+      |                                    [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:958:48:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  958 |     RCLCPP_INFO(nh_->get_logger(), "vx vy: %d [01;36m[K%d[m[K\n",kalmanHeadPos[1], kalmanHeadPos[3]);
+      |                                               [01;36m[K~^[m[K
+      |                                                [01;36m[K|[m[K
+      |                                                [01;36m[Kint[m[K
+      |                                               [32m[K%f[m[K

@@ -1,5 +1,6 @@
 #pragma once
 #include <eigen3/Eigen/Dense>
+#include <iostream>
 
 class TwoDMovementKalmanFilter
 {
@@ -7,12 +8,13 @@ public:
     TwoDMovementKalmanFilter(float samplingTime, 
         int initialLocation[2], 
         int initialuncertainty,
+        float accRandVar,
         int measurementErrorStandardDeviation);
     ~TwoDMovementKalmanFilter();
+    Eigen::Matrix<float, 4, 1> predict();
+    void update(std::array<int32_t, 2> measuredLocation);
 
 private:
-    void predict();
-    void update(int measuredLocation[2]);
     Eigen::Matrix<float, 4, 1> states0, states1; //states1 = statesTransitionMatrix*states0
     Eigen::Matrix<float, 4, 4> statesTransitionMatrix;
     Eigen::Matrix<float, 4, 4> estimateUncertaintyMatrix0, estimateUncertaintyMatrix1, processNoiseMatrix;
@@ -23,7 +25,7 @@ private:
     Eigen::Matrix<float, 4, 2> kalmanGain;
     Eigen::Matrix<float, 4, 4> identityMatrix;
     
-    int samplingTime;
+    float samplingTime;
 
 
 };

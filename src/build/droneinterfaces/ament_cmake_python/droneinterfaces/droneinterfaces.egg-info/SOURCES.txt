@@ -18,12 +18,14 @@ droneinterfaces/msg/__init__.py
 droneinterfaces/msg/_frame_array.py
 droneinterfaces/msg/_frame_array_s.c
 droneinterfaces/msg/_human_pose_coor.py
+droneinterfaces/msg/_human_pose_coor_s.c
 droneinterfaces/msg/_position_array.py
 droneinterfaces/msg/_position_array_s.c
 droneinterfaces/srv/__init__.py
 droneinterfaces/srv/_drone_controller.py
 droneinterfaces/srv/_drone_controller_s.c
 droneinterfaces/srv/_drone_map.py
+droneinterfaces/srv/_drone_map_s.c
 droneinterfaces/srv/_drone_pool_status.py
 droneinterfaces/srv/_drone_pool_status_s.c
 droneinterfaces/srv/_drone_register.py
@@ -31,5 +33,6 @@ droneinterfaces/srv/_drone_register_s.c
 droneinterfaces/srv/_drone_shut_down.py
 droneinterfaces/srv/_drone_shut_down_s.c
 droneinterfaces/srv/_drone_slam.py
+droneinterfaces/srv/_drone_slam_s.c
 droneinterfaces/srv/_go_to_point.py
 droneinterfaces/srv/_go_to_point_s.c

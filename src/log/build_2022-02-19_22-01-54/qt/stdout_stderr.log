@@ -1,0 +1,36 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[ 25%] [34m[1mGenerating include/qt/moc_mainwindow.cpp[0m
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:0: Note: No relevant classes found. No output generated.
+[35m[1mScanning dependencies of target gui[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:140:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K)[m[K’ token
+  140 |     std::array<int, 10UL> preHumanPoseCoor=[32m[K{[m[K0,0,0,0,0,0,0,0,0,0[01;31m[K)[m[K, humanPoseCoor1={0,0,0,0,0,0,0,0,0,0},
+      |                                            [32m[K~[m[K                   [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:140:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:140:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K)[m[K’ token
+  140 |     std::array<int, 10UL> preHumanPoseCoor=[32m[K{[m[K0,0,0,0,0,0,0,0,0,0[01;31m[K)[m[K, humanPoseCoor1={0,0,0,0,0,0,0,0,0,0},
+      |                                            [32m[K~[m[K                   [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:140:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:504:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  504 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:947:27:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor1[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor[m[K’?
+  947 |         humanpartpos[0] = [01;31m[KpreHumanPoseCoor1[m[K[0];
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                           [32m[KpreHumanPoseCoor[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:953:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor1[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor[m[K’?
+  953 |         [01;31m[KpreHumanPoseCoor1[m[K[0] = humanPoseCoor1[0];
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KpreHumanPoseCoor[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:80：CMakeFiles/gui.dir/src/main.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

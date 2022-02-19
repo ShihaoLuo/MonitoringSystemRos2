@@ -1,0 +1,28 @@
+[0.226s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt -- -j12 -l12
+[0.267s] [ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[0.281s] [ 12%] Built target gui_autogen
+[0.296s] [35m[1mScanning dependencies of target gui[0m
+[0.326s] [ 25%] [32mBuilding CXX object CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o[0m
+[3.178s] [ 37%] [32m[1mLinking CXX executable gui[0m
+[4.799s] [100%] Built target gui
+[4.808s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt -- -j12 -l12
+[4.833s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt
+[4.840s] -- Install configuration: "RelWithDebInfo"
+[4.840s] -- Execute custom install script
+[4.840s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/lib/qt/gui
+[4.841s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/ament_index/resource_index/package_run_dependencies/qt
+[4.841s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/ament_index/resource_index/parent_prefix_path/qt
+[4.841s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/environment/ament_prefix_path.sh
+[4.841s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/environment/ament_prefix_path.dsv
+[4.842s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/environment/path.sh
+[4.842s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/environment/path.dsv
+[4.842s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/local_setup.bash
+[4.842s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/local_setup.sh
+[4.843s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/local_setup.zsh
+[4.843s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/local_setup.dsv
+[4.843s] -- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.dsv
+[4.851s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/ament_index/resource_index/packages/qt
+[4.852s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/cmake/qtConfig.cmake
+[4.852s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/cmake/qtConfig-version.cmake
+[4.852s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.xml
+[4.855s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt

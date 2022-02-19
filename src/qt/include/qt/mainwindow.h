@@ -91,7 +91,10 @@ public slots:
     // void slam();
 
 private:
-    TwoDMovementKalmanFilter* kalmanFilter;
+    Eigen::Matrix<float, 4, 1>  predictResult;
+    std::array<int32_t, 2> humanpartpos={0,0};
+    std::array<int32_t, 10> kalmanHumanPose = {0,0,0,0,0,0,0,0,0,0};
+    TwoDMovementKalmanFilter* kalmanFilter1, *kalmanFilter2, *kalmanFilter3;
     Ui::MainWindow *ui;
     cv::Mat im1 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im2 = cv::Mat(720, 960, CV_8UC3);
@@ -135,7 +138,7 @@ private:
     QScrollBar *plaintext2scrollbar;
     std::array<float, 4UL> p1, p2;
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
-    std::array<int, 10UL> humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, 
+    std::array<int, 10UL> preHumanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, 
         humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
     int64_t ptime1=0, ptime2=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;

@@ -6,7 +6,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     int location[2] = {0, 0};
-    kalmanFilter = new TwoDMovementKalmanFilter(1/24, location, 500, 30);
+    kalmanFilter1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    kalmanFilter2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    kalmanFilter3 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
     goalPosition = {0, 0, 1800, 0};
     goalPosition1 = goalPosition;
     goalPosition2 = goalPosition;
@@ -773,7 +775,9 @@ void MainWindow::clickButtonup202()
 
 MainWindow::~MainWindow()
 {
-    delete kalmanFilter;
+    delete kalmanFilter1;
+    delete kalmanFilter2;
+    delete kalmanFilter3;
     delete ui;
 }
 
@@ -942,9 +946,57 @@ void MainWindow::updateFrame2()
 void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im1.data, msg->framebuf.data(), 2073600);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 10, cv::Scalar(0, 255, 255), cv::FILLED);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 10, cv::Scalar(0, 255, 170), cv::FILLED);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 10, cv::Scalar(0, 255, 85), cv::FILLED);
+    if(humanPoseCoor1[0] == -1)
+    {
+        humanpartpos[0] = preHumanPoseCoor1[0];
+        humanpartpos[1] = preHumanPoseCoor1[1];
+    }else
+    {
+        humanpartpos[0] = humanPoseCoor1[0];
+        humanpartpos[1] = humanPoseCoor1[1];
+        preHumanPoseCoor1[0] = humanPoseCoor1[0];
+        preHumanPoseCoor1[1] = humanPoseCoor1[1];
+    }
+    kalmanFilter1->update(humanpartpos);
+    predictResult = kalmanFilter1->predict();
+    kalmanHumanPose[0] = predictResult[0];
+    kalmanHumanPose[1] = predictResult[2];
+    cv::circle(im1, cv::Point2i(kalmanHumanPose[0], kalmanHumanPose[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    if(humanPoseCoor1[2] == -1)
+    {
+        humanpartpos[0] = preHumanPoseCoor1[2];
+        humanpartpos[1] = preHumanPoseCoor1[3];
+    }else
+    {
+        humanpartpos[0] = humanPoseCoor1[2];
+        humanpartpos[1] = humanPoseCoor1[3];
+        preHumanPoseCoor1[2] = humanPoseCoor1[2];
+        preHumanPoseCoor1[3] = humanPoseCoor1[3];
+    }
+    kalmanFilter2->update(humanpartpos);
+    predictResult = kalmanFilter2->predict();
+    kalmanHumanPose[2] = predictResult[0];
+    kalmanHumanPose[3] = predictResult[2];
+    cv::circle(im1, cv::Point2i(kalmanHumanPose[2], kalmanHumanPose[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    if(humanPoseCoor1[4] == -1)
+    {
+        humanpartpos[0] = preHumanPoseCoor1[4];
+        humanpartpos[1] = preHumanPoseCoor1[5];
+    }else
+    {
+        humanpartpos[0] = humanPoseCoor1[4];
+        humanpartpos[1] = humanPoseCoor1[5];
+        preHumanPoseCoor1[4] = humanPoseCoor1[4];
+        preHumanPoseCoor1[5] = humanPoseCoor1[5];
+    }
+    kalmanFilter3->update(humanpartpos);
+    predictResult = kalmanFilter3->predict();
+    kalmanHumanPose[4] = predictResult[0];
+    kalmanHumanPose[5] = predictResult[2];
+    cv::circle(im1, cv::Point2i(kalmanHumanPose[4], kalmanHumanPose[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    // cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    // cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    // cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
     qimage1 = mat2qim(im1);
     updateFrame1();
 }
@@ -952,9 +1004,9 @@ void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPt
 void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im2.data, msg->framebuf.data(), 2073600);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[0], humanPoseCoor2[1]), 10, cv::Scalar(0, 255, 255), cv::FILLED);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[2], humanPoseCoor2[3]), 10, cv::Scalar(0, 255, 170), cv::FILLED);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[4], humanPoseCoor2[5]), 10, cv::Scalar(0, 255, 85), cv::FILLED);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[0], humanPoseCoor2[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[2], humanPoseCoor2[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::circle(im2, cv::Point2i(humanPoseCoor2[4], humanPoseCoor2[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
     qimage2 = mat2qim(im2);
     updateFrame2();
 }
