@@ -1256,6 +1256,42 @@ switch</string>
      </font>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonSaveImg1">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>saveImg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSaveImg2">
+    <property name="geometry">
+     <rect>
+      <x>1850</x>
+      <y>20</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>saveImg</string>
+    </property>
+   </widget>
    <zorder>img1</zorder>
    <zorder>pushButtonland1</zorder>
    <zorder>img2</zorder>
@@ -1315,6 +1351,8 @@ switch</string>
    <zorder>verticalSlider2</zorder>
    <zorder>pushButtonsavemap</zorder>
    <zorder>lineEditmap</zorder>
+   <zorder>pushButtonSaveImg1</zorder>
+   <zorder>pushButtonSaveImg2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

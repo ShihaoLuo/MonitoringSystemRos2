@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o"
   "CMakeFiles/gui.dir/src/main.cpp.o"
   "CMakeFiles/gui.dir/src/mainwindow.cpp.o"
+  "CMakeFiles/gui.dir/src/targetPosition.cpp.o"
   "gui"
   "gui.pdb"
   "include/qt/moc_mainwindow.cpp"

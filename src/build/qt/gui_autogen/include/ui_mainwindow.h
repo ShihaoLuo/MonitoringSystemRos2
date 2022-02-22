@@ -86,6 +86,8 @@ public:
     QSlider *verticalSlider2;
     QPushButton *pushButtonsavemap;
     QLineEdit *lineEditmap;
+    QPushButton *pushButtonSaveImg1;
+    QPushButton *pushButtonSaveImg2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -410,6 +412,14 @@ public:
         lineEditmap->setObjectName(QString::fromUtf8("lineEditmap"));
         lineEditmap->setGeometry(QRect(2110, 10, 161, 31));
         lineEditmap->setFont(font);
+        pushButtonSaveImg1 = new QPushButton(centralwidget);
+        pushButtonSaveImg1->setObjectName(QString::fromUtf8("pushButtonSaveImg1"));
+        pushButtonSaveImg1->setGeometry(QRect(850, 20, 101, 25));
+        pushButtonSaveImg1->setFont(font);
+        pushButtonSaveImg2 = new QPushButton(centralwidget);
+        pushButtonSaveImg2->setObjectName(QString::fromUtf8("pushButtonSaveImg2"));
+        pushButtonSaveImg2->setGeometry(QRect(1850, 20, 101, 25));
+        pushButtonSaveImg2->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         img1->raise();
         pushButtonland1->raise();
@@ -470,6 +480,8 @@ public:
         verticalSlider2->raise();
         pushButtonsavemap->raise();
         lineEditmap->raise();
+        pushButtonSaveImg1->raise();
+        pushButtonSaveImg2->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -546,6 +558,8 @@ public:
         lineEditt1_ori_height->setText(QApplication::translate("MainWindow", "1800 0", nullptr));
         lineEditt2_ori_height->setText(QApplication::translate("MainWindow", "1800 0", nullptr));
         pushButtonsavemap->setText(QApplication::translate("MainWindow", "Save Map", nullptr));
+        pushButtonSaveImg1->setText(QApplication::translate("MainWindow", "saveImg", nullptr));
+        pushButtonSaveImg2->setText(QApplication::translate("MainWindow", "saveImg", nullptr));
     } // retranslateUi
 
 };

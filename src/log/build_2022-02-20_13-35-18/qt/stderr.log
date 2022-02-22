@@ -1,0 +1,26 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:509:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  509 | [01;35m[Knst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In destructor ‘[01m[Kvirtual MainWindow::~MainWindow()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:781:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter1[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH1[m[K’?
+  781 |     delete [01;31m[KkalmanFilter1[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:782:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter2[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH2[m[K’?
+  782 |     delete [01;31m[KkalmanFilter2[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH2[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:783:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter3[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH1[m[K’?
+  783 |     delete [01;31m[KkalmanFilter3[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:967:33:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanHumanPose[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanHumanPose1[m[K’?
+  967 |     cv::circle(im1, cv::Point2i([01;31m[KkalmanHumanPose[m[K[0], kalmanHumanPose[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+      |                                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                 [32m[KkalmanHumanPose1[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

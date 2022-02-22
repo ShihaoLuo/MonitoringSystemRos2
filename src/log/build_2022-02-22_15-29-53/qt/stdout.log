@@ -1,0 +1,4 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 11%] Built target gui_autogen
+[35m[1mScanning dependencies of target gui[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/gui.dir/src/targetPosition.cpp.o[0m

@@ -1,0 +1,174 @@
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:326[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:2[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:1[m[K:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:[m[K In member function ‘[01m[Kvoid Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::operator()(Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar*, Index, const LhsScalar*, const RhsScalar*, Index, Index, Index, Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar, Index, Index, Index, Index, RhsScalar*)[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:574:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  574 |         [01;35m[Kif[m[K(nr==4) traits.initAcc(C3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:575:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  575 |                   [01;36m[Ktraits[m[K.initAcc(C4);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:946:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  946 |         [01;35m[Kif[m[K(nr==4) R3 = ploadu<ResPacket>(r3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:948:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  948 |                   [01;36m[Ktraits[m[K.acc(C0, alphav, R0);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:951:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  951 |         [01;35m[Kif[m[K(nr==4) traits.acc(C3, alphav, R3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:953:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  953 |                   [01;36m[Kpstoreu[m[K(r0, R0);
+      |                   [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:284[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:2[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:1[m[K:
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 4, 4>, Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Derived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Derived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h:197:7:[m[K   required from ‘[01m[KEigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::operator const PlainObject&() const [with LhsNested = const Eigen::Matrix<float, 4, 4>&; RhsNested = const Eigen::Matrix<float, 4, 4>&; int NestingFlags = 6; Eigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::PlainObject = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h:150:30:[m[K   required from ‘[01m[KEigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::CoeffBasedProduct(const Lhs&, const Rhs&) [with Lhs = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Rhs = Eigen::Matrix<float, 4, 4>; LhsNested = const Eigen::Matrix<float, 4, 4>&; RhsNested = const Eigen::Matrix<float, 4, 4>&; int NestingFlags = 6][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/GeneralProduct.h:593:60:[m[K   required from ‘[01m[Kconst typename Eigen::ProductReturnType<Derived, OtherDerived>::Type Eigen::MatrixBase<Derived>::operator*(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 4, 4>; Derived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; typename Eigen::ProductReturnType<Derived, OtherDerived>::Type = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:15:52:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 4, 1>, Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6>; Derived = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6>; Derived = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h:197:7:[m[K   required from ‘[01m[KEigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::operator const PlainObject&() const [with LhsNested = const Eigen::Matrix<float, 4, 4>&; RhsNested = const Eigen::Matrix<float, 4, 1>&; int NestingFlags = 6; Eigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::PlainObject = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:68:35:[m[K   required from ‘[01m[KEigen::CwiseUnaryOp<UnaryOp, MatrixType>::CwiseUnaryOp(const XprType&, const UnaryOp&) [with UnaryOp = Eigen::internal::scalar_quotient1_op<float>; XprType = const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:63:10:[m[K   required from ‘[01m[Kconst Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<typename Eigen::internal::traits<T>::Scalar>, const Derived> Eigen::MatrixBase<Derived>::operator/(const Scalar&) const [with Derived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6>; typename Eigen::internal::traits<T>::Scalar = float; Eigen::MatrixBase<Derived>::Scalar = float][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:31:21:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 4, 1>, Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> > >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >; Derived = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >; Derived = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:527:123:[m[K   required from ‘[01m[Kstatic Derived& Eigen::internal::assign_selector<Derived, OtherDerived, false, false>::run(Derived&, const OtherDerived&) [with Derived = Eigen::Matrix<float, 4, 1>; OtherDerived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:653:72:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >; Derived = Eigen::Matrix<float, 4, 1>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Matrix.h:296:25:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::MatrixBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_quotient1_op<float>, const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 4, 4>&, const Eigen::Matrix<float, 4, 1>&, 6> >; _Scalar = float; int _Rows = 4; int _Cols = 1; int _Options = 0; int _MaxRows = 4; int _MaxCols = 1][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:31:21:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 4, 4>, Eigen::Matrix<float, 4, 4> >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 4, 4>; Derived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 4, 4>; Derived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:527:123:[m[K   required from ‘[01m[Kstatic Derived& Eigen::internal::assign_selector<Derived, OtherDerived, false, false>::run(Derived&, const OtherDerived&) [with Derived = Eigen::Matrix<float, 4, 4>; OtherDerived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:653:72:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 4, 4>; Derived = Eigen::Matrix<float, 4, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Matrix.h:220:27:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp:41:12:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:514:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  514 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::spin()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1076:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TargetPosition[m[K’ has no member named ‘[01m[KgetTransformMatrix[m[K’; did you mean ‘[01m[KsetTransformMatrix[m[K’?
+ 1076 |     targetPosition->[01;31m[KgetTransformMatrix[m[K(p1);
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[KsetTransformMatrix[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

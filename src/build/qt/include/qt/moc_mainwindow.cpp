@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[33];
-    char stringdata0[482];
+    QByteArrayData data[35];
+    char stringdata0[500];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -63,7 +63,9 @@ QT_MOC_LITERAL(28, 424, 12), // "orientation1"
 QT_MOC_LITERAL(29, 437, 12), // "orientation2"
 QT_MOC_LITERAL(30, 450, 11), // "goalHeight1"
 QT_MOC_LITERAL(31, 462, 11), // "goalHeight2"
-QT_MOC_LITERAL(32, 474, 7) // "saveMap"
+QT_MOC_LITERAL(32, 474, 7), // "saveMap"
+QT_MOC_LITERAL(33, 482, 8), // "saveImg1"
+QT_MOC_LITERAL(34, 491, 8) // "saveImg2"
 
     },
     "MainWindow\0clickButtonTakeoff1\0\0"
@@ -79,7 +81,8 @@ QT_MOC_LITERAL(32, 474, 7) // "saveMap"
     "cancelGoal1\0cancelGoal2\0droneConnect1\0"
     "droneShutDown1\0droneConnect2\0"
     "droneShutDown2\0orientation1\0orientation2\0"
-    "goalHeight1\0goalHeight2\0saveMap"
+    "goalHeight1\0goalHeight2\0saveMap\0"
+    "saveImg1\0saveImg2"
 };
 #undef QT_MOC_LITERAL
 
@@ -89,7 +92,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      31,   14, // methods
+      33,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -97,39 +100,43 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  169,    2, 0x0a /* Public */,
-       3,    0,  170,    2, 0x0a /* Public */,
-       4,    0,  171,    2, 0x0a /* Public */,
-       5,    0,  172,    2, 0x0a /* Public */,
-       6,    0,  173,    2, 0x0a /* Public */,
-       7,    0,  174,    2, 0x0a /* Public */,
-       8,    0,  175,    2, 0x0a /* Public */,
-       9,    0,  176,    2, 0x0a /* Public */,
-      10,    0,  177,    2, 0x0a /* Public */,
-      11,    0,  178,    2, 0x0a /* Public */,
-      12,    0,  179,    2, 0x0a /* Public */,
-      13,    0,  180,    2, 0x0a /* Public */,
-      14,    0,  181,    2, 0x0a /* Public */,
-      15,    0,  182,    2, 0x0a /* Public */,
-      16,    0,  183,    2, 0x0a /* Public */,
-      17,    0,  184,    2, 0x0a /* Public */,
-      18,    0,  185,    2, 0x0a /* Public */,
-      19,    0,  186,    2, 0x0a /* Public */,
-      20,    0,  187,    2, 0x0a /* Public */,
-      21,    0,  188,    2, 0x0a /* Public */,
-      22,    0,  189,    2, 0x0a /* Public */,
-      23,    0,  190,    2, 0x0a /* Public */,
-      24,    0,  191,    2, 0x0a /* Public */,
-      25,    0,  192,    2, 0x0a /* Public */,
-      26,    0,  193,    2, 0x0a /* Public */,
-      27,    0,  194,    2, 0x0a /* Public */,
-      28,    0,  195,    2, 0x0a /* Public */,
-      29,    0,  196,    2, 0x0a /* Public */,
-      30,    0,  197,    2, 0x0a /* Public */,
-      31,    0,  198,    2, 0x0a /* Public */,
-      32,    0,  199,    2, 0x0a /* Public */,
+       1,    0,  179,    2, 0x0a /* Public */,
+       3,    0,  180,    2, 0x0a /* Public */,
+       4,    0,  181,    2, 0x0a /* Public */,
+       5,    0,  182,    2, 0x0a /* Public */,
+       6,    0,  183,    2, 0x0a /* Public */,
+       7,    0,  184,    2, 0x0a /* Public */,
+       8,    0,  185,    2, 0x0a /* Public */,
+       9,    0,  186,    2, 0x0a /* Public */,
+      10,    0,  187,    2, 0x0a /* Public */,
+      11,    0,  188,    2, 0x0a /* Public */,
+      12,    0,  189,    2, 0x0a /* Public */,
+      13,    0,  190,    2, 0x0a /* Public */,
+      14,    0,  191,    2, 0x0a /* Public */,
+      15,    0,  192,    2, 0x0a /* Public */,
+      16,    0,  193,    2, 0x0a /* Public */,
+      17,    0,  194,    2, 0x0a /* Public */,
+      18,    0,  195,    2, 0x0a /* Public */,
+      19,    0,  196,    2, 0x0a /* Public */,
+      20,    0,  197,    2, 0x0a /* Public */,
+      21,    0,  198,    2, 0x0a /* Public */,
+      22,    0,  199,    2, 0x0a /* Public */,
+      23,    0,  200,    2, 0x0a /* Public */,
+      24,    0,  201,    2, 0x0a /* Public */,
+      25,    0,  202,    2, 0x0a /* Public */,
+      26,    0,  203,    2, 0x0a /* Public */,
+      27,    0,  204,    2, 0x0a /* Public */,
+      28,    0,  205,    2, 0x0a /* Public */,
+      29,    0,  206,    2, 0x0a /* Public */,
+      30,    0,  207,    2, 0x0a /* Public */,
+      31,    0,  208,    2, 0x0a /* Public */,
+      32,    0,  209,    2, 0x0a /* Public */,
+      33,    0,  210,    2, 0x0a /* Public */,
+      34,    0,  211,    2, 0x0a /* Public */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -202,6 +209,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 28: _t->goalHeight1(); break;
         case 29: _t->goalHeight2(); break;
         case 30: _t->saveMap(); break;
+        case 31: _t->saveImg1(); break;
+        case 32: _t->saveImg2(); break;
         default: ;
         }
     }
@@ -237,13 +246,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 31)
+        if (_id < 33)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 31;
+        _id -= 33;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 31)
+        if (_id < 33)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 31;
+        _id -= 33;
     }
     return _id;
 }

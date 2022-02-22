@@ -1,0 +1,8 @@
+/usr/bin/ld: CMakeFiles/gui.dir/src/mainwindow.cpp.o: in function `MainWindow::~MainWindow()':
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:792: undefined reference to `TargetPosition::~TargetPosition()'
+/usr/bin/ld: CMakeFiles/gui.dir/src/mainwindow.cpp.o: in function `MainWindow::MainWindow(QWidget*)':
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:19: undefined reference to `TargetPosition::TargetPosition(Eigen::Matrix<float, 4, 4, 0, 4, 4>)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/gui.dir/build.make:233：gui] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

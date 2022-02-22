@@ -1,0 +1,30 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[ 25%] [34m[1mGenerating include/qt/moc_mainwindow.cpp[0m
+[35m[1mScanning dependencies of target gui[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::humanposeCallback1(droneinterfaces::msg::HumanPoseCoor_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:139:5:[m[K [01;31m[Kerror: [m[K‘[01m[KhumanPoseCoor1[m[K’ was not declared in this scope
+  139 |     [01;31m[KhumanPoseCoor1[m[K = msg->coordinate;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::humanposeCallback2(droneinterfaces::msg::HumanPoseCoor_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:144:5:[m[K [01;31m[Kerror: [m[K‘[01m[KhumanPoseCoor2[m[K’ was not declared in this scope
+  144 |     [01;31m[KhumanPoseCoor2[m[K = msg->coordinate;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:509:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  509 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1003:33:[m[K [01;31m[Kerror: [m[K‘[01m[KhumanPoseCoor1[m[K’ was not declared in this scope
+ 1003 |     cv::circle(im1, cv::Point2i([01;31m[KhumanPoseCoor1[m[K[0], humanPoseCoor1[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback2(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1061:33:[m[K [01;31m[Kerror: [m[K‘[01m[KhumanPoseCoor2[m[K’ was not declared in this scope
+ 1061 |     cv::circle(im2, cv::Point2i([01;31m[KhumanPoseCoor2[m[K[0], humanPoseCoor2[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

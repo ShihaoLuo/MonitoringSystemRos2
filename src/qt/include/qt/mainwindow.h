@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#pragma
 
 #include <QMainWindow>
 #include <QGraphicsScene>
@@ -32,7 +33,9 @@
 #include <unistd.h>
 #include <QDial>
 #include <QSlider>
+#include <ctime>
 #include "2DMovementKalmanFilter.h"
+#include "targetPosition.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -88,13 +91,23 @@ public slots:
     void goalHeight1();
     void goalHeight2();
     void saveMap();
+    void saveImg1();
+    void saveImg2();
     // void slam();
 
 private:
-    Eigen::Matrix<float, 4, 1>  predictResult;
-    std::array<int32_t, 2> humanpartpos={0,0};
-    std::array<int32_t, 10> kalmanHumanPose = {0,0,0,0,0,0,0,0,0,0};
-    TwoDMovementKalmanFilter* kalmanFilter1, *kalmanFilter2, *kalmanFilter3;
+    bool recordFlag1, recordFlag2;
+    time_t curr_time1, curr_time2;
+	tm *curr_tm1, *curr_tm2;
+	char time_string1[100], time_string2[100];
+    Eigen::Matrix4f intrinsicMatrix;
+    TargetPosition *targetPosition;
+    // Eigen::Matrix<float, 4, 1>  predictResult1, predictResult2;
+    // std::array<int32_t, 2> humanpartpos1={0,0}, humanpartpos2={0,0};
+    // std::array<int32_t, 10> kalmanHumanPose1 = {0,0,0,0,0,0,0,0,0,0}, kalmanHumanPose2 = {0,0,0,0,0,0,0,0,0,0};
+    // TwoDMovementKalmanFilter *kalmanFilterH1, *kalmanFilterN1, *kalmanFilterB1, *kalmanFilterH2, *kalmanFilterN2, *kalmanFilterB2;
+    std::array<int, 10UL> preHumanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, preHumanPoseCoor2={0,0,0,0,0,0,0,0,0,0},
+        humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
     Ui::MainWindow *ui;
     cv::Mat im1 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im2 = cv::Mat(720, 960, CV_8UC3);
@@ -138,8 +151,6 @@ private:
     QScrollBar *plaintext2scrollbar;
     std::array<float, 4UL> p1, p2;
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
-    std::array<int, 10UL> preHumanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, 
-        humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
     int64_t ptime1=0, ptime2=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;
     // std::shared_ptr<droneinterfaces::srv::GoToPoint_Request>  goToPointRequest;

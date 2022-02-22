@@ -354,6 +354,33 @@ src/mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/targetPosition.o: src/targetPosition.cpp.o
+
+.PHONY : src/targetPosition.o
+
+# target to build an object file
+src/targetPosition.cpp.o:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.o
+.PHONY : src/targetPosition.cpp.o
+
+src/targetPosition.i: src/targetPosition.cpp.i
+
+.PHONY : src/targetPosition.i
+
+# target to preprocess a source file
+src/targetPosition.cpp.i:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.i
+.PHONY : src/targetPosition.cpp.i
+
+src/targetPosition.s: src/targetPosition.cpp.s
+
+.PHONY : src/targetPosition.s
+
+# target to generate assembly for a file
+src/targetPosition.cpp.s:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.s
+.PHONY : src/targetPosition.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -386,6 +413,9 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/targetPosition.o"
+	@echo "... src/targetPosition.i"
+	@echo "... src/targetPosition.s"
 .PHONY : help
 
 

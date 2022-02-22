@@ -1,3 +1,4 @@
+-I/usr/local/include/eigen3
 -I/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include
 -I/usr/include/x86_64-linux-gnu/qt5
 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets

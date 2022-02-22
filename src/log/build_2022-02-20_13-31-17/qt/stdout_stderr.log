@@ -1,0 +1,98 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[ 25%] [34m[1mGenerating include/qt/moc_mainwindow.cpp[0m
+[35m[1mScanning dependencies of target gui[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:6:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTwoDMovementKalmanFilter::TwoDMovementKalmanFilter()[m[K’
+    6 |     , ui(new Ui::MainWindow[01;31m[K)[m[K
+      |                            [01;31m[K^[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:35[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:8:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTwoDMovementKalmanFilter::TwoDMovementKalmanFilter(float, int*, int, float, int)[m[K’
+    8 |     [01;36m[KTwoDMovementKalmanFilter[m[K(float samplingTime,
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:8:5:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 0 provided
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTwoDMovementKalmanFilter::TwoDMovementKalmanFilter(const TwoDMovementKalmanFilter&)[m[K’
+    5 | class [01;36m[KTwoDMovementKalmanFilter[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:5:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:12:84:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KTwoDMovementKalmanFilter[m[K’ and ‘[01m[KTwoDMovementKalmanFilter*[m[K’)
+   12 |     kalmanFilterH2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10[01;31m[K)[m[K;
+      |                                                                                    [01;31m[K^[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:35[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTwoDMovementKalmanFilter& TwoDMovementKalmanFilter::operator=(const TwoDMovementKalmanFilter&)[m[K’
+    5 | class [01;36m[KTwoDMovementKalmanFilter[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/2DMovementKalmanFilter.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KTwoDMovementKalmanFilter*[m[K’ to ‘[01m[Kconst TwoDMovementKalmanFilter&[m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:509:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  509 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In destructor ‘[01m[Kvirtual MainWindow::~MainWindow()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:781:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter1[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH1[m[K’?
+  781 |     delete [01;31m[KkalmanFilter1[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:782:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter2[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH2[m[K’?
+  782 |     delete [01;31m[KkalmanFilter2[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH2[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:783:12:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanFilter3[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanFilterH1[m[K’?
+  783 |     delete [01;31m[KkalmanFilter3[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+      |            [32m[KkalmanFilterH1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:954:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khumanpartpos[m[K’ was not declared in this scope; did you mean ‘[01m[Khumanpartpos1[m[K’?
+  954 |         [01;31m[Khumanpartpos[m[K[0] = preHumanPoseCoor1[0];
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[Khumanpartpos1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:965:5:[m[K [01;31m[Kerror: [m[K‘[01m[KkalmanHumanPose[m[K’ was not declared in this scope; did you mean ‘[01m[KkalmanHumanPose1[m[K’?
+  965 |     [01;31m[KkalmanHumanPose[m[K[0] = predictResult1[0];
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |     [32m[KkalmanHumanPose1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:970:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khumanpartpos[m[K’ was not declared in this scope; did you mean ‘[01m[Khumanpartpos1[m[K’?
+  970 |         [01;31m[Khumanpartpos[m[K[0] = preHumanPoseCoor1[2];
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[Khumanpartpos1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:974:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khumanpartpos[m[K’ was not declared in this scope; did you mean ‘[01m[Khumanpartpos1[m[K’?
+  974 |         [01;31m[Khumanpartpos[m[K[0] = humanPoseCoor1[2];
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[Khumanpartpos1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback2(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1012:28:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1012 |         humanpartpos2[0] = [01;31m[KpreHumanPoseCoor2[m[K[0];
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[KpreHumanPoseCoor1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1018 |         [01;31m[KpreHumanPoseCoor2[m[K[0] = humanPoseCoor2[0];
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KpreHumanPoseCoor1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1021:19:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KTwoDMovementKalmanFilter[m[K’
+ 1021 |     kalmanFilterH2[01;31m[K->[m[Kupdate(humanpartpos2);
+      |                   [01;31m[K^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1022:36:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KTwoDMovementKalmanFilter[m[K’
+ 1022 |     predictResult2 = kalmanFilterH2[01;31m[K->[m[Kpredict();
+      |                                    [01;31m[K^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1028:28:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1028 |         humanpartpos2[0] = [01;31m[KpreHumanPoseCoor2[m[K[2];
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[KpreHumanPoseCoor1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1034:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1034 |         [01;31m[KpreHumanPoseCoor2[m[K[2] = humanPoseCoor2[2];
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KpreHumanPoseCoor1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1044:28:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1044 |         humanpartpos2[0] = [01;31m[KpreHumanPoseCoor2[m[K[4];
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[KpreHumanPoseCoor1[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1050:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpreHumanPoseCoor2[m[K’ was not declared in this scope; did you mean ‘[01m[KpreHumanPoseCoor1[m[K’?
+ 1050 |         [01;31m[KpreHumanPoseCoor2[m[K[4] = humanPoseCoor2[4];
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KpreHumanPoseCoor1[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -640,6 +640,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/FindBoost.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake"
   "/usr/share/cmake-3.16/Modules/FindPython/Support.cmake"
   "/usr/share/cmake-3.16/Modules/FindPython3.cmake"
   "/usr/share/cmake-3.16/Modules/FindThreads.cmake"

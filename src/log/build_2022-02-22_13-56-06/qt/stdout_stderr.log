@@ -1,0 +1,634 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 11%] Built target gui_autogen
+[35m[1mScanning dependencies of target gui[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:514:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  514 | [01;35m[Knst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:36:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KY[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%[01;35m[KY[m[K-%B-%d-%T.jpg", curr_tm1);
+      |                                    [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:39:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KB[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%[01;35m[KB[m[K-%d-%T.jpg", curr_tm1);
+      |                                       [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:42:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ktm*[m[K’ [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%B-[01;35m[K%d[m[K-%T.jpg", [32m[Kcurr_tm1[m[K);
+      |                                         [01;35m[K~^[m[K          [32m[K~~~~~~~~[m[K
+      |                                          [01;35m[K|[m[K          [32m[K|[m[K
+      |                                          [01;35m[Kint[m[K        [32m[Ktm*[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KT[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%B-%d-%[01;35m[KT[m[K.jpg", curr_tm1);
+      |                                             [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kwrite(char [100], cv::Mat&)[m[K’
+ 1018 |         cv::write(time_string1, im1[01;31m[K)[m[K;
+      |                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:697:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, int)[m[K’
+  697 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, int value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:697:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:698:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, float)[m[K’
+  698 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, float value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:698:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:699:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, double)[m[K’
+  699 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, double value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:699:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:700:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::String&)[m[K’
+  700 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const String& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:700:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:701:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::Mat&)[m[K’
+  701 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const Mat& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:701:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:702:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::SparseMat&)[m[K’
+  702 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const SparseMat& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:702:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:704:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const std::vector<cv::KeyPoint>&)[m[K’
+  704 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<KeyPoint>& value);
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:704:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:705:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const std::vector<cv::DMatch>&)[m[K’
+  705 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<DMatch>& value);
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:705:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:876:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const _Tp&)[m[K’
+  876 | void [01;36m[Kwrite[m[K(FileStorage& fs, const _Tp& value)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:876:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:19:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((MainWindow*)this)->MainWindow::time_string1[m[K’ (type ‘[01m[Kchar [100][m[K’) to type ‘[01m[Kcv::FileStorage&[m[K’
+ 1018 |         cv::write([01;36m[Ktime_string1[m[K, im1);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:906:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Point_<_Tp>&)[m[K’
+  906 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Point_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:906:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Point_<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:913:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Point3_<_Tp>&)[m[K’
+  913 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Point3_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:913:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Point3_<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:921:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Size_<_Tp>&)[m[K’
+  921 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Size_<_Tp>& sz )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:921:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Size_<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:928:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Complex<_Tp>&)[m[K’
+  928 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Complex<_Tp>& c )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:928:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Complex<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:935:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Rect_<_Tp>&)[m[K’
+  935 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Rect_<_Tp>& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:935:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Rect_<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:944:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int cn> void cv::write(cv::FileStorage&, const cv::Vec<_Tp, m>&)[m[K’
+  944 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Vec<_Tp, cn>& v )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:944:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Vec<_Tp, m>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:951:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Scalar_<_Tp>&)[m[K’
+  951 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Scalar_<_Tp>& s )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:951:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Scalar_<_Tp>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:960:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::Range&)[m[K’
+  960 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Range& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:960:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+  960 | void write([01;36m[KFileStorage& fs[m[K, const Range& r )
+      |            [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:967:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const std::vector<T>&)[m[K’
+  967 | void [01;36m[Kwrite[m[K( FileStorage& fs, const std::vector<_Tp>& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:967:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst std::vector<T>[m[K’
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:974:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Point_<_Tp>&)[m[K’
+  974 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Point_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:974:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:981:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Point3_<_Tp>&)[m[K’
+  981 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Point3_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:981:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:988:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Size_<_Tp>&)[m[K’
+  988 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Size_<_Tp>& sz )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:988:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:995:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Complex<_Tp>&)[m[K’
+  995 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Complex<_Tp>& c )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:995:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1002:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Rect_<_Tp>&)[m[K’
+ 1002 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Rect_<_Tp>& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1002:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1009:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int cn> void cv::write(cv::FileStorage&, const cv::String&, const cv::Vec<_Tp, m>&)[m[K’
+ 1009 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Vec<_Tp, cn>& v )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1009:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1016:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Scalar_<_Tp>&)[m[K’
+ 1016 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Scalar_<_Tp>& s )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1016:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1023:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::Range&)[m[K’
+ 1023 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Range& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1023:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1030:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::KeyPoint&)[m[K’
+ 1030 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const KeyPoint& kpt)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1030:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1043:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::DMatch&)[m[K’
+ 1043 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const DMatch& m)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1043:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1053:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const std::vector<T>&)[m[K’
+ 1053 | void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<_Tp>& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1053:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1060:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const std::vector<std::vector<T> >&)[m[K’
+ 1060 | void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector< std::vector<_Tp> >& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1060:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1018:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1018 |         cv::write(time_string1, im1[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1073:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::KeyPoint&)[m[K’
+ 1073 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const KeyPoint& kpt) { write(fs, String(), kpt); }
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1073:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1073 | static inline void write([01;36m[KFileStorage& fs[m[K, const KeyPoint& kpt) { write(fs, String(), kpt); }
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1074:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::DMatch&)[m[K’
+ 1074 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const DMatch& m) { write(fs, String(), m); }
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1074:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1074 | static inline void write([01;36m[KFileStorage& fs[m[K, const DMatch& m) { write(fs, String(), m); }
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1075:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const std::vector<cv::KeyPoint>&)[m[K’
+ 1075 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const std::vector<KeyPoint>& vec)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1075:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1075 | static inline void write([01;36m[KFileStorage& fs[m[K, const std::vector<KeyPoint>& vec)
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1080:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const std::vector<cv::DMatch>&)[m[K’
+ 1080 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const std::vector<DMatch>& vec)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1080:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1080 | static inline void write([01;36m[KFileStorage& fs[m[K, const std::vector<DMatch>& vec)
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback2(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1080:38:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Ktm[m[K’ and ‘[01m[Ktm*[m[K’)
+ 1080 |      curr_tm2 = localtime(&curr_time2[01;31m[K)[m[K;
+      |                                      [01;31m[K^[m[K
+In file included from [01m[K/usr/include/time.h:39[m[K,
+                 from [01m[K/usr/include/pthread.h:23[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:35[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h:148[m[K,
+                 from [01m[K/usr/include/c++/9/ext/atomicity.h:35[m[K,
+                 from [01m[K/usr/include/c++/9/bits/basic_string.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/9/array:39[m[K,
+                 from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/functional:54[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:142[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:4[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:7:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr tm& tm::operator=(const tm&)[m[K’
+    7 | struct [01;36m[Ktm[m[K
+      |        [01;36m[K^~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:7:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ktm*[m[K’ to ‘[01m[Kconst tm&[m[K’
+[01m[K/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:7:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr tm& tm::operator=(tm&&)[m[K’
+[01m[K/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:7:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ktm*[m[K’ to ‘[01m[Ktm&&[m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:36:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KY[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%[01;35m[KY[m[K-%B-%d-%T.jpg", curr_tm2);
+      |                                    [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:39:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KB[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%[01;35m[KB[m[K-%d-%T.jpg", curr_tm2);
+      |                                       [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:42:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ktm[m[K’ [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%B-[01;35m[K%d[m[K-%T.jpg", [32m[Kcurr_tm2[m[K);
+      |                                         [01;35m[K~^[m[K          [32m[K~~~~~~~~[m[K
+      |                                          [01;35m[K|[m[K          [32m[K|[m[K
+      |                                          [01;35m[Kint[m[K        [32m[Ktm[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KT[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%B-%d-%[01;35m[KT[m[K.jpg", curr_tm2);
+      |                                             [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kwrite(char [100], cv::Mat&)[m[K’
+ 1082 |         cv::write(time_string2, im2[01;31m[K)[m[K;
+      |                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:697:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, int)[m[K’
+  697 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, int value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:697:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:698:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, float)[m[K’
+  698 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, float value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:698:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:699:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, double)[m[K’
+  699 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, double value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:699:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:700:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::String&)[m[K’
+  700 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const String& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:700:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:701:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::Mat&)[m[K’
+  701 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const Mat& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:701:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:702:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::SparseMat&)[m[K’
+  702 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const SparseMat& value );
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:702:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:704:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const std::vector<cv::KeyPoint>&)[m[K’
+  704 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<KeyPoint>& value);
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:704:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:705:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const std::vector<cv::DMatch>&)[m[K’
+  705 | CV_EXPORTS void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<DMatch>& value);
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:705:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:876:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const _Tp&)[m[K’
+  876 | void [01;36m[Kwrite[m[K(FileStorage& fs, const _Tp& value)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:876:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:19:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((MainWindow*)this)->MainWindow::time_string2[m[K’ (type ‘[01m[Kchar [100][m[K’) to type ‘[01m[Kcv::FileStorage&[m[K’
+ 1082 |         cv::write([01;36m[Ktime_string2[m[K, im2);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:906:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Point_<_Tp>&)[m[K’
+  906 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Point_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:906:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Point_<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:913:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Point3_<_Tp>&)[m[K’
+  913 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Point3_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:913:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Point3_<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:921:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Size_<_Tp>&)[m[K’
+  921 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Size_<_Tp>& sz )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:921:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Size_<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:928:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Complex<_Tp>&)[m[K’
+  928 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Complex<_Tp>& c )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:928:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Complex<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:935:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Rect_<_Tp>&)[m[K’
+  935 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Rect_<_Tp>& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:935:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Rect_<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:944:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int cn> void cv::write(cv::FileStorage&, const cv::Vec<_Tp, m>&)[m[K’
+  944 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Vec<_Tp, cn>& v )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:944:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Vec<_Tp, m>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:951:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::Scalar_<_Tp>&)[m[K’
+  951 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Scalar_<_Tp>& s )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:951:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst cv::Scalar_<_Tp>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:960:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::Range&)[m[K’
+  960 | void [01;36m[Kwrite[m[K(FileStorage& fs, const Range& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:960:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+  960 | void write([01;36m[KFileStorage& fs[m[K, const Range& r )
+      |            [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:967:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const std::vector<T>&)[m[K’
+  967 | void [01;36m[Kwrite[m[K( FileStorage& fs, const std::vector<_Tp>& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:967:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst std::vector<T>[m[K’
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:974:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Point_<_Tp>&)[m[K’
+  974 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Point_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:974:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:981:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Point3_<_Tp>&)[m[K’
+  981 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Point3_<_Tp>& pt )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:981:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:988:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Size_<_Tp>&)[m[K’
+  988 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Size_<_Tp>& sz )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:988:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:995:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Complex<_Tp>&)[m[K’
+  995 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Complex<_Tp>& c )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:995:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1002:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Rect_<_Tp>&)[m[K’
+ 1002 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Rect_<_Tp>& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1002:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1009:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int cn> void cv::write(cv::FileStorage&, const cv::String&, const cv::Vec<_Tp, m>&)[m[K’
+ 1009 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Vec<_Tp, cn>& v )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1009:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1016:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const cv::Scalar_<_Tp>&)[m[K’
+ 1016 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Scalar_<_Tp>& s )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1016:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1023:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::Range&)[m[K’
+ 1023 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const Range& r )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1023:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1030:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::KeyPoint&)[m[K’
+ 1030 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const KeyPoint& kpt)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1030:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1043:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::String&, const cv::DMatch&)[m[K’
+ 1043 | void [01;36m[Kwrite[m[K(FileStorage& fs, const String& name, const DMatch& m)
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1043:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1053:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const std::vector<T>&)[m[K’
+ 1053 | void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector<_Tp>& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1053:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1060:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> void cv::write(cv::FileStorage&, const cv::String&, const std::vector<std::vector<T> >&)[m[K’
+ 1060 | void [01;36m[Kwrite[m[K( FileStorage& fs, const String& name, const std::vector< std::vector<_Tp> >& vec )
+      |      [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1060:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1082:36:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+ 1082 |         cv::write(time_string2, im2[01;36m[K)[m[K;
+      |                                    [01;36m[K^[m[K
+In file included from [01m[K/usr/local/include/opencv2/core.hpp:60[m[K,
+                 from [01m[K/usr/local/include/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:6[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1073:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::KeyPoint&)[m[K’
+ 1073 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const KeyPoint& kpt) { write(fs, String(), kpt); }
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1073:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1073 | static inline void write([01;36m[KFileStorage& fs[m[K, const KeyPoint& kpt) { write(fs, String(), kpt); }
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1074:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const cv::DMatch&)[m[K’
+ 1074 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const DMatch& m) { write(fs, String(), m); }
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1074:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1074 | static inline void write([01;36m[KFileStorage& fs[m[K, const DMatch& m) { write(fs, String(), m); }
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1075:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const std::vector<cv::KeyPoint>&)[m[K’
+ 1075 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const std::vector<KeyPoint>& vec)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1075:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1075 | static inline void write([01;36m[KFileStorage& fs[m[K, const std::vector<KeyPoint>& vec)
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1080:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::write(cv::FileStorage&, const std::vector<cv::DMatch>&)[m[K’
+ 1080 | static inline void [01;36m[Kwrite[m[K(FileStorage& fs, const std::vector<DMatch>& vec)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/local/include/opencv2/core/persistence.hpp:1080:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar [100][m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+ 1080 | static inline void write([01;36m[KFileStorage& fs[m[K, const std::vector<DMatch>& vec)
+      |                          [01;36m[K~~~~~~~~~~~~~^~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

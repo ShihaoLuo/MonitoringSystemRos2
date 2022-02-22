@@ -1,0 +1,40 @@
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:514:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  514 | [01;35m[Knst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback1(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:36:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KY[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%[01;35m[KY[m[K-%B-%d-%T.jpg", curr_tm1);
+      |                                    [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:39:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KB[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%[01;35m[KB[m[K-%d-%T.jpg", curr_tm1);
+      |                                       [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:42:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ktm*[m[K’ [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%B-[01;35m[K%d[m[K-%T.jpg", [32m[Kcurr_tm1[m[K);
+      |                                         [01;35m[K~^[m[K          [32m[K~~~~~~~~[m[K
+      |                                          [01;35m[K|[m[K          [32m[K|[m[K
+      |                                          [01;35m[Kint[m[K        [32m[Ktm*[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1017:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KT[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1017 |         sprintf(time_string1, "t1-%Y-%B-%d-%[01;35m[KT[m[K.jpg", curr_tm1);
+      |                                             [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::frameCallback2(droneinterfaces::msg::FrameArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:36:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KY[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%[01;35m[KY[m[K-%B-%d-%T.jpg", curr_tm2);
+      |                                    [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:39:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KB[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%[01;35m[KB[m[K-%d-%T.jpg", curr_tm2);
+      |                                       [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:42:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ktm*[m[K’ [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%B-[01;35m[K%d[m[K-%T.jpg", [32m[Kcurr_tm2[m[K);
+      |                                         [01;35m[K~^[m[K          [32m[K~~~~~~~~[m[K
+      |                                          [01;35m[K|[m[K          [32m[K|[m[K
+      |                                          [01;35m[Kint[m[K        [32m[Ktm*[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1081:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[KT[m[K’ in format [[01;35m[K-Wformat=[m[K]
+ 1081 |         sprintf(time_string2, "t2-%Y-%B-%d-%[01;35m[KT[m[K.jpg", curr_tm2);
+      |                                             [01;35m[K^[m[K

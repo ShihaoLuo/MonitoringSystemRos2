@@ -1,0 +1,4 @@
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:93: Error: Not a signal or slot declaration
+make[2]: *** [CMakeFiles/gui.dir/build.make:62：include/qt/moc_mainwindow.cpp] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

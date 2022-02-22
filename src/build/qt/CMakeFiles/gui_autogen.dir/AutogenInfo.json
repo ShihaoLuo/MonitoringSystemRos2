@@ -29,6 +29,7 @@
 	[
 		"/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt",
 		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt",
+		"/usr/local/include/eigen3",
 		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include",
 		"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt",
 		"/usr/include/x86_64-linux-gnu/qt5",
@@ -109,6 +110,10 @@
 		],
 		[
 			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp",
+			"MU"
+		],
+		[
+			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp",
 			"MU"
 		]
 	],

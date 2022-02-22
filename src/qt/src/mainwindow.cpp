@@ -5,10 +5,18 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    int location[2] = {0, 0};
-    kalmanFilter1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
-    kalmanFilter2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
-    kalmanFilter3 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // int location[2] = {0, 0};
+    // kalmanFilterH1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // kalmanFilterN1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // kalmanFilterB1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // kalmanFilterH2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // kalmanFilterN2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    // kalmanFilterB2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
+    intrinsicMatrix <<921.171, 0, 459.9, 0, 
+                    0, 919.018, 351.24, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1;
+    targetPosition = new TargetPosition(intrinsicMatrix);
     goalPosition = {0, 0, 1800, 0};
     goalPosition1 = goalPosition;
     goalPosition2 = goalPosition;
@@ -128,7 +136,39 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->verticalSlider1, SIGNAL(sliderMoved(int)), this, SLOT(goalHeight1()));
     connect(ui->verticalSlider2, SIGNAL(sliderMoved(int)), this, SLOT(goalHeight2()));
     connect(ui->pushButtonsavemap, SIGNAL(clicked()), this, SLOT(saveMap()));
+    connect(ui->pushButtonSaveImg1, SIGNAL(clicked()), this, SLOT(saveImg1()));
+    connect(ui->pushButtonSaveImg2, SIGNAL(clicked()), this, SLOT(saveImg2()));
     // connect(ui->pushButtonslam, SIGNAL(clicked()), this, SLOT(slam()));
+}
+
+void MainWindow::saveImg1()
+{
+    if (recordFlag1)
+    {
+        recordFlag1 = !recordFlag1;
+        ui->plainTextEdit1->insertPlainText("\nrecord1 off");
+        ui->pushButtonSaveImg1->setStyleSheet("");
+    }
+    else{
+        recordFlag1 = !recordFlag1;
+        ui->plainTextEdit1->insertPlainText("\nrecord1 on");
+        ui->pushButtonSaveImg1->setStyleSheet("background-color: rgb(0, 100, 30)");
+    }
+}
+
+void MainWindow::saveImg2()
+{
+    if (recordFlag2)
+    {
+        recordFlag2 = !recordFlag2;
+        ui->plainTextEdit2->insertPlainText("\nrecord2 off");
+        ui->pushButtonSaveImg2->setStyleSheet("");
+    }
+    else{
+        recordFlag2 = !recordFlag2;
+        ui->plainTextEdit2->insertPlainText("\nrecord2 on");
+        ui->pushButtonSaveImg2->setStyleSheet("background-color: rgb(0, 100, 30)");
+    }
 }
 
 void MainWindow::humanposeCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
@@ -198,6 +238,7 @@ void MainWindow::disableAllButton1()
     ui->pushButtoncancelgoal1->setDisabled(true);
     ui->dial1->setDisabled(true);
     ui->verticalSlider1->setDisabled(true);
+    ui->pushButtonSaveImg1->setDisabled(true);
     // ui->pushButtonslam->setDisabled(true);
 }
 
@@ -215,6 +256,7 @@ void MainWindow::disableAllButton2()
     ui->pushButtoncancelgoal2->setDisabled(true);
     ui->dial2->setDisabled(true);
     ui->verticalSlider2->setDisabled(true);
+    ui->pushButtonSaveImg2->setDisabled(true);
 }
 
 void MainWindow::enableAllButton1()
@@ -233,6 +275,7 @@ void MainWindow::enableAllButton1()
     ui->dial1->setEnabled(true);
     ui->verticalSlider1->setEnabled(true);
     // ui->pushButtonslam->setEnabled(true);
+    ui->pushButtonSaveImg1->setEnabled(true);
 }
 
 void MainWindow::enableAllButton2()
@@ -249,6 +292,7 @@ void MainWindow::enableAllButton2()
     ui->pushButtoncancelgoal2->setEnabled(true);
     ui->dial2->setEnabled(true);
     ui->verticalSlider2->setEnabled(true);
+    ui->pushButtonSaveImg2->setEnabled(true);
 }
 
 void MainWindow::droneShutDown1()
@@ -775,9 +819,13 @@ void MainWindow::clickButtonup202()
 
 MainWindow::~MainWindow()
 {
-    delete kalmanFilter1;
-    delete kalmanFilter2;
-    delete kalmanFilter3;
+    // delete kalmanFilterH1;
+    // delete kalmanFilterH2;
+    // delete kalmanFilterB1;
+    // delete kalmanFilterB2;
+    // delete kalmanFilterN1;
+    // delete kalmanFilterN2;
+    delete targetPosition;
     delete ui;
 }
 
@@ -946,67 +994,153 @@ void MainWindow::updateFrame2()
 void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im1.data, msg->framebuf.data(), 2073600);
-    if(humanPoseCoor1[0] == -1)
-    {
-        humanpartpos[0] = preHumanPoseCoor1[0];
-        humanpartpos[1] = preHumanPoseCoor1[1];
-    }else
-    {
-        humanpartpos[0] = humanPoseCoor1[0];
-        humanpartpos[1] = humanPoseCoor1[1];
-        preHumanPoseCoor1[0] = humanPoseCoor1[0];
-        preHumanPoseCoor1[1] = humanPoseCoor1[1];
-    }
-    kalmanFilter1->update(humanpartpos);
-    predictResult = kalmanFilter1->predict();
-    kalmanHumanPose[0] = predictResult[0];
-    kalmanHumanPose[1] = predictResult[2];
-    cv::circle(im1, cv::Point2i(kalmanHumanPose[0], kalmanHumanPose[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    if(humanPoseCoor1[2] == -1)
-    {
-        humanpartpos[0] = preHumanPoseCoor1[2];
-        humanpartpos[1] = preHumanPoseCoor1[3];
-    }else
-    {
-        humanpartpos[0] = humanPoseCoor1[2];
-        humanpartpos[1] = humanPoseCoor1[3];
-        preHumanPoseCoor1[2] = humanPoseCoor1[2];
-        preHumanPoseCoor1[3] = humanPoseCoor1[3];
-    }
-    kalmanFilter2->update(humanpartpos);
-    predictResult = kalmanFilter2->predict();
-    kalmanHumanPose[2] = predictResult[0];
-    kalmanHumanPose[3] = predictResult[2];
-    cv::circle(im1, cv::Point2i(kalmanHumanPose[2], kalmanHumanPose[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    if(humanPoseCoor1[4] == -1)
-    {
-        humanpartpos[0] = preHumanPoseCoor1[4];
-        humanpartpos[1] = preHumanPoseCoor1[5];
-    }else
-    {
-        humanpartpos[0] = humanPoseCoor1[4];
-        humanpartpos[1] = humanPoseCoor1[5];
-        preHumanPoseCoor1[4] = humanPoseCoor1[4];
-        preHumanPoseCoor1[5] = humanPoseCoor1[5];
-    }
-    kalmanFilter3->update(humanpartpos);
-    predictResult = kalmanFilter3->predict();
-    kalmanHumanPose[4] = predictResult[0];
-    kalmanHumanPose[5] = predictResult[2];
-    cv::circle(im1, cv::Point2i(kalmanHumanPose[4], kalmanHumanPose[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    // cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    // cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    // cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    // if(humanPoseCoor1[0] == -1)
+    // {
+    //     humanpartpos1[0] = preHumanPoseCoor1[0];
+    //     humanpartpos1[1] = preHumanPoseCoor1[1];
+    // }else
+    // {
+    //     humanpartpos1[0] = humanPoseCoor1[0];
+    //     humanpartpos1[1] = humanPoseCoor1[1];
+    //     preHumanPoseCoor1[0] = humanPoseCoor1[0];
+    //     preHumanPoseCoor1[1] = humanPoseCoor1[1];
+    // }
+    // kalmanFilterH1->update(humanpartpos1);
+    // predictResult1 = kalmanFilterH1->predict();
+    // kalmanHumanPose1[0] = predictResult1[0];
+    // kalmanHumanPose1[1] = predictResult1[2];
+    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[0], kalmanHumanPose1[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    // if(humanPoseCoor1[2] == -1)
+    // {
+    //     humanpartpos1[0] = preHumanPoseCoor1[2];
+    //     humanpartpos1[1] = preHumanPoseCoor1[3];
+    // }else
+    // {
+    //     humanpartpos1[0] = humanPoseCoor1[2];
+    //     humanpartpos1[1] = humanPoseCoor1[3];
+    //     preHumanPoseCoor1[2] = humanPoseCoor1[2];
+    //     preHumanPoseCoor1[3] = humanPoseCoor1[3];
+    // }
+    // kalmanFilterN1->update(humanpartpos1);
+    // predictResult1 = kalmanFilterN1->predict();
+    // kalmanHumanPose1[2] = predictResult1[0];
+    // kalmanHumanPose1[3] = predictResult1[2];
+    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[2], kalmanHumanPose1[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    // if(humanPoseCoor1[4] == -1)
+    // {
+    //     humanpartpos1[0] = preHumanPoseCoor1[4];
+    //     humanpartpos1[1] = preHumanPoseCoor1[5];
+    // }else
+    // {
+    //     humanpartpos1[0] = humanPoseCoor1[4];
+    //     humanpartpos1[1] = humanPoseCoor1[5];
+    //     preHumanPoseCoor1[4] = humanPoseCoor1[4];
+    //     preHumanPoseCoor1[5] = humanPoseCoor1[5];
+    // }
+    // kalmanFilterB1->update(humanpartpos1);
+    // predictResult1 = kalmanFilterB1->predict();
+    // kalmanHumanPose1[4] = predictResult1[0];
+    // kalmanHumanPose1[5] = predictResult1[2];
+    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[4], kalmanHumanPose1[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::putText(im1, std::to_string(humanPoseCoor1[0])+"-"+std::to_string(humanPoseCoor1[1]), cv::Point(30, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
     qimage1 = mat2qim(im1);
+    if(recordFlag1)
+    {
+        time(&curr_time1);
+	    curr_tm1 = localtime(&curr_time1);
+        strftime(time_string1, 100, "t1-%Y-%B-%d-%T.jpg", curr_tm1);
+        cv::imwrite(time_string1, im1);
+    }
+    targetPosition->setTransformMatrix(p1);
+    std::array<float, 3UL> PHHH = {600, 600, 1800};
+    Eigen::Matrix<float, 4, 1> pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {600, 0, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {600, -600, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1200, 600, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1200, 0, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1200, -600, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1800, 600, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1800, 0, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {1800, -600, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {2400, 0, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
+    PHHH = {3000, 0, 1800};
+    pixelPoint = targetPosition->getPixelCoor(PHHH);
     updateFrame1();
 }
 
 void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im2.data, msg->framebuf.data(), 2073600);
+    // if(humanPoseCoor2[0] == -1)
+    // {
+    //     humanpartpos2[0] = preHumanPoseCoor2[0];
+    //     humanpartpos2[1] = preHumanPoseCoor2[1];
+    // }else
+    // {
+    //     humanpartpos2[0] = humanPoseCoor2[0];
+    //     humanpartpos2[1] = humanPoseCoor2[1];
+    //     preHumanPoseCoor2[0] = humanPoseCoor2[0];
+    //     preHumanPoseCoor2[1] = humanPoseCoor2[1];
+    // }
+    // kalmanFilterH2->update(humanpartpos2);
+    // predictResult2 = kalmanFilterH2->predict();
+    // kalmanHumanPose2[0] = predictResult2[0];
+    // kalmanHumanPose2[1] = predictResult2[2];
+    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[0], kalmanHumanPose2[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    // if(humanPoseCoor2[2] == -1)
+    // {
+    //     humanpartpos2[0] = preHumanPoseCoor2[2];
+    //     humanpartpos2[1] = preHumanPoseCoor2[3];
+    // }else
+    // {
+    //     humanpartpos2[0] = humanPoseCoor2[2];
+    //     humanpartpos2[1] = humanPoseCoor2[3];
+    //     preHumanPoseCoor2[2] = humanPoseCoor2[2];
+    //     preHumanPoseCoor2[3] = humanPoseCoor2[3];
+    // }
+    // kalmanFilterN2->update(humanpartpos2);
+    // predictResult2 = kalmanFilterN2->predict();
+    // kalmanHumanPose2[2] = predictResult2[0];
+    // kalmanHumanPose2[3] = predictResult2[2];
+    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[2], kalmanHumanPose2[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
+    // if(humanPoseCoor2[4] == -1)
+    // {
+    //     humanpartpos2[0] = preHumanPoseCoor2[4];
+    //     humanpartpos2[1] = preHumanPoseCoor2[5];
+    // }else
+    // {
+    //     humanpartpos2[0] = humanPoseCoor2[4];
+    //     humanpartpos2[1] = humanPoseCoor2[5];
+    //     preHumanPoseCoor2[4] = humanPoseCoor2[4];
+    //     preHumanPoseCoor2[5] = humanPoseCoor2[5];
+    // }
+    // kalmanFilterB2->update(humanpartpos2);
+    // predictResult2 = kalmanFilterB2->predict();
+    // kalmanHumanPose2[4] = predictResult2[0];
+    // kalmanHumanPose2[5] = predictResult2[2];
+    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[4], kalmanHumanPose2[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
     cv::circle(im2, cv::Point2i(humanPoseCoor2[0], humanPoseCoor2[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
     cv::circle(im2, cv::Point2i(humanPoseCoor2[2], humanPoseCoor2[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
     cv::circle(im2, cv::Point2i(humanPoseCoor2[4], humanPoseCoor2[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    if(recordFlag2)
+    {
+        time(&curr_time2);
+	    curr_tm2 = localtime(&curr_time2);
+        strftime(time_string2, 100, "t2-%Y-%B-%d-%T.jpg", curr_tm2);
+        cv::imwrite(time_string2, im2);
+    }
     qimage2 = mat2qim(im2);
     updateFrame2();
 }

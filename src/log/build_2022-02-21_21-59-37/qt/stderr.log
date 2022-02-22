@@ -1,0 +1,47 @@
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/targetPosition.h:1:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    1 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:98:51:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{9.2117100000000005e+2, 0, 4.5989999999999998e+2, 0, 0, 9.1901800000000003e+2, 3.5124000000000001e+2, 0, 0, 0, 1, 0, 0, 0, 0, 1}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KEigen::Matrix4f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 4, 4>[m[K’}
+   98 |                                         0, 0, 0, 1[01;31m[K}[m[K;
+      |                                                   [01;31m[K^[m[K
+      |                                                   [01;31m[K|[m[K
+      |                                                   [01;31m[K<brace-enclosed initializer list>[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:98:51:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{9.2117100000000005e+2, 0, 4.5989999999999998e+2, 0, 0, 9.1901800000000003e+2, 3.5124000000000001e+2, 0, 0, 0, 1, 0, 0, 0, 0, 1}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KEigen::Matrix4f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 4, 4>[m[K’}
+   98 |                                         0, 0, 0, 1[01;31m[K}[m[K;
+      |                                                   [01;31m[K^[m[K
+      |                                                   [01;31m[K|[m[K
+      |                                                   [01;31m[K<brace-enclosed initializer list>[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:15:26:[m[K [01;31m[Kerror: [m[Kexpected type-specifier
+   15 |     targetPosition = new [01;31m[KTargetPosition[m[K::TargetPosition(intrinsicMatrix);
+      |                          [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:98:51:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{9.2117100000000005e+2, 0, 4.5989999999999998e+2, 0, 0, 9.1901800000000003e+2, 3.5124000000000001e+2, 0, 0, 0, 1, 0, 0, 0, 0, 1}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KEigen::Matrix4f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 4, 4>[m[K’}
+   98 |                                         0, 0, 0, 1[01;31m[K}[m[K;
+      |                                                   [01;31m[K^[m[K
+      |                                                   [01;31m[K|[m[K
+      |                                                   [01;31m[K<brace-enclosed initializer list>[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:510:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  510 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:119：CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[2]: *** [CMakeFiles/gui.dir/build.make:80：CMakeFiles/gui.dir/src/main.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2
