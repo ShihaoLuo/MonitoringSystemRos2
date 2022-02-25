@@ -16,8 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
                     0, 919.018, 351.24, 0,
                     0, 0, 1, 0,
                     0, 0, 0, 1;
-    targetPosition = new TargetPosition(intrinsicMatrix);
-    goalPosition = {0, 0, 1800, 0};
+    targetPosition = new CameraAndPhyPointTransformer(intrinsicMatrix);
+    goalPosition = {0.f, 0.f, 1800.f, 0.f};
     goalPosition1 = goalPosition;
     goalPosition2 = goalPosition;
     dronePoolStatusRequest = std::make_shared<droneinterfaces::srv::DronePoolStatus::Request>();
@@ -390,7 +390,7 @@ void MainWindow::droneConnect1()
             if(result->res == true){
                 connectFlag1 = true;
                 ui->pushButtonconnect1->setDisabled(true);
-                sleep(2);
+                sleep(0.5);
                 enableAllButton1();
                 ui->pushButtonshutdown1->setEnabled(true);
             }else
@@ -417,7 +417,7 @@ void MainWindow::droneConnect2()
         if(result->res == true){
             connectFlag2 = true;
             ui->pushButtonconnect2->setDisabled(true);
-            sleep(2);
+            sleep(0.5);
             enableAllButton2();
             ui->pushButtonshutdown2->setEnabled(true);
         }else
@@ -623,42 +623,21 @@ void MainWindow::mousePressEvent(QMouseEvent* event)
     }
 }
 
-// void MainWindow::checkDrones()
-// {
-//     // RCLCPP_INFO(nh_->get_logger(), "Result: dronepool\n");
-//     // auto result = controllerClient_->async_send_request(request);
-//     // RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", s.c_str());
-//     // // rclcpp::spin_until_future_complete(nh_, result);
-//     // res = result.get()->res;
-//     // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-//     // memset(c, 0, size+1);
-//     auto response_received_callback = [this](ServiceResponseFuture2 future){
-//         auto result = future.get();
-//         // std::string res = "-"+result.get()->res;
-//         // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", res.c_str());
-//         int size = result.get()->dronenames.size();
-//         for(int i = 0; i< size; i++)
-//         {
-//             // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->dronenames[i].c_str());
-//             // RCLCPP_INFO(nh_->get_logger(), "Result: %s\n", result->droneips[i].c_str());
-//             if(result->dronenames[i]=="t1")
-//             {
-//                 ui->lineEdit1->setText(QString::fromStdString(result->droneips[i]));
-//                 ip1 = ui->lineEdit1->text().toStdString();
-//             }else if(result->dronenames[i]=="t2")
-//             {
-//                 ui->lineEdit2->setText(QString::fromStdString(result->droneips[i]));
-//                 ip2 = ui->lineEdit2->text().toStdString();
-//             }
-//         }
-//     };
-//     auto future_result = dronePoolStatusClient_ -> async_send_request(dronePoolStatusRequest, response_received_callback);
-// }
-
 void MainWindow::positionCallback1(const droneinterfaces::msg::PositionArray::SharedPtr msg)
 {
     p1 = msg->position;
     ptime1 = msg->time;
+    memcpy(TCW1.data(), msg->tcw.data(), 64);
+    targetPosition->setProjectMatrix(TCW1);
+    std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
+    auto result = targetPosition->getCameraPoint(tmp);
+    std::cout<<"camera point1:"<<result[0]<<" "<<result[1]<<std::endl;
+    tmp = {1200.f, 600.f, 1800.f, 1.f};
+    result = targetPosition->getCameraPoint(tmp);
+    std::cout<<"camera point2:"<<result[0]<<" "<<result[1]<<std::endl;
+    tmp = {1800.f, 0.f, 1800.f, 1.f};
+    result = targetPosition->getCameraPoint(tmp);
+    std::cout<<"camera point3:"<<result[0]<<" "<<result[1]<<std::endl;
     // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
     // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p1[0], p1[1], p1[2], p1[3], ms.count(), ptime1);
 }
@@ -668,6 +647,11 @@ void MainWindow::positionCallback2(const droneinterfaces::msg::PositionArray::Sh
 
     p2 = msg->position;
     ptime2 = msg->time;
+    memcpy(TCW2.data(), msg->tcw.data(), 56);
+    targetPosition->setProjectMatrix(TCW2);
+    std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
+    auto result = targetPosition->getCameraPoint(tmp);
+    std::cout<<"camera point:"<<result[0]<<" "<<result[1]<<std::endl;
     // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
     // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p2[0], p2[1], p2[2], p2[3], ms.count(), ptime1);
 }
@@ -1054,29 +1038,6 @@ void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPt
         strftime(time_string1, 100, "t1-%Y-%B-%d-%T.jpg", curr_tm1);
         cv::imwrite(time_string1, im1);
     }
-    targetPosition->setTransformMatrix(p1);
-    std::array<float, 3UL> PHHH = {600, 600, 1800};
-    Eigen::Matrix<float, 4, 1> pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {600, 0, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {600, -600, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1200, 600, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1200, 0, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1200, -600, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1800, 600, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1800, 0, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {1800, -600, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {2400, 0, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
-    PHHH = {3000, 0, 1800};
-    pixelPoint = targetPosition->getPixelCoor(PHHH);
     updateFrame1();
 }
 
@@ -1152,11 +1113,11 @@ void MainWindow::spin()
     // std::cout<<"tt"<<(ms - ptime1)<<std::endl;
     if((ms - ptime1) < 100)
     {
-        cv::circle(tmp, cv::Point(-p1[1]/20+300, -p1[0]/20+300), 5, cv::Scalar(255, 0, 0), cv::FILLED);
+        cv::circle(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 5, cv::Scalar(255, 0, 0), cv::FILLED);
         // std::cout<<"ttee"<<p1[0]<<p1[1]<<std::endl;
         // cv::imwrite("t1.jpg", tmp);
-        cv::line(tmp, cv::Point(-p1[1]/20+300, -p1[0]/20+300), 
-            cv::Point(-(p1[1])/20+300-sin(p1[3])*20, -(p1[0])/20+300-cos(p1[3])*20), cv::Scalar(255, 0, 0),
+        cv::line(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 
+            cv::Point(-(p1[1])/20.f+300.f-sin(p1[5])*20.f, -(p1[0])/20.f+300.f-cos(p1[5])*20.f), cv::Scalar(255, 0, 0),
                 3);
         cv::putText(tmp, std::to_string(static_cast<int>(p1[0]))+"-"+std::to_string(static_cast<int>(p1[1]))+"-"+std::to_string(static_cast<int>(p1[2]))
         , cv::Point(10, 30),cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(255, 0, 0));
@@ -1166,9 +1127,9 @@ void MainWindow::spin()
     }
     if((ms - ptime2) < 100)
     {
-        cv::circle(tmp, cv::Point(-p2[1]/20+300, -p2[0]/20+300), 5, cv::Scalar(0, 0, 255), cv::FILLED);
-        cv::line(tmp, cv::Point(-p2[1]/20+300, -p2[0]/20+300), 
-            cv::Point(-(p2[1])/20+300-sin(p2[3])*20, -(p2[0])/20+300-cos(p2[3])*20), cv::Scalar(0, 0, 255),
+        cv::circle(tmp, cv::Point(-p2[1]/20.f+300.f, -p2[0]/20.f+300.f), 5, cv::Scalar(0, 0, 255), cv::FILLED);
+        cv::line(tmp, cv::Point(-p2[1]/20.f+300.f, -p2[0]/20.f+300.f), 
+            cv::Point(-(p2[1])/20.f+300.f-sin(p2[5])*20.f, -(p2[0])/20.f+300.f-cos(p2[5])*20.f), cv::Scalar(0, 0, 255),
                 3);
         cv::putText(tmp, std::to_string(p2[2]), cv::Point(310, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
     }else

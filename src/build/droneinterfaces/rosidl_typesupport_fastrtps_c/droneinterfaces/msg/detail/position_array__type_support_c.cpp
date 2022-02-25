@@ -51,8 +51,15 @@ static bool _PositionArray__cdr_serialize(
   const _PositionArray__ros_msg_type * ros_message = static_cast<const _PositionArray__ros_msg_type *>(untyped_ros_message);
   // Field name: position
   {
-    size_t size = 4;
+    size_t size = 6;
     auto array_ptr = ros_message->position;
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: tcw
+  {
+    size_t size = 16;
+    auto array_ptr = ros_message->tcw;
     cdr.serializeArray(array_ptr, size);
   }
 
@@ -75,8 +82,15 @@ static bool _PositionArray__cdr_deserialize(
   _PositionArray__ros_msg_type * ros_message = static_cast<_PositionArray__ros_msg_type *>(untyped_ros_message);
   // Field name: position
   {
-    size_t size = 4;
+    size_t size = 6;
     auto array_ptr = ros_message->position;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: tcw
+  {
+    size_t size = 16;
+    auto array_ptr = ros_message->tcw;
     cdr.deserializeArray(array_ptr, size);
   }
 
@@ -104,8 +118,17 @@ size_t get_serialized_size_droneinterfaces__msg__PositionArray(
 
   // field.name position
   {
-    size_t array_size = 4;
+    size_t array_size = 6;
     auto array_ptr = ros_message->position;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name tcw
+  {
+    size_t array_size = 16;
+    auto array_ptr = ros_message->tcw;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -146,7 +169,14 @@ size_t max_serialized_size_droneinterfaces__msg__PositionArray(
 
   // member: position
   {
-    size_t array_size = 4;
+    size_t array_size = 6;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: tcw
+  {
+    size_t array_size = 16;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

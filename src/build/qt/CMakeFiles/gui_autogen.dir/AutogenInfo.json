@@ -105,15 +105,15 @@
 			"MU"
 		],
 		[
+			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp",
+			"MU"
+		],
+		[
 			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp",
 			"MU"
 		],
 		[
 			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp",
-			"MU"
-		],
-		[
-			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp",
 			"MU"
 		]
 	],

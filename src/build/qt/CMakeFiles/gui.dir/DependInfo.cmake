@@ -7,9 +7,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/gui_autogen/mocs_compilation.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/gui_autogen/mocs_compilation.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/2DMovementKalmanFilter.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o"
+  "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/src/main.cpp.o"
   "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/src/mainwindow.cpp.o"
-  "/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp" "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui.dir/src/targetPosition.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -40,37 +40,72 @@ void PositionArray_fini_function(void * message_memory)
 size_t size_function__PositionArray__position(const void * untyped_member)
 {
   (void)untyped_member;
-  return 4;
+  return 6;
 }
 
 const void * get_const_function__PositionArray__position(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::array<float, 4> *>(untyped_member);
+    *reinterpret_cast<const std::array<float, 6> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__PositionArray__position(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::array<float, 4> *>(untyped_member);
+    *reinterpret_cast<std::array<float, 6> *>(untyped_member);
   return &member[index];
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember PositionArray_message_member_array[2] = {
+size_t size_function__PositionArray__tcw(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 16;
+}
+
+const void * get_const_function__PositionArray__tcw(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<float, 16> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__PositionArray__tcw(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<float, 16> *>(untyped_member);
+  return &member[index];
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember PositionArray_message_member_array[3] = {
   {
     "position",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     true,  // is array
-    4,  // array size
+    6,  // array size
     false,  // is upper bound
     offsetof(droneinterfaces::msg::PositionArray, position),  // bytes offset in struct
     nullptr,  // default value
     size_function__PositionArray__position,  // size() function pointer
     get_const_function__PositionArray__position,  // get_const(index) function pointer
     get_function__PositionArray__position,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "tcw",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    16,  // array size
+    false,  // is upper bound
+    offsetof(droneinterfaces::msg::PositionArray, tcw),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__PositionArray__tcw,  // size() function pointer
+    get_const_function__PositionArray__tcw,  // get_const(index) function pointer
+    get_function__PositionArray__tcw,  // get(index) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -93,7 +128,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PositionArray
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers PositionArray_message_members = {
   "droneinterfaces::msg",  // message namespace
   "PositionArray",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(droneinterfaces::msg::PositionArray),
   PositionArray_message_member_array,  // message members
   PositionArray_init_function,  // function to initialize message memory (memory has to be allocated)

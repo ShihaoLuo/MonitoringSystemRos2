@@ -37,35 +37,47 @@ struct PositionArray_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      std::fill<typename std::array<float, 4>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 6>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 16>::iterator, float>(this->tcw.begin(), this->tcw.end(), 0.0f);
       this->time = 0ll;
     }
   }
 
   explicit PositionArray_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : position(_alloc)
+  : position(_alloc),
+    tcw(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      std::fill<typename std::array<float, 4>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 6>::iterator, float>(this->position.begin(), this->position.end(), 0.0f);
+      std::fill<typename std::array<float, 16>::iterator, float>(this->tcw.begin(), this->tcw.end(), 0.0f);
       this->time = 0ll;
     }
   }
 
   // field types and members
   using _position_type =
-    std::array<float, 4>;
+    std::array<float, 6>;
   _position_type position;
+  using _tcw_type =
+    std::array<float, 16>;
+  _tcw_type tcw;
   using _time_type =
     int64_t;
   _time_type time;
 
   // setters for named parameter idiom
   Type & set__position(
-    const std::array<float, 4> & _arg)
+    const std::array<float, 6> & _arg)
   {
     this->position = _arg;
+    return *this;
+  }
+  Type & set__tcw(
+    const std::array<float, 16> & _arg)
+  {
+    this->tcw = _arg;
     return *this;
   }
   Type & set__time(
@@ -118,6 +130,9 @@ struct PositionArray_
   bool operator==(const PositionArray_ & other) const
   {
     if (this->position != other.position) {
+      return false;
+    }
+    if (this->tcw != other.tcw) {
       return false;
     }
     if (this->time != other.time) {

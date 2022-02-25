@@ -726,7 +726,7 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="ip">192.168.1.100</string>
+     <string extracomment="ip">192.168.50.100</string>
     </property>
     <property name="placeholderText">
      <string>t1 ip address</string>
@@ -742,7 +742,7 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="ip">192.168.1.101</string>
+     <string extracomment="ip">192.168.50.101</string>
     </property>
     <property name="placeholderText">
      <string>t2 ip address</string>

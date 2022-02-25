@@ -36,16 +36,32 @@ private:
   ::droneinterfaces::msg::PositionArray msg_;
 };
 
+class Init_PositionArray_tcw
+{
+public:
+  explicit Init_PositionArray_tcw(::droneinterfaces::msg::PositionArray & msg)
+  : msg_(msg)
+  {}
+  Init_PositionArray_time tcw(::droneinterfaces::msg::PositionArray::_tcw_type arg)
+  {
+    msg_.tcw = std::move(arg);
+    return Init_PositionArray_time(msg_);
+  }
+
+private:
+  ::droneinterfaces::msg::PositionArray msg_;
+};
+
 class Init_PositionArray_position
 {
 public:
   Init_PositionArray_position()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_PositionArray_time position(::droneinterfaces::msg::PositionArray::_position_type arg)
+  Init_PositionArray_tcw position(::droneinterfaces::msg::PositionArray::_position_type arg)
   {
     msg_.position = std::move(arg);
-    return Init_PositionArray_time(msg_);
+    return Init_PositionArray_tcw(msg_);
   }
 
 private:

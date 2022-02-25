@@ -534,9 +534,9 @@ public:
         pushButton1_33->setText(QApplication::translate("MainWindow", "back10", nullptr));
         label1->setText(QApplication::translate("MainWindow", "drone t1", nullptr));
         label2->setText(QApplication::translate("MainWindow", "drone t2", nullptr));
-        lineEdit1->setText(QApplication::translate("MainWindow", "192.168.1.100", nullptr));
+        lineEdit1->setText(QApplication::translate("MainWindow", "192.168.50.100", nullptr));
         lineEdit1->setPlaceholderText(QApplication::translate("MainWindow", "t1 ip address", nullptr));
-        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.1.101", nullptr));
+        lineEdit2->setText(QApplication::translate("MainWindow", "192.168.50.101", nullptr));
         lineEdit2->setPlaceholderText(QApplication::translate("MainWindow", "t2 ip address", nullptr));
         pushButtonstreamswitch1->setText(QApplication::translate("MainWindow", "stream\n"
 "switch", nullptr));

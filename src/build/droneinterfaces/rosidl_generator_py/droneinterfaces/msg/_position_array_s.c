@@ -67,8 +67,32 @@ bool droneinterfaces__msg__position_array__convert_from_py(PyObject * _pymsg, vo
       Py_INCREF(seq_field);
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 4;
+      Py_ssize_t size = 6;
       float * dest = ros_message->position;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(float));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
+  {  // tcw
+    PyObject * field = PyObject_GetAttrString(_pymsg, "tcw");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+      Py_ssize_t size = 16;
+      float * dest = ros_message->tcw;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -123,7 +147,25 @@ PyObject * droneinterfaces__msg__position_array__convert_to_py(void * raw_ros_me
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
     float * src = &(ros_message->position[0]);
-    memcpy(dst, src, 4 * sizeof(float));
+    memcpy(dst, src, 6 * sizeof(float));
+    Py_DECREF(field);
+  }
+  {  // tcw
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "tcw");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+    assert(sizeof(npy_float32) == sizeof(float));
+    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
+    float * src = &(ros_message->tcw[0]);
+    memcpy(dst, src, 16 * sizeof(float));
     Py_DECREF(field);
   }
   {  // time

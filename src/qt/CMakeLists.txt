@@ -54,7 +54,7 @@ add_executable(gui
   src/mainwindow.cpp
   src/mainwindow.ui
   src/2DMovementKalmanFilter.cpp
-  src/targetPosition.cpp
+  src/CameraAndPhyPointTransformer.cpp
   ${header_SRC} 
 )
 

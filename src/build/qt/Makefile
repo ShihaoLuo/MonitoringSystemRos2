@@ -300,6 +300,33 @@ src/2DMovementKalmanFilter.cpp.s:
 	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.s
 .PHONY : src/2DMovementKalmanFilter.cpp.s
 
+src/CameraAndPhyPointTransformer.o: src/CameraAndPhyPointTransformer.cpp.o
+
+.PHONY : src/CameraAndPhyPointTransformer.o
+
+# target to build an object file
+src/CameraAndPhyPointTransformer.cpp.o:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o
+.PHONY : src/CameraAndPhyPointTransformer.cpp.o
+
+src/CameraAndPhyPointTransformer.i: src/CameraAndPhyPointTransformer.cpp.i
+
+.PHONY : src/CameraAndPhyPointTransformer.i
+
+# target to preprocess a source file
+src/CameraAndPhyPointTransformer.cpp.i:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.i
+.PHONY : src/CameraAndPhyPointTransformer.cpp.i
+
+src/CameraAndPhyPointTransformer.s: src/CameraAndPhyPointTransformer.cpp.s
+
+.PHONY : src/CameraAndPhyPointTransformer.s
+
+# target to generate assembly for a file
+src/CameraAndPhyPointTransformer.cpp.s:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.s
+.PHONY : src/CameraAndPhyPointTransformer.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -354,33 +381,6 @@ src/mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
-src/targetPosition.o: src/targetPosition.cpp.o
-
-.PHONY : src/targetPosition.o
-
-# target to build an object file
-src/targetPosition.cpp.o:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.o
-.PHONY : src/targetPosition.cpp.o
-
-src/targetPosition.i: src/targetPosition.cpp.i
-
-.PHONY : src/targetPosition.i
-
-# target to preprocess a source file
-src/targetPosition.cpp.i:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.i
-.PHONY : src/targetPosition.cpp.i
-
-src/targetPosition.s: src/targetPosition.cpp.s
-
-.PHONY : src/targetPosition.s
-
-# target to generate assembly for a file
-src/targetPosition.cpp.s:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/targetPosition.cpp.s
-.PHONY : src/targetPosition.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -407,15 +407,15 @@ help:
 	@echo "... src/2DMovementKalmanFilter.o"
 	@echo "... src/2DMovementKalmanFilter.i"
 	@echo "... src/2DMovementKalmanFilter.s"
+	@echo "... src/CameraAndPhyPointTransformer.o"
+	@echo "... src/CameraAndPhyPointTransformer.i"
+	@echo "... src/CameraAndPhyPointTransformer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
-	@echo "... src/targetPosition.o"
-	@echo "... src/targetPosition.i"
-	@echo "... src/targetPosition.s"
 .PHONY : help
 
 

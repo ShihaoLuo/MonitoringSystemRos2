@@ -15,9 +15,10 @@ Drone::Drone(const char* name_, const char* ip_)
     auto opt3 = rclcpp::PublisherOptions();
     opt3.callback_group = callbackgroup3;
     // callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
-    Tcal << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
-    TcalZ << cos(10*3.1415926/180),0,sin(10*3.1415926/180),0, 0,1,0,0, -sin(10*3.1415926/180),0,cos(10*3.1415926/180),0, 0,0,0,1;
-    oTW <<0,0,1,0,  -1,0,0,0,  0,-1,0,0,  0,0,0,1;
+    TcalX << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
+    TcalY << cos(8.*3.1415926/180),0,sin(8.*3.1415926/180), 0, 0,1,0,0, -sin(8.*3.1415926/180),0,cos(8.*3.1415926/180),0, 0,0,0,1;
+    TcalZ << cos(0.5*3.1415926/180),-sin(0.5*3.1415926/180),0,0, sin(0.5*3.1415926/180),cos(0.5*3.1415926/180),0,0, 0,0,1,0, 0,0,0,1;
+    TFcalW <<0, -1, 0, 0,  0 , 0, -1, 0,  1, 0, 0, 0,   0, 0, 0,1; 
     goToPointActionServer_ = rclcpp_action::create_server<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
         nh_->get_node_clock_interface(),
@@ -187,7 +188,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
     {
         if(goal_handle->is_canceling())
         {
-            feedback->set__distance((goalPoint-position).norm());
+            feedback->set__distance((goalPoint-position.block<4, 1>(0, 0)).norm());
             goal_handle->publish_feedback(feedback);
             std::sprintf(s.data(), "~rc 0 0 0 0");
             request2->cmd = s;
@@ -226,7 +227,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
         res = result2.get()->res;
         if(feedbackInterval == 15)
         {
-            feedback->set__distance((goalPoint-position).norm());
+            feedback->set__distance((goalPoint-position.block<4, 1>(0, 0)).norm());
             goal_handle->publish_feedback(feedback);
             feedbackInterval = 0;
         }
@@ -266,21 +267,37 @@ void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
     pose = pSlam->TrackMonocular(im, tframe_);
     if(!pose.empty())
     {
-        TCW << pose.at<float>(0, 0), pose.at<float>(0, 1), pose.at<float>(0, 2), pose.at<float>(0, 3),
+        TCF << pose.at<float>(0, 0), pose.at<float>(0, 1), pose.at<float>(0, 2), pose.at<float>(0, 3),
         pose.at<float>(1, 0), pose.at<float>(1, 1), pose.at<float>(1, 2), pose.at<float>(1, 3),
         pose.at<float>(2, 0), pose.at<float>(2, 1), pose.at<float>(2, 2), pose.at<float>(2, 3),
         pose.at<float>(3, 0), pose.at<float>(3, 1), pose.at<float>(3, 2), pose.at<float>(3, 3);
-        Tco = TCW*Tcal*TcalZ;
-        Toc = Tco.inverse();
-        position << Toc(2,3), -Toc(0,3), -Toc(1,3);
-        position *= scale;
-        position(0) += 360;
-        position(1) -= 1230;
-        position(2) += height_offset;
-        position(3) = atan2(Toc(2,0), Toc(0,0));
-        std::array<float, 4UL> tmp = {position(0),position(1),position(2), position(3)};
+        TCFcal = TCF*TcalX*TcalY*TcalZ;
+        TCFcal.block(0, 3, 3, 1) = TCFcal.block(0, 3, 3, 1) * scale;
+        // TCFcal(1, 3) = TCFcal(1, 3);
+        TFcalC = TCFcal.inverse();
+        TCW = TCFcal * TFcalW;
+        TWC = TCW.inverse();
+        TWC(0, 3) += W_X_offset;
+        TWC(1, 3) += W_Y_offset;
+        TWC(2, 3) += W_Z_offset;
+        TCW = TWC.inverse();
+        sleep(1/100);
+        Eigen::Vector3f ea = TFcalC.block<3, 3>(0, 0).eulerAngles(2, 1, 0);
+        position << TWC(0,3), TWC(1,3), TWC(2,3), -ea[2], ea[0], -ea[1];
+        // std::cout<<"Position:"<<position<<std::endl;
+        // position *= scale;
+        // position(0) += 360;
+        // position(1) -= 1230;
+        // position(2) += height_offset;
+        // std::cout<<"TCFcal:"<<TCFcal<<std::endl;
+        // std::cout<<"TFcalC:"<<TFcalC<<std::endl;
+        // std::cout<<"TWC:"<<TWC<<std::endl;
+        // RCLCPP_INFO(nh_->get_logger(), "atan3:%f, eigen:z %f, y %f x %f", position(3), ea[0], ea[1], ea[2]);
+        // std::array<float, 6UL> tmp = {position(0),position(1),position(2), ea[2], ea[1], ea[0]};
         auto ms = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch());
-        positionarray_.set__position(tmp);
+        // positionarray_.set__position(position.data());
+        memcpy(positionarray_.position.data(), position.data(), 24);
+        memcpy(positionarray_.tcw.data(), TCW.data(), 64);
         positionarray_.set__time(ms.count());
         positionPublisher_->publish(positionarray_);
     }

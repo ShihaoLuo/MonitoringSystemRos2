@@ -18,6 +18,7 @@ droneinterfaces__msg__PositionArray__init(droneinterfaces__msg__PositionArray * 
     return false;
   }
   // position
+  // tcw
   // time
   return true;
 }
@@ -29,6 +30,7 @@ droneinterfaces__msg__PositionArray__fini(droneinterfaces__msg__PositionArray * 
     return;
   }
   // position
+  // tcw
   // time
 }
 

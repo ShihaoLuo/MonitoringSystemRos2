@@ -41,6 +41,24 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: tcw
+  {
+    if (msg.tcw.size() == 0) {
+      out << "tcw: []";
+    } else {
+      out << "tcw: [";
+      size_t pending_items = msg.tcw.size();
+      for (auto item : msg.tcw) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
   // member: time
   {
     out << "time: ";
@@ -63,6 +81,26 @@ inline void to_block_style_yaml(
     } else {
       out << "position:\n";
       for (auto item : msg.position) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: tcw
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.tcw.size() == 0) {
+      out << "tcw: []\n";
+    } else {
+      out << "tcw:\n";
+      for (auto item : msg.tcw) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

@@ -20,7 +20,8 @@ extern "C"
 // Struct defined in msg/PositionArray in the package droneinterfaces.
 typedef struct droneinterfaces__msg__PositionArray
 {
-  float position[4];
+  float position[6];
+  float tcw[16];
   int64_t time;
 } droneinterfaces__msg__PositionArray;
 

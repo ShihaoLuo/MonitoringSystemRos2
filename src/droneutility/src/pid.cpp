@@ -1,12 +1,12 @@
 #include "pid.hpp"
 
-PID::PID():kp(0), ki(0), kd(0), target(0), actual(0), intergral(0), Minintergral(-4000), Maxintergral(4000)
+PID::PID():kp(0.f), ki(0.f), kd(0.f), target(0.f), actual(0.f), intergral(0.f), Minintergral(-4000.f), Maxintergral(4000.f)
 {
    e = target - actual;
    e_pre = e;
 }
 
-PID::PID(float p, float i, float d):kp(p), ki(i), kd(d), target(0), actual(0), intergral(0), Minintergral(-4000), Maxintergral(4000)
+PID::PID(float p, float i, float d):kp(p), ki(i), kd(d), target(0.f), actual(0.f), intergral(0.f), Minintergral(-4000.f), Maxintergral(4000.f)
 {
    e = target - actual;
    e_pre = e;
@@ -16,8 +16,8 @@ PID::~PID(){}
 
 void PID::reset()
 {
-   intergral = 0;
-   e = 0;
+   intergral = 0.f;
+   e = 0.f;
    e_pre = e;
 }
 

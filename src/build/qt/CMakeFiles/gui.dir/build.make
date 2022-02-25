@@ -113,18 +113,18 @@ CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/2DMovementKalmanFilter.cpp -o CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.s
 
-CMakeFiles/gui.dir/src/targetPosition.cpp.o: CMakeFiles/gui.dir/flags.make
-CMakeFiles/gui.dir/src/targetPosition.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/gui.dir/src/targetPosition.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gui.dir/src/targetPosition.cpp.o -c /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp
+CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o: CMakeFiles/gui.dir/flags.make
+CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o -c /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp
 
-CMakeFiles/gui.dir/src/targetPosition.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gui.dir/src/targetPosition.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp > CMakeFiles/gui.dir/src/targetPosition.cpp.i
+CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp > CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.i
 
-CMakeFiles/gui.dir/src/targetPosition.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gui.dir/src/targetPosition.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/targetPosition.cpp -o CMakeFiles/gui.dir/src/targetPosition.cpp.s
+CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp -o CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.s
 
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: CMakeFiles/gui.dir/flags.make
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: include/qt/moc_mainwindow.cpp
@@ -145,7 +145,7 @@ gui_OBJECTS = \
 "CMakeFiles/gui.dir/src/main.cpp.o" \
 "CMakeFiles/gui.dir/src/mainwindow.cpp.o" \
 "CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o" \
-"CMakeFiles/gui.dir/src/targetPosition.cpp.o" \
+"CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o" \
 "CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o"
 
 # External object files for target gui
@@ -155,7 +155,7 @@ gui: CMakeFiles/gui.dir/gui_autogen/mocs_compilation.cpp.o
 gui: CMakeFiles/gui.dir/src/main.cpp.o
 gui: CMakeFiles/gui.dir/src/mainwindow.cpp.o
 gui: CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o
-gui: CMakeFiles/gui.dir/src/targetPosition.cpp.o
+gui: CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o
 gui: CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o
 gui: CMakeFiles/gui.dir/build.make
 gui: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so

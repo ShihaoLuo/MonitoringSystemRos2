@@ -36,6 +36,10 @@ cdr_serialize(
   {
     cdr << ros_message.position;
   }
+  // Member: tcw
+  {
+    cdr << ros_message.tcw;
+  }
   // Member: time
   cdr << ros_message.time;
   return true;
@@ -50,6 +54,11 @@ cdr_deserialize(
   // Member: position
   {
     cdr >> ros_message.position;
+  }
+
+  // Member: tcw
+  {
+    cdr >> ros_message.tcw;
   }
 
   // Member: time
@@ -73,8 +82,15 @@ get_serialized_size(
 
   // Member: position
   {
-    size_t array_size = 4;
+    size_t array_size = 6;
     size_t item_size = sizeof(ros_message.position[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: tcw
+  {
+    size_t array_size = 16;
+    size_t item_size = sizeof(ros_message.tcw[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -108,7 +124,15 @@ max_serialized_size_PositionArray(
 
   // Member: position
   {
-    size_t array_size = 4;
+    size_t array_size = 6;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: tcw
+  {
+    size_t array_size = 16;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

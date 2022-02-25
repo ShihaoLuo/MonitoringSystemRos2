@@ -1,0 +1,47 @@
+In file included from [01m[K/home/jakeluo/Documents/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h:41[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORB_SLAM2/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h:36[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORB_SLAM2/include/LoopClosing.h:34[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORB_SLAM2/include/LocalMapping.h:26[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORB_SLAM2/include/Tracking.h:31[m[K,
+                 from [01m[K/home/jakeluo/Documents/ORB_SLAM2/include/System.h:29[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:17[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/ORB_SLAM2/Thirdparty/g2o/g2o/types/se3quat.h:43:38:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+   43 |       EIGEN_MAKE_ALIGNED_OPERATOR_NEW[01;35m[K;[m[K
+      |                                      [01;35m[K^[m[K
+      |                                      [31m[K-[m[K
+In file included from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/jakeluo/Software/ros2_rolling/install/rclcpp/include/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/include/drone.hpp:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::Drone::saveMap(std::shared_ptr<droneinterfaces::srv::DroneMap_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneMap_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:76:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’ [[01;35m[K-Wformat=[m[K]
+   76 |     RCLCPP_INFO(nh_->get_logger(), [01;35m[K"save map %s\n"[m[K, tmp);
+      |                                    [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:76:47:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   76 |     RCLCPP_INFO(nh_->get_logger(), "save map [01;36m[K%s[m[K\n", tmp);
+      |                                              [01;36m[K~^[m[K
+      |                                               [01;36m[K|[m[K
+      |                                               [01;36m[Kchar*[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::Drone::connect(std::shared_ptr<droneinterfaces::srv::DroneShutDown_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneShutDown_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:123:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  123 |         [01;35m[Kif[m[K(bReuseMap)
+      |         [01;35m[K^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:125:13:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  125 |             [01;36m[KpSlam[m[K -> ActivateLocalizationMode();
+      |             [01;36m[K^~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::Drone::shutDown(std::shared_ptr<droneinterfaces::srv::DroneShutDown_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneShutDown_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:244:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  244 | void Drone::shutDown([01;35m[Kconst std::shared_ptr<droneinterfaces::srv::DroneShutDown::Request> request[m[K,
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+make[2]: *** [CMakeFiles/drone.dir/build.make:63: CMakeFiles/drone.dir/src/drone.cpp.o] 中断
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/drone.dir/all] 中断
+make: *** [Makefile:141: all] 中断

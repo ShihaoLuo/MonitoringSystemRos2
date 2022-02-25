@@ -35,7 +35,7 @@
 #include <QSlider>
 #include <ctime>
 #include "2DMovementKalmanFilter.h"
-#include "targetPosition.h"
+#include "CameraAndPhyPointTransformer.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -100,8 +100,8 @@ private:
     time_t curr_time1, curr_time2;
 	tm *curr_tm1, *curr_tm2;
 	char time_string1[100], time_string2[100];
-    Eigen::Matrix4f intrinsicMatrix;
-    TargetPosition *targetPosition;
+    Eigen::Matrix4f intrinsicMatrix, TCW1, TCW2;
+    CameraAndPhyPointTransformer *targetPosition;
     // Eigen::Matrix<float, 4, 1>  predictResult1, predictResult2;
     // std::array<int32_t, 2> humanpartpos1={0,0}, humanpartpos2={0,0};
     // std::array<int32_t, 10> kalmanHumanPose1 = {0,0,0,0,0,0,0,0,0,0}, kalmanHumanPose2 = {0,0,0,0,0,0,0,0,0,0};
@@ -143,13 +143,13 @@ private:
     void spin();
     // void checkDrones();
 
-    std::string ip1 = "127.0.0.1";
-    std::string ip2 = "127.0.0.1";
+    std::string ip1 = "192.168.50.100";
+    std::string ip2 = "192.168.50.101";
     bool stream1 = false;
     bool stream2 = false;
     QScrollBar *plaintext1scrollbar;
     QScrollBar *plaintext2scrollbar;
-    std::array<float, 4UL> p1, p2;
+    std::array<float, 6UL> p1, p2;
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
     int64_t ptime1=0, ptime2=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;

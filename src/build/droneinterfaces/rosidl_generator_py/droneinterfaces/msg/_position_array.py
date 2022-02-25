@@ -6,6 +6,7 @@
 # Import statements for member types
 
 # Member 'position'
+# Member 'tcw'
 import numpy  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
@@ -57,16 +58,19 @@ class PositionArray(metaclass=Metaclass_PositionArray):
 
     __slots__ = [
         '_position',
+        '_tcw',
         '_time',
     ]
 
     _fields_and_field_types = {
-        'position': 'float[4]',
+        'position': 'float[6]',
+        'tcw': 'float[16]',
         'time': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 4),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 6),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 16),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -75,10 +79,15 @@ class PositionArray(metaclass=Metaclass_PositionArray):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         if 'position' not in kwargs:
-            self.position = numpy.zeros(4, dtype=numpy.float32)
+            self.position = numpy.zeros(6, dtype=numpy.float32)
         else:
             self.position = numpy.array(kwargs.get('position'), dtype=numpy.float32)
-            assert self.position.shape == (4, )
+            assert self.position.shape == (6, )
+        if 'tcw' not in kwargs:
+            self.tcw = numpy.zeros(16, dtype=numpy.float32)
+        else:
+            self.tcw = numpy.array(kwargs.get('tcw'), dtype=numpy.float32)
+            assert self.tcw.shape == (16, )
         self.time = kwargs.get('time', int())
 
     def __repr__(self):
@@ -112,6 +121,8 @@ class PositionArray(metaclass=Metaclass_PositionArray):
             return False
         if all(self.position != other.position):
             return False
+        if all(self.tcw != other.tcw):
+            return False
         if self.time != other.time:
             return False
         return True
@@ -131,8 +142,8 @@ class PositionArray(metaclass=Metaclass_PositionArray):
         if isinstance(value, numpy.ndarray):
             assert value.dtype == numpy.float32, \
                 "The 'position' numpy.ndarray() must have the dtype of 'numpy.float32'"
-            assert value.size == 4, \
-                "The 'position' numpy.ndarray() must have a size of 4"
+            assert value.size == 6, \
+                "The 'position' numpy.ndarray() must have a size of 6"
             self._position = value
             return
         if __debug__:
@@ -146,11 +157,42 @@ class PositionArray(metaclass=Metaclass_PositionArray):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 len(value) == 4 and
+                 len(value) == 6 and
                  all(isinstance(v, float) for v in value) and
                  all(val >= -3.402823e+38 and val <= 3.402823e+38 for val in value)), \
-                "The 'position' field must be a set or sequence with length 4 and each value of type 'float' and each float in [-340282299999999994960115009090224128000.000000, 340282299999999994960115009090224128000.000000]"
+                "The 'position' field must be a set or sequence with length 6 and each value of type 'float' and each float in [-340282299999999994960115009090224128000.000000, 340282299999999994960115009090224128000.000000]"
         self._position = numpy.array(value, dtype=numpy.float32)
+
+    @property
+    def tcw(self):
+        """Message field 'tcw'."""
+        return self._tcw
+
+    @tcw.setter
+    def tcw(self, value):
+        if isinstance(value, numpy.ndarray):
+            assert value.dtype == numpy.float32, \
+                "The 'tcw' numpy.ndarray() must have the dtype of 'numpy.float32'"
+            assert value.size == 16, \
+                "The 'tcw' numpy.ndarray() must have a size of 16"
+            self._tcw = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 16 and
+                 all(isinstance(v, float) for v in value) and
+                 all(val >= -3.402823e+38 and val <= 3.402823e+38 for val in value)), \
+                "The 'tcw' field must be a set or sequence with length 16 and each value of type 'float' and each float in [-340282299999999994960115009090224128000.000000, 340282299999999994960115009090224128000.000000]"
+        self._tcw = numpy.array(value, dtype=numpy.float32)
 
     @property
     def time(self):
