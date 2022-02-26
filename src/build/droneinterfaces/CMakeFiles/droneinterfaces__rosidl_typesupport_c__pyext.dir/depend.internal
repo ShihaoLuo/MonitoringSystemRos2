@@ -111,6 +111,9 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/position_array__type_support.h
+ rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.h
+ rosidl_generator_c/droneinterfaces/msg/detail/target_location__struct.h
+ rosidl_generator_c/droneinterfaces/msg/detail/target_location__type_support.h
  rosidl_generator_c/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__functions.h
  rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__struct.h

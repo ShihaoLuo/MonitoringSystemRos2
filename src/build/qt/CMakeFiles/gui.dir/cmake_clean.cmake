@@ -4,8 +4,6 @@ file(REMOVE_RECURSE
   "gui_autogen"
   "CMakeFiles/gui.dir/gui_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o"
-  "CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o"
-  "CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o"
   "CMakeFiles/gui.dir/src/main.cpp.o"
   "CMakeFiles/gui.dir/src/mainwindow.cpp.o"
   "gui"

@@ -1,0 +1,20 @@
+[35m[1mScanning dependencies of target positioning[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/positioning.dir/src/positioning.cpp.o[0m
+[100%] [32m[1mLinking CXX executable positioning[0m
+[100%] Built target positioning
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/package_run_dependencies/positioning
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/parent_prefix_path/positioning
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.bash
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.sh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.zsh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/packages/positioning
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig-version.cmake
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.xml

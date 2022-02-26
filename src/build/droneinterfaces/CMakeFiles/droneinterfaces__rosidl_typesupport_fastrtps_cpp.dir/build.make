@@ -75,6 +75,7 @@ rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_re
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/action/GoPoint.idl
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/srv/DroneMap.idl
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/srv/DroneSlam.idl
+rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: rosidl_adapter/droneinterfaces/msg/TargetLocation.idl
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl
@@ -141,6 +142,12 @@ rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_sl
 
 rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_cpp.hpp
+
+rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp
+
+rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_cpp.hpp
 
 CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp.o: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
 CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp
@@ -272,6 +279,19 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesuppo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp -o CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp.s
 
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp > CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.i
+
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp -o CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.s
+
 # Object files for target droneinterfaces__rosidl_typesupport_fastrtps_cpp
 droneinterfaces__rosidl_typesupport_fastrtps_cpp_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_register__type_support.cpp.o" \
@@ -283,7 +303,8 @@ droneinterfaces__rosidl_typesupport_fastrtps_cpp_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/human_pose_coor__type_support.cpp.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/action/detail/dds_fastrtps/go_point__type_support.cpp.o" \
 "CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_map__type_support.cpp.o" \
-"CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp.o"
+"CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp.o" \
+"CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o"
 
 # External object files for target droneinterfaces__rosidl_typesupport_fastrtps_cpp
 droneinterfaces__rosidl_typesupport_fastrtps_cpp_EXTERNAL_OBJECTS =
@@ -298,6 +319,7 @@ libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfac
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/action/detail/dds_fastrtps/go_point__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_map__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp.o
+libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp.o
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: /home/jakeluo/Software/ros2_rolling/install/rmw/lib/librmw.so
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: /home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_fastrtps_cpp/lib/librosidl_typesupport_fastrtps_cpp.so
@@ -328,7 +350,7 @@ libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: /home/jakeluo/Software/r
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: /home/jakeluo/Software/ros2_rolling/install/rcpputils/lib/librcpputils.so
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: /home/jakeluo/Software/ros2_rolling/install/rcutils/lib/librcutils.so
 libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -360,6 +382,8 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_t
 CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_fastrtps_cpp.hpp
 CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/dds_fastrtps/drone_slam__type_support.cpp
 CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/dds_fastrtps/target_location__type_support.cpp
+CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_cpp.hpp
 	cd /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/droneinterfaces__rosidl_typesupport_fastrtps_cpp.dir/depend
 

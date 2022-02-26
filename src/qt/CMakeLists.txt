@@ -53,13 +53,14 @@ add_executable(gui
   src/main.cpp
   src/mainwindow.cpp
   src/mainwindow.ui
-  src/2DMovementKalmanFilter.cpp
-  src/CameraAndPhyPointTransformer.cpp
+  # src/2DMovementKalmanFilter.cpp
+  # src/CameraAndPhyPointTransformer.cpp
   ${header_SRC} 
 )
 
 
 ament_target_dependencies(gui rclcpp Boost rclcpp std_msgs droneinterfaces rclcpp_action)
+
 
 
 target_link_libraries(gui

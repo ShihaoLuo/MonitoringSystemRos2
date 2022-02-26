@@ -6,6 +6,8 @@ msg/HumanPoseCoor.idl
 msg/HumanPoseCoor.msg
 msg/PositionArray.idl
 msg/PositionArray.msg
+msg/TargetLocation.idl
+msg/TargetLocation.msg
 srv/DroneController.idl
 srv/DroneController.srv
 srv/DroneController_Request.msg

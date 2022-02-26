@@ -23,6 +23,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/GoPoint.action"
   "srv/DroneMap.srv"
   "srv/DroneSlam.srv"
+  "msg/TargetLocation.msg"
 )
 
 

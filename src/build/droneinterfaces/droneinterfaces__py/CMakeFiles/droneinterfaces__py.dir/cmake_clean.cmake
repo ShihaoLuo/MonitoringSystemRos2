@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/droneinterfaces/msg/_human_pose_coor_s.c"
   "../rosidl_generator_py/droneinterfaces/msg/_position_array.py"
   "../rosidl_generator_py/droneinterfaces/msg/_position_array_s.c"
+  "../rosidl_generator_py/droneinterfaces/msg/_target_location.py"
+  "../rosidl_generator_py/droneinterfaces/msg/_target_location_s.c"
   "../rosidl_generator_py/droneinterfaces/srv/__init__.py"
   "../rosidl_generator_py/droneinterfaces/srv/_drone_controller.py"
   "../rosidl_generator_py/droneinterfaces/srv/_drone_controller_s.c"

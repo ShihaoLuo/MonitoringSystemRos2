@@ -273,60 +273,6 @@ include/qt/moc_mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.s
 .PHONY : include/qt/moc_mainwindow.cpp.s
 
-src/2DMovementKalmanFilter.o: src/2DMovementKalmanFilter.cpp.o
-
-.PHONY : src/2DMovementKalmanFilter.o
-
-# target to build an object file
-src/2DMovementKalmanFilter.cpp.o:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o
-.PHONY : src/2DMovementKalmanFilter.cpp.o
-
-src/2DMovementKalmanFilter.i: src/2DMovementKalmanFilter.cpp.i
-
-.PHONY : src/2DMovementKalmanFilter.i
-
-# target to preprocess a source file
-src/2DMovementKalmanFilter.cpp.i:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.i
-.PHONY : src/2DMovementKalmanFilter.cpp.i
-
-src/2DMovementKalmanFilter.s: src/2DMovementKalmanFilter.cpp.s
-
-.PHONY : src/2DMovementKalmanFilter.s
-
-# target to generate assembly for a file
-src/2DMovementKalmanFilter.cpp.s:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.s
-.PHONY : src/2DMovementKalmanFilter.cpp.s
-
-src/CameraAndPhyPointTransformer.o: src/CameraAndPhyPointTransformer.cpp.o
-
-.PHONY : src/CameraAndPhyPointTransformer.o
-
-# target to build an object file
-src/CameraAndPhyPointTransformer.cpp.o:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.o
-.PHONY : src/CameraAndPhyPointTransformer.cpp.o
-
-src/CameraAndPhyPointTransformer.i: src/CameraAndPhyPointTransformer.cpp.i
-
-.PHONY : src/CameraAndPhyPointTransformer.i
-
-# target to preprocess a source file
-src/CameraAndPhyPointTransformer.cpp.i:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.i
-.PHONY : src/CameraAndPhyPointTransformer.cpp.i
-
-src/CameraAndPhyPointTransformer.s: src/CameraAndPhyPointTransformer.cpp.s
-
-.PHONY : src/CameraAndPhyPointTransformer.s
-
-# target to generate assembly for a file
-src/CameraAndPhyPointTransformer.cpp.s:
-	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/CameraAndPhyPointTransformer.cpp.s
-.PHONY : src/CameraAndPhyPointTransformer.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -404,12 +350,6 @@ help:
 	@echo "... include/qt/moc_mainwindow.o"
 	@echo "... include/qt/moc_mainwindow.i"
 	@echo "... include/qt/moc_mainwindow.s"
-	@echo "... src/2DMovementKalmanFilter.o"
-	@echo "... src/2DMovementKalmanFilter.i"
-	@echo "... src/2DMovementKalmanFilter.s"
-	@echo "... src/CameraAndPhyPointTransformer.o"
-	@echo "... src/CameraAndPhyPointTransformer.i"
-	@echo "... src/CameraAndPhyPointTransformer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

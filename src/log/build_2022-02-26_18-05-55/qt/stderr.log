@@ -1,0 +1,106 @@
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:326[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:37[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:[m[K In member function ‘[01m[Kvoid Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::operator()(Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar*, Index, const LhsScalar*, const RhsScalar*, Index, Index, Index, Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar, Index, Index, Index, Index, RhsScalar*)[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:574:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  574 |         [01;35m[Kif[m[K(nr==4) traits.initAcc(C3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:575:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  575 |                   [01;36m[Ktraits[m[K.initAcc(C4);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:946:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  946 |         [01;35m[Kif[m[K(nr==4) R3 = ploadu<ResPacket>(r3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:948:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  948 |                   [01;36m[Ktraits[m[K.acc(C0, alphav, R0);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:951:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  951 |         [01;35m[Kif[m[K(nr==4) traits.acc(C3, alphav, R3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:953:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  953 |                   [01;36m[Kpstoreu[m[K(r0, R0);
+      |                   [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:326[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:37[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:[m[K In member function ‘[01m[Kvoid Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::operator()(Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar*, Index, const LhsScalar*, const RhsScalar*, Index, Index, Index, Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar, Index, Index, Index, Index, RhsScalar*)[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:574:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  574 |         [01;35m[Kif[m[K(nr==4) traits.initAcc(C3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:575:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  575 |                   [01;36m[Ktraits[m[K.initAcc(C4);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:946:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  946 |         [01;35m[Kif[m[K(nr==4) R3 = ploadu<ResPacket>(r3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:948:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  948 |                   [01;36m[Ktraits[m[K.acc(C0, alphav, R0);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:951:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  951 |         [01;35m[Kif[m[K(nr==4) traits.acc(C3, alphav, R3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:953:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  953 |                   [01;36m[Kpstoreu[m[K(r0, R0);
+      |                   [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:326[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:37[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:[m[K In member function ‘[01m[Kvoid Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::operator()(Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar*, Index, const LhsScalar*, const RhsScalar*, Index, Index, Index, Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar, Index, Index, Index, Index, RhsScalar*)[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:574:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  574 |         [01;35m[Kif[m[K(nr==4) traits.initAcc(C3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:575:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  575 |                   [01;36m[Ktraits[m[K.initAcc(C4);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:946:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  946 |         [01;35m[Kif[m[K(nr==4) R3 = ploadu<ResPacket>(r3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:948:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  948 |                   [01;36m[Ktraits[m[K.acc(C0, alphav, R0);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:951:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  951 |         [01;35m[Kif[m[K(nr==4) traits.acc(C3, alphav, R3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:953:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  953 |                   [01;36m[Kpstoreu[m[K(r0, R0);
+      |                   [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:[m[K At global scope:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:103:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  103 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:[m[K At global scope:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:103:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  103 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:[m[K At global scope:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:103:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  103 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:550:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  550 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:106：CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[2]: *** [CMakeFiles/gui.dir/build.make:80：CMakeFiles/gui.dir/src/main.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

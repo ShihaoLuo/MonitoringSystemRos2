@@ -6,4 +6,5 @@ ros2 run humanpose estimater t1 &
 ros2 run droneutility drone t2 222 &
 ros2 run humanpose estimater t2 &
 ros2 run droneutility dronemanager &
+ros2 run positioning positioning &
 ros2 run qt gui 

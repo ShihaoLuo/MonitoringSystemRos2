@@ -12,11 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
     // kalmanFilterH2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
     // kalmanFilterN2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
     // kalmanFilterB2 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
-    intrinsicMatrix <<921.171, 0, 459.9, 0, 
-                    0, 919.018, 351.24, 0,
-                    0, 0, 1, 0,
-                    0, 0, 0, 1;
-    targetPosition = new CameraAndPhyPointTransformer(intrinsicMatrix);
+    // intrinsicMatrix <<921.171, 0, 459.9, 0, 
+    //                 0, 919.018, 351.24, 0,
+    //                 0, 0, 1, 0,
+    //                 0, 0, 0, 1;
+    // targetPosition = new CameraAndPhyPointTransformer(intrinsicMatrix);
     goalPosition = {0.f, 0.f, 1800.f, 0.f};
     goalPosition1 = goalPosition;
     goalPosition2 = goalPosition;
@@ -627,17 +627,17 @@ void MainWindow::positionCallback1(const droneinterfaces::msg::PositionArray::Sh
 {
     p1 = msg->position;
     ptime1 = msg->time;
-    memcpy(TCW1.data(), msg->tcw.data(), 64);
-    targetPosition->setProjectMatrix(TCW1);
-    std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
-    auto result = targetPosition->getCameraPoint(tmp);
-    std::cout<<"camera point1:"<<result[0]<<" "<<result[1]<<std::endl;
-    tmp = {1200.f, 600.f, 1800.f, 1.f};
-    result = targetPosition->getCameraPoint(tmp);
-    std::cout<<"camera point2:"<<result[0]<<" "<<result[1]<<std::endl;
-    tmp = {1800.f, 0.f, 1800.f, 1.f};
-    result = targetPosition->getCameraPoint(tmp);
-    std::cout<<"camera point3:"<<result[0]<<" "<<result[1]<<std::endl;
+    // memcpy(TCW1.data(), msg->tcw.data(), 64);
+    // targetPosition->setProjectMatrix(TCW1);
+    // std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
+    // auto result = targetPosition->getCameraPoint(tmp);
+    // std::cout<<"camera point1:"<<result[0]<<" "<<result[1]<<std::endl;
+    // tmp = {1200.f, 600.f, 1800.f, 1.f};
+    // result = targetPosition->getCameraPoint(tmp);
+    // std::cout<<"camera point2:"<<result[0]<<" "<<result[1]<<std::endl;
+    // tmp = {1800.f, 0.f, 1800.f, 1.f};
+    // result = targetPosition->getCameraPoint(tmp);
+    // std::cout<<"camera point3:"<<result[0]<<" "<<result[1]<<std::endl;
     // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
     // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p1[0], p1[1], p1[2], p1[3], ms.count(), ptime1);
 }
@@ -647,11 +647,11 @@ void MainWindow::positionCallback2(const droneinterfaces::msg::PositionArray::Sh
 
     p2 = msg->position;
     ptime2 = msg->time;
-    memcpy(TCW2.data(), msg->tcw.data(), 56);
-    targetPosition->setProjectMatrix(TCW2);
-    std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
-    auto result = targetPosition->getCameraPoint(tmp);
-    std::cout<<"camera point:"<<result[0]<<" "<<result[1]<<std::endl;
+    // memcpy(TCW2.data(), msg->tcw.data(), 56);
+    // targetPosition->setProjectMatrix(TCW2);
+    // std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
+    // auto result = targetPosition->getCameraPoint(tmp);
+    // std::cout<<"camera point:"<<result[0]<<" "<<result[1]<<std::endl;
     // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
     // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p2[0], p2[1], p2[2], p2[3], ms.count(), ptime1);
 }
@@ -809,7 +809,7 @@ MainWindow::~MainWindow()
     // delete kalmanFilterB2;
     // delete kalmanFilterN1;
     // delete kalmanFilterN2;
-    delete targetPosition;
+    // delete targetPosition;
     delete ui;
 }
 
@@ -1111,27 +1111,28 @@ void MainWindow::spin()
     cv::Mat tmp = im.clone();
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     // std::cout<<"tt"<<(ms - ptime1)<<std::endl;
-    if((ms - ptime1) < 100)
+    if((ms - ptime1) < 500)
     {
-        cv::circle(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 5, cv::Scalar(255, 0, 0), cv::FILLED);
+        cv::circle(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 10, cv::Scalar(255, 0, 0), cv::FILLED);
         // std::cout<<"ttee"<<p1[0]<<p1[1]<<std::endl;
         // cv::imwrite("t1.jpg", tmp);
         cv::line(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 
             cv::Point(-(p1[1])/20.f+300.f-sin(p1[5])*20.f, -(p1[0])/20.f+300.f-cos(p1[5])*20.f), cv::Scalar(255, 0, 0),
-                3);
-        cv::putText(tmp, std::to_string(static_cast<int>(p1[0]))+"-"+std::to_string(static_cast<int>(p1[1]))+"-"+std::to_string(static_cast<int>(p1[2]))
-        , cv::Point(10, 30),cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(255, 0, 0));
+                6);
+        // cv::putText(tmp, std::to_string(static_cast<int>(p1[0]))+"-"+std::to_string(static_cast<int>(p1[1]))+"-"+std::to_string(static_cast<int>(p1[2]))
+        // , cv::Point(10, 30),cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(255, 0, 0));
     }else
     {
         cv::putText(tmp, "T1 Lost", cv::Point(10, 30), cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(255, 0, 0));
     }
-    if((ms - ptime2) < 100)
+    if((ms - ptime2) < 500)
     {
-        cv::circle(tmp, cv::Point(-p2[1]/20.f+300.f, -p2[0]/20.f+300.f), 5, cv::Scalar(0, 0, 255), cv::FILLED);
+        cv::circle(tmp, cv::Point(-p2[1]/20.f+300.f, -p2[0]/20.f+300.f), 10, cv::Scalar(0, 0, 255), cv::FILLED);
         cv::line(tmp, cv::Point(-p2[1]/20.f+300.f, -p2[0]/20.f+300.f), 
             cv::Point(-(p2[1])/20.f+300.f-sin(p2[5])*20.f, -(p2[0])/20.f+300.f-cos(p2[5])*20.f), cv::Scalar(0, 0, 255),
-                3);
-        cv::putText(tmp, std::to_string(p2[2]), cv::Point(310, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
+                6);
+        // cv::putText(tmp, std::to_string(static_cast<int>(p2[0]))+"-"+std::to_string(static_cast<int>(p2[1]))+"-"+std::to_string(static_cast<int>(p2[2]))
+        // , cv::Point(10, 30),cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(255, 0, 0));
     }else
     {
         cv::putText(tmp, "T2 Lost", cv::Point(310, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));

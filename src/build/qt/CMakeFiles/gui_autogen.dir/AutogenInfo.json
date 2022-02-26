@@ -101,14 +101,6 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/2DMovementKalmanFilter.cpp",
-			"MU"
-		],
-		[
-			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/CameraAndPhyPointTransformer.cpp",
-			"MU"
-		],
-		[
 			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp",
 			"MU"
 		],

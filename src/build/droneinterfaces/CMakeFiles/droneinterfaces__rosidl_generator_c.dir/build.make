@@ -80,6 +80,7 @@ rosidl_generator_c/droneinterfaces/srv/drone_register.h: rosidl_adapter/droneint
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: rosidl_adapter/droneinterfaces/action/GoPoint.idl
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: rosidl_adapter/droneinterfaces/srv/DroneMap.idl
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: rosidl_adapter/droneinterfaces/srv/DroneSlam.idl
+rosidl_generator_c/droneinterfaces/srv/drone_register.h: rosidl_adapter/droneinterfaces/msg/TargetLocation.idl
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_c/droneinterfaces/srv/drone_register.h: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl
@@ -207,6 +208,18 @@ rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__struct.h: rosidl_gener
 rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__type_support.h: rosidl_generator_c/droneinterfaces/srv/drone_register.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__type_support.h
 
+rosidl_generator_c/droneinterfaces/msg/target_location.h: rosidl_generator_c/droneinterfaces/srv/drone_register.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/msg/target_location.h
+
+rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.h: rosidl_generator_c/droneinterfaces/srv/drone_register.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.h
+
+rosidl_generator_c/droneinterfaces/msg/detail/target_location__struct.h: rosidl_generator_c/droneinterfaces/srv/drone_register.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/msg/detail/target_location__struct.h
+
+rosidl_generator_c/droneinterfaces/msg/detail/target_location__type_support.h: rosidl_generator_c/droneinterfaces/srv/drone_register.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/msg/detail/target_location__type_support.h
+
 rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c: rosidl_generator_c/droneinterfaces/srv/drone_register.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c
 
@@ -236,6 +249,9 @@ rosidl_generator_c/droneinterfaces/srv/detail/drone_map__functions.c: rosidl_gen
 
 rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c: rosidl_generator_c/droneinterfaces/srv/drone_register.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c
+
+rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c: rosidl_generator_c/droneinterfaces/srv/drone_register.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c
 
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o: rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c
@@ -367,6 +383,19 @@ CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinter
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c -o CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c.s
 
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o: rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o   -c /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c
+
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c > CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.i
+
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c -o CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.s
+
 # Object files for target droneinterfaces__rosidl_generator_c
 droneinterfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c.o" \
@@ -378,7 +407,8 @@ droneinterfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__functions.c.o" \
 "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.c.o" \
 "CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_map__functions.c.o" \
-"CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c.o"
+"CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c.o" \
+"CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o"
 
 # External object files for target droneinterfaces__rosidl_generator_c
 droneinterfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -393,6 +423,7 @@ libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_ge
 libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.c.o
 libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_map__functions.c.o
 libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c.o
+libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c.o
 libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/build.make
 libdroneinterfaces__rosidl_generator_c.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
 libdroneinterfaces__rosidl_generator_c.so: /home/jakeluo/Software/ros2_rolling/install/action_msgs/lib/libaction_msgs__rosidl_typesupport_c.so
@@ -417,7 +448,7 @@ libdroneinterfaces__rosidl_generator_c.so: /home/jakeluo/Software/ros2_rolling/i
 libdroneinterfaces__rosidl_generator_c.so: /home/jakeluo/Software/ros2_rolling/install/rcpputils/lib/librcpputils.so
 libdroneinterfaces__rosidl_generator_c.so: /home/jakeluo/Software/ros2_rolling/install/rcutils/lib/librcutils.so
 libdroneinterfaces__rosidl_generator_c.so: CMakeFiles/droneinterfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C shared library libdroneinterfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C shared library libdroneinterfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/droneinterfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -469,6 +500,10 @@ CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/dr
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.h
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__struct.h
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__type_support.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/msg/target_location.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/msg/detail/target_location__struct.h
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/msg/detail/target_location__type_support.h
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_register__functions.c
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_controller__functions.c
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_pool_status__functions.c
@@ -479,6 +514,7 @@ CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/dr
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/action/detail/go_point__functions.c
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_map__functions.c
 CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/srv/detail/drone_slam__functions.c
+CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/droneinterfaces/msg/detail/target_location__functions.c
 	cd /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/CMakeFiles/droneinterfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/droneinterfaces__rosidl_generator_c.dir/depend
 

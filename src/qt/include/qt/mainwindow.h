@@ -34,8 +34,7 @@
 #include <QDial>
 #include <QSlider>
 #include <ctime>
-#include "2DMovementKalmanFilter.h"
-#include "CameraAndPhyPointTransformer.h"
+// #include "Eigen/Dense"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -100,8 +99,8 @@ private:
     time_t curr_time1, curr_time2;
 	tm *curr_tm1, *curr_tm2;
 	char time_string1[100], time_string2[100];
-    Eigen::Matrix4f intrinsicMatrix, TCW1, TCW2;
-    CameraAndPhyPointTransformer *targetPosition;
+    // Eigen::Matrix4f intrinsicMatrix, TCW1, TCW2;
+    // CameraAndPhyPointTransformer *targetPosition;
     // Eigen::Matrix<float, 4, 1>  predictResult1, predictResult2;
     // std::array<int32_t, 2> humanpartpos1={0,0}, humanpartpos2={0,0};
     // std::array<int32_t, 10> kalmanHumanPose1 = {0,0,0,0,0,0,0,0,0,0}, kalmanHumanPose2 = {0,0,0,0,0,0,0,0,0,0};

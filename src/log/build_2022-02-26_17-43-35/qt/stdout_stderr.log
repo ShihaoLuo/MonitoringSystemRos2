@@ -1,0 +1,48 @@
+[ 14%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 14%] Built target gui_autogen
+[ 28%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:[m[K [01;35m[Kwarning: [m[Kignoring #pragma   [[01;35m[K-Wunknown-pragmas[m[K]
+    3 | #pragma
+      | 
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:101:5:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ does not name a type
+  101 |     [01;31m[KEigen[m[K::Matrix4f intrinsicMatrix, TCW1, TCW2;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:102:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  102 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:101:5:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ does not name a type
+  101 |     [01;31m[KEigen[m[K::Matrix4f intrinsicMatrix, TCW1, TCW2;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:102:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  102 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:101:5:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ does not name a type
+  101 |     [01;31m[KEigen[m[K::Matrix4f intrinsicMatrix, TCW1, TCW2;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:102:5:[m[K [01;31m[Kerror: [m[K‘[01m[KCameraAndPhyPointTransformer[m[K’ does not name a type
+  102 |     [01;31m[KCameraAndPhyPointTransformer[m[K *targetPosition;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:550:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  550 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:106：CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[2]: *** [CMakeFiles/gui.dir/build.make:80：CMakeFiles/gui.dir/src/main.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

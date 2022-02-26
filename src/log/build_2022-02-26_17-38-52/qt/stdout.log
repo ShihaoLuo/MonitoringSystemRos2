@@ -1,0 +1,5 @@
+[ 14%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 14%] Built target gui_autogen
+[ 28%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m

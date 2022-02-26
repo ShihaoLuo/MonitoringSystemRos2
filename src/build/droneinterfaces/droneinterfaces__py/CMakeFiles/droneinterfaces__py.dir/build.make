@@ -66,6 +66,7 @@ droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneint
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/_go_point.py
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_map.py
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_slam.py
+droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_target_location.py
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/__init__.py
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/__init__.py
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/__init__.py
@@ -79,6 +80,7 @@ droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneint
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/_go_point_s.c
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_map_s.c
 droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_slam_s.c
+droneinterfaces__py/CMakeFiles/droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_target_location_s.c
 
 
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/jakeluo/Software/ros2_rolling/install/rosidl_generator_py/lib/rosidl_generator_py/rosidl_generator_py
@@ -104,6 +106,7 @@ rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_int
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/droneinterfaces/action/GoPoint.idl
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/droneinterfaces/srv/DroneMap.idl
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/droneinterfaces/srv/DroneSlam.idl
+rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/droneinterfaces/msg/TargetLocation.idl
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl
@@ -150,6 +153,9 @@ rosidl_generator_py/droneinterfaces/srv/_drone_map.py: rosidl_generator_py/drone
 rosidl_generator_py/droneinterfaces/srv/_drone_slam.py: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/droneinterfaces/srv/_drone_slam.py
 
+rosidl_generator_py/droneinterfaces/msg/_target_location.py: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/droneinterfaces/msg/_target_location.py
+
 rosidl_generator_py/droneinterfaces/srv/__init__.py: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/droneinterfaces/srv/__init__.py
 
@@ -189,6 +195,9 @@ rosidl_generator_py/droneinterfaces/srv/_drone_map_s.c: rosidl_generator_py/dron
 rosidl_generator_py/droneinterfaces/srv/_drone_slam_s.c: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/droneinterfaces/srv/_drone_slam_s.c
 
+rosidl_generator_py/droneinterfaces/msg/_target_location_s.c: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/droneinterfaces/msg/_target_location_s.c
+
 droneinterfaces__py: droneinterfaces__py/CMakeFiles/droneinterfaces__py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -203,6 +212,7 @@ droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_human_pose_coor.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/_go_point.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_map.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_slam.py
+droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_target_location.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/__init__.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/__init__.py
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/__init__.py
@@ -216,6 +226,7 @@ droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_human_pose_coor_s.
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/action/_go_point_s.c
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_map_s.c
 droneinterfaces__py: rosidl_generator_py/droneinterfaces/srv/_drone_slam_s.c
+droneinterfaces__py: rosidl_generator_py/droneinterfaces/msg/_target_location_s.c
 droneinterfaces__py: droneinterfaces__py/CMakeFiles/droneinterfaces__py.dir/build.make
 
 .PHONY : droneinterfaces__py

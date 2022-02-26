@@ -21,6 +21,8 @@ droneinterfaces/msg/_human_pose_coor.py
 droneinterfaces/msg/_human_pose_coor_s.c
 droneinterfaces/msg/_position_array.py
 droneinterfaces/msg/_position_array_s.c
+droneinterfaces/msg/_target_location.py
+droneinterfaces/msg/_target_location_s.c
 droneinterfaces/srv/__init__.py
 droneinterfaces/srv/_drone_controller.py
 droneinterfaces/srv/_drone_controller_s.c
