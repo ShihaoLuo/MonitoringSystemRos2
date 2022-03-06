@@ -1,0 +1,2 @@
+source;share/openpose/environment/ament_prefix_path.sh
+source;share/openpose/environment/path.sh

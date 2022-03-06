@@ -1,0 +1,4 @@
+source;share/openpose/local_setup.bash
+source;share/openpose/local_setup.dsv
+source;share/openpose/local_setup.sh
+source;share/openpose/local_setup.zsh

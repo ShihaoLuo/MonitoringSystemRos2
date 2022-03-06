@@ -76,6 +76,7 @@ CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/dro
 CMakeFiles/droneinterfaces: rosidl_cmake/srv/DroneSlam_Request.msg
 CMakeFiles/droneinterfaces: rosidl_cmake/srv/DroneSlam_Response.msg
 CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/TargetLocation.msg
+CMakeFiles/droneinterfaces: /home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/HumanBox.msg
 CMakeFiles/droneinterfaces: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/droneinterfaces: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/droneinterfaces: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl

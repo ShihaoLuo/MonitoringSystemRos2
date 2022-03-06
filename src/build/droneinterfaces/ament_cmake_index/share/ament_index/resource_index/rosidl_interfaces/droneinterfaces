@@ -2,6 +2,8 @@ action/GoPoint.action
 action/GoPoint.idl
 msg/FrameArray.idl
 msg/FrameArray.msg
+msg/HumanBox.idl
+msg/HumanBox.msg
 msg/HumanPoseCoor.idl
 msg/HumanPoseCoor.msg
 msg/PositionArray.idl

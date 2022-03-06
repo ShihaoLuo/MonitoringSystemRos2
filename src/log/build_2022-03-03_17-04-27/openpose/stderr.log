@@ -1,0 +1,5 @@
+CMake Error at CMakeLists.txt:45 (cmake_print_variables):
+  Unknown CMake command "cmake_print_variables".
+
+
+make: *** [Makefile:266：cmake_check_build_system] 错误 1

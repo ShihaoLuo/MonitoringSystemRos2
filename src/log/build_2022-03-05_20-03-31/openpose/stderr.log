@@ -1,0 +1,19 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:3:19:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+    3 | Openpose::Openpose[01;31m[K([m[Kname)
+      |                   [01;31m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:87:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOpenpose::Openpose(char*&)[m[K’
+   87 |     Openpose openpose(argv[1][01;31m[K)[m[K;
+      |                              [01;31m[K^[m[K
+In file included from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:1[m[K:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include/openpose.hpp:22:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KOpenpose::Openpose()[m[K’
+   22 |     [01;36m[KOpenpose[m[K();
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include/openpose.hpp:22:5:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include/openpose.hpp:19:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KOpenpose::Openpose(const Openpose&)[m[K’
+   19 | class [01;36m[KOpenpose[m[K
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include/openpose.hpp:19:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kchar*[m[K’ to ‘[01m[Kconst Openpose&[m[K’
+make[2]: *** [CMakeFiles/estimater.dir/build.make:63：CMakeFiles/estimater.dir/src/openpose.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/estimater.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

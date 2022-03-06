@@ -11,6 +11,7 @@
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:action/GoPoint.action",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneMap.srv",
     "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:srv/DroneSlam.srv",
-    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/TargetLocation.msg"
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/TargetLocation.msg",
+    "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces:msg/HumanBox.msg"
   ]
 }

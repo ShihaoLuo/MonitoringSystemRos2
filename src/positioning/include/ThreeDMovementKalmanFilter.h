@@ -5,14 +5,16 @@
 class ThreeDMovementKalmanFilter
 {
 public:
-    ThreeDMovementKalmanFilter(float samplingTime, 
-        int initialLocation[3], 
-        int initialuncertainty,
-        float accRandVar,
-        int measurementErrorStandardDeviation);
+    ThreeDMovementKalmanFilter();
     ~ThreeDMovementKalmanFilter();
     Eigen::Matrix<float, 6, 1> predict();
-    void update(std::array<int32_t, 3> measuredLocation);
+    void update(std::array<float, 3> measuredLocation);
+    void initial(
+        float samplingTime, 
+        std::array<float, 3UL> initialLocation, 
+        float initialuncertainty,
+        float accRandVar,
+        float measurementErrorStandardDeviation);
 
 private:
     Eigen::Matrix<float, 6, 1> states0, states1; //states1 = statesTransitionMatrix*states0

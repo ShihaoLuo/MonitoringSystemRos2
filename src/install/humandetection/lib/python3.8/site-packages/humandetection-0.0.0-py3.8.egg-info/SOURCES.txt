@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/humandetection/humandetection.egg-info/PKG-INFO
+../build/humandetection/humandetection.egg-info/SOURCES.txt
+../build/humandetection/humandetection.egg-info/dependency_links.txt
+../build/humandetection/humandetection.egg-info/entry_points.txt
+../build/humandetection/humandetection.egg-info/requires.txt
+../build/humandetection/humandetection.egg-info/top_level.txt
+../build/humandetection/humandetection.egg-info/zip-safe
+humandetection/__init__.py
+humandetection/detector.py
+resource/humandetection
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,11 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:[m[K In constructor ‘[01m[KOpenpose::Openpose(const char*)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:7:5:[m[K [01;31m[Kerror: [m[K‘[01m[KframeSubscription1_[m[K’ was not declared in this scope; did you mean ‘[01m[KframeSubscription[m[K’?
+    7 |     [01;31m[KframeSubscription1_[m[K = nh_->create_subscription<droneinterfaces::msg::FrameArray>(
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[KframeSubscription[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src/openpose.cpp:10:20:[m[K [01;31m[Kerror: [m[K‘[01m[KMainWindow[m[K’ has not been declared
+   10 |         std::bind(&[01;31m[KMainWindow[m[K::frameCallback1, this, std::placeholders::_1));
+      |                    [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/estimater.dir/build.make:63：CMakeFiles/estimater.dir/src/openpose.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/estimater.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

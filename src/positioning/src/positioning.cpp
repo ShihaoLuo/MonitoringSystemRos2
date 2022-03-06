@@ -2,32 +2,41 @@
 
 Positioning::Positioning()
 {
-
+    nh_ = rclcpp::Node::make_shared("positioning");
+    callbackgroup1 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup2 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+    kalmanFilter_ = std::make_shared<ThreeDMovementKalmanFilter>();
+    kalmanFilter_->initial(0.05, initialLocation, INITIALUNCERTAINTY, ACCRANDVAR, MEASUREMENTERRORSTD);
     worldPoint = new cv::Mat(4, 1, CV_32F);
     inMatrix <<921.171, 0, 459.9, 0, 
             0, 919.018, 351.24, 0,
             0, 0, 1, 0;
-    nh_ = rclcpp::Node::make_shared("positioning");
-    humanPoseSubscription1_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
-        "t1_HumanPose",
+    auto opt1 = rclcpp::SubscriptionOptions();
+    opt1.callback_group = callbackgroup1;
+    auto opt2 = rclcpp::SubscriptionOptions();
+    opt2.callback_group = callbackgroup2;
+    humanBoxSubscription1_ = nh_->create_subscription<droneinterfaces::msg::HumanBox>(
+        "t1_HumanBox",
         1,
-        std::bind(&Positioning::humanPoseCallback1, this, std::placeholders::_1));
-    humanPoseSubscription2_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
-        "t2_HumanPose",
+        std::bind(&Positioning::humanBoxCallback1, this, std::placeholders::_1), opt1);
+    humanBoxSubscription2_ = nh_->create_subscription<droneinterfaces::msg::HumanBox>(
+        "t2_HumanBox",
         1,
-        std::bind(&Positioning::humanPoseCallback2, this, std::placeholders::_1));
+        std::bind(&Positioning::humanBoxCallback2, this, std::placeholders::_1), opt2);
     positionSubscription1_ = nh_->create_subscription<droneinterfaces::msg::PositionArray>(
         "t1_Positionarray",
         1,
-        std::bind(&Positioning::positionCallback1, this, std::placeholders::_1));
+        std::bind(&Positioning::positionCallback1, this, std::placeholders::_1), opt1);
     positionSubscription2_ = nh_->create_subscription<droneinterfaces::msg::PositionArray>(
         "t2_Positionarray",
         1,
-        std::bind(&Positioning::positionCallback2, this, std::placeholders::_1));
+        std::bind(&Positioning::positionCallback2, this, std::placeholders::_1), opt2);
     targetLocationPublisher_ = nh_->create_publisher<droneinterfaces::msg::TargetLocation>("targetLocation", 1);
     timer_ = nh_->create_wall_timer(
-        45ms,
-        std::bind(&Positioning::getTargetPosition, this)
+        50ms,
+        std::bind(&Positioning::getKalmanTargetPosition, this),
+        callbackgroup3
     );
 }
 
@@ -36,14 +45,20 @@ Positioning::~Positioning()
     delete worldPoint;
 }
 
-void Positioning::humanPoseCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+void Positioning::humanBoxCallback1(const droneinterfaces::msg::HumanBox::SharedPtr msg)
 {
-    memcpy(humanPose1.data(), msg->coordinate.data(), 40);
+    humanBox1[0] = (int)msg->coordinate[0];
+    humanBox1[1] = (int)msg->coordinate[1];
+    humanBox1[2] = (int)msg->coordinate[2];
+    humanBox1[3] = (int)msg->coordinate[3];
 }
 
-void Positioning::humanPoseCallback2(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+void Positioning::humanBoxCallback2(const droneinterfaces::msg::HumanBox::SharedPtr msg)
 {
-    memcpy(humanPose2.data(), msg->coordinate.data(), 40);
+    humanBox2[0] = (int)msg->coordinate[0];
+    humanBox2[1] = (int)msg->coordinate[1];
+    humanBox2[2] = (int)msg->coordinate[2];
+    humanBox2[3] = (int)msg->coordinate[3];
 }
 
 
@@ -63,13 +78,15 @@ void Positioning::positionCallback2(const droneinterfaces::msg::PositionArray::S
 void Positioning::getTargetPosition()
 {
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-    if(ms - ptime1 < 45)
+    // std::cout<<"period:"<<ms-oldtime<<std::endl;
+    // oldtime = ms;
+    if(ms - ptime1 < 100)
     {
-        if(ms - ptime2 < 45)
+        if(ms - ptime2 < 100)
         {
-            if(humanPose1[0]==-1 || humanPose2[0]==-1)
+            if(humanBox1[0]==-1 || humanBox2[0]==-1)
             {
-                targetLocation_.time = ptime1;
+                targetLocation_.time = ms;
                 memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
                 targetLocationPublisher_ -> publish(targetLocation_);
             }
@@ -81,10 +98,10 @@ void Positioning::getTargetPosition()
                 cv::Mat pm2(3, 4, CV_32F, tmp2.data());
                 cv::Mat pp1(2, 1, CV_32F);
                 cv::Mat pp2(2, 1, CV_32F);
-                pp1.at<float>(0,0) = humanPose1[0];
-                pp1.at<float>(1,0) = humanPose1[1];
-                pp2.at<float>(0,0) = humanPose2[0];
-                pp2.at<float>(1,0) = humanPose2[1];
+                pp1.at<float>(0,0) = humanBox1[0];
+                pp1.at<float>(1,0) = humanBox1[1];
+                pp2.at<float>(0,0) = humanBox2[0];
+                pp2.at<float>(1,0) = humanBox2[1];
                 cv::triangulatePoints(
                     pm1, 
                     pm2, 
@@ -93,35 +110,124 @@ void Positioning::getTargetPosition()
                     *worldPoint);
                 (*worldPoint) = (*worldPoint) / worldPoint->at<float>(3, 0);
                 memcpy(targetWorldPoint.data(), worldPoint->data, 12);
-                // std::cout<<*worldPoint<<std::endl;
-                // std::cout<<targetWorldPoint[0]/targetWorldPoint[3]<<" "<<targetWorldPoint[1]/targetWorldPoint[3]<<" "<<targetWorldPoint[2]/targetWorldPoint[3];
-                // targetWorldPoint[0] /= targetWorldPoint[3];
-                // targetWorldPoint[1] /= targetWorldPoint[3];
-                // targetWorldPoint[2] /= targetWorldPoint[3];
-                // std::cout<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2];
-                targetLocation_.time = ptime1;
+                targetLocation_.time = ms;
                 memcpy(targetLocation_.location.data(), targetWorldPoint.data(), 12);
+                std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
                 targetLocationPublisher_ -> publish(targetLocation_);
             }
         }
         else
         {
-            targetLocation_.time = ptime1;
+            targetLocation_.time = ms;
             memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
             targetLocationPublisher_ -> publish(targetLocation_);
         }
     }
     else
     {
-        targetLocation_.time = ptime1;
+        targetLocation_.time = ms;
         memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
         targetLocationPublisher_ -> publish(targetLocation_);
     }
 }
 
+void Positioning::getKalmanTargetPosition()
+{
+    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    // if(ms - oldtime > 5000)
+    // {
+    //     targetLocation_.location = defaultLostLocation;
+    //     kalmanFilter_->initial(0.05, initialLocation, INITIALUNCERTAINTY, ACCRANDVAR, MEASUREMENTERRORSTD);
+    // }
+    if(ms - ptime1 < 45)
+    {
+        if(ms - ptime2 < 45)
+        {
+            if(humanBox1[0]==-1 || humanBox2[0]==-1)
+            {
+                targetLocation_.time = ms;
+                kalmanFilter_->update(oldTargetWorldPoint);
+                auto tmp = kalmanFilter_->predict();
+                // std::cout<<"tmp1"<<tmp<<std::endl;
+                targetLocation_.location[0] = tmp(0, 0);
+                targetLocation_.location[1] = tmp(2, 0);
+                targetLocation_.location[2] = tmp(4, 0);
+                // memcpy(targetLocation_.location.data(), tmp.data(), 12);
+                // targetLocationPublisher_ -> publish(targetLocation_);
+            }
+            else
+            {
+                oldtime = ms;
+                Eigen::Matrix<float, 4, 3> tmp1 = (inMatrix * TCW1).transpose();
+                Eigen::Matrix<float, 4, 3> tmp2 = (inMatrix * TCW2).transpose();
+                cv::Mat pm1(3, 4, CV_32F, tmp1.data());
+                cv::Mat pm2(3, 4, CV_32F, tmp2.data());
+                cv::Mat pp1(2, 1, CV_32F);
+                cv::Mat pp2(2, 1, CV_32F);
+                pp1.at<float>(0,0) = humanBox1[0];
+                pp1.at<float>(1,0) = humanBox1[1];
+                pp2.at<float>(0,0) = humanBox2[0];
+                pp2.at<float>(1,0) = humanBox2[1];
+                cv::triangulatePoints(
+                    pm1, 
+                    pm2, 
+                    pp1,
+                    pp2,
+                    *worldPoint);
+                (*worldPoint) = (*worldPoint) / worldPoint->at<float>(3, 0);
+                memcpy(targetWorldPoint.data(), worldPoint->data, 12);
+                memcpy(oldTargetWorldPoint.data(), worldPoint->data, 12);
+                std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
+                // std::cout<<*worldPoint<<std::endl;
+                // std::cout<<targetWorldPoint[0]/targetWorldPoint[3]<<" "<<targetWorldPoint[1]/targetWorldPoint[3]<<" "<<targetWorldPoint[2]/targetWorldPoint[3];
+                // targetWorldPoint[0] /= targetWorldPoint[3];
+                // targetWorldPoint[1] /= targetWorldPoint[3];
+                // targetWorldPoint[2] /= targetWorldPoint[3];
+                // std::cout<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2];
+                targetLocation_.time = ms;
+                kalmanFilter_->update(targetWorldPoint);
+                auto tmp = kalmanFilter_->predict();
+                // memcpy(targetLocation_.location.data(), tmp.data(), 12);
+                // targetLocationPublisher_ -> publish(targetLocation_);
+                targetLocation_.location[0] = tmp(0, 0);
+                targetLocation_.location[1] = tmp(2, 0);
+                targetLocation_.location[2] = tmp(4, 0);
+            }
+        }
+        else
+        {
+            targetLocation_.time = ms;
+            kalmanFilter_->update(oldTargetWorldPoint);
+            auto tmp = kalmanFilter_->predict();
+            // std::cout<<"tmp2"<<tmp<<std::endl;
+            // memcpy(targetLocation_.location.data(), tmp.data(), 12);
+            // targetLocationPublisher_ -> publish(targetLocation_);
+            targetLocation_.location[0] = tmp(0, 0);
+            targetLocation_.location[1] = tmp(2, 0);
+            targetLocation_.location[2] = tmp(4, 0);
+        }
+    }
+    else
+    {
+        targetLocation_.time = ms;
+        kalmanFilter_->update(oldTargetWorldPoint);
+        auto tmp = kalmanFilter_->predict();
+        // std::cout<<"tmp3"<<tmp<<std::endl;
+        // memcpy(targetLocation_.location.data(), tmp.data(), 12);
+        // targetLocationPublisher_ -> publish(targetLocation_);
+        targetLocation_.location[0] = tmp(0, 0);
+        targetLocation_.location[1] = tmp(2, 0);
+        targetLocation_.location[2] = tmp(4, 0);
+    }
+    targetLocationPublisher_ -> publish(targetLocation_);
+}
+
 void Positioning::spin()
 {
-    rclcpp::spin(nh_);
+    rclcpp::executors::MultiThreadedExecutor exector_;
+    exector_.add_node(nh_);
+    exector_.spin();
+    // rclcpp::spin(nh_);
 }
     
 int main(int argc, char** argv)

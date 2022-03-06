@@ -1,0 +1,24 @@
+[0.574s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection': PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/humandetection build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log --single-version-externally-managed
+[1.028s] running egg_info
+[1.029s] writing ../build/humandetection/humandetection.egg-info/PKG-INFO
+[1.029s] writing dependency_links to ../build/humandetection/humandetection.egg-info/dependency_links.txt
+[1.029s] writing entry points to ../build/humandetection/humandetection.egg-info/entry_points.txt
+[1.029s] writing requirements to ../build/humandetection/humandetection.egg-info/requires.txt
+[1.029s] writing top-level names to ../build/humandetection/humandetection.egg-info/top_level.txt
+[4.581s] reading manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+[4.582s] writing manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+[4.582s] running build
+[4.582s] running build_py
+[4.583s] copying humandetection/models/experimental.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection/models
+[4.583s] running install
+[4.586s] running install_lib
+[4.587s] copying /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection/models/experimental.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection/models
+[4.589s] byte-compiling /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection/models/experimental.py to experimental.cpython-38.pyc
+[4.591s] running install_data
+[4.592s] running install_egg_info
+[4.592s] removing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info' (and everything under it)
+[4.593s] Copying ../build/humandetection/humandetection.egg-info to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info
+[4.594s] running install_scripts
+[4.623s] Installing detecter script to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/humandetection
+[4.623s] writing list of installed files to '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log'
+[4.646s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection' returned '0': PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/humandetection build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log --single-version-externally-managed

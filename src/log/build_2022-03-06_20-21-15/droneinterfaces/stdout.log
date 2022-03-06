@@ -1,0 +1,19 @@
+[  0%] Built target droneinterfaces__cpp
+[ 12%] Built target droneinterfaces__rosidl_generator_c
+[ 12%] Built target ament_cmake_python_symlink_droneinterfaces
+[ 24%] Built target droneinterfaces__rosidl_typesupport_cpp
+[ 36%] Built target droneinterfaces__rosidl_typesupport_introspection_cpp
+[ 48%] Built target droneinterfaces__rosidl_typesupport_introspection_c
+[ 60%] Built target droneinterfaces__rosidl_typesupport_c
+[ 71%] Built target droneinterfaces__rosidl_typesupport_fastrtps_cpp
+[ 83%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c
+[ 83%] Built target droneinterfaces
+[ 84%] Built target droneinterfaces__py
+[ 95%] Built target droneinterfaces__python
+[ 97%] Built target droneinterfaces__rosidl_typesupport_c__pyext
+[ 98%] Built target droneinterfaces__rosidl_typesupport_introspection_c__pyext
+[100%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing droneinterfaces.egg-info/PKG-INFO
+writing dependency_links to droneinterfaces.egg-info/dependency_links.txt
+writing top-level names to droneinterfaces.egg-info/top_level.txt

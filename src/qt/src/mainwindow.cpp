@@ -70,14 +70,14 @@ MainWindow::MainWindow(QWidget *parent)
         std::bind(&MainWindow::positionCallback2, this, std::placeholders::_1), opt4);
     auto opt6 = rclcpp::SubscriptionOptions();
     opt6.callback_group = callbackgroup6;
-    humanPoseSubscription1_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
-        "t1_HumanPose",
+    humanBoxSubscription1_ = nh_->create_subscription<droneinterfaces::msg::HumanBox>(
+        "t1_HumanBox",
         1,
-        std::bind(&MainWindow::humanposeCallback1, this, std::placeholders::_1), opt6);
-    humanPoseSubscription2_ = nh_->create_subscription<droneinterfaces::msg::HumanPoseCoor>(
-        "t2_HumanPose",
+        std::bind(&MainWindow::humanboxCallback1, this, std::placeholders::_1), opt6);
+    humanBoxSubscription2_ = nh_->create_subscription<droneinterfaces::msg::HumanBox>(
+        "t2_HumanBox",
         1,
-        std::bind(&MainWindow::humanposeCallback2, this, std::placeholders::_1), opt6);
+        std::bind(&MainWindow::humanboxCallback2, this, std::placeholders::_1), opt6);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     droneShutDownClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_ShutDown");
     droneConnectClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_Connect");
@@ -171,14 +171,24 @@ void MainWindow::saveImg2()
     }
 }
 
-void MainWindow::humanposeCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+void MainWindow::humanboxCallback1(const droneinterfaces::msg::HumanBox::SharedPtr msg)
 {   
-    humanPoseCoor1 = msg->coordinate;
+    // humanPoseCoor1 = msg->coordinate;
+    // std::cout<<"humanbox1:"<<msg->coordinate[0]<<" "<<msg->coordinate[1]<<" "<<msg->coordinate[2]<<" "<<msg->coordinate[3]<<" "<<std::endl;
+    humanBox1[0] = (int)msg->coordinate[0];
+    humanBox1[1] = (int)msg->coordinate[1];
+    humanBox1[2] = (int)msg->coordinate[2];
+    humanBox1[3] = (int)msg->coordinate[3];
 }
 
-void MainWindow::humanposeCallback2(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg)
+void MainWindow::humanboxCallback2(const droneinterfaces::msg::HumanBox::SharedPtr msg)
 {   
-    humanPoseCoor2 = msg->coordinate;
+    // humanPoseCoor2 = msg->coordinate;
+    // std::cout<<"humanbox2:"<<msg->coordinate[0]<<" "<<msg->coordinate[1]<<" "<<msg->coordinate[2]<<" "<<msg->coordinate[3]<<" "<<std::endl;
+    humanBox2[0] = (int)msg->coordinate[0];
+    humanBox2[1] = (int)msg->coordinate[1];
+    humanBox2[2] = (int)msg->coordinate[2];
+    humanBox2[3] = (int)msg->coordinate[3];
 }
 
 void MainWindow::saveMap()
@@ -978,58 +988,13 @@ void MainWindow::updateFrame2()
 void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im1.data, msg->framebuf.data(), 2073600);
-    // if(humanPoseCoor1[0] == -1)
-    // {
-    //     humanpartpos1[0] = preHumanPoseCoor1[0];
-    //     humanpartpos1[1] = preHumanPoseCoor1[1];
-    // }else
-    // {
-    //     humanpartpos1[0] = humanPoseCoor1[0];
-    //     humanpartpos1[1] = humanPoseCoor1[1];
-    //     preHumanPoseCoor1[0] = humanPoseCoor1[0];
-    //     preHumanPoseCoor1[1] = humanPoseCoor1[1];
-    // }
-    // kalmanFilterH1->update(humanpartpos1);
-    // predictResult1 = kalmanFilterH1->predict();
-    // kalmanHumanPose1[0] = predictResult1[0];
-    // kalmanHumanPose1[1] = predictResult1[2];
-    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[0], kalmanHumanPose1[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    // if(humanPoseCoor1[2] == -1)
-    // {
-    //     humanpartpos1[0] = preHumanPoseCoor1[2];
-    //     humanpartpos1[1] = preHumanPoseCoor1[3];
-    // }else
-    // {
-    //     humanpartpos1[0] = humanPoseCoor1[2];
-    //     humanpartpos1[1] = humanPoseCoor1[3];
-    //     preHumanPoseCoor1[2] = humanPoseCoor1[2];
-    //     preHumanPoseCoor1[3] = humanPoseCoor1[3];
-    // }
-    // kalmanFilterN1->update(humanpartpos1);
-    // predictResult1 = kalmanFilterN1->predict();
-    // kalmanHumanPose1[2] = predictResult1[0];
-    // kalmanHumanPose1[3] = predictResult1[2];
-    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[2], kalmanHumanPose1[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    // if(humanPoseCoor1[4] == -1)
-    // {
-    //     humanpartpos1[0] = preHumanPoseCoor1[4];
-    //     humanpartpos1[1] = preHumanPoseCoor1[5];
-    // }else
-    // {
-    //     humanpartpos1[0] = humanPoseCoor1[4];
-    //     humanpartpos1[1] = humanPoseCoor1[5];
-    //     preHumanPoseCoor1[4] = humanPoseCoor1[4];
-    //     preHumanPoseCoor1[5] = humanPoseCoor1[5];
-    // }
-    // kalmanFilterB1->update(humanpartpos1);
-    // predictResult1 = kalmanFilterB1->predict();
-    // kalmanHumanPose1[4] = predictResult1[0];
-    // kalmanHumanPose1[5] = predictResult1[2];
-    // cv::circle(im1, cv::Point2i(kalmanHumanPose1[4], kalmanHumanPose1[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[0], humanPoseCoor1[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[2], humanPoseCoor1[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    cv::circle(im1, cv::Point2i(humanPoseCoor1[4], humanPoseCoor1[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    cv::putText(im1, std::to_string(humanPoseCoor1[0])+"-"+std::to_string(humanPoseCoor1[1]), cv::Point(30, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
+    cv::rectangle(
+        im1, 
+        cv::Point(humanBox1[0]-(int)(humanBox1[2]/2), humanBox1[1]-(int)(humanBox1[3]/2)),
+        cv::Point(humanBox1[0]+(int)(humanBox1[2]/2), humanBox1[1]+(int)(humanBox1[3]/2)),
+        cv::Scalar(0, 0, 255),
+        2);
+    cv::putText(im1, std::to_string(humanBox1[0])+"-"+std::to_string(humanBox1[1]), cv::Point(30, 30), cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
     qimage1 = mat2qim(im1);
     if(recordFlag1)
     {
@@ -1044,57 +1009,13 @@ void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPt
 void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg)
 {
     memcpy(im2.data, msg->framebuf.data(), 2073600);
-    // if(humanPoseCoor2[0] == -1)
-    // {
-    //     humanpartpos2[0] = preHumanPoseCoor2[0];
-    //     humanpartpos2[1] = preHumanPoseCoor2[1];
-    // }else
-    // {
-    //     humanpartpos2[0] = humanPoseCoor2[0];
-    //     humanpartpos2[1] = humanPoseCoor2[1];
-    //     preHumanPoseCoor2[0] = humanPoseCoor2[0];
-    //     preHumanPoseCoor2[1] = humanPoseCoor2[1];
-    // }
-    // kalmanFilterH2->update(humanpartpos2);
-    // predictResult2 = kalmanFilterH2->predict();
-    // kalmanHumanPose2[0] = predictResult2[0];
-    // kalmanHumanPose2[1] = predictResult2[2];
-    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[0], kalmanHumanPose2[1]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    // if(humanPoseCoor2[2] == -1)
-    // {
-    //     humanpartpos2[0] = preHumanPoseCoor2[2];
-    //     humanpartpos2[1] = preHumanPoseCoor2[3];
-    // }else
-    // {
-    //     humanpartpos2[0] = humanPoseCoor2[2];
-    //     humanpartpos2[1] = humanPoseCoor2[3];
-    //     preHumanPoseCoor2[2] = humanPoseCoor2[2];
-    //     preHumanPoseCoor2[3] = humanPoseCoor2[3];
-    // }
-    // kalmanFilterN2->update(humanpartpos2);
-    // predictResult2 = kalmanFilterN2->predict();
-    // kalmanHumanPose2[2] = predictResult2[0];
-    // kalmanHumanPose2[3] = predictResult2[2];
-    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[2], kalmanHumanPose2[3]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    // if(humanPoseCoor2[4] == -1)
-    // {
-    //     humanpartpos2[0] = preHumanPoseCoor2[4];
-    //     humanpartpos2[1] = preHumanPoseCoor2[5];
-    // }else
-    // {
-    //     humanpartpos2[0] = humanPoseCoor2[4];
-    //     humanpartpos2[1] = humanPoseCoor2[5];
-    //     preHumanPoseCoor2[4] = humanPoseCoor2[4];
-    //     preHumanPoseCoor2[5] = humanPoseCoor2[5];
-    // }
-    // kalmanFilterB2->update(humanpartpos2);
-    // predictResult2 = kalmanFilterB2->predict();
-    // kalmanHumanPose2[4] = predictResult2[0];
-    // kalmanHumanPose2[5] = predictResult2[2];
-    // cv::circle(im2, cv::Point2i(kalmanHumanPose2[4], kalmanHumanPose2[5]), 6, cv::Scalar(255, 0, 0), cv::FILLED);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[0], humanPoseCoor2[1]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[2], humanPoseCoor2[3]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
-    cv::circle(im2, cv::Point2i(humanPoseCoor2[4], humanPoseCoor2[5]), 6, cv::Scalar(0, 0, 255), cv::FILLED);
+    cv::rectangle(
+        im2, 
+        cv::Point(humanBox2[0]-(int)(humanBox2[2]/2), humanBox2[1]-(int)(humanBox2[3]/2)),
+        cv::Point(humanBox2[0]+(int)(humanBox2[2]/2), humanBox2[1]+(int)(humanBox2[3]/2)),
+        cv::Scalar(0, 0, 255),
+        2);
+    cv::putText(im2, std::to_string(humanBox2[0])+"-"+std::to_string(humanBox2[1]), cv::Point(30, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
     if(recordFlag2)
     {
         time(&curr_time2);

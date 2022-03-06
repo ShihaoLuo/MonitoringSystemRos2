@@ -206,6 +206,33 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
+src/ThreeDMovementKalmanFilter.o: src/ThreeDMovementKalmanFilter.cpp.o
+
+.PHONY : src/ThreeDMovementKalmanFilter.o
+
+# target to build an object file
+src/ThreeDMovementKalmanFilter.cpp.o:
+	$(MAKE) -f CMakeFiles/positioning.dir/build.make CMakeFiles/positioning.dir/src/ThreeDMovementKalmanFilter.cpp.o
+.PHONY : src/ThreeDMovementKalmanFilter.cpp.o
+
+src/ThreeDMovementKalmanFilter.i: src/ThreeDMovementKalmanFilter.cpp.i
+
+.PHONY : src/ThreeDMovementKalmanFilter.i
+
+# target to preprocess a source file
+src/ThreeDMovementKalmanFilter.cpp.i:
+	$(MAKE) -f CMakeFiles/positioning.dir/build.make CMakeFiles/positioning.dir/src/ThreeDMovementKalmanFilter.cpp.i
+.PHONY : src/ThreeDMovementKalmanFilter.cpp.i
+
+src/ThreeDMovementKalmanFilter.s: src/ThreeDMovementKalmanFilter.cpp.s
+
+.PHONY : src/ThreeDMovementKalmanFilter.s
+
+# target to generate assembly for a file
+src/ThreeDMovementKalmanFilter.cpp.s:
+	$(MAKE) -f CMakeFiles/positioning.dir/build.make CMakeFiles/positioning.dir/src/ThreeDMovementKalmanFilter.cpp.s
+.PHONY : src/ThreeDMovementKalmanFilter.cpp.s
+
 src/positioning.o: src/positioning.cpp.o
 
 .PHONY : src/positioning.o
@@ -249,6 +276,9 @@ help:
 	@echo "... positioning"
 	@echo "... positioning_uninstall"
 	@echo "... uninstall"
+	@echo "... src/ThreeDMovementKalmanFilter.o"
+	@echo "... src/ThreeDMovementKalmanFilter.i"
+	@echo "... src/ThreeDMovementKalmanFilter.s"
 	@echo "... src/positioning.o"
 	@echo "... src/positioning.i"
 	@echo "... src/positioning.s"

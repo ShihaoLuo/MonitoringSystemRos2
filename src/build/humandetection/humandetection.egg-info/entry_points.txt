@@ -1,0 +1,3 @@
+[console_scripts]
+detecter = humandetection.detector:main
+

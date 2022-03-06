@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/humandetection/humandetection.egg-info
+writing ../build/humandetection/humandetection.egg-info/PKG-INFO
+writing dependency_links to ../build/humandetection/humandetection.egg-info/dependency_links.txt
+writing entry points to ../build/humandetection/humandetection.egg-info/entry_points.txt
+writing requirements to ../build/humandetection/humandetection.egg-info/requires.txt
+writing top-level names to ../build/humandetection/humandetection.egg-info/top_level.txt
+writing manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+reading manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+writing manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection
+copying humandetection/detector.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection
+copying humandetection/__init__.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection
+running install
+running install_lib
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection
+copying /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection/detector.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection
+copying /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build/lib/humandetection/__init__.py -> /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection
+byte-compiling /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection/detector.py to detector.cpython-38.pyc
+byte-compiling /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/ament_index
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/ament_index/resource_index
+creating /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/ament_index/resource_index/packages
+copying resource/humandetection -> /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/ament_index/resource_index/packages
+copying package.xml -> /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/humandetection
+running install_egg_info
+Copying ../build/humandetection/humandetection.egg-info to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info
+running install_scripts
+Installing detecter script to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/humandetection
+writing list of installed files to '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log'

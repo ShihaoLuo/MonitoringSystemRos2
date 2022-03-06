@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/droneinterfaces/msg/__init__.py"
   "../rosidl_generator_py/droneinterfaces/msg/_frame_array.py"
   "../rosidl_generator_py/droneinterfaces/msg/_frame_array_s.c"
+  "../rosidl_generator_py/droneinterfaces/msg/_human_box.py"
+  "../rosidl_generator_py/droneinterfaces/msg/_human_box_s.c"
   "../rosidl_generator_py/droneinterfaces/msg/_human_pose_coor.py"
   "../rosidl_generator_py/droneinterfaces/msg/_human_pose_coor_s.c"
   "../rosidl_generator_py/droneinterfaces/msg/_position_array.py"

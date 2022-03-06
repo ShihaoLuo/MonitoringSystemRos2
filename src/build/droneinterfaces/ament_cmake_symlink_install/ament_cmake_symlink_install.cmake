@@ -400,6 +400,9 @@ ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/TargetLocation.idl" "DESTINATION" "share/droneinterfaces/msg")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/TargetLocation.idl" "DESTINATION" "share/droneinterfaces/msg")
 
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/HumanBox.idl" "DESTINATION" "share/droneinterfaces/msg")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/rosidl_adapter/droneinterfaces/msg/HumanBox.idl" "DESTINATION" "share/droneinterfaces/msg")
+
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneRegister.srv" "DESTINATION" "share/droneinterfaces/srv")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/srv/DroneRegister.srv" "DESTINATION" "share/droneinterfaces/srv")
 
@@ -468,6 +471,9 @@ ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/
 
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/TargetLocation.msg" "DESTINATION" "share/droneinterfaces/msg")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/TargetLocation.msg" "DESTINATION" "share/droneinterfaces/msg")
+
+# install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/HumanBox.msg" "DESTINATION" "share/droneinterfaces/msg")
+ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces/msg/HumanBox.msg" "DESTINATION" "share/droneinterfaces/msg")
 
 # install(FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/droneinterfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces" FILES "/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/droneinterfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -1,0 +1,131 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found droneinterfaces: 0.0.0 (/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rclcpp_action: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp_action/share/rclcpp_action/cmake)
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/include;$<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning
+[35m[1mScanning dependencies of target positioning[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/positioning.dir/src/positioning.cpp.o[0m
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:326[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/include/positioning.h:8[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/src/positioning.cpp:1[m[K:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:[m[K In member function ‘[01m[Kvoid Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::operator()(Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar*, Index, const LhsScalar*, const RhsScalar*, Index, Index, Index, Eigen::internal::gebp_kernel<LhsScalar, RhsScalar, Index, mr, nr, ConjugateLhs, ConjugateRhs>::ResScalar, Index, Index, Index, Index, RhsScalar*)[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:574:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  574 |         [01;35m[Kif[m[K(nr==4) traits.initAcc(C3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:575:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  575 |                   [01;36m[Ktraits[m[K.initAcc(C4);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:946:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  946 |         [01;35m[Kif[m[K(nr==4) R3 = ploadu<ResPacket>(r3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:948:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  948 |                   [01;36m[Ktraits[m[K.acc(C0, alphav, R0);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:951:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  951 |         [01;35m[Kif[m[K(nr==4) traits.acc(C3, alphav, R3);
+      |         [01;35m[K^~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:953:19:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  953 |                   [01;36m[Kpstoreu[m[K(r0, R0);
+      |                   [01;36m[K^~~~~~~[m[K
+In file included from [01m[K/usr/local/include/eigen3/Eigen/Core:284[m[K,
+                 from [01m[K/usr/local/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/include/positioning.h:8[m[K,
+                 from [01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/src/positioning.cpp:1[m[K:
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 3, 4>, Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Derived = Eigen::Matrix<float, 3, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Derived = Eigen::Matrix<float, 3, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h:197:7:[m[K   required from ‘[01m[KEigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::operator const PlainObject&() const [with LhsNested = const Eigen::Matrix<float, 3, 4>&; RhsNested = const Eigen::Matrix<float, 4, 4>&; int NestingFlags = 6; Eigen::CoeffBasedProduct<Lhs, Rhs, NestingFlags>::PlainObject = Eigen::Matrix<float, 3, 4>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Transpose.h:65:63:[m[K   required from ‘[01m[KEigen::Transpose<MatrixType>::Transpose(MatrixType&) [with MatrixType = const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Transpose.h:213:10:[m[K   required from ‘[01m[KEigen::DenseBase<Derived>::ConstTransposeReturnType Eigen::DenseBase<Derived>::transpose() const [with Derived = Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6>; Eigen::DenseBase<Derived>::ConstTransposeReturnType = const Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/src/positioning.cpp:89:79:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+/usr/local/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘[01m[Kstruct Eigen::internal::assign_traits<Eigen::Matrix<float, 4, 3>, Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> > >[m[K’:
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:506:64:[m[K   required from ‘[01m[KDerived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >; Derived = Eigen::Matrix<float, 4, 3>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:414:30:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >; Derived = Eigen::Matrix<float, 4, 3>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:527:123:[m[K   required from ‘[01m[Kstatic Derived& Eigen::internal::assign_selector<Derived, OtherDerived, false, false>::run(Derived&, const OtherDerived&) [with Derived = Eigen::Matrix<float, 4, 3>; OtherDerived = Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:653:72:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >; Derived = Eigen::Matrix<float, 4, 3>][m[K’
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Matrix.h:296:25:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::MatrixBase<OtherDerived>&) [with OtherDerived = Eigen::Transpose<const Eigen::CoeffBasedProduct<const Eigen::Matrix<float, 3, 4>&, const Eigen::Matrix<float, 4, 4>&, 6> >; _Scalar = float; int _Rows = 4; int _Cols = 3; int _Options = 0; int _MaxRows = 4; int _MaxCols = 3][m[K’
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning/src/positioning.cpp:89:79:[m[K   required from here
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:24:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned)[m[K && int(SrcIsAligned),
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:51:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   50 |     MayInnerVectorize  = [01;35m[KMightVectorize && int(InnerSize)!=Dynamic && int(InnerSize)%int(PacketSize)==0[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   51 | [01;35m[K                       && int(DstIsAligned) && int(SrcIsAligned)[m[K,
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:53:57:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   53 |     MayLinearVectorize = [01;35m[KMightVectorize && MayLinearize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:54:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   54 |                        && [01;35m[K(DstIsAligned || MaxSizeAtCompileTime == Dynamic)[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:57:41:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   57 |     MaySliceVectorize  = [01;35m[KMightVectorize && DstHasDirectAccess[m[K
+      |                          [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/include/eigen3/Eigen/src/Core/Assign.h:96:50:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K-Wint-in-bool-context[m[K]
+   96 |                 ? ( bool(MayUnrollCompletely) && [01;35m[Kbool(DstIsAligned)[m[K ? int(CompleteUnrolling) : int(NoUnrolling) )
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[ 66%] [32m[1mLinking CXX executable positioning[0m
+[100%] Built target positioning
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/positioning/positioning
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/package_run_dependencies/positioning
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/parent_prefix_path/positioning
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.sh
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.dsv
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.bash
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.sh
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.zsh
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.dsv
+-- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.dsv
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/packages/positioning
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig.cmake
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig-version.cmake
+-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.xml

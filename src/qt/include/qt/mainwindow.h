@@ -14,7 +14,7 @@
 #include "droneinterfaces/msg/frame_array.hpp"
 #include "droneinterfaces/msg/position_array.hpp"
 #include "droneinterfaces/srv/drone_map.hpp"
-#include "droneinterfaces/msg/human_pose_coor.hpp"
+#include "droneinterfaces/msg/human_box.hpp"
 #include <thread>
 #include <functional>
 #include "droneinterfaces/srv/drone_pool_status.hpp"
@@ -105,8 +105,9 @@ private:
     // std::array<int32_t, 2> humanpartpos1={0,0}, humanpartpos2={0,0};
     // std::array<int32_t, 10> kalmanHumanPose1 = {0,0,0,0,0,0,0,0,0,0}, kalmanHumanPose2 = {0,0,0,0,0,0,0,0,0,0};
     // TwoDMovementKalmanFilter *kalmanFilterH1, *kalmanFilterN1, *kalmanFilterB1, *kalmanFilterH2, *kalmanFilterN2, *kalmanFilterB2;
-    std::array<int, 10UL> preHumanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, preHumanPoseCoor2={0,0,0,0,0,0,0,0,0,0},
-        humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
+    // std::array<int, 10UL> preHumanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, preHumanPoseCoor2={0,0,0,0,0,0,0,0,0,0},
+    //     humanPoseCoor1={0,0,0,0,0,0,0,0,0,0}, humanPoseCoor2={0,0,0,0,0,0,0,0,0,0};
+    std::array<int, 4UL> humanBox1, humanBox2;
     Ui::MainWindow *ui;
     cv::Mat im1 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im2 = cv::Mat(720, 960, CV_8UC3);
@@ -123,7 +124,7 @@ private:
     rclcpp::executors::MultiThreadedExecutor *exector_;
     rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription1_, frameSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::PositionArray>::SharedPtr positionSubscription1_, positionSubscription2_;
-    rclcpp::Subscription<droneinterfaces::msg::HumanPoseCoor>::SharedPtr humanPoseSubscription1_, humanPoseSubscription2_;
+    rclcpp::Subscription<droneinterfaces::msg::HumanBox>::SharedPtr humanBoxSubscription1_, humanBoxSubscription2_;
     rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
     rclcpp::Client<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronePoolStatusClient_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownClient1_;
@@ -137,8 +138,8 @@ private:
     void frameCallback2(const droneinterfaces::msg::FrameArray::SharedPtr msg);
     void positionCallback1(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg);
-    void humanposeCallback1(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg);
-    void humanposeCallback2(const droneinterfaces::msg::HumanPoseCoor::SharedPtr msg);
+    void humanboxCallback1(const droneinterfaces::msg::HumanBox::SharedPtr msg);
+    void humanboxCallback2(const droneinterfaces::msg::HumanBox::SharedPtr msg);
     void spin();
     // void checkDrones();
 

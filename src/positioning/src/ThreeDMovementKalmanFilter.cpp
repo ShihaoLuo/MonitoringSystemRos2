@@ -1,10 +1,13 @@
 #include "ThreeDMovementKalmanFilter.h"
 
-ThreeDMovementKalmanFilter::ThreeDMovementKalmanFilter(float samplingTime_, 
-    int initialLocation[3], 
-    int initialuncertainty,
+ThreeDMovementKalmanFilter::ThreeDMovementKalmanFilter(){}
+
+void ThreeDMovementKalmanFilter::initial(
+    float samplingTime_, 
+    std::array<float, 3UL> initialLocation, 
+    float initialuncertainty,
     float accRandVar,
-    int measurementErrorStandardDeviation)
+    float measurementErrorStandardDeviation)
 {
     samplingTime = samplingTime_;
     states0 << initialLocation[0], 0, initialLocation[1], 0, initialLocation[2], 0;
@@ -54,8 +57,6 @@ ThreeDMovementKalmanFilter::ThreeDMovementKalmanFilter(float samplingTime_,
         0, 0, 0, 0, 1, 0;
 }
 
-
-
 ThreeDMovementKalmanFilter::~ThreeDMovementKalmanFilter(){}
 
 Eigen::Matrix<float, 6, 1> ThreeDMovementKalmanFilter::predict()
@@ -65,9 +66,9 @@ Eigen::Matrix<float, 6, 1> ThreeDMovementKalmanFilter::predict()
     return states1;
 }
 
-void ThreeDMovementKalmanFilter::update(std::array<int32_t, 3> measuredLocation)
+void ThreeDMovementKalmanFilter::update(std::array<float, 3> measuredLocation)
 {
-    measurementVector << measuredLocation[0], measuredLocation[1];
+    measurementVector << measuredLocation[0], measuredLocation[1], measuredLocation[2];
     kalmanGain = estimateUncertaintyMatrix1*observationMatrix.transpose()*
         (observationMatrix*estimateUncertaintyMatrix1*observationMatrix.transpose()+measurementUncertainty).inverse();
     states0 = states1 + kalmanGain*(measurementVector-observationMatrix*states1);

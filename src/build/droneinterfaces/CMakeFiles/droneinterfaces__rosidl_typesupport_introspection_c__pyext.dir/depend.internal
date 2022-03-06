@@ -105,6 +105,9 @@ CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/frame_array__type_support.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_box__functions.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_box__struct.h
+ rosidl_generator_c/droneinterfaces/msg/detail/human_box__type_support.h
  rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__functions.h
  rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__struct.h
  rosidl_generator_c/droneinterfaces/msg/detail/human_pose_coor__type_support.h

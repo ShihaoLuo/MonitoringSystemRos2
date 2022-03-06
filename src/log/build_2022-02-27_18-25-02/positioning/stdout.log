@@ -1,0 +1,3 @@
+[35m[1mScanning dependencies of target positioning[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/positioning.dir/src/positioning.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/positioning.dir/src/ThreeDMovementKalmanFilter.cpp.o[0m

@@ -97,6 +97,10 @@ CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/target
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__builder.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__struct.hpp
 CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__traits.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/human_box.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__builder.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__struct.hpp
+CMakeFiles/droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__traits.hpp
 
 
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/rosidl_generator_cpp/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -125,6 +129,7 @@ rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/dron
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/srv/DroneMap.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/srv/DroneSlam.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/msg/TargetLocation.idl
+rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: rosidl_adapter/droneinterfaces/msg/HumanBox.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp: /home/jakeluo/Software/ros2_rolling/install/action_msgs/share/action_msgs/msg/GoalStatusArray.idl
@@ -264,6 +269,18 @@ rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__struct.hpp: ros
 rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__traits.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__traits.hpp
 
+rosidl_generator_cpp/droneinterfaces/msg/human_box.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/human_box.hpp
+
+rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__builder.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__builder.hpp
+
+rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__struct.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__struct.hpp
+
+rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__traits.hpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__traits.hpp
+
 droneinterfaces__cpp: CMakeFiles/droneinterfaces__cpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/drone_register.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/srv/detail/drone_register__builder.hpp
@@ -309,6 +326,10 @@ droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/target_location.h
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__builder.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__struct.hpp
 droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/target_location__traits.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/human_box.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__builder.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__struct.hpp
+droneinterfaces__cpp: rosidl_generator_cpp/droneinterfaces/msg/detail/human_box__traits.hpp
 droneinterfaces__cpp: CMakeFiles/droneinterfaces__cpp.dir/build.make
 
 .PHONY : droneinterfaces__cpp

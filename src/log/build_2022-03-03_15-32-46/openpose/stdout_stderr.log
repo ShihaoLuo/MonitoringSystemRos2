@@ -1,0 +1,80 @@
+-- Found ament_cmake: 1.1.4 (/home/jakeluo/Software/ros2_rolling/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 13.0.0 (/home/jakeluo/Software/ros2_rolling/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Found rosidl_adapter: 2.5.0 (/home/jakeluo/Software/ros2_rolling/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 5.0.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.24.0 (/home/jakeluo/Software/ros2_rolling/install/rmw_cyclonedds_cpp/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found gflags  (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libgflags.so)
+-- Found glog    (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libglog.so)
+-- Found ament_lint_auto: 0.11.2 (/home/jakeluo/Software/ros2_rolling/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include;/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include/openpose;$<BUILD_INTERFACE:/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+CMake Warning at CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target estimater because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/home/jakeluo/Documents/MonitoringSystemRos2/src/openpose/src]
+    dir 1 is [/usr/local/lib]
+      dir 2 must precede it due to runtime library [libopenpose.so.1.7.0]
+      dir 4 must precede it due to runtime library [libcaffe.so.1.0.0]
+    dir 2 is [/home/jakeluo/Documents/openpose/build/src/openpose]
+      dir 1 must precede it due to runtime library [libopenpose.so.1.7.0]
+    dir 3 is [/home/jakeluo/Software/ros2_rolling/install/rclcpp/lib]
+    dir 4 is [/home/jakeluo/Documents/openpose/build/caffe/lib]
+    dir 5 is [/home/jakeluo/Software/ros2_rolling/install/libstatistics_collector/lib]
+    dir 6 is [/home/jakeluo/Software/ros2_rolling/install/std_msgs/lib]
+    dir 7 is [/home/jakeluo/Software/ros2_rolling/install/rcl/lib]
+    dir 8 is [/home/jakeluo/Software/ros2_rolling/install/rcl_interfaces/lib]
+    dir 9 is [/home/jakeluo/Software/ros2_rolling/install/rmw_implementation/lib]
+    dir 10 is [/home/jakeluo/Software/ros2_rolling/install/ament_index_cpp/lib]
+    dir 11 is [/home/jakeluo/Software/ros2_rolling/install/rcl_logging_spdlog/lib]
+    dir 12 is [/home/jakeluo/Software/ros2_rolling/install/rcl_logging_interface/lib]
+    dir 13 is [/home/jakeluo/Software/ros2_rolling/install/rcl_yaml_param_parser/lib]
+    dir 14 is [/home/jakeluo/Software/ros2_rolling/install/rmw/lib]
+    dir 15 is [/home/jakeluo/Software/ros2_rolling/install/libyaml_vendor/lib]
+    dir 16 is [/home/jakeluo/Software/ros2_rolling/install/rosgraph_msgs/lib]
+    dir 17 is [/home/jakeluo/Software/ros2_rolling/install/statistics_msgs/lib]
+    dir 18 is [/home/jakeluo/Software/ros2_rolling/install/builtin_interfaces/lib]
+    dir 19 is [/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_cpp/lib]
+    dir 20 is [/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_introspection_c/lib]
+    dir 21 is [/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_cpp/lib]
+    dir 22 is [/home/jakeluo/Software/ros2_rolling/install/rosidl_typesupport_c/lib]
+    dir 23 is [/home/jakeluo/Software/ros2_rolling/install/rcpputils/lib]
+    dir 24 is [/home/jakeluo/Software/ros2_rolling/install/rosidl_runtime_c/lib]
+    dir 25 is [/home/jakeluo/Software/ros2_rolling/install/rcutils/lib]
+    dir 26 is [/home/jakeluo/Software/ros2_rolling/install/tracetools/lib]
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done
+-- Build files have been written to: /home/jakeluo/Documents/MonitoringSystemRos2/src/build/openpose
+[ 50%] [32m[1mLinking CXX executable estimater[0m
+[100%] Built target estimater
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/lib/openpose/estimater
+-- Set runtime path of "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/lib/openpose/estimater" to ""
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/ament_index/resource_index/package_run_dependencies/openpose
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/ament_index/resource_index/parent_prefix_path/openpose
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/environment/ament_prefix_path.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/environment/path.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/local_setup.bash
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/local_setup.sh
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/local_setup.zsh
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/local_setup.dsv
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/package.dsv
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/ament_index/resource_index/packages/openpose
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/cmake/openposeConfig.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/cmake/openposeConfig-version.cmake
+-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/openpose/share/openpose/package.xml

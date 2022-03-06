@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/action/_go_point_s.c.o"
   "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_frame_array_s.c.o"
+  "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_human_box_s.c.o"
   "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_human_pose_coor_s.c.o"
   "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_position_array_s.c.o"
   "CMakeFiles/droneinterfaces__python.dir/rosidl_generator_py/droneinterfaces/msg/_target_location_s.c.o"

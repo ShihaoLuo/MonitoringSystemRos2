@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__type_support.c.o"
+  "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_box__type_support.c.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__type_support.c.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/target_location__type_support.c.o"
@@ -16,6 +17,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_introspection_c/droneinterfaces/action/detail/go_point__type_support.c"
   "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/frame_array__type_support.c"
+  "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_box__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_box__type_support.c"
   "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/human_pose_coor__type_support.c"
   "rosidl_typesupport_introspection_c/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_c.h"

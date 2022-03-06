@@ -22,7 +22,7 @@ ${EIGEN3_INCLUDE_DIR})
 
 LINK_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
 
-add_executable(positioning src/positioning.cpp)
+add_executable(positioning src/positioning.cpp src/ThreeDMovementKalmanFilter.cpp)
 
 target_include_directories(positioning PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

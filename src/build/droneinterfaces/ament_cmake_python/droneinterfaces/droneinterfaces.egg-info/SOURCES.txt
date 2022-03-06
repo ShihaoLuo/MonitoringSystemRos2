@@ -17,6 +17,7 @@ droneinterfaces/action/_go_point_s.c
 droneinterfaces/msg/__init__.py
 droneinterfaces/msg/_frame_array.py
 droneinterfaces/msg/_frame_array_s.c
+droneinterfaces/msg/_human_box.py
 droneinterfaces/msg/_human_pose_coor.py
 droneinterfaces/msg/_human_pose_coor_s.c
 droneinterfaces/msg/_position_array.py

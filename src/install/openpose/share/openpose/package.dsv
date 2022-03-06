@@ -1,0 +1,8 @@
+source;share/openpose/hook/cmake_prefix_path.ps1
+source;share/openpose/hook/cmake_prefix_path.dsv
+source;share/openpose/hook/cmake_prefix_path.sh
+source;share/openpose/local_setup.bash
+source;share/openpose/local_setup.dsv
+source;share/openpose/local_setup.ps1
+source;share/openpose/local_setup.sh
+source;share/openpose/local_setup.zsh

@@ -1,0 +1,1 @@
+float32[4] coordinate # centerx, centery, w, h

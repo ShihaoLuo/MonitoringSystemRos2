@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp.o"
+  "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/human_box__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/human_pose_coor__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp.o"
   "CMakeFiles/droneinterfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/droneinterfaces/msg/target_location__type_support.cpp.o"
@@ -14,6 +15,7 @@ file(REMOVE_RECURSE
   "libdroneinterfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/droneinterfaces/action/go_point__type_support.cpp"
   "rosidl_typesupport_cpp/droneinterfaces/msg/frame_array__type_support.cpp"
+  "rosidl_typesupport_cpp/droneinterfaces/msg/human_box__type_support.cpp"
   "rosidl_typesupport_cpp/droneinterfaces/msg/human_pose_coor__type_support.cpp"
   "rosidl_typesupport_cpp/droneinterfaces/msg/position_array__type_support.cpp"
   "rosidl_typesupport_cpp/droneinterfaces/msg/target_location__type_support.cpp"
