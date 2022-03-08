@@ -17,9 +17,13 @@ CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/Moni
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
+CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__builder.hpp
+CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.hpp
+CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__traits.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
+CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
@@ -44,6 +48,7 @@ CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/Moni
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/planning.h
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
 CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o: /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__functions.h
@@ -559,9 +564,13 @@ CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
+CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__builder.hpp
+CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.hpp
+CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__traits.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
+CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
@@ -586,6 +595,7 @@ CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/planning.h
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp
 CMakeFiles/gui.dir/src/main.cpp.o: /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
@@ -1109,9 +1119,13 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSyste
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
+CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__builder.hpp
+CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.hpp
+CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__traits.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
+CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
@@ -1136,6 +1150,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSyste
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/planning.h
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /home/jakeluo/Software/ros2_rolling/install/action_msgs/include/action_msgs/msg/detail/goal_info__builder.hpp
@@ -1670,4 +1685,7 @@ CMakeFiles/gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWid
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/gui.dir/src/mainwindow.cpp.o: gui_autogen/include/ui_mainwindow.h
+
+CMakeFiles/gui.dir/src/planning.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/planning.h
+CMakeFiles/gui.dir/src/planning.cpp.o: /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp
 

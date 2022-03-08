@@ -1,0 +1,18 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[35m[1mScanning dependencies of target gui[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::cancelGoal1()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:505:22:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Krclcpp::Rate loop_rate[m[K’
+  505 |         rclcpp::Rate [01;31m[Kloop_rate[m[K(1);
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:493:22:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Rate loop_rate[m[K’ previously declared here
+  493 |         rclcpp::Rate [01;36m[Kloop_rate[m[K(20);
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:610:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  610 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

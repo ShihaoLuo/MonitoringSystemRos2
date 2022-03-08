@@ -78,6 +78,10 @@ MainWindow::MainWindow(QWidget *parent)
         "t2_HumanBox",
         1,
         std::bind(&MainWindow::humanboxCallback2, this, std::placeholders::_1), opt6);
+    targetLocationSubscription_ = nh_->create_subscription<droneinterfaces::msg::TargetLocation>(
+        "targetLocation",
+        1,
+        std::bind(&MainWindow::targetLocationCallback, this, std::placeholders::_1), opt6);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     droneShutDownClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_ShutDown");
     droneConnectClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_Connect");
@@ -88,6 +92,7 @@ MainWindow::MainWindow(QWidget *parent)
     // droneSlamClient_ = nh_->create_client<droneinterfaces::srv::DroneSlam>("t1_Slam");
     exector_ = new rclcpp::executors::MultiThreadedExecutor();
     exector_->add_node(nh_);
+    planner_ = std::make_shared<Planning>();
     ui->setupUi(this);
     ui->plainTextEdit1->moveCursor(QTextCursor::End);
     ui->plainTextEdit2->moveCursor(QTextCursor::End);
@@ -98,11 +103,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->imgp->setPixmap(QPixmap::fromImage(qimagep));
     plaintext1scrollbar = ui->plainTextEdit1->verticalScrollBar();
     plaintext2scrollbar = ui->plainTextEdit2->verticalScrollBar();
-    QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, std::bind(&MainWindow::spin, this));
-    timer->start(50);
+    timer1_ = std::make_shared<QTimer>(this);
+    timer2_ = std::make_shared<QTimer>(this);
+    connect(timer1_.get(), &QTimer::timeout, std::bind(&MainWindow::spin, this));
+    timer1_->start(50);
+    connect(timer2_.get(), &QTimer::timeout, std::bind(&MainWindow::tracking, this));
     ui->pushButtonshutdown1->setDisabled(true);
     ui->pushButtonshutdown2->setDisabled(true);
+    ui->pushButtontracking->setDisabled(true);
     disableAllButton1();
     disableAllButton2();
     connect(ui->pushButtontakeoff1, SIGNAL(clicked()), this, SLOT(clickButtonTakeoff1()));
@@ -138,7 +146,97 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtonsavemap, SIGNAL(clicked()), this, SLOT(saveMap()));
     connect(ui->pushButtonSaveImg1, SIGNAL(clicked()), this, SLOT(saveImg1()));
     connect(ui->pushButtonSaveImg2, SIGNAL(clicked()), this, SLOT(saveImg2()));
+    connect(ui->pushButtontracking, SIGNAL(clicked()), this, SLOT(startTracking()));
     // connect(ui->pushButtonslam, SIGNAL(clicked()), this, SLOT(slam()));
+}
+
+void MainWindow::startTracking()
+{
+    if (trackingFlag)
+    {
+        trackingFlag = !trackingFlag;
+        ui->pushButtontracking->setStyleSheet("");
+        // ui->pushButtont1goalpoint->setEnabled(true);
+        // ui->pushButtonsendgoal1->setEnabled(true);
+        // ui->pushButtoncancelgoal1->setEnabled(true);
+        // ui->pushButtont2goalpoint->setEnabled(true);
+        // ui->pushButtonsendgoal2->setEnabled(true);
+        // ui->pushButtoncancelgoal2->setEnabled(true);
+        enableAllButton1();
+        enableAllButton2();
+        // timer2_->stop();
+    }
+    else{
+        trackingFlag = !trackingFlag;
+        ui->pushButtontracking->setStyleSheet("background-color: rgb(0, 100, 30)");
+        // ui->pushButtont1goalpoint->setDisabled(true);
+        // ui->pushButtonsendgoal1->setDisabled(true);
+        // ui->pushButtoncancelgoal1->setDisabled(true);
+        // ui->pushButtont2goalpoint->setEnabled(true);
+        // ui->pushButtonsendgoal2->setEnabled(true);
+        // ui->pushButtoncancelgoal2->setEnabled(true);
+        disableAllButton1();
+        disableAllButton2();
+        std::thread trackingThread(std::bind(&MainWindow::tracking, this));
+        trackingThread.detach();
+        // timer2_->start(500);
+    }
+}
+
+void MainWindow::tracking()
+{
+    sendGoal1();
+    sendGoal2();
+    rclcpp::Rate loop_rate2(20);
+    rclcpp::Rate loop_rate(20);
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    while(trackingFlag)
+    {
+        if(actionGoalStatus1 == false)
+        {
+            RCLCPP_ERROR(nh_->get_logger(), "Go point action 1 is not executing!");
+        }else{
+            
+            while(!goal_handle_future1.valid())
+            {
+                RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+                loop_rate.sleep();
+            }
+            goPointActionClient1_->async_cancel_goal(goal_handle_future1.get(), 
+                [this](std::shared_ptr<action_msgs::srv::CancelGoal_Response> res)
+                {
+                    sendGoal1();
+                });
+            actionGoalStatus1 = false;
+        }
+        if(actionGoalStatus2 == false)
+        {
+            RCLCPP_ERROR(nh_->get_logger(), "Go point action 2 is not executing!");
+        }else{
+            
+            while(!goal_handle_future2.valid())
+            {
+                RCLCPP_INFO(nh_->get_logger(), "goalhandlefuture not valid.");
+                loop_rate2.sleep();
+            }
+            goPointActionClient2_->async_cancel_goal(goal_handle_future2.get(), 
+                [this](std::shared_ptr<action_msgs::srv::CancelGoal_Response> res)
+                {
+                    sendGoal2();
+                });
+            actionGoalStatus2 = false;
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    cancelGoal2();
+    cancelGoal1();
+}
+
+void MainWindow::targetLocationCallback(const droneinterfaces::msg::TargetLocation::SharedPtr msg)
+{
+    targetLocation = msg->location;
+    ttime = msg->time;
 }
 
 void MainWindow::saveImg1()
@@ -307,6 +405,7 @@ void MainWindow::enableAllButton2()
 
 void MainWindow::droneShutDown1()
 {
+    ui->pushButtontracking->setDisabled(true);
     if(connectFlag1 == true)
     {
         if(actionGoalStatus1 == true)
@@ -347,6 +446,7 @@ void MainWindow::droneShutDown1()
 
 void MainWindow::droneShutDown2()
 {
+    ui->pushButtontracking->setDisabled(true);
     if(actionGoalStatus2 == true)
     {
         rclcpp::Rate loop_rate(2);
@@ -403,6 +503,10 @@ void MainWindow::droneConnect1()
                 sleep(0.5);
                 enableAllButton1();
                 ui->pushButtonshutdown1->setEnabled(true);
+                if(connectFlag2 == true)
+                {
+                    ui->pushButtontracking->setEnabled(true);
+                }
             }else
             {
                 disableAllButton1();
@@ -415,6 +519,7 @@ void MainWindow::droneConnect1()
 
 void MainWindow::droneConnect2()
 {
+    
     if(connectFlag2 == false)
     {
         ui->pushButtonconnect2->setDisabled(true);
@@ -430,6 +535,10 @@ void MainWindow::droneConnect2()
             sleep(0.5);
             enableAllButton2();
             ui->pushButtonshutdown2->setEnabled(true);
+            if(connectFlag1 == true)
+            {
+                ui->pushButtontracking->setEnabled(true);
+            }
         }else
         {
             disableAllButton2();
@@ -446,7 +555,7 @@ void MainWindow::cancelGoal1()
     {
         RCLCPP_ERROR(nh_->get_logger(), "Go point action 1 is not executing!");
     }else{
-        rclcpp::Rate loop_rate(2);
+        rclcpp::Rate loop_rate(20);
         if(!goPointActionClient1_)
         {
             RCLCPP_INFO(nh_->get_logger(), "Go point action client 1 not actived.");
@@ -483,7 +592,7 @@ void MainWindow::sendGoal1()
         actionGoalStatus1 = true;
         auto goal = droneinterfaces::action::GoPoint::Goal();
         goal.set__goal(goalPosition1);
-        RCLCPP_INFO(nh_->get_logger(), "Sending goal:%f %f %f %f", goal.goal[0], goal.goal[1], goal.goal[2], goal.goal[3]);
+        // RCLCPP_INFO(nh_->get_logger(), "Sending goal:%f %f %f %f", goal.goal[0], goal.goal[1], goal.goal[2], goal.goal[3]);
         auto send_goal_options = rclcpp_action::Client<droneinterfaces::action::GoPoint>::SendGoalOptions();
         send_goal_options.goal_response_callback = std::bind(&MainWindow::goal_response_callback, this, std::placeholders::_1);
         send_goal_options.feedback_callback = std::bind(&MainWindow::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
@@ -536,14 +645,13 @@ void MainWindow::sendGoal2()
         actionGoalStatus2 = true;
         auto goal = droneinterfaces::action::GoPoint::Goal();
         goal.set__goal(goalPosition2);
-        RCLCPP_INFO(nh_->get_logger(), "Sending goal");
+        // RCLCPP_INFO(nh_->get_logger(), "Sending goal");
         auto send_goal_options = rclcpp_action::Client<droneinterfaces::action::GoPoint>::SendGoalOptions();
         send_goal_options.goal_response_callback = std::bind(&MainWindow::goal_response_callback, this, std::placeholders::_1);
         send_goal_options.feedback_callback = std::bind(&MainWindow::feedback_callback, this, std::placeholders::_1, std::placeholders::_2);
         send_goal_options.result_callback = std::bind(&MainWindow::result_callback, this, std::placeholders::_1);
         goal_handle_future2 = goPointActionClient2_->async_send_goal(goal, send_goal_options);
     }
-    
 }
 
 void MainWindow::goal_response_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr goal_handle)
@@ -552,7 +660,7 @@ void MainWindow::goal_response_callback(rclcpp_action::ClientGoalHandle<droneint
     {
         RCLCPP_INFO(nh_->get_logger(), "Goal is rejected.");
     }else{
-        RCLCPP_INFO(nh_->get_logger(), "Goal is accepted.");
+        // RCLCPP_INFO(nh_->get_logger(), "Goal is accepted.");
     }
 }
 
@@ -569,13 +677,13 @@ void MainWindow::result_callback(const rclcpp_action::ClientGoalHandle<droneinte
         case rclcpp_action::ResultCode::SUCCEEDED:
             break;
         case rclcpp_action::ResultCode::ABORTED:
-            RCLCPP_ERROR(nh_->get_logger(), "Goal was aborted");
+            // RCLCPP_ERROR(nh_->get_logger(), "Goal was aborted");
             return;
         case rclcpp_action::ResultCode::CANCELED:
-            RCLCPP_ERROR(nh_->get_logger(), "Goal was canceled");
+            // RCLCPP_ERROR(nh_->get_logger(), "Goal was canceled");
             return;
         default:
-            RCLCPP_ERROR(nh_->get_logger(), "Unknown result code");
+            // RCLCPP_ERROR(nh_->get_logger(), "Unknown result code");
             return;
     }
     RCLCPP_INFO(nh_->get_logger(), "Result received: %d", result.result->arrived);
@@ -1029,9 +1137,36 @@ void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPt
 
 void MainWindow::spin()
 {
+    // std::cout<<"target time:"<<ttime<<", targetlocation:/n"<<targetLocation[0]<<" "<<targetLocation[1]<<" "<<targetLocation[2]<<" "<<std::endl;
     cv::Mat tmp = im.clone();
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     // std::cout<<"tt"<<(ms - ptime1)<<std::endl;
+    if(trackingFlag)
+    {
+        dTD = ui->lineEdittdistanceTD->text().toFloat();
+        dDD = ui->lineEdittdistanceDD->text().toFloat();
+        planner_ -> update(targetLocation[0], targetLocation[1], targetLocation[2],
+                            p1[0], p1[1], p1[2], p2[0], p2[1], p2[2], dTD, dDD);
+        auto result = planner_ -> compute();
+        // std::cout<<"result:"<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<result[4]<<" "<<result[5]<<" "<<result[6]<<" "<<result[7]<<std::endl;
+        memcpy(goalPosition1.data(), result.data(), 16);
+        memcpy(goalPosition2.data(), result.data()+4, 16);
+        cv::circle(tmp, cv::Point(-goalPosition1[1]/20.f+300.f, -goalPosition1[0]/20.f+300.f), 6, cv::Scalar(200, 100, 0), cv::FILLED);
+        cv::line(tmp, cv::Point(-goalPosition1[1]/20.f+300.f, -goalPosition1[0]/20.f+300.f), 
+            cv::Point(-(goalPosition1[1])/20.f+300.f-sin(goalPosition1[3])*20.f, -(goalPosition1[0])/20.f+300.f-cos(goalPosition1[3])*20.f), cv::Scalar(200, 100, 0),
+            4);
+        cv::circle(tmp, cv::Point(-goalPosition2[1]/20.f+300.f, -goalPosition2[0]/20.f+300.f), 6, cv::Scalar(0, 100, 200), cv::FILLED);
+        cv::line(tmp, cv::Point(-goalPosition2[1]/20.f+300.f, -goalPosition2[0]/20.f+300.f), 
+            cv::Point(-(goalPosition2[1])/20.f+300.f-sin(goalPosition2[3])*20.f, -(goalPosition2[0])/20.f+300.f-cos(goalPosition2[3])*20.f), cv::Scalar(0, 100, 200),
+            4);
+    }
+    if((ms - ttime) < 2000)
+    {
+        cv::circle(tmp, cv::Point(-targetLocation[1]/20.f+300.f, -targetLocation[0]/20.f+300.f), 10, cv::Scalar(0, 255, 0), cv::FILLED);
+    }else
+    {
+        cv::putText(tmp, "Target Lost", cv::Point(10, 60), cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 255, 0));
+    }
     if((ms - ptime1) < 500)
     {
         cv::circle(tmp, cv::Point(-p1[1]/20.f+300.f, -p1[0]/20.f+300.f), 10, cv::Scalar(255, 0, 0), cv::FILLED);

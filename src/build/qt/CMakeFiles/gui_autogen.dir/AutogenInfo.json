@@ -107,6 +107,10 @@
 		[
 			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp",
 			"MU"
+		],
+		[
+			"/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp",
+			"MU"
 		]
 	],
 	"UIC_OPTIONS" : [],

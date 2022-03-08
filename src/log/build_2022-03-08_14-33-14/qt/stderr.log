@@ -1,0 +1,11 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:587:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  587 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::spin()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1072:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+ 1072 |         std::cout<<tmp1[0]<<[01;31m[K<<[m[Ktmp1[1]<<tmp1[2]<<tmp1[3]<<tmp1[4]std::endl;
+      |                             [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

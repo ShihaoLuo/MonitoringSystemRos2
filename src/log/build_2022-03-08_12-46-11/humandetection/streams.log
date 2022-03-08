@@ -1,0 +1,19 @@
+[0.294s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../build/humandetection build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log --single-version-externally-managed
+[0.580s] running egg_info
+[0.581s] writing ../build/humandetection/humandetection.egg-info/PKG-INFO
+[0.581s] writing dependency_links to ../build/humandetection/humandetection.egg-info/dependency_links.txt
+[0.581s] writing entry points to ../build/humandetection/humandetection.egg-info/entry_points.txt
+[0.581s] writing requirements to ../build/humandetection/humandetection.egg-info/requires.txt
+[0.581s] writing top-level names to ../build/humandetection/humandetection.egg-info/top_level.txt
+[4.033s] writing manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'
+[4.033s] running build
+[4.033s] running build_py
+[4.033s] running install
+[4.034s] running install_lib
+[4.035s] running install_data
+[4.035s] running install_egg_info
+[4.036s] removing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info' (and everything under it)
+[4.036s] Copying ../build/humandetection/humandetection.egg-info to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info
+[4.037s] running install_scripts
+[4.050s] Installing detecter script to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/humandetection
+[4.050s] writing list of installed files to '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log'

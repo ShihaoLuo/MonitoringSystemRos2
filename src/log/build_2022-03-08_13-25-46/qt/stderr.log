@@ -1,0 +1,24 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In function ‘[01m[Kstd::array<float, 4> getNewPosition(float, float, float, float, float, float, float)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:73:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kz1[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   73 | std::array<float, 4UL> getNewPosition(float tx, float ty, float tz, float x1, float y1, [01;35m[Kfloat z1[m[K, float d)
+      |                                                                                         [01;35m[K~~~~~~^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In member function ‘[01m[Kstd::array<float, 5> Planning::getCircleIntersection(float, float, float, float, float, float)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:71:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+   71 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::startTracking()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:159:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass QString[m[K’ has no member named ‘[01m[KtoStdFloat[m[K’; did you mean ‘[01m[KtoFloat[m[K’?
+  159 |         dTD = ui->lineEdittdistanceTD->text().[01;31m[KtoStdFloat[m[K();
+      |                                               [01;31m[K^~~~~~~~~~[m[K
+      |                                               [32m[KtoFloat[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:160:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass QString[m[K’ has no member named ‘[01m[KtoStdFloat[m[K’; did you mean ‘[01m[KtoFloat[m[K’?
+  160 |         dDD = ui->lineEdittdistanceDD->text().[01;31m[KtoStdFloat[m[K();
+      |                                               [01;31m[K^~~~~~~~~~[m[K
+      |                                               [32m[KtoFloat[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:587:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  587 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/gui.dir/build.make:93：CMakeFiles/gui.dir/src/mainwindow.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:79：CMakeFiles/gui.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

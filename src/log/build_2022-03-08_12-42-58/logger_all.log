@@ -1,0 +1,362 @@
+[0.241s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.241s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f4392a66b80>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f4392a66b80>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f4392a71130>)
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.247s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.248s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jakeluo/Documents/MonitoringSystemRos2/src'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ros'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['cmake', 'python']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'cmake'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'python'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['python_setup_py']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'python_setup_py'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(data/labels) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(droneinterfaces) by extension 'ros'
+[0.269s] DEBUG:colcon.colcon_core.package_identification:Package 'droneinterfaces' with type 'ros.ament_cmake' and name 'droneinterfaces'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(droneutility) by extension 'ros'
+[0.271s] DEBUG:colcon.colcon_core.package_identification:Package 'droneutility' with type 'ros.ament_cmake' and name 'droneutility'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(humandetection) by extension 'ros'
+[0.271s] DEBUG:colcon.colcon_core.package_identification:Package 'humandetection' with type 'ros.ament_python' and name 'humandetection'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(positioning) by extension 'ros'
+[0.273s] DEBUG:colcon.colcon_core.package_identification:Package 'positioning' with type 'ros.ament_cmake' and name 'positioning'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ros'
+[0.274s] DEBUG:colcon.colcon_core.package_identification:Package 'qt' with type 'ros.ament_cmake' and name 'qt'
+[0.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_target' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'droneinterfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.293s] DEBUG:colcon.colcon_core.verb:Building package 'droneinterfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces', 'merge_install': False, 'path': '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces', 'symlink_install': False, 'test_result_base': None}
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_target' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_clean_cache' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_clean_first' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'cmake_force_configure' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'ament_cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'catkin_cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'droneutility' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.295s] DEBUG:colcon.colcon_core.verb:Building package 'droneutility' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility', 'merge_install': False, 'path': '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility', 'symlink_install': False, 'test_result_base': None}
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'ament_cmake_args' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'catkin_cmake_args' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'humandetection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.299s] DEBUG:colcon.colcon_core.verb:Building package 'humandetection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection', 'merge_install': False, 'path': '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection', 'symlink_install': False, 'test_result_base': None}
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_args' from command line to 'None'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_target' from command line to 'None'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_clean_cache' from command line to 'False'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_clean_first' from command line to 'False'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'cmake_force_configure' from command line to 'False'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'ament_cmake_args' from command line to 'None'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'catkin_cmake_args' from command line to 'None'
+[0.301s] Level 5:colcon.colcon_core.verb:set package 'positioning' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.301s] DEBUG:colcon.colcon_core.verb:Building package 'positioning' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning', 'merge_install': False, 'path': '/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning', 'symlink_install': False, 'test_result_base': None}
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_args' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_target' from command line to 'None'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_clean_cache' from command line to 'False'
+[0.303s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_clean_first' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'cmake_force_configure' from command line to 'False'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'ament_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'catkin_cmake_args' from command line to 'None'
+[0.304s] Level 5:colcon.colcon_core.verb:set package 'qt' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.304s] DEBUG:colcon.colcon_core.verb:Building package 'qt' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt', 'merge_install': False, 'path': '/home/jakeluo/Documents/MonitoringSystemRos2/src/qt', 'symlink_install': False, 'test_result_base': None}
+[0.304s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.306s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.306s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces' with build type 'ament_cmake'
+[0.306s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneinterfaces'
+[0.310s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.310s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.310s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces -- -j12 -l12
+[4.287s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces' returned '0': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces -- -j12 -l12
+[4.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces
+[4.541s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(droneinterfaces)
+[4.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces' returned '0': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces
+[4.547s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces' for CMake module files
+[4.548s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces' for CMake config files
+[4.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'cmake_prefix_path')
+[4.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.ps1'
+[4.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.dsv'
+[4.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.sh'
+[4.552s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib'
+[4.552s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'ld_library_path_lib')
+[4.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.ps1'
+[4.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.dsv'
+[4.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.sh'
+[4.554s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/bin'
+[4.554s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/pkgconfig/droneinterfaces.pc'
+[4.554s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'
+[4.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'pythonpath')
+[4.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.ps1'
+[4.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.dsv'
+[4.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.sh'
+[4.557s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.ps1'
+[4.559s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.dsv'
+[4.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.sh'
+[4.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.bash'
+[4.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.zsh'
+[4.562s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/colcon-core/packages/droneinterfaces)
+[4.693s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(droneinterfaces)
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces' for CMake module files
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces' for CMake config files
+[4.695s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'cmake_prefix_path')
+[4.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.ps1'
+[4.696s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.dsv'
+[4.696s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/cmake_prefix_path.sh'
+[4.697s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib'
+[4.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'ld_library_path_lib')
+[4.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.ps1'
+[4.697s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.dsv'
+[4.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/ld_library_path_lib.sh'
+[4.698s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/bin'
+[4.698s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/pkgconfig/droneinterfaces.pc'
+[4.698s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'
+[4.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneinterfaces', 'pythonpath')
+[4.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.ps1'
+[4.699s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.dsv'
+[4.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/hook/pythonpath.sh'
+[4.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.ps1'
+[4.701s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.dsv'
+[4.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.sh'
+[4.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.bash'
+[4.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.zsh'
+[4.702s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/colcon-core/packages/droneinterfaces)
+[4.702s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility' with build type 'ament_cmake'
+[4.703s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility'
+[4.703s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.703s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.707s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection' with build type 'ament_python'
+[4.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('humandetection', 'ament_prefix_path')
+[4.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/humandetection/hook/ament_prefix_path.ps1'
+[4.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/humandetection/hook/ament_prefix_path.dsv'
+[4.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/share/humandetection/hook/ament_prefix_path.sh'
+[4.711s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.711s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.715s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning' with build type 'ament_cmake'
+[4.715s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/positioning'
+[4.717s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.717s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.721s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/qt' with build type 'ament_cmake'
+[4.721s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/qt'
+[4.722s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.722s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12
+[4.972s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection'
+[4.973s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.973s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning -- -j12 -l12
+[4.987s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12
+[4.994s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt -- -j12 -l12
+[4.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../build/humandetection build --build-base /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build install --prefix /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection --record /home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log --single-version-externally-managed
+[5.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[5.032s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(droneutility)
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility' for CMake module files
+[5.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[5.034s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility' for CMake config files
+[5.035s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneutility', 'cmake_prefix_path')
+[5.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.ps1'
+[5.036s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.dsv'
+[5.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.sh'
+[5.037s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib'
+[5.038s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/bin'
+[5.038s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/pkgconfig/droneutility.pc'
+[5.038s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/python3.8/site-packages'
+[5.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.ps1'
+[5.040s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.dsv'
+[5.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.sh'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.bash'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.zsh'
+[5.041s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/colcon-core/packages/droneutility)
+[5.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning -- -j12 -l12
+[5.065s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(droneutility)
+[5.065s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility' for CMake module files
+[5.066s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility' for CMake config files
+[5.066s] Level 1:colcon.colcon_core.shell:create_environment_hook('droneutility', 'cmake_prefix_path')
+[5.067s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.ps1'
+[5.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.dsv'
+[5.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/hook/cmake_prefix_path.sh'
+[5.068s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib'
+[5.068s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/bin'
+[5.068s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/pkgconfig/droneutility.pc'
+[5.068s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/python3.8/site-packages'
+[5.069s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.ps1'
+[5.069s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.dsv'
+[5.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.sh'
+[5.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.bash'
+[5.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.zsh'
+[5.071s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/colcon-core/packages/droneutility)
+[5.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning
+[5.097s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(positioning)
+[5.098s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning' for CMake module files
+[5.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning
+[5.099s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning' for CMake config files
+[5.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('positioning', 'cmake_prefix_path')
+[5.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.ps1'
+[5.100s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.dsv'
+[5.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.sh'
+[5.101s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib'
+[5.101s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/bin'
+[5.101s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/pkgconfig/positioning.pc'
+[5.101s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/python3.8/site-packages'
+[5.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.ps1'
+[5.102s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.dsv'
+[5.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.sh'
+[5.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.bash'
+[5.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.zsh'
+[5.103s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/colcon-core/packages/positioning)
+[5.125s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(positioning)
+[5.126s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning' for CMake module files
+[5.126s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning' for CMake config files
+[5.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('positioning', 'cmake_prefix_path')
+[5.127s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.ps1'
+[5.127s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.dsv'
+[5.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/hook/cmake_prefix_path.sh'
+[5.128s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib'
+[5.128s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/bin'
+[5.128s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/pkgconfig/positioning.pc'
+[5.128s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/python3.8/site-packages'
+[5.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.ps1'
+[5.129s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.dsv'
+[5.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.sh'
+[5.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.bash'
+[5.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.zsh'
+[5.130s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/colcon-core/packages/positioning)
+[5.253s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt' returned '2': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt -- -j12 -l12
+[5.276s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(qt)
+[5.277s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt' for CMake module files
+[5.278s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt' for CMake config files
+[5.278s] Level 1:colcon.colcon_core.shell:create_environment_hook('qt', 'cmake_prefix_path')
+[5.279s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/hook/cmake_prefix_path.ps1'
+[5.279s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/hook/cmake_prefix_path.dsv'
+[5.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/hook/cmake_prefix_path.sh'
+[5.280s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/lib'
+[5.280s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/bin'
+[5.280s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/lib/pkgconfig/qt.pc'
+[5.280s] Level 1:colcon.colcon_core.environment:checking '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/lib/python3.8/site-packages'
+[5.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.ps1'
+[5.281s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.dsv'
+[5.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.sh'
+[5.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.bash'
+[5.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.zsh'
+[5.282s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/colcon-core/packages/qt)
+[8.759s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.759s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.759s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[8.760s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.765s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.765s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.766s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.778s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/local_setup.ps1'
+[8.780s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/_local_setup_util_ps1.py'
+[8.780s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/setup.ps1'
+[8.782s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/local_setup.sh'
+[8.783s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/_local_setup_util_sh.py'
+[8.783s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/setup.sh'
+[8.785s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/local_setup.bash'
+[8.785s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/setup.bash'
+[8.787s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/local_setup.zsh'
+[8.787s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/setup.zsh'

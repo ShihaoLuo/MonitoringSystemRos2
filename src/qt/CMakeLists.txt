@@ -53,6 +53,7 @@ add_executable(gui
   src/main.cpp
   src/mainwindow.cpp
   src/mainwindow.ui
+  src/planning.cpp
   # src/2DMovementKalmanFilter.cpp
   # src/CameraAndPhyPointTransformer.cpp
   ${header_SRC} 

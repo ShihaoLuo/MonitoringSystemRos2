@@ -148,7 +148,7 @@ rclcpp_action::GoalResponse Drone::handle_goal(
     RCLCPP_INFO(nh_->get_logger(), "Received goal request: %f %f %f %f", goal->goal[0], goal->goal[1], goal->goal[2], goal->goal[3]);
     (void)uuid;
     // Let's reject sequences that are over 9000
-    if (goalPoint.norm()>6000) {
+    if (goalPoint.norm()>100000) {
         return rclcpp_action::GoalResponse::REJECT;
     }
     return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
@@ -158,7 +158,7 @@ rclcpp_action::CancelResponse Drone::handle_cancel(
     const std::shared_ptr<rclcpp_action::ServerGoalHandle
             <droneinterfaces::action::GoPoint>> goal_handle)
 {
-    RCLCPP_INFO(nh_->get_logger(), "Received request to cancel go points action.");
+    // RCLCPP_INFO(nh_->get_logger(), "Received request to cancel go points action.");
     (void)goal_handle;
     return rclcpp_action::CancelResponse::ACCEPT;
 }
@@ -166,19 +166,17 @@ rclcpp_action::CancelResponse Drone::handle_cancel(
 void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
             <droneinterfaces::action::GoPoint>> goal_handle)
 {
-    RCLCPP_INFO(nh_->get_logger(), "Executing go points action.");
+    // RCLCPP_INFO(nh_->get_logger(), "Executing go points action.");
     rclcpp::Rate loop_rate(33);
     const auto goal = goal_handle->get_goal();
     auto feedback = std::make_shared<droneinterfaces::action::GoPoint::Feedback>();
     auto & distance = feedback->distance;
     goalPoint = Eigen::Map<Eigen::Vector4f>((float*)goal->goal.data());
     distance = goalPoint.norm();
-    float oP=0, oR=0, oC=0, oY=0, oScale=0;
-    string s = "~rc 000 000 000 000";
-    dronepidp->reset();
-    dronepidr->reset();
-    dronepidc->reset();
-    dronepidy->reset();
+    // dronepidp->reset();
+    // dronepidr->reset();
+    // dronepidc->reset();
+    // dronepidy->reset();
     auto result = std::make_shared<droneinterfaces::action::GoPoint::Result>();
     auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
     request2->ip = ip;
@@ -197,10 +195,10 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
             loop_rate.sleep();
             result->arrived = 1;
             goal_handle->canceled(result);
-            RCLCPP_INFO(nh_->get_logger(), "Go point action canceled.");
+            // RCLCPP_INFO(nh_->get_logger(), "Go point action canceled.");
             return;
         }
-        RCLCPP_INFO(nh_->get_logger(), "goal: %f %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2], goalPoint[3]);
+        // RCLCPP_INFO(nh_->get_logger(), "goal: %f %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2], goalPoint[3]);
         oP = dronepidp->pid_control(goalPoint[0], position[0]);
         oR = dronepidr->pid_control(goalPoint[1], position[1]);
         oC = dronepidc->pid_control(goalPoint[2], position[2]);
@@ -221,7 +219,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
 
         std::sprintf(s.data(), "~rc %d %d %d %d", static_cast<int>(-oR), static_cast<int>(oP), static_cast<int>(oC), static_cast<int>(-oY));
         // std::sprintf(s.data(), "~rc 0 0 %d %d", static_cast<int>(oC), static_cast<int>(-oY));
-        RCLCPP_INFO(nh_->get_logger(), "send cmd: %s", s.c_str());
+        // RCLCPP_INFO(nh_->get_logger(), "send cmd: %s", s.c_str());
         request2->cmd = s;
         auto result2 = controllerClient_->async_send_request(request2);
         res = result2.get()->res;

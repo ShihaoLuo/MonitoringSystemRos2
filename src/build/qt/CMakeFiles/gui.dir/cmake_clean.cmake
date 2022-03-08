@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o"
   "CMakeFiles/gui.dir/src/main.cpp.o"
   "CMakeFiles/gui.dir/src/mainwindow.cpp.o"
+  "CMakeFiles/gui.dir/src/planning.cpp.o"
   "gui"
   "gui.pdb"
   "include/qt/moc_mainwindow.cpp"

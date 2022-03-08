@@ -88,13 +88,18 @@ public:
     QLineEdit *lineEditmap;
     QPushButton *pushButtonSaveImg1;
     QPushButton *pushButtonSaveImg2;
+    QLineEdit *lineEdittdistanceTD;
+    QLineEdit *lineEdittdistanceDD;
+    QLabel *labelTD;
+    QLabel *labelDD;
+    QPushButton *pushButtontracking;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(2600, 1102);
+        MainWindow->resize(2600, 1105);
         QSizePolicy sizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -420,6 +425,32 @@ public:
         pushButtonSaveImg2->setObjectName(QString::fromUtf8("pushButtonSaveImg2"));
         pushButtonSaveImg2->setGeometry(QRect(1850, 20, 101, 25));
         pushButtonSaveImg2->setFont(font);
+        lineEdittdistanceTD = new QLineEdit(centralwidget);
+        lineEdittdistanceTD->setObjectName(QString::fromUtf8("lineEdittdistanceTD"));
+        lineEdittdistanceTD->setGeometry(QRect(2130, 940, 51, 25));
+        lineEdittdistanceTD->setFont(font);
+        lineEdittdistanceTD->setMouseTracking(false);
+        lineEdittdistanceDD = new QLineEdit(centralwidget);
+        lineEdittdistanceDD->setObjectName(QString::fromUtf8("lineEdittdistanceDD"));
+        lineEdittdistanceDD->setGeometry(QRect(2330, 940, 51, 25));
+        lineEdittdistanceDD->setFont(font);
+        lineEdittdistanceDD->setMouseTracking(false);
+        labelTD = new QLabel(centralwidget);
+        labelTD->setObjectName(QString::fromUtf8("labelTD"));
+        labelTD->setGeometry(QRect(1990, 942, 131, 21));
+        labelTD->setFont(font);
+        labelTD->setFrameShape(QFrame::NoFrame);
+        labelTD->setFrameShadow(QFrame::Sunken);
+        labelDD = new QLabel(centralwidget);
+        labelDD->setObjectName(QString::fromUtf8("labelDD"));
+        labelDD->setGeometry(QRect(2190, 942, 131, 21));
+        labelDD->setFont(font);
+        labelDD->setFrameShape(QFrame::NoFrame);
+        labelDD->setFrameShadow(QFrame::Sunken);
+        pushButtontracking = new QPushButton(centralwidget);
+        pushButtontracking->setObjectName(QString::fromUtf8("pushButtontracking"));
+        pushButtontracking->setGeometry(QRect(2390, 940, 171, 25));
+        pushButtontracking->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         img1->raise();
         pushButtonland1->raise();
@@ -482,6 +513,11 @@ public:
         lineEditmap->raise();
         pushButtonSaveImg1->raise();
         pushButtonSaveImg2->raise();
+        lineEdittdistanceTD->raise();
+        lineEdittdistanceDD->raise();
+        labelTD->raise();
+        labelDD->raise();
+        pushButtontracking->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -560,6 +596,11 @@ public:
         pushButtonsavemap->setText(QApplication::translate("MainWindow", "Save Map", nullptr));
         pushButtonSaveImg1->setText(QApplication::translate("MainWindow", "saveImg", nullptr));
         pushButtonSaveImg2->setText(QApplication::translate("MainWindow", "saveImg", nullptr));
+        lineEdittdistanceTD->setText(QApplication::translate("MainWindow", "2000", nullptr));
+        lineEdittdistanceDD->setText(QApplication::translate("MainWindow", "2000", nullptr));
+        labelTD->setText(QApplication::translate("MainWindow", "Distance T2D", nullptr));
+        labelDD->setText(QApplication::translate("MainWindow", "Distance D2D", nullptr));
+        pushButtontracking->setText(QApplication::translate("MainWindow", "StartTracking", nullptr));
     } // retranslateUi
 
 };

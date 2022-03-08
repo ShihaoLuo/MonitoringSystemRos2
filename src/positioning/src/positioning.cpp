@@ -99,9 +99,9 @@ void Positioning::getTargetPosition()
                 cv::Mat pp1(2, 1, CV_32F);
                 cv::Mat pp2(2, 1, CV_32F);
                 pp1.at<float>(0,0) = humanBox1[0];
-                pp1.at<float>(1,0) = humanBox1[1];
+                pp1.at<float>(1,0) = humanBox1[1]-humanBox1[3]/2;
                 pp2.at<float>(0,0) = humanBox2[0];
-                pp2.at<float>(1,0) = humanBox2[1];
+                pp2.at<float>(1,0) = humanBox2[1]-humanBox2[3]/2;
                 cv::triangulatePoints(
                     pm1, 
                     pm2, 
@@ -112,7 +112,7 @@ void Positioning::getTargetPosition()
                 memcpy(targetWorldPoint.data(), worldPoint->data, 12);
                 targetLocation_.time = ms;
                 memcpy(targetLocation_.location.data(), targetWorldPoint.data(), 12);
-                std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
+                // std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
                 targetLocationPublisher_ -> publish(targetLocation_);
             }
         }
@@ -134,18 +134,13 @@ void Positioning::getTargetPosition()
 void Positioning::getKalmanTargetPosition()
 {
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-    // if(ms - oldtime > 5000)
-    // {
-    //     targetLocation_.location = defaultLostLocation;
-    //     kalmanFilter_->initial(0.05, initialLocation, INITIALUNCERTAINTY, ACCRANDVAR, MEASUREMENTERRORSTD);
-    // }
     if(ms - ptime1 < 45)
     {
         if(ms - ptime2 < 45)
         {
             if(humanBox1[0]==-1 || humanBox2[0]==-1)
             {
-                targetLocation_.time = ms;
+                // targetLocation_.time = ms;
                 kalmanFilter_->update(oldTargetWorldPoint);
                 auto tmp = kalmanFilter_->predict();
                 // std::cout<<"tmp1"<<tmp<<std::endl;
@@ -165,9 +160,9 @@ void Positioning::getKalmanTargetPosition()
                 cv::Mat pp1(2, 1, CV_32F);
                 cv::Mat pp2(2, 1, CV_32F);
                 pp1.at<float>(0,0) = humanBox1[0];
-                pp1.at<float>(1,0) = humanBox1[1];
+                pp1.at<float>(1,0) = humanBox1[1]-humanBox1[3]/2;
                 pp2.at<float>(0,0) = humanBox2[0];
-                pp2.at<float>(1,0) = humanBox2[1];
+                pp2.at<float>(1,0) = humanBox2[1]-humanBox2[3]/2;
                 cv::triangulatePoints(
                     pm1, 
                     pm2, 
@@ -177,7 +172,7 @@ void Positioning::getKalmanTargetPosition()
                 (*worldPoint) = (*worldPoint) / worldPoint->at<float>(3, 0);
                 memcpy(targetWorldPoint.data(), worldPoint->data, 12);
                 memcpy(oldTargetWorldPoint.data(), worldPoint->data, 12);
-                std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
+                // std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
                 // std::cout<<*worldPoint<<std::endl;
                 // std::cout<<targetWorldPoint[0]/targetWorldPoint[3]<<" "<<targetWorldPoint[1]/targetWorldPoint[3]<<" "<<targetWorldPoint[2]/targetWorldPoint[3];
                 // targetWorldPoint[0] /= targetWorldPoint[3];
@@ -196,7 +191,7 @@ void Positioning::getKalmanTargetPosition()
         }
         else
         {
-            targetLocation_.time = ms;
+            // targetLocation_.time = ms;
             kalmanFilter_->update(oldTargetWorldPoint);
             auto tmp = kalmanFilter_->predict();
             // std::cout<<"tmp2"<<tmp<<std::endl;
@@ -209,7 +204,7 @@ void Positioning::getKalmanTargetPosition()
     }
     else
     {
-        targetLocation_.time = ms;
+        // targetLocation_.time = ms;
         kalmanFilter_->update(oldTargetWorldPoint);
         auto tmp = kalmanFilter_->predict();
         // std::cout<<"tmp3"<<tmp<<std::endl;

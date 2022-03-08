@@ -40,6 +40,8 @@ namespace dronenamespace
 
 
         private:
+        string s = "~rc 000 000 000 000";
+        float oP=0, oR=0, oC=0, oY=0, oScale=0;
         bool slamMode = false;
         ORB_SLAM2::System* pSlam;
         // std::mutex mx;

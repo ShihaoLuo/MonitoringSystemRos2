@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#pragma
+#pragma once
 
 #include <QMainWindow>
 #include <QGraphicsScene>
@@ -30,10 +30,12 @@
 #include "droneinterfaces/action/go_point.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "droneinterfaces/srv/drone_shut_down.hpp"
+#include "droneinterfaces/msg/target_location.hpp"
 #include <unistd.h>
 #include <QDial>
 #include <QSlider>
 #include <ctime>
+#include "planning.h"
 // #include "Eigen/Dense"
 
 QT_BEGIN_NAMESPACE
@@ -92,9 +94,14 @@ public slots:
     void saveMap();
     void saveImg1();
     void saveImg2();
+    void startTracking();
     // void slam();
 
 private:
+    std::shared_ptr<QTimer> timer1_, timer2_;
+    std::shared_ptr<Planning> planner_;
+    float dTD, dDD;
+    bool trackingFlag = false;
     bool recordFlag1, recordFlag2;
     time_t curr_time1, curr_time2;
 	tm *curr_tm1, *curr_tm2;
@@ -125,6 +132,7 @@ private:
     rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription1_, frameSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::PositionArray>::SharedPtr positionSubscription1_, positionSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::HumanBox>::SharedPtr humanBoxSubscription1_, humanBoxSubscription2_;
+    rclcpp::Subscription<droneinterfaces::msg::TargetLocation>::SharedPtr targetLocationSubscription_;
     rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
     rclcpp::Client<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronePoolStatusClient_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownClient1_;
@@ -140,7 +148,9 @@ private:
     void positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void humanboxCallback1(const droneinterfaces::msg::HumanBox::SharedPtr msg);
     void humanboxCallback2(const droneinterfaces::msg::HumanBox::SharedPtr msg);
+    void targetLocationCallback(const droneinterfaces::msg::TargetLocation::SharedPtr msg);
     void spin();
+    void tracking();
     // void checkDrones();
 
     std::string ip1 = "192.168.50.100";
@@ -149,9 +159,10 @@ private:
     bool stream2 = false;
     QScrollBar *plaintext1scrollbar;
     QScrollBar *plaintext2scrollbar;
-    std::array<float, 6UL> p1, p2;
+    std::array<float, 6UL> p1= {-10000, -10000, -10000, 0, 0, 0}, p2= {-10000, -10000, -10000, 0, 0, 0};
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
-    int64_t ptime1=0, ptime2=0;
+    std::array<float, 3UL> targetLocation = {-10000, -10000, -10000};
+    int64_t ptime1=0, ptime2=0, ttime=0, trackingtime=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;
     // std::shared_ptr<droneinterfaces::srv::GoToPoint_Request>  goToPointRequest;
     int goalPointFlag = 0;

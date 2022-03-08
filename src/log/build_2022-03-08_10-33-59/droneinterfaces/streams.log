@@ -1,0 +1,317 @@
+[0.014s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces -- -j12 -l12
+[0.165s] [  0%] Built target droneinterfaces__cpp
+[0.169s] [  0%] Built target ament_cmake_python_symlink_droneinterfaces
+[0.175s] [ 12%] Built target droneinterfaces__rosidl_generator_c
+[0.195s] [ 24%] Built target droneinterfaces__rosidl_typesupport_cpp
+[0.195s] [ 36%] Built target droneinterfaces__rosidl_typesupport_introspection_cpp
+[0.201s] [ 48%] Built target droneinterfaces__rosidl_typesupport_introspection_c
+[0.203s] [ 60%] Built target droneinterfaces__rosidl_typesupport_c
+[0.204s] [ 71%] Built target droneinterfaces__rosidl_typesupport_fastrtps_cpp
+[0.232s] [ 83%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c
+[0.249s] [ 83%] Built target droneinterfaces
+[0.269s] [ 84%] Built target droneinterfaces__py
+[0.298s] [ 95%] Built target droneinterfaces__python
+[0.323s] [ 99%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.323s] [ 99%] Built target droneinterfaces__rosidl_typesupport_introspection_c__pyext
+[0.324s] [100%] Built target droneinterfaces__rosidl_typesupport_c__pyext
+[0.406s] running egg_info
+[0.407s] writing droneinterfaces.egg-info/PKG-INFO
+[0.407s] writing dependency_links to droneinterfaces.egg-info/dependency_links.txt
+[0.408s] writing top-level names to droneinterfaces.egg-info/top_level.txt
+[4.004s] writing manifest file 'droneinterfaces.egg-info/SOURCES.txt'
+[4.025s] [100%] Built target ament_cmake_python_build_droneinterfaces_egg
+[4.035s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces' returned '0': /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces -- -j12 -l12
+[4.173s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces
+[4.182s] -- Install configuration: "RelWithDebInfo"
+[4.183s] -- Execute custom install script
+[4.183s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/rosidl_interfaces/droneinterfaces
+[4.184s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__functions.h
+[4.184s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__struct.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__type_support.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/go_point.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__functions.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__type_support.h
+[4.185s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__functions.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__struct.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__type_support.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__functions.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__type_support.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__functions.h
+[4.186s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__type_support.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__functions.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__type_support.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.h
+[4.187s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_generator_c__visibility_control.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__functions.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__type_support.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__functions.h
+[4.188s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__type_support.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__functions.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__type_support.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__functions.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__struct.h
+[4.189s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__type_support.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__functions.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__type_support.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__functions.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__type_support.h
+[4.190s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__functions.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__struct.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__type_support.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.h
+[4.191s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.h
+[4.192s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.h
+[4.192s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/go_to_point.h
+[4.192s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/library_path.sh
+[4.192s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/library_path.dsv
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_introspection_c.h
+[4.193s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_introspection_c.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_c.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_introspection_c.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_c.h
+[4.194s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_c.h
+[4.195s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_introspection_c.h
+[4.195s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_fastrtps_c.h
+[4.195s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_fastrtps_c.h
+[4.196s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_fastrtps_c.h
+[4.197s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_fastrtps_c.h
+[4.197s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_fastrtps_c.h
+[4.197s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_fastrtps_c.h
+[4.197s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_c.h
+[4.197s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_fastrtps_c.h
+[4.198s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_fastrtps_c.so
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_cpp.hpp
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.199s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_cpp.hpp
+[4.200s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_fastrtps_cpp.hpp
+[4.201s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.201s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__builder.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__struct.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__traits.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/go_point.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp
+[4.202s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__builder.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__struct.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__traits.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__builder.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__traits.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp
+[4.203s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__builder.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__traits.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.hpp
+[4.204s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__builder.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__traits.hpp
+[4.205s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__builder.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__struct.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__traits.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp
+[4.206s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__builder.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__traits.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__builder.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__struct.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__traits.hpp
+[4.207s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp
+[4.208s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/go_to_point.hpp
+[4.209s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_cpp.hpp
+[4.209s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_cpp.hpp
+[4.209s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_introspection_cpp.hpp
+[4.209s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_cpp.hpp
+[4.209s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_cpp.hpp
+[4.210s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_introspection_cpp.hpp
+[4.210s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_introspection_cpp.hpp
+[4.210s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_cpp.hpp
+[4.210s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_introspection_cpp.hpp
+[4.210s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_cpp.hpp
+[4.211s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_cpp.hpp
+[4.211s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_cpp.hpp
+[4.211s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_introspection_cpp.hpp
+[4.211s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/pythonpath.sh
+[4.211s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/pythonpath.dsv
+[4.212s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/PKG-INFO
+[4.212s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/SOURCES.txt
+[4.212s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/dependency_links.txt
+[4.212s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/top_level.txt
+[4.213s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/__init__.py
+[4.213s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_c.c
+[4.213s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/__init__.py
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/_go_point.py
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/_go_point_s.c
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[4.214s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/libdroneinterfaces__python.so
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/__init__.py
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_frame_array.py
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_frame_array_s.c
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_box.py
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_box_s.c
+[4.215s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_pose_coor.py
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_pose_coor_s.c
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_position_array.py
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_position_array_s.c
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_target_location.py
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_target_location_s.c
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/__init__.py
+[4.216s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_controller.py
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_controller_s.c
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_map.py
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_map_s.c
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_pool_status.py
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_pool_status_s.c
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_register.py
+[4.217s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_register_s.c
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_shut_down.py
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_shut_down_s.c
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_slam.py
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_slam_s.c
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_go_to_point.py
+[4.218s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_go_to_point_s.c
+[4.219s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[4.219s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[4.220s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[4.220s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__python.so
+[4.221s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister.idl
+[4.221s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController.idl
+[4.221s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus.idl
+[4.221s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/FrameArray.idl
+[4.222s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/PositionArray.idl
+[4.222s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown.idl
+[4.222s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanPoseCoor.idl
+[4.222s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/action/GoPoint.idl
+[4.222s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap.idl
+[4.223s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam.idl
+[4.223s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/TargetLocation.idl
+[4.223s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanBox.idl
+[4.223s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister.srv
+[4.224s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister_Request.msg
+[4.224s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister_Response.msg
+[4.224s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController.srv
+[4.224s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController_Request.msg
+[4.224s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController_Response.msg
+[4.225s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus.srv
+[4.225s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus_Request.msg
+[4.225s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus_Response.msg
+[4.225s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/FrameArray.msg
+[4.225s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/PositionArray.msg
+[4.226s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown.srv
+[4.226s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown_Request.msg
+[4.226s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown_Response.msg
+[4.226s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanPoseCoor.msg
+[4.227s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/action/GoPoint.action
+[4.227s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap.srv
+[4.227s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap_Request.msg
+[4.227s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap_Response.msg
+[4.228s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam.srv
+[4.228s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam_Request.msg
+[4.228s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam_Response.msg
+[4.228s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/TargetLocation.msg
+[4.228s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanBox.msg
+[4.229s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/package_run_dependencies/droneinterfaces
+[4.229s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/parent_prefix_path/droneinterfaces
+[4.229s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.sh
+[4.229s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.dsv
+[4.230s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.sh
+[4.230s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.dsv
+[4.230s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.bash
+[4.230s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.sh
+[4.230s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.zsh
+[4.231s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.dsv
+[4.231s] -- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.dsv
+[4.240s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/packages/droneinterfaces
+[4.240s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake-extras.cmake
+[4.240s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.240s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.240s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.241s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.241s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.241s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.241s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfacesConfig.cmake
+[4.241s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfacesConfig-version.cmake
+[4.242s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.xml
+[4.242s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_generator_c.so
+[4.242s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so
+[4.243s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_c.so
+[4.243s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_cpp.so
+[4.243s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_cpp.so
+[4.270s] Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces'...
+[4.270s] Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action'...
+[4.270s] Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg'...
+[4.270s] Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv'...
+[4.274s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cExport.cmake
+[4.274s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cExport-relwithdebinfo.cmake
+[4.274s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.274s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake
+[4.274s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cExport.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cExport-relwithdebinfo.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cppExport.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cppExport.cmake
+[4.275s] -- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cppExport-relwithdebinfo.cmake
+[4.278s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces' returned '0': /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces

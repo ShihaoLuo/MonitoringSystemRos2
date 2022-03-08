@@ -115,7 +115,7 @@ def main(args=None):
         "/home/jakeluo/Documents/darknet/cfg/coco.data", 
         "/home/jakeluo/Documents/darknet/yolov4.weights", 
         1, 
-        0.85
+        0.75
     )
     rclpy.init(args=args)
     subscriber = HumanPose(sys.argv[1], detector)

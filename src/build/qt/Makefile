@@ -327,6 +327,33 @@ src/mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/planning.o: src/planning.cpp.o
+
+.PHONY : src/planning.o
+
+# target to build an object file
+src/planning.cpp.o:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/planning.cpp.o
+.PHONY : src/planning.cpp.o
+
+src/planning.i: src/planning.cpp.i
+
+.PHONY : src/planning.i
+
+# target to preprocess a source file
+src/planning.cpp.i:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/planning.cpp.i
+.PHONY : src/planning.cpp.i
+
+src/planning.s: src/planning.cpp.s
+
+.PHONY : src/planning.s
+
+# target to generate assembly for a file
+src/planning.cpp.s:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/planning.cpp.s
+.PHONY : src/planning.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -356,6 +383,9 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/planning.o"
+	@echo "... src/planning.i"
+	@echo "... src/planning.s"
 .PHONY : help
 
 

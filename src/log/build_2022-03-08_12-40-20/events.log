@@ -1,0 +1,916 @@
+[0.000000] (-) TimerEvent: {}
+[0.000162] (droneinterfaces) JobQueued: {'identifier': 'droneinterfaces', 'dependencies': OrderedDict()}
+[0.000798] (droneutility) JobQueued: {'identifier': 'droneutility', 'dependencies': OrderedDict([('droneinterfaces', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')])}
+[0.001057] (humandetection) JobQueued: {'identifier': 'humandetection', 'dependencies': OrderedDict([('droneinterfaces', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')])}
+[0.001123] (positioning) JobQueued: {'identifier': 'positioning', 'dependencies': OrderedDict([('droneinterfaces', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')])}
+[0.001153] (qt) JobQueued: {'identifier': 'qt', 'dependencies': OrderedDict([('droneinterfaces', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')])}
+[0.001191] (droneinterfaces) JobStarted: {'identifier': 'droneinterfaces'}
+[0.009951] (droneinterfaces) JobProgress: {'identifier': 'droneinterfaces', 'progress': 'cmake'}
+[0.010285] (droneinterfaces) JobProgress: {'identifier': 'droneinterfaces', 'progress': 'build'}
+[0.010959] (droneinterfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces', '--', '-j12', '-l12'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', ':/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.055509] (droneinterfaces) StdoutLine: {'line': b'[  0%] Built target droneinterfaces__cpp\n'}
+[0.058267] (droneinterfaces) StdoutLine: {'line': b'[ 12%] Built target droneinterfaces__rosidl_generator_c\n'}
+[0.061781] (droneinterfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_droneinterfaces\n'}
+[0.075835] (droneinterfaces) StdoutLine: {'line': b'[ 36%] Built target droneinterfaces__rosidl_typesupport_cpp\n'}
+[0.076071] (droneinterfaces) StdoutLine: {'line': b'[ 36%] Built target droneinterfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.077146] (droneinterfaces) StdoutLine: {'line': b'[ 48%] Built target droneinterfaces__rosidl_typesupport_c\n'}
+[0.078971] (droneinterfaces) StdoutLine: {'line': b'[ 70%] Built target droneinterfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.079126] (droneinterfaces) StdoutLine: {'line': b'[ 71%] Built target droneinterfaces__rosidl_typesupport_introspection_c\n'}
+[0.099684] (-) TimerEvent: {}
+[0.102970] (droneinterfaces) StdoutLine: {'line': b'[ 83%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.119907] (droneinterfaces) StdoutLine: {'line': b'[ 83%] Built target droneinterfaces\n'}
+[0.137030] (droneinterfaces) StdoutLine: {'line': b'[ 84%] Built target droneinterfaces__py\n'}
+[0.162834] (droneinterfaces) StdoutLine: {'line': b'[ 95%] Built target droneinterfaces__python\n'}
+[0.183318] (droneinterfaces) StdoutLine: {'line': b'[ 99%] Built target droneinterfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.183524] (droneinterfaces) StdoutLine: {'line': b'[ 99%] Built target droneinterfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.183644] (droneinterfaces) StdoutLine: {'line': b'[100%] Built target droneinterfaces__rosidl_typesupport_c__pyext\n'}
+[0.199781] (-) TimerEvent: {}
+[0.275362] (droneinterfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.275733] (droneinterfaces) StdoutLine: {'line': b'writing droneinterfaces.egg-info/PKG-INFO\n'}
+[0.275951] (droneinterfaces) StdoutLine: {'line': b'writing dependency_links to droneinterfaces.egg-info/dependency_links.txt\n'}
+[0.276143] (droneinterfaces) StdoutLine: {'line': b'writing top-level names to droneinterfaces.egg-info/top_level.txt\n'}
+[0.299887] (-) TimerEvent: {}
+[0.400142] (-) TimerEvent: {}
+[0.500481] (-) TimerEvent: {}
+[0.600804] (-) TimerEvent: {}
+[0.701100] (-) TimerEvent: {}
+[0.801406] (-) TimerEvent: {}
+[0.901730] (-) TimerEvent: {}
+[1.002032] (-) TimerEvent: {}
+[1.102348] (-) TimerEvent: {}
+[1.202638] (-) TimerEvent: {}
+[1.303040] (-) TimerEvent: {}
+[1.403382] (-) TimerEvent: {}
+[1.503749] (-) TimerEvent: {}
+[1.604091] (-) TimerEvent: {}
+[1.704379] (-) TimerEvent: {}
+[1.804713] (-) TimerEvent: {}
+[1.905061] (-) TimerEvent: {}
+[2.005407] (-) TimerEvent: {}
+[2.105774] (-) TimerEvent: {}
+[2.206181] (-) TimerEvent: {}
+[2.306510] (-) TimerEvent: {}
+[2.406784] (-) TimerEvent: {}
+[2.507105] (-) TimerEvent: {}
+[2.607418] (-) TimerEvent: {}
+[2.707782] (-) TimerEvent: {}
+[2.808088] (-) TimerEvent: {}
+[2.908368] (-) TimerEvent: {}
+[3.008655] (-) TimerEvent: {}
+[3.108962] (-) TimerEvent: {}
+[3.209280] (-) TimerEvent: {}
+[3.309638] (-) TimerEvent: {}
+[3.409905] (-) TimerEvent: {}
+[3.510282] (-) TimerEvent: {}
+[3.610633] (-) TimerEvent: {}
+[3.661383] (droneinterfaces) StdoutLine: {'line': b"writing manifest file 'droneinterfaces.egg-info/SOURCES.txt'\n"}
+[3.683027] (droneinterfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_droneinterfaces_egg\n'}
+[3.694346] (droneinterfaces) CommandEnded: {'returncode': 0}
+[3.710765] (-) TimerEvent: {}
+[3.811050] (-) TimerEvent: {}
+[3.825445] (droneinterfaces) JobProgress: {'identifier': 'droneinterfaces', 'progress': 'install'}
+[3.835236] (droneinterfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', ':/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneinterfaces'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[3.842829] (droneinterfaces) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[3.843499] (droneinterfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.843931] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/rosidl_interfaces/droneinterfaces\n'}
+[3.845217] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__functions.h\n'}
+[3.845382] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__struct.h\n'}
+[3.845590] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__type_support.h\n'}
+[3.845772] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/go_point.h\n'}
+[3.845950] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__functions.h\n'}
+[3.846118] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.h\n'}
+[3.846285] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__type_support.h\n'}
+[3.846410] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__functions.h\n'}
+[3.846547] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__struct.h\n'}
+[3.846685] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__type_support.h\n'}
+[3.846820] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__functions.h\n'}
+[3.846956] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.h\n'}
+[3.847091] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__type_support.h\n'}
+[3.847291] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__functions.h\n'}
+[3.847485] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.h\n'}
+[3.847635] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__type_support.h\n'}
+[3.847830] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__functions.h\n'}
+[3.848043] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.h\n'}
+[3.848225] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__type_support.h\n'}
+[3.848355] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.h\n'}
+[3.848503] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.h\n'}
+[3.848657] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.h\n'}
+[3.848815] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.h\n'}
+[3.848976] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.849135] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.h\n'}
+[3.849268] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__functions.h\n'}
+[3.849403] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.h\n'}
+[3.849541] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__type_support.h\n'}
+[3.849676] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__functions.h\n'}
+[3.849812] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.h\n'}
+[3.849951] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__type_support.h\n'}
+[3.850089] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__functions.h\n'}
+[3.850222] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.h\n'}
+[3.850391] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__type_support.h\n'}
+[3.850554] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__functions.h\n'}
+[3.850712] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__struct.h\n'}
+[3.850872] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__type_support.h\n'}
+[3.851002] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__functions.h\n'}
+[3.851251] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.h\n'}
+[3.851401] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__type_support.h\n'}
+[3.851594] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__functions.h\n'}
+[3.851742] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.h\n'}
+[3.851892] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__type_support.h\n'}
+[3.852041] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__functions.h\n'}
+[3.852184] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__struct.h\n'}
+[3.852324] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__type_support.h\n'}
+[3.852452] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.h\n'}
+[3.852584] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.h\n'}
+[3.852714] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.h\n'}
+[3.852847] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.h\n'}
+[3.852978] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.h\n'}
+[3.853110] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.h\n'}
+[3.853240] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/go_to_point.h\n'}
+[3.853528] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/library_path.sh\n'}
+[3.853754] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/library_path.dsv\n'}
+[3.854393] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_c.h\n'}
+[3.854596] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_c.h\n'}
+[3.854760] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_introspection_c.h\n'}
+[3.854891] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_c.h\n'}
+[3.855029] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_c.h\n'}
+[3.855226] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_introspection_c.h\n'}
+[3.855366] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.855460] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_introspection_c.h\n'}
+[3.855590] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_c.h\n'}
+[3.855724] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_introspection_c.h\n'}
+[3.855855] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_c.h\n'}
+[3.855987] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_c.h\n'}
+[3.856146] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_c.h\n'}
+[3.856251] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_introspection_c.h\n'}
+[3.857115] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_fastrtps_c.h\n'}
+[3.857363] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.857597] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_fastrtps_c.h\n'}
+[3.857750] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_fastrtps_c.h\n'}
+[3.857904] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858051] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858189] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.858424] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858528] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858662] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858793] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_fastrtps_c.h\n'}
+[3.858927] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_fastrtps_c.h\n'}
+[3.859063] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_c.h\n'}
+[3.859225] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_fastrtps_c.h\n'}
+[3.859577] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.860528] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.860713] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.860834] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.860961] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.861070] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.861200] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.861338] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.861556] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.861748] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.861901] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.862053] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.862198] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.862346] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.862490] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.862841] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.863647] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__builder.hpp\n'}
+[3.863856] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__struct.hpp\n'}
+[3.863987] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__traits.hpp\n'}
+[3.864104] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/go_point.hpp\n'}
+[3.864262] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__builder.hpp\n'}
+[3.864374] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__struct.hpp\n'}
+[3.864478] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__traits.hpp\n'}
+[3.864611] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__builder.hpp\n'}
+[3.864742] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__struct.hpp\n'}
+[3.864875] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__traits.hpp\n'}
+[3.865008] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__builder.hpp\n'}
+[3.865140] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__struct.hpp\n'}
+[3.865272] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__traits.hpp\n'}
+[3.865402] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__builder.hpp\n'}
+[3.865533] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__struct.hpp\n'}
+[3.865663] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__traits.hpp\n'}
+[3.865799] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__builder.hpp\n'}
+[3.865931] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__struct.hpp\n'}
+[3.866107] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__traits.hpp\n'}
+[3.866391] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/frame_array.hpp\n'}
+[3.866609] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_box.hpp\n'}
+[3.866757] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/human_pose_coor.hpp\n'}
+[3.866906] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/position_array.hpp\n'}
+[3.867047] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/target_location.hpp\n'}
+[3.867204] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__builder.hpp\n'}
+[3.867444] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__struct.hpp\n'}
+[3.867607] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__traits.hpp\n'}
+[3.867773] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__builder.hpp\n'}
+[3.867878] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__struct.hpp\n'}
+[3.868009] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__traits.hpp\n'}
+[3.868147] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__builder.hpp\n'}
+[3.868284] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__struct.hpp\n'}
+[3.868416] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__traits.hpp\n'}
+[3.868580] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__builder.hpp\n'}
+[3.868744] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__struct.hpp\n'}
+[3.868894] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__traits.hpp\n'}
+[3.869071] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__builder.hpp\n'}
+[3.869220] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__struct.hpp\n'}
+[3.869379] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__traits.hpp\n'}
+[3.869515] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__builder.hpp\n'}
+[3.869649] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__struct.hpp\n'}
+[3.869784] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__traits.hpp\n'}
+[3.869919] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__builder.hpp\n'}
+[3.870054] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__struct.hpp\n'}
+[3.870205] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__traits.hpp\n'}
+[3.870347] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_controller.hpp\n'}
+[3.870480] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_map.hpp\n'}
+[3.870617] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_pool_status.hpp\n'}
+[3.870749] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_register.hpp\n'}
+[3.870898] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_shut_down.hpp\n'}
+[3.871044] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/drone_slam.hpp\n'}
+[3.871209] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/go_to_point.hpp\n'}
+[3.871804] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.871957] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/frame_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872096] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872234] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/human_pose_coor__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872371] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/position_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872516] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/msg/detail/target_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872654] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_controller__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872795] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_map__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.872931] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_pool_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.873066] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_register__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.873310] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_shut_down__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.873455] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/drone_slam__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.873591] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/srv/detail/go_to_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.873864] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/pythonpath.sh\n'}
+[3.874090] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/pythonpath.dsv\n'}
+[3.874536] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/PKG-INFO\n'}
+[3.874699] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/SOURCES.txt\n'}
+[3.874907] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/dependency_links.txt\n'}
+[3.875060] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces-0.0.0-py3.8.egg-info/top_level.txt\n'}
+[3.876291] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/__init__.py\n'}
+[3.876478] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_c.c\n'}
+[3.876647] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.876801] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/_droneinterfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.876932] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/__init__.py\n'}
+[3.877105] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/_go_point.py\n'}
+[3.877286] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action/_go_point_s.c\n'}
+[3.877527] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.877731] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.877865] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.878017] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/libdroneinterfaces__python.so\n'}
+[3.878178] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/__init__.py\n'}
+[3.878327] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_frame_array.py\n'}
+[3.878464] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_frame_array_s.c\n'}
+[3.878596] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_box.py\n'}
+[3.878733] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_box_s.c\n'}
+[3.878868] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_pose_coor.py\n'}
+[3.879005] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_human_pose_coor_s.c\n'}
+[3.879137] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_position_array.py\n'}
+[3.879285] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_position_array_s.c\n'}
+[3.879419] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_target_location.py\n'}
+[3.879586] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg/_target_location_s.c\n'}
+[3.879804] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/__init__.py\n'}
+[3.879964] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_controller.py\n'}
+[3.880125] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_controller_s.c\n'}
+[3.880282] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_map.py\n'}
+[3.880428] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_map_s.c\n'}
+[3.880560] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_pool_status.py\n'}
+[3.880692] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_pool_status_s.c\n'}
+[3.880827] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_register.py\n'}
+[3.880961] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_register_s.c\n'}
+[3.881094] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_shut_down.py\n'}
+[3.881238] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_shut_down_s.c\n'}
+[3.881367] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_slam.py\n'}
+[3.881499] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_drone_slam_s.c\n'}
+[3.881633] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_go_to_point.py\n'}
+[3.881766] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv/_go_to_point_s.c\n'}
+[3.882165] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.882547] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.882894] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/droneinterfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.883334] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__python.so\n'}
+[3.883624] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister.idl\n'}
+[3.883939] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController.idl\n'}
+[3.884266] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus.idl\n'}
+[3.884633] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/FrameArray.idl\n'}
+[3.884938] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/PositionArray.idl\n'}
+[3.885187] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown.idl\n'}
+[3.885409] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanPoseCoor.idl\n'}
+[3.885711] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/action/GoPoint.idl\n'}
+[3.885922] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap.idl\n'}
+[3.886193] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam.idl\n'}
+[3.886413] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/TargetLocation.idl\n'}
+[3.886739] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanBox.idl\n'}
+[3.886972] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister.srv\n'}
+[3.887322] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister_Request.msg\n'}
+[3.887620] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneRegister_Response.msg\n'}
+[3.887883] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController.srv\n'}
+[3.888153] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController_Request.msg\n'}
+[3.888370] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneController_Response.msg\n'}
+[3.888676] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus.srv\n'}
+[3.888948] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus_Request.msg\n'}
+[3.889150] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DronePoolStatus_Response.msg\n'}
+[3.889412] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/FrameArray.msg\n'}
+[3.889662] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/PositionArray.msg\n'}
+[3.889873] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown.srv\n'}
+[3.890086] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown_Request.msg\n'}
+[3.890306] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneShutDown_Response.msg\n'}
+[3.890582] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanPoseCoor.msg\n'}
+[3.890821] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/action/GoPoint.action\n'}
+[3.891051] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap.srv\n'}
+[3.891412] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap_Request.msg\n'}
+[3.891684] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneMap_Response.msg\n'}
+[3.891908] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam.srv\n'}
+[3.892145] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam_Request.msg\n'}
+[3.892393] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/srv/DroneSlam_Response.msg\n'}
+[3.892656] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/TargetLocation.msg\n'}
+[3.892898] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/msg/HumanBox.msg\n'}
+[3.893152] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/package_run_dependencies/droneinterfaces\n'}
+[3.893430] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/parent_prefix_path/droneinterfaces\n'}
+[3.893732] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.sh\n'}
+[3.893993] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/ament_prefix_path.dsv\n'}
+[3.894227] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.sh\n'}
+[3.894471] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/environment/path.dsv\n'}
+[3.894706] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.bash\n'}
+[3.894944] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.sh\n'}
+[3.895156] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.zsh\n'}
+[3.895418] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/local_setup.dsv\n'}
+[3.895671] (droneinterfaces) StdoutLine: {'line': b'-- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.dsv\n'}
+[3.903555] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/ament_index/resource_index/packages/droneinterfaces\n'}
+[3.903770] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.904068] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.904370] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.904647] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.904920] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.905219] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.905488] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.905785] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfacesConfig.cmake\n'}
+[3.906029] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfacesConfig-version.cmake\n'}
+[3.906243] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/package.xml\n'}
+[3.906509] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_generator_c.so\n'}
+[3.906928] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.907344] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_c.so\n'}
+[3.907752] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.908231] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/libdroneinterfaces__rosidl_typesupport_cpp.so\n'}
+[3.911133] (-) TimerEvent: {}
+[3.931549] (droneinterfaces) StdoutLine: {'line': b"Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces'...\n"}
+[3.931776] (droneinterfaces) StdoutLine: {'line': b"Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/action'...\n"}
+[3.931859] (droneinterfaces) StdoutLine: {'line': b"Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/msg'...\n"}
+[3.931926] (droneinterfaces) StdoutLine: {'line': b"Listing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages/droneinterfaces/srv'...\n"}
+[3.935064] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cExport.cmake\n'}
+[3.935299] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cExport-relwithdebinfo.cmake\n'}
+[3.935507] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.935661] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake\n'}
+[3.935815] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.935935] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cExport-relwithdebinfo.cmake\n'}
+[3.936179] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_generator_cppExport.cmake\n'}
+[3.936379] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.936505] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake\n'}
+[3.936652] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.936777] (droneinterfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/share/droneinterfaces/cmake/droneinterfaces__rosidl_typesupport_cppExport-relwithdebinfo.cmake\n'}
+[3.939072] (droneinterfaces) CommandEnded: {'returncode': 0}
+[4.011338] (-) TimerEvent: {}
+[4.091622] (droneinterfaces) JobEnded: {'identifier': 'droneinterfaces', 'rc': 0}
+[4.094949] (droneutility) JobStarted: {'identifier': 'droneutility'}
+[4.097812] (humandetection) JobStarted: {'identifier': 'humandetection'}
+[4.107863] (positioning) JobStarted: {'identifier': 'positioning'}
+[4.112049] (-) TimerEvent: {}
+[4.114953] (qt) JobStarted: {'identifier': 'qt'}
+[4.126294] (droneutility) JobProgress: {'identifier': 'droneutility', 'progress': 'cmake'}
+[4.127243] (droneutility) JobProgress: {'identifier': 'droneutility', 'progress': 'build'}
+[4.127716] (droneutility) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility', '--', '-j12', '-l12'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')]), 'shell': False}
+[4.212223] (-) TimerEvent: {}
+[4.312601] (-) TimerEvent: {}
+[4.371458] (positioning) JobProgress: {'identifier': 'positioning', 'progress': 'cmake'}
+[4.372143] (positioning) JobProgress: {'identifier': 'positioning', 'progress': 'build'}
+[4.372577] (positioning) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning', '--', '-j12', '-l12'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')]), 'shell': False}
+[4.377358] (droneutility) StdoutLine: {'line': b'[ 40%] Built target dronemanager\n'}
+[4.377760] (droneutility) StdoutLine: {'line': b'[100%] Built target drone\n'}
+[4.379036] (qt) JobProgress: {'identifier': 'qt', 'progress': 'cmake'}
+[4.379828] (qt) JobProgress: {'identifier': 'qt', 'progress': 'build'}
+[4.380125] (qt) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt', '--', '-j12', '-l12'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')]), 'shell': False}
+[4.383711] (droneutility) CommandEnded: {'returncode': 0}
+[4.388524] (humandetection) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/humandetection', 'build', '--build-base', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/build', 'install', '--prefix', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection', '--record', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log', '--single-version-externally-managed'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/humandetection', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'jakeluo', 'LC_TIME': 'zh_CN.UTF-8', 'SSH_AGENT_PID': '2145', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib', 'HOME': '/home/jakeluo', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/jakeluo', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge:appmenu-gtk-module', 'LC_MONETARY': 'zh_CN.UTF-8', 'MANAGERPID': '1964', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'jakeluo', 'JOURNAL_STREAM': '8:55644', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'jakeluo', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin', 'SESSION_MANAGER': 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182', 'INVOCATION_ID': 'c1f449db9d3f4682839a939f83f5290f', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.90', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'CONDA_PYTHON_EXE': '/home/jakeluo/anaconda3/bin/python', 'AMENT_PREFIX_PATH': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection', 'LC_ALL': 'en_US.UTF-8', 'CUDA_HOME': ':/usr/local/cuda', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/jakeluo/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LC_NUMERIC': 'zh_CN.UTF-8', 'PYTHONPATH': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages:/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'}, 'shell': False}
+[4.405765] (droneutility) JobProgress: {'identifier': 'droneutility', 'progress': 'install'}
+[4.406060] (droneutility) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')]), 'shell': False}
+[4.412723] (-) TimerEvent: {}
+[4.414741] (droneutility) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[4.415304] (droneutility) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.415815] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/dronemanager\n'}
+[4.416055] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/drone\n'}
+[4.416317] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/package_run_dependencies/droneutility\n'}
+[4.417018] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/parent_prefix_path/droneutility\n'}
+[4.417174] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.sh\n'}
+[4.417351] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.dsv\n'}
+[4.417611] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.sh\n'}
+[4.417944] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.dsv\n'}
+[4.418156] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.bash\n'}
+[4.418413] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.sh\n'}
+[4.418635] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.zsh\n'}
+[4.418850] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.dsv\n'}
+[4.419079] (droneutility) StdoutLine: {'line': b'-- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.dsv\n'}
+[4.425603] (qt) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target gui\x1b[0m\n'}
+[4.426618] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/packages/droneutility\n'}
+[4.426826] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/cmake/droneutilityConfig.cmake\n'}
+[4.427001] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/cmake/droneutilityConfig-version.cmake\n'}
+[4.427232] (droneutility) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.xml\n'}
+[4.428869] (droneutility) CommandEnded: {'returncode': 0}
+[4.432513] (positioning) StdoutLine: {'line': b'[100%] Built target positioning\n'}
+[4.443564] (positioning) CommandEnded: {'returncode': 0}
+[4.450629] (qt) StdoutLine: {'line': b'[ 14%] Built target gui_autogen\n'}
+[4.465905] (qt) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating include/qt/moc_mainwindow.cpp\x1b[0m\n'}
+[4.471353] (droneutility) JobEnded: {'identifier': 'droneutility', 'rc': 0}
+[4.472503] (positioning) JobProgress: {'identifier': 'positioning', 'progress': 'install'}
+[4.473649] (positioning) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning'], 'cwd': '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'jakeluo'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '2145'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib:/usr/local/cuda-11.2/targets/x86_64-linux/lib'), ('HOME', '/home/jakeluo'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/jakeluo'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1964'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'jakeluo'), ('JOURNAL_STREAM', '8:55644'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jakeluo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/home/jakeluo/anaconda3/condabin:/home/jakeluo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/kendryte-toolchain/bin:/usr/local/cuda-11.2/bin'), ('SESSION_MANAGER', 'local/jakeluo-MS-7B45:@/tmp/.ICE-unix/2182,unix/jakeluo-MS-7B45:/tmp/.ICE-unix/2182'), ('INVOCATION_ID', 'c1f449db9d3f4682839a939f83f5290f'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/613484f3_96f5_4605_899c_93f084bad625'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/jakeluo/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/positioning'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', ':/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jakeluo/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces')]), 'shell': False}
+[4.480400] (positioning) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[4.480780] (positioning) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.481212] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/lib/positioning/positioning\n'}
+[4.481390] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/package_run_dependencies/positioning\n'}
+[4.481629] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/parent_prefix_path/positioning\n'}
+[4.481882] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.sh\n'}
+[4.482104] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/ament_prefix_path.dsv\n'}
+[4.482351] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.sh\n'}
+[4.482575] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/environment/path.dsv\n'}
+[4.482790] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.bash\n'}
+[4.483280] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.sh\n'}
+[4.483372] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.zsh\n'}
+[4.483539] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/local_setup.dsv\n'}
+[4.483755] (positioning) StdoutLine: {'line': b'-- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.dsv\n'}
+[4.492381] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/ament_index/resource_index/packages/positioning\n'}
+[4.492669] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig.cmake\n'}
+[4.492781] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/cmake/positioningConfig-version.cmake\n'}
+[4.493183] (positioning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/positioning/share/positioning/package.xml\n'}
+[4.494793] (positioning) CommandEnded: {'returncode': 0}
+[4.512854] (-) TimerEvent: {}
+[4.529055] (positioning) JobEnded: {'identifier': 'positioning', 'rc': 0}
+[4.533322] (qt) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target gui\x1b[0m\n'}
+[4.612937] (-) TimerEvent: {}
+[4.615584] (qt) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[4.615811] (qt) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o\x1b[0m\n'}
+[4.619063] (qt) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o\x1b[0m\n'}
+[4.625307] (qt) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp:9\x1b[m\x1b[K:\n'}
+[4.625481] (qt) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/../../../../qt/include/qt/mainwindow.h:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kignoring #pragma   [\x1b[01;35m\x1b[K-Wunknown-pragmas\x1b[m\x1b[K]\n'}
+[4.625545] (qt) StderrLine: {'line': b'    3 | #pragma\n'}
+[4.625733] (qt) StderrLine: {'line': b'      | \n'}
+[4.625809] (qt) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[4.625866] (qt) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kignoring #pragma   [\x1b[01;35m\x1b[K-Wunknown-pragmas\x1b[m\x1b[K]\n'}
+[4.625921] (qt) StderrLine: {'line': b'    3 | #pragma\n'}
+[4.625972] (qt) StderrLine: {'line': b'      | \n'}
+[4.626022] (qt) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[4.626073] (qt) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kignoring #pragma   [\x1b[01;35m\x1b[K-Wunknown-pragmas\x1b[m\x1b[K]\n'}
+[4.626125] (qt) StderrLine: {'line': b'    3 | #pragma\n'}
+[4.626174] (qt) StderrLine: {'line': b'      | \n'}
+[4.692660] (humandetection) StdoutLine: {'line': b'running egg_info\n'}
+[4.693047] (humandetection) StdoutLine: {'line': b'writing ../build/humandetection/humandetection.egg-info/PKG-INFO\n'}
+[4.693290] (humandetection) StdoutLine: {'line': b'writing dependency_links to ../build/humandetection/humandetection.egg-info/dependency_links.txt\n'}
+[4.693460] (humandetection) StdoutLine: {'line': b'writing entry points to ../build/humandetection/humandetection.egg-info/entry_points.txt\n'}
+[4.693637] (humandetection) StdoutLine: {'line': b'writing requirements to ../build/humandetection/humandetection.egg-info/requires.txt\n'}
+[4.693805] (humandetection) StdoutLine: {'line': b'writing top-level names to ../build/humandetection/humandetection.egg-info/top_level.txt\n'}
+[4.713031] (-) TimerEvent: {}
+[4.813384] (-) TimerEvent: {}
+[4.913755] (-) TimerEvent: {}
+[5.014118] (-) TimerEvent: {}
+[5.114576] (-) TimerEvent: {}
+[5.214985] (-) TimerEvent: {}
+[5.315434] (-) TimerEvent: {}
+[5.415784] (-) TimerEvent: {}
+[5.516144] (-) TimerEvent: {}
+[5.616641] (-) TimerEvent: {}
+[5.716979] (-) TimerEvent: {}
+[5.817327] (-) TimerEvent: {}
+[5.917774] (-) TimerEvent: {}
+[6.018305] (-) TimerEvent: {}
+[6.118771] (-) TimerEvent: {}
+[6.219184] (-) TimerEvent: {}
+[6.319607] (-) TimerEvent: {}
+[6.420038] (-) TimerEvent: {}
+[6.520469] (-) TimerEvent: {}
+[6.620858] (-) TimerEvent: {}
+[6.721260] (-) TimerEvent: {}
+[6.821646] (-) TimerEvent: {}
+[6.922024] (-) TimerEvent: {}
+[7.022424] (-) TimerEvent: {}
+[7.122781] (-) TimerEvent: {}
+[7.223184] (-) TimerEvent: {}
+[7.323580] (-) TimerEvent: {}
+[7.423967] (-) TimerEvent: {}
+[7.524372] (-) TimerEvent: {}
+[7.624786] (-) TimerEvent: {}
+[7.725186] (-) TimerEvent: {}
+[7.825587] (-) TimerEvent: {}
+[7.925975] (-) TimerEvent: {}
+[8.026468] (-) TimerEvent: {}
+[8.126992] (-) TimerEvent: {}
+[8.227404] (-) TimerEvent: {}
+[8.327825] (-) TimerEvent: {}
+[8.428241] (-) TimerEvent: {}
+[8.528631] (-) TimerEvent: {}
+[8.628986] (-) TimerEvent: {}
+[8.722076] (humandetection) StdoutLine: {'line': b"writing manifest file '../build/humandetection/humandetection.egg-info/SOURCES.txt'\n"}
+[8.722446] (humandetection) StdoutLine: {'line': b'running build\n'}
+[8.722541] (humandetection) StdoutLine: {'line': b'running build_py\n'}
+[8.722785] (humandetection) StdoutLine: {'line': b'running install\n'}
+[8.723939] (humandetection) StdoutLine: {'line': b'running install_lib\n'}
+[8.726637] (humandetection) StdoutLine: {'line': b'running install_data\n'}
+[8.727425] (humandetection) StdoutLine: {'line': b'running install_egg_info\n'}
+[8.728304] (humandetection) StdoutLine: {'line': b"removing '/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[8.728807] (humandetection) StdoutLine: {'line': b'Copying ../build/humandetection/humandetection.egg-info to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/python3.8/site-packages/humandetection-0.0.0-py3.8.egg-info\n'}
+[8.729038] (-) TimerEvent: {}
+[8.729784] (humandetection) StdoutLine: {'line': b'running install_scripts\n'}
+[8.753456] (humandetection) StdoutLine: {'line': b'Installing detecter script to /home/jakeluo/Documents/MonitoringSystemRos2/src/install/humandetection/lib/humandetection\n'}
+[8.753970] (humandetection) StdoutLine: {'line': b"writing list of installed files to '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/humandetection/install.log'\n"}
+[8.784620] (humandetection) CommandEnded: {'returncode': 0}
+[8.791610] (humandetection) JobEnded: {'identifier': 'humandetection', 'rc': 0}
+[8.829163] (-) TimerEvent: {}
+[8.929510] (-) TimerEvent: {}
+[9.029862] (-) TimerEvent: {}
+[9.130210] (-) TimerEvent: {}
+[9.230560] (-) TimerEvent: {}
+[9.277609] (qt) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.277866] (qt) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:571:77:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kfeedback\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[9.278008] (qt) StderrLine: {'line': b'  571 |     \x1b[01;35m\x1b[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback\x1b[m\x1b[K)\n'}
+[9.278125] (qt) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[9.330662] (-) TimerEvent: {}
+[9.431042] (-) TimerEvent: {}
+[9.531459] (-) TimerEvent: {}
+[9.631829] (-) TimerEvent: {}
+[9.732292] (-) TimerEvent: {}
+[9.832741] (-) TimerEvent: {}
+[9.933194] (-) TimerEvent: {}
+[10.033644] (-) TimerEvent: {}
+[10.134041] (-) TimerEvent: {}
+[10.234394] (-) TimerEvent: {}
+[10.334806] (-) TimerEvent: {}
+[10.435143] (-) TimerEvent: {}
+[10.535549] (-) TimerEvent: {}
+[10.635915] (-) TimerEvent: {}
+[10.736259] (-) TimerEvent: {}
+[10.836597] (-) TimerEvent: {}
+[10.936915] (-) TimerEvent: {}
+[11.037250] (-) TimerEvent: {}
+[11.137579] (-) TimerEvent: {}
+[11.237915] (-) TimerEvent: {}
+[11.338246] (-) TimerEvent: {}
+[11.438582] (-) TimerEvent: {}
+[11.538961] (-) TimerEvent: {}
+[11.639309] (-) TimerEvent: {}
+[11.739658] (-) TimerEvent: {}
+[11.839990] (-) TimerEvent: {}
+[11.940322] (-) TimerEvent: {}
+[12.040649] (-) TimerEvent: {}
+[12.140986] (-) TimerEvent: {}
+[12.241315] (-) TimerEvent: {}
+[12.341633] (-) TimerEvent: {}
+[12.441960] (-) TimerEvent: {}
+[12.542313] (-) TimerEvent: {}
+[12.642677] (-) TimerEvent: {}
+[12.743006] (-) TimerEvent: {}
+[12.843356] (-) TimerEvent: {}
+[12.943693] (-) TimerEvent: {}
+[13.044034] (-) TimerEvent: {}
+[13.144408] (-) TimerEvent: {}
+[13.244838] (-) TimerEvent: {}
+[13.345148] (-) TimerEvent: {}
+[13.445464] (-) TimerEvent: {}
+[13.545787] (-) TimerEvent: {}
+[13.646105] (-) TimerEvent: {}
+[13.746440] (-) TimerEvent: {}
+[13.846770] (-) TimerEvent: {}
+[13.947089] (-) TimerEvent: {}
+[14.047432] (-) TimerEvent: {}
+[14.147741] (-) TimerEvent: {}
+[14.248101] (-) TimerEvent: {}
+[14.348440] (-) TimerEvent: {}
+[14.448816] (-) TimerEvent: {}
+[14.549141] (-) TimerEvent: {}
+[14.649479] (-) TimerEvent: {}
+[14.749790] (-) TimerEvent: {}
+[14.850121] (-) TimerEvent: {}
+[14.950457] (-) TimerEvent: {}
+[15.050799] (-) TimerEvent: {}
+[15.151193] (-) TimerEvent: {}
+[15.251558] (-) TimerEvent: {}
+[15.351904] (-) TimerEvent: {}
+[15.452251] (-) TimerEvent: {}
+[15.552557] (-) TimerEvent: {}
+[15.652897] (-) TimerEvent: {}
+[15.753203] (-) TimerEvent: {}
+[15.853522] (-) TimerEvent: {}
+[15.953866] (-) TimerEvent: {}
+[16.054197] (-) TimerEvent: {}
+[16.154531] (-) TimerEvent: {}
+[16.254857] (-) TimerEvent: {}
+[16.355264] (-) TimerEvent: {}
+[16.455679] (-) TimerEvent: {}
+[16.555947] (-) TimerEvent: {}
+[16.656298] (-) TimerEvent: {}
+[16.756643] (-) TimerEvent: {}
+[16.856976] (-) TimerEvent: {}
+[16.957315] (-) TimerEvent: {}
+[17.057667] (-) TimerEvent: {}
+[17.157999] (-) TimerEvent: {}
+[17.258337] (-) TimerEvent: {}
+[17.358624] (-) TimerEvent: {}
+[17.458957] (-) TimerEvent: {}
+[17.559275] (-) TimerEvent: {}
+[17.659553] (-) TimerEvent: {}
+[17.759852] (-) TimerEvent: {}
+[17.860158] (-) TimerEvent: {}
+[17.960478] (-) TimerEvent: {}
+[18.060815] (-) TimerEvent: {}
+[18.161128] (-) TimerEvent: {}
+[18.261450] (-) TimerEvent: {}
+[18.361775] (-) TimerEvent: {}
+[18.462089] (-) TimerEvent: {}
+[18.562381] (-) TimerEvent: {}
+[18.662700] (-) TimerEvent: {}
+[18.762996] (-) TimerEvent: {}
+[18.863298] (-) TimerEvent: {}
+[18.963588] (-) TimerEvent: {}
+[19.063907] (-) TimerEvent: {}
+[19.164218] (-) TimerEvent: {}
+[19.264519] (-) TimerEvent: {}
+[19.364843] (-) TimerEvent: {}
+[19.465216] (-) TimerEvent: {}
+[19.565552] (-) TimerEvent: {}
+[19.666025] (-) TimerEvent: {}
+[19.766327] (-) TimerEvent: {}
+[19.866637] (-) TimerEvent: {}
+[19.966940] (-) TimerEvent: {}
+[20.067253] (-) TimerEvent: {}
+[20.167605] (-) TimerEvent: {}
+[20.267929] (-) TimerEvent: {}
+[20.369752] (-) TimerEvent: {}
+[20.470184] (-) TimerEvent: {}
+[20.570575] (-) TimerEvent: {}
+[20.670953] (-) TimerEvent: {}
+[20.771262] (-) TimerEvent: {}
+[20.871519] (-) TimerEvent: {}
+[20.971853] (-) TimerEvent: {}
+[21.072157] (-) TimerEvent: {}
+[21.172460] (-) TimerEvent: {}
+[21.272764] (-) TimerEvent: {}
+[21.373071] (-) TimerEvent: {}
+[21.473379] (-) TimerEvent: {}
+[21.573683] (-) TimerEvent: {}
+[21.673979] (-) TimerEvent: {}
+[21.774296] (-) TimerEvent: {}
+[21.874628] (-) TimerEvent: {}
+[21.974950] (-) TimerEvent: {}
+[22.075298] (-) TimerEvent: {}
+[22.175605] (-) TimerEvent: {}
+[22.275928] (-) TimerEvent: {}
+[22.376236] (-) TimerEvent: {}
+[22.476552] (-) TimerEvent: {}
+[22.576878] (-) TimerEvent: {}
+[22.677193] (-) TimerEvent: {}
+[22.777505] (-) TimerEvent: {}
+[22.877820] (-) TimerEvent: {}
+[22.978136] (-) TimerEvent: {}
+[23.078459] (-) TimerEvent: {}
+[23.178794] (-) TimerEvent: {}
+[23.279135] (-) TimerEvent: {}
+[23.379486] (-) TimerEvent: {}
+[23.479801] (-) TimerEvent: {}
+[23.580145] (-) TimerEvent: {}
+[23.680451] (-) TimerEvent: {}
+[23.780750] (-) TimerEvent: {}
+[23.881052] (-) TimerEvent: {}
+[23.981352] (-) TimerEvent: {}
+[24.081668] (-) TimerEvent: {}
+[24.181990] (-) TimerEvent: {}
+[24.282347] (-) TimerEvent: {}
+[24.382670] (-) TimerEvent: {}
+[24.482924] (-) TimerEvent: {}
+[24.583282] (-) TimerEvent: {}
+[24.683575] (-) TimerEvent: {}
+[24.783863] (-) TimerEvent: {}
+[24.884192] (-) TimerEvent: {}
+[24.984510] (-) TimerEvent: {}
+[25.084812] (-) TimerEvent: {}
+[25.185117] (-) TimerEvent: {}
+[25.285452] (-) TimerEvent: {}
+[25.385758] (-) TimerEvent: {}
+[25.486043] (-) TimerEvent: {}
+[25.586357] (-) TimerEvent: {}
+[25.686646] (-) TimerEvent: {}
+[25.786951] (-) TimerEvent: {}
+[25.887238] (-) TimerEvent: {}
+[25.987559] (-) TimerEvent: {}
+[26.087885] (-) TimerEvent: {}
+[26.188216] (-) TimerEvent: {}
+[26.288556] (-) TimerEvent: {}
+[26.388902] (-) TimerEvent: {}
+[26.489251] (-) TimerEvent: {}
+[26.589608] (-) TimerEvent: {}
+[26.689972] (-) TimerEvent: {}
+[26.790361] (-) TimerEvent: {}
+[26.890700] (-) TimerEvent: {}
+[26.991112] (-) TimerEvent: {}
+[27.091458] (-) TimerEvent: {}
+[27.191761] (-) TimerEvent: {}
+[27.292065] (-) TimerEvent: {}
+[27.392369] (-) TimerEvent: {}
+[27.492668] (-) TimerEvent: {}
+[27.592980] (-) TimerEvent: {}
+[27.693298] (-) TimerEvent: {}
+[27.793644] (-) TimerEvent: {}
+[27.893962] (-) TimerEvent: {}
+[27.994259] (-) TimerEvent: {}
+[28.094566] (-) TimerEvent: {}
+[28.194880] (-) TimerEvent: {}
+[28.295185] (-) TimerEvent: {}
+[28.395519] (-) TimerEvent: {}
+[28.495818] (-) TimerEvent: {}
+[28.596125] (-) TimerEvent: {}
+[28.696436] (-) TimerEvent: {}
+[28.796746] (-) TimerEvent: {}
+[28.897049] (-) TimerEvent: {}
+[28.997356] (-) TimerEvent: {}
+[29.097663] (-) TimerEvent: {}
+[29.197981] (-) TimerEvent: {}
+[29.298298] (-) TimerEvent: {}
+[29.398584] (-) TimerEvent: {}
+[29.498908] (-) TimerEvent: {}
+[29.599219] (-) TimerEvent: {}
+[29.699532] (-) TimerEvent: {}
+[29.799837] (-) TimerEvent: {}
+[29.900146] (-) TimerEvent: {}
+[30.000453] (-) TimerEvent: {}
+[30.100763] (-) TimerEvent: {}
+[30.201068] (-) TimerEvent: {}
+[30.301407] (-) TimerEvent: {}
+[30.401722] (-) TimerEvent: {}
+[30.502021] (-) TimerEvent: {}
+[30.602315] (-) TimerEvent: {}
+[30.702622] (-) TimerEvent: {}
+[30.802923] (-) TimerEvent: {}
+[30.903217] (-) TimerEvent: {}
+[31.003528] (-) TimerEvent: {}
+[31.103840] (-) TimerEvent: {}
+[31.204155] (-) TimerEvent: {}
+[31.304501] (-) TimerEvent: {}
+[31.404806] (-) TimerEvent: {}
+[31.505121] (-) TimerEvent: {}
+[31.605443] (-) TimerEvent: {}
+[31.705774] (-) TimerEvent: {}
+[31.806075] (-) TimerEvent: {}
+[31.906365] (-) TimerEvent: {}
+[32.006711] (-) TimerEvent: {}
+[32.107043] (-) TimerEvent: {}
+[32.207393] (-) TimerEvent: {}
+[32.307712] (-) TimerEvent: {}
+[32.408020] (-) TimerEvent: {}
+[32.508334] (-) TimerEvent: {}
+[32.608702] (-) TimerEvent: {}
+[32.709020] (-) TimerEvent: {}
+[32.809331] (-) TimerEvent: {}
+[32.909643] (-) TimerEvent: {}
+[33.009947] (-) TimerEvent: {}
+[33.110259] (-) TimerEvent: {}
+[33.210564] (-) TimerEvent: {}
+[33.310885] (-) TimerEvent: {}
+[33.411212] (-) TimerEvent: {}
+[33.511527] (-) TimerEvent: {}
+[33.611842] (-) TimerEvent: {}
+[33.712156] (-) TimerEvent: {}
+[33.812464] (-) TimerEvent: {}
+[33.912788] (-) TimerEvent: {}
+[34.013103] (-) TimerEvent: {}
+[34.113412] (-) TimerEvent: {}
+[34.213720] (-) TimerEvent: {}
+[34.314076] (-) TimerEvent: {}
+[34.414387] (-) TimerEvent: {}
+[34.514696] (-) TimerEvent: {}
+[34.614994] (-) TimerEvent: {}
+[34.715310] (-) TimerEvent: {}
+[34.815645] (-) TimerEvent: {}
+[34.915964] (-) TimerEvent: {}
+[35.016252] (-) TimerEvent: {}
+[35.116554] (-) TimerEvent: {}
+[35.216863] (-) TimerEvent: {}
+[35.317164] (-) TimerEvent: {}
+[35.417474] (-) TimerEvent: {}
+[35.517785] (-) TimerEvent: {}
+[35.618097] (-) TimerEvent: {}
+[35.718400] (-) TimerEvent: {}
+[35.818710] (-) TimerEvent: {}
+[35.919018] (-) TimerEvent: {}
+[36.019343] (-) TimerEvent: {}
+[36.119701] (-) TimerEvent: {}
+[36.220024] (-) TimerEvent: {}
+[36.320335] (-) TimerEvent: {}
+[36.420647] (-) TimerEvent: {}
+[36.520993] (-) TimerEvent: {}
+[36.621371] (-) TimerEvent: {}
+[36.721708] (-) TimerEvent: {}
+[36.822020] (-) TimerEvent: {}
+[36.922322] (-) TimerEvent: {}
+[37.022633] (-) TimerEvent: {}
+[37.122946] (-) TimerEvent: {}
+[37.223234] (-) TimerEvent: {}
+[37.323567] (-) TimerEvent: {}
+[37.423912] (-) TimerEvent: {}
+[37.524232] (-) TimerEvent: {}
+[37.624558] (-) TimerEvent: {}
+[37.724878] (-) TimerEvent: {}
+[37.825208] (-) TimerEvent: {}
+[37.925540] (-) TimerEvent: {}
+[38.025858] (-) TimerEvent: {}
+[38.126189] (-) TimerEvent: {}
+[38.226501] (-) TimerEvent: {}
+[38.326809] (-) TimerEvent: {}
+[38.427135] (-) TimerEvent: {}
+[38.527520] (-) TimerEvent: {}
+[38.627933] (-) TimerEvent: {}
+[38.728237] (-) TimerEvent: {}
+[38.828524] (-) TimerEvent: {}
+[38.928853] (-) TimerEvent: {}
+[39.029287] (-) TimerEvent: {}
+[39.129610] (-) TimerEvent: {}
+[39.229946] (-) TimerEvent: {}
+[39.330245] (-) TimerEvent: {}
+[39.430607] (-) TimerEvent: {}
+[39.530992] (-) TimerEvent: {}
+[39.631335] (-) TimerEvent: {}
+[39.731657] (-) TimerEvent: {}
+[39.831991] (-) TimerEvent: {}
+[39.932328] (-) TimerEvent: {}
+[40.032662] (-) TimerEvent: {}
+[40.132996] (-) TimerEvent: {}
+[40.233317] (-) TimerEvent: {}
+[40.333634] (-) TimerEvent: {}
+[40.433957] (-) TimerEvent: {}
+[40.534289] (-) TimerEvent: {}
+[40.634619] (-) TimerEvent: {}
+[40.734965] (-) TimerEvent: {}
+[40.835244] (-) TimerEvent: {}
+[40.935550] (-) TimerEvent: {}
+[41.035861] (-) TimerEvent: {}
+[41.136181] (-) TimerEvent: {}
+[41.236558] (-) TimerEvent: {}
+[41.336882] (-) TimerEvent: {}
+[41.437205] (-) TimerEvent: {}
+[41.537546] (-) TimerEvent: {}
+[41.637881] (-) TimerEvent: {}
+[41.738180] (-) TimerEvent: {}
+[41.838507] (-) TimerEvent: {}
+[41.938832] (-) TimerEvent: {}
+[42.039157] (-) TimerEvent: {}
+[42.139469] (-) TimerEvent: {}
+[42.239782] (-) TimerEvent: {}
+[42.340158] (-) TimerEvent: {}
+[42.440458] (-) TimerEvent: {}
+[42.540773] (-) TimerEvent: {}
+[42.641100] (-) TimerEvent: {}
+[42.741389] (-) TimerEvent: {}
+[42.841746] (-) TimerEvent: {}
+[42.942114] (-) TimerEvent: {}
+[43.042467] (-) TimerEvent: {}
+[43.142830] (-) TimerEvent: {}
+[43.243263] (-) TimerEvent: {}
+[43.343552] (-) TimerEvent: {}
+[43.443860] (-) TimerEvent: {}
+[43.544175] (-) TimerEvent: {}
+[43.644525] (-) TimerEvent: {}
+[43.744834] (-) TimerEvent: {}
+[43.845128] (-) TimerEvent: {}
+[43.945410] (-) TimerEvent: {}
+[44.045757] (-) TimerEvent: {}
+[44.146117] (-) TimerEvent: {}
+[44.246510] (-) TimerEvent: {}
+[44.346906] (-) TimerEvent: {}
+[44.447285] (-) TimerEvent: {}
+[44.547646] (-) TimerEvent: {}
+[44.647970] (-) TimerEvent: {}
+[44.748307] (-) TimerEvent: {}
+[44.848703] (-) TimerEvent: {}
+[44.949016] (-) TimerEvent: {}
+[44.974363] (qt) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable gui\x1b[0m\n'}
+[45.049139] (-) TimerEvent: {}
+[45.149590] (-) TimerEvent: {}
+[45.250137] (-) TimerEvent: {}
+[45.350776] (-) TimerEvent: {}
+[45.451264] (-) TimerEvent: {}
+[45.551674] (-) TimerEvent: {}
+[45.652096] (-) TimerEvent: {}
+[45.752829] (-) TimerEvent: {}
+[45.853400] (-) TimerEvent: {}
+[45.953871] (-) TimerEvent: {}
+[46.054327] (-) TimerEvent: {}
+[46.154727] (-) TimerEvent: {}
+[46.255084] (-) TimerEvent: {}
+[46.355568] (-) TimerEvent: {}
+[46.455895] (-) TimerEvent: {}
+[46.556257] (-) TimerEvent: {}
+[46.656613] (-) TimerEvent: {}
+[46.756961] (-) TimerEvent: {}
+[46.857253] (-) TimerEvent: {}
+[46.957624] (-) TimerEvent: {}
+[47.026067] (qt) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/gui.dir/src/mainwindow.cpp.o: in function `void __gnu_cxx::new_allocator<Planning>::construct<Planning>(Planning*)':\n"}
+[47.026254] (qt) StderrLine: {'line': b"/usr/include/c++/9/new:174: undefined reference to `Planning::Planning()'\n"}
+[47.026329] (qt) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/gui.dir/src/mainwindow.cpp.o: in function `void __gnu_cxx::new_allocator<Planning>::destroy<Planning>(Planning*)':\n"}
+[47.026389] (qt) StderrLine: {'line': b"/usr/include/c++/9/ext/new_allocator.h:152: undefined reference to `Planning::~Planning()'\n"}
+[47.032103] (qt) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[47.033698] (qt) StderrLine: {'line': b'make[2]: *** [CMakeFiles/gui.dir/build.make:218\xef\xbc\x9agui] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[47.034022] (qt) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:79\xef\xbc\x9aCMakeFiles/gui.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[47.034273] (qt) StderrLine: {'line': b'make: *** [Makefile:141\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[47.035814] (qt) CommandEnded: {'returncode': 2}
+[47.057772] (-) TimerEvent: {}
+[47.062076] (qt) JobEnded: {'identifier': 'qt', 'rc': 2}
+[47.072576] (-) EventReactorShutdown: {}

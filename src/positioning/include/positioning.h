@@ -9,9 +9,9 @@
 #include <chrono>
 #include "ThreeDMovementKalmanFilter.h"
 
-#define INITIALUNCERTAINTY 2000
-#define ACCRANDVAR  90000
-#define MEASUREMENTERRORSTD 1000
+#define INITIALUNCERTAINTY 500
+#define ACCRANDVAR  90000 //huamn walking speed Mean=680mm/s, std = 300mm/s, 
+#define MEASUREMENTERRORSTD 300
 
 using namespace std::chrono_literals;
 
@@ -35,13 +35,13 @@ private:
     void positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg);
     void getTargetPosition();
     void getKalmanTargetPosition();
-    std::array<int, 4UL> humanBox1, humanBox2;
+    std::array<int, 4UL> humanBox1 = {-1, -1, -1, -1}, humanBox2 = {-1, -1, -1, -1};
     Eigen::Matrix<float, 3, 4> inMatrix;
     Eigen::Matrix4f TCW1, TCW2;
     // std::array<std::array<float, 4>, 3> projectMatrix1, projectMatrix2;
     // std::array<std::array<int, 1>, 2> pixelPoint1, pixelPoint2;
     cv::Mat *worldPoint;
-    std::array<float, 3UL> targetWorldPoint, oldTargetWorldPoint, defaultLostLocation={-10000, -10000, -10000};
+    std::array<float, 3UL> targetWorldPoint={-10000, -10000, -10000}, oldTargetWorldPoint={-10000, -10000, -10000}, defaultLostLocation={-10000, -10000, -10000};
     std::array<float, 3UL> initialLocation = {0, 0, 0};
     int64_t ptime1=0, ptime2=0, oldtime;
     std::shared_ptr<ThreeDMovementKalmanFilter> kalmanFilter_;

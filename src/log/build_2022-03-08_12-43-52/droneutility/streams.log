@@ -1,0 +1,25 @@
+[0.031s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12
+[0.287s] [ 40%] Built target dronemanager
+[0.288s] [100%] Built target drone
+[0.288s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --build /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility -- -j12 -l12
+[0.315s] Invoking command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility
+[0.322s] -- Install configuration: "RelWithDebInfo"
+[0.322s] -- Execute custom install script
+[0.323s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/dronemanager
+[0.323s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/lib/droneutility/drone
+[0.323s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/package_run_dependencies/droneutility
+[0.324s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/parent_prefix_path/droneutility
+[0.324s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.sh
+[0.324s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/ament_prefix_path.dsv
+[0.325s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.sh
+[0.325s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/environment/path.dsv
+[0.325s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.bash
+[0.326s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.sh
+[0.326s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.zsh
+[0.326s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/local_setup.dsv
+[0.326s] -- Symlinking: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.dsv
+[0.336s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/ament_index/resource_index/packages/droneutility
+[0.336s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/cmake/droneutilityConfig.cmake
+[0.336s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/cmake/droneutilityConfig-version.cmake
+[0.336s] -- Up-to-date symlink: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneutility/share/droneutility/package.xml
+[0.340s] Invoked command in '/home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility' returned '0': AMENT_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces CMAKE_PREFIX_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces LD_LIBRARY_PATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib${LD_LIBRARY_PATH} PYTHONPATH=/home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/lib/python3.8/site-packages /usr/bin/cmake --install /home/jakeluo/Documents/MonitoringSystemRos2/src/build/droneutility

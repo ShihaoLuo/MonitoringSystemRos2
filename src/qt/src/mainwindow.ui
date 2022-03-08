@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>2600</width>
-    <height>1102</height>
+    <height>1105</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1292,6 +1292,114 @@ switch</string>
      <string>saveImg</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdittdistanceTD">
+    <property name="geometry">
+     <rect>
+      <x>2130</x>
+      <y>940</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>2000</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdittdistanceDD">
+    <property name="geometry">
+     <rect>
+      <x>2330</x>
+      <y>940</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>2000</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTD">
+    <property name="geometry">
+     <rect>
+      <x>1990</x>
+      <y>942</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Distance T2D</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDD">
+    <property name="geometry">
+     <rect>
+      <x>2190</x>
+      <y>942</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Distance D2D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtontracking">
+    <property name="geometry">
+     <rect>
+      <x>2390</x>
+      <y>940</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>StartTracking</string>
+    </property>
+   </widget>
    <zorder>img1</zorder>
    <zorder>pushButtonland1</zorder>
    <zorder>img2</zorder>
@@ -1353,6 +1461,11 @@ switch</string>
    <zorder>lineEditmap</zorder>
    <zorder>pushButtonSaveImg1</zorder>
    <zorder>pushButtonSaveImg2</zorder>
+   <zorder>lineEdittdistanceTD</zorder>
+   <zorder>lineEdittdistanceDD</zorder>
+   <zorder>labelTD</zorder>
+   <zorder>labelDD</zorder>
+   <zorder>pushButtontracking</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

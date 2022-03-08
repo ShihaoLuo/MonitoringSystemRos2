@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "/opt/ros/rolling/include",
+                "./**",
+                "${workspaceFolder}/src/droneutility/include/**",
+                "${workspaceFolder}/src/build/**",
+                // "/home/jakeluo/Documents/ORBSLAM_MapSave/include",
+                // "/home/jakeluo/Documents/ORBSLAM_MapSave",
+                "/home/jakeluo/Documents/ORB_SLAM2/include",
+                "/home/jakeluo/Documents/ORB_SLAM2",
+                "${workspaceFolder}/src/droneutility/include",
+                "/usr/local/include/eigen3",
+                "${workspaceFolder}/src/build/droneinterfaces/rosidl_generator_cpp",
+                "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt5/QtGui",
+                "${workspaceFolder}/src/positioning/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
