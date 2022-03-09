@@ -128,13 +128,13 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         }
         // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
-        dronepidp->setLimits(-50.0, 50.0);
+        dronepidp->setLimits(-30.0, 30.0);
         dronepidr = new PID(0.03, 0.0005, 0.002);
-        dronepidr->setLimits(-50.0, 50.0);
+        dronepidr->setLimits(-30.0, 30.0);
         dronepidc = new PID(0.05, 0.0007, 0.001);
-        dronepidc->setLimits(-50.0, 50.0);
+        dronepidc->setLimits(-30.0, 30.0);
         dronepidy = new PID(50, 0.3, 0.15);
-        dronepidy->setLimits(-50.0, 50.0);
+        dronepidy->setLimits(-40.0, 40.0);
         dronepidy->setIntergralLimits(-100, 100);
         response->set__res(true);
     }else{
@@ -190,11 +190,11 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
         { 
             feedback->set__distance((goalPoint-position.block<4, 1>(0, 0)).norm());
             goal_handle->publish_feedback(feedback);
-            std::sprintf(s.data(), "~rc 0 0 0 0");
-            request2->cmd = s;
-            auto result2 = controllerClient_->async_send_request(request2);
-            res = result2.get()->res;
-            loop_rate.sleep();
+            // std::sprintf(s.data(), "~rc 0 0 0 0");
+            // request2->cmd = s;
+            // auto result2 = controllerClient_->async_send_request(request2);
+            // res = result2.get()->res;
+            // loop_rate.sleep();
             result->arrived = 1;
             goal_handle->canceled(result);
             // RCLCPP_INFO(nh_->get_logger(), "Go point action canceled.");

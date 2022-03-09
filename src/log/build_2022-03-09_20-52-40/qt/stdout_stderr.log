@@ -1,0 +1,32 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[35m[1mScanning dependencies of target gui[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/gui.dir/src/planning.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In member function ‘[01m[Kstd::array<float, 4> Planning::getNewPosition(float, float, float, float, float, float, float)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:77:105:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kz1[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   77 | std::array<float, 4UL> Planning::getNewPosition(float tx, float ty, float tz, float x1, float y1, [01;35m[Kfloat z1[m[K, float d)
+      |                                                                                                   [01;35m[K~~~~~~^~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In member function ‘[01m[Kstd::array<float, 5> Planning::getCircleIntersection(float, float, float, float, float, float)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:75:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+   75 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In lambda function:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:206:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  206 | this]([01;35m[Kstd::shared_ptr<action_msgs::srv::CancelGoal_Response> res[m[K)
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In lambda function:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:223:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  223 | this]([01;35m[Kstd::shared_ptr<action_msgs::srv::CancelGoal_Response> res[m[K)
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:668:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  668 | [01;35m[Knst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[ 50%] [32m[1mLinking CXX executable gui[0m
+[100%] Built target gui
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.dsv

@@ -169,6 +169,8 @@ void MainWindow::startTracking()
     else{
         trackingFlag = !trackingFlag;
         ui->pushButtontracking->setStyleSheet("background-color: rgb(0, 100, 30)");
+        cancelGoal1();
+        cancelGoal2();
         // ui->pushButtont1goalpoint->setDisabled(true);
         // ui->pushButtonsendgoal1->setDisabled(true);
         // ui->pushButtoncancelgoal1->setDisabled(true);
@@ -189,7 +191,7 @@ void MainWindow::tracking()
     sendGoal2();
     rclcpp::Rate loop_rate2(20);
     rclcpp::Rate loop_rate(20);
-    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    std::this_thread::sleep_for(std::chrono::milliseconds(450));
     while(trackingFlag)
     {
         if(actionGoalStatus1 == false)
@@ -226,9 +228,9 @@ void MainWindow::tracking()
                 });
             actionGoalStatus2 = false;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::this_thread::sleep_for(std::chrono::milliseconds(450));
     }
-    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    std::this_thread::sleep_for(std::chrono::milliseconds(450));
     cancelGoal2();
     cancelGoal1();
 }
