@@ -1,0 +1,4 @@
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:[m[K In member function ‘[01m[Kvoid dronenamespace::Drone::shutDown(std::shared_ptr<droneinterfaces::srv::DroneShutDown_Request_<std::allocator<void> > >, std::shared_ptr<droneinterfaces::srv::DroneShutDown_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/drone.cpp:250:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktmp[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  250 |     bool [01;35m[Ktmp[m[K = request->shutdown;
+      |          [01;35m[K^~~[m[K

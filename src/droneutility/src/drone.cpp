@@ -128,13 +128,13 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         }
         // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
-        dronepidp->setLimits(-30.0, 30.0);
+        dronepidp->setLimits(-50.0, 50.0);
         dronepidr = new PID(0.03, 0.0005, 0.002);
-        dronepidr->setLimits(-30.0, 30.0);
+        dronepidr->setLimits(-50.0, 50.0);
         dronepidc = new PID(0.05, 0.0007, 0.001);
-        dronepidc->setLimits(-30.0, 30.0);
+        dronepidc->setLimits(-50.0, 50.0);
         dronepidy = new PID(50, 0.3, 0.15);
-        dronepidy->setLimits(-20.0, 20.0);
+        dronepidy->setLimits(-50.0, 50.0);
         dronepidy->setIntergralLimits(-100, 100);
         response->set__res(true);
     }else{
@@ -187,7 +187,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
     while(1)
     {
         if(goal_handle->is_canceling())
-        {
+        { 
             feedback->set__distance((goalPoint-position.block<4, 1>(0, 0)).norm());
             goal_handle->publish_feedback(feedback);
             std::sprintf(s.data(), "~rc 0 0 0 0");
@@ -213,7 +213,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
             
         }else
         {
-            oY = 0.0;
+            oY = dronepidy->pid_control(goalPoint[3], position[5]);
         }
         // std::cout<<oScale<<std::endl;
         oP = oP/oScale;
