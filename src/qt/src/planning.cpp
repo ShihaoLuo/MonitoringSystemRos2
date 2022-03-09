@@ -110,31 +110,45 @@ std::array<float, 8UL> Planning::compute()
     // std::cout<<"d2point: "<<d2Point[0]<<" "<<d2Point[1]<<" "<<d2Point[2]<<std::endl;
     // std::cout<<"d:"<<dTD_<<" "<<dDD_;
     memcpy(result.data(), goalPosition1.data(), 16);
-    float d1, d2;
-    if(oldD2Goalpoint[0] == -10000)
-    {
-        d1 = (d2Point[0]-tmp1[1])*(d2Point[0]-tmp1[1]) + (d2Point[1]-tmp1[2])*(d2Point[1]-tmp1[2]);
-        d2 = (d2Point[0]-tmp1[3])*(d2Point[0]-tmp1[3]) + (d2Point[1]-tmp1[4])*(d2Point[1]-tmp1[4]);
-    }
-    else
-    {
-        d1 = (oldD2Goalpoint[0]-tmp1[1])*(oldD2Goalpoint[0]-tmp1[1]) + (oldD2Goalpoint[1]-tmp1[2])*(oldD2Goalpoint[1]-tmp1[2]);
-        d2 = (oldD2Goalpoint[0]-tmp1[3])*(oldD2Goalpoint[0]-tmp1[3]) + (oldD2Goalpoint[1]-tmp1[4])*(oldD2Goalpoint[1]-tmp1[4]);
-    }
-    if(d1 < d2)
+    float theta1 = atan2f32(targetPoint[1]-tmp1[2], targetPoint[0]-tmp1[1]);
+    float theta2 = atan2f32(targetPoint[1]-tmp1[4], targetPoint[0]-tmp1[3]);
+    if(fabs(theta1 - d2Point[2]) < fabs(theta2 - d2Point[2]))
     {
         result[4] = tmp1[1];
         result[5] = tmp1[2];
         result[6] = targetPoint[2];
-        result[7] = atan2f32(targetPoint[1]-tmp1[2], targetPoint[0]-tmp1[1]);
+        result[7] = theta1;
     }else
     {
         result[4] = tmp1[3];
         result[5] = tmp1[4];
         result[6] = targetPoint[2];
-        result[7] = atan2f32(targetPoint[1]-tmp1[4], targetPoint[0]-tmp1[3]);
+        result[7] = theta2;
     }
-    oldD2Goalpoint[0] = result[4];
-    oldD2Goalpoint[1] = result[5];
+    // if(oldD2Goalpoint[0] == -10000)
+    // {
+    //     d1 = (d2Point[0]-tmp1[1])*(d2Point[0]-tmp1[1]) + (d2Point[1]-tmp1[2])*(d2Point[1]-tmp1[2]);
+    //     d2 = (d2Point[0]-tmp1[3])*(d2Point[0]-tmp1[3]) + (d2Point[1]-tmp1[4])*(d2Point[1]-tmp1[4]);
+    // }
+    // else
+    // {
+    //     d1 = (oldD2Goalpoint[0]-tmp1[1])*(oldD2Goalpoint[0]-tmp1[1]) + (oldD2Goalpoint[1]-tmp1[2])*(oldD2Goalpoint[1]-tmp1[2]);
+    //     d2 = (oldD2Goalpoint[0]-tmp1[3])*(oldD2Goalpoint[0]-tmp1[3]) + (oldD2Goalpoint[1]-tmp1[4])*(oldD2Goalpoint[1]-tmp1[4]);
+    // }
+    // if(d1 < d2)
+    // {
+    //     result[4] = tmp1[1];
+    //     result[5] = tmp1[2];
+    //     result[6] = targetPoint[2];
+    //     result[7] = atan2f32(targetPoint[1]-tmp1[2], targetPoint[0]-tmp1[1]);
+    // }else
+    // {
+    //     result[4] = tmp1[3];
+    //     result[5] = tmp1[4];
+    //     result[6] = targetPoint[2];
+    //     result[7] = atan2f32(targetPoint[1]-tmp1[4], targetPoint[0]-tmp1[3]);
+    // }
+    // oldD2Goalpoint[0] = result[4];
+    // oldD2Goalpoint[1] = result[5];
     return result;
 }

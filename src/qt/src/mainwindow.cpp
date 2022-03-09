@@ -1100,16 +1100,17 @@ void MainWindow::frameCallback1(const droneinterfaces::msg::FrameArray::SharedPt
         im1, 
         cv::Point(humanBox1[0]-(int)(humanBox1[2]/2), humanBox1[1]-(int)(humanBox1[3]/2)),
         cv::Point(humanBox1[0]+(int)(humanBox1[2]/2), humanBox1[1]+(int)(humanBox1[3]/2)),
-        cv::Scalar(0, 0, 255),
+        cv::Scalar(255, 0, 0),
         2);
-    cv::putText(im1, std::to_string(humanBox1[0])+"-"+std::to_string(humanBox1[1]), cv::Point(30, 30), cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
+    // cv::putText(im1, std::to_string(humanBox1[0])+"-"+std::to_string(humanBox1[1]), cv::Point(30, 30), cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(255, 0, 0));
     qimage1 = mat2qim(im1);
     if(recordFlag1)
     {
         time(&curr_time1);
 	    curr_tm1 = localtime(&curr_time1);
         strftime(time_string1, 100, "t1-%Y-%B-%d-%T.jpg", curr_tm1);
-        cv::imwrite(time_string1, im1);
+        cv::cvtColor(im1, saveIm1, cv::COLOR_RGB2BGR);
+        cv::imwrite(time_string1, saveIm1);
     }
     updateFrame1();
 }
@@ -1123,13 +1124,14 @@ void MainWindow::frameCallback2(const droneinterfaces::msg::FrameArray::SharedPt
         cv::Point(humanBox2[0]+(int)(humanBox2[2]/2), humanBox2[1]+(int)(humanBox2[3]/2)),
         cv::Scalar(0, 0, 255),
         2);
-    cv::putText(im2, std::to_string(humanBox2[0])+"-"+std::to_string(humanBox2[1]), cv::Point(30, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
+    // cv::putText(im2, std::to_string(humanBox2[0])+"-"+std::to_string(humanBox2[1]), cv::Point(30, 30),cv::FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 0, 255));
     if(recordFlag2)
     {
         time(&curr_time2);
 	    curr_tm2 = localtime(&curr_time2);
         strftime(time_string2, 100, "t2-%Y-%B-%d-%T.jpg", curr_tm2);
-        cv::imwrite(time_string2, im2);
+        cv::cvtColor(im2, saveIm2, cv::COLOR_RGB2BGR);
+        cv::imwrite(time_string2, saveIm2);
     }
     qimage2 = mat2qim(im2);
     updateFrame2();

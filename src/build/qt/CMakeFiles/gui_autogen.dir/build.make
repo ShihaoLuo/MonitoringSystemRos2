@@ -55,7 +55,7 @@ include CMakeFiles/gui_autogen.dir/progress.make
 
 CMakeFiles/gui_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target gui"
-	/usr/bin/cmake -E cmake_autogen /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui_autogen.dir/AutogenInfo.json RelWithDebInfo
+	/usr/bin/cmake -E cmake_autogen /home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/CMakeFiles/gui_autogen.dir/AutogenInfo.json ""
 
 gui_autogen: CMakeFiles/gui_autogen
 gui_autogen: CMakeFiles/gui_autogen.dir/build.make

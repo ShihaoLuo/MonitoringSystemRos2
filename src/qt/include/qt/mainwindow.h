@@ -102,7 +102,7 @@ private:
     std::shared_ptr<Planning> planner_;
     float dTD, dDD;
     bool trackingFlag = false;
-    bool recordFlag1, recordFlag2;
+    bool recordFlag1 = false, recordFlag2 = false;
     time_t curr_time1, curr_time2;
 	tm *curr_tm1, *curr_tm2;
 	char time_string1[100], time_string2[100];
@@ -118,6 +118,8 @@ private:
     Ui::MainWindow *ui;
     cv::Mat im1 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im2 = cv::Mat(720, 960, CV_8UC3);
+    cv::Mat saveIm1 = cv::Mat(720, 960, CV_8UC3);
+    cv::Mat saveIm2 = cv::Mat(720, 960, CV_8UC3);
     cv::Mat im;
     QImage qimage1, qimage2, qimagep;
     QImage mat2qim(cv::Mat & mat);

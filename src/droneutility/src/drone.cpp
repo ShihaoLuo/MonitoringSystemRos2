@@ -74,7 +74,7 @@ void Drone::saveMap(const std::shared_ptr<droneinterfaces::srv::DroneMap::Reques
     std::shared_ptr<droneinterfaces::srv::DroneMap::Response> response)
 {
     auto tmp = request->mapname;
-    RCLCPP_INFO(nh_->get_logger(), "save map %s\n", tmp);
+    RCLCPP_INFO(nh_->get_logger(), "save map %s\n", tmp.c_str());
     osmap->mapSave(tmp+".yaml", true);
     response->set__res(true);
 }
@@ -122,8 +122,10 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         osmap = new ORB_SLAM2::Osmap(*pSlam);
         pose = pSlam->TrackMonocular(im, tframe_);
         if(bReuseMap)
+        {
             osmap->mapLoad("0215.yaml");
             pSlam -> ActivateLocalizationMode();
+        }
         // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
         dronepidp->setLimits(-30.0, 30.0);
@@ -199,6 +201,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
             return;
         }
         // RCLCPP_INFO(nh_->get_logger(), "goal: %f %f %f %f", goalPoint[0], goalPoint[1], goalPoint[2], goalPoint[3]);
+        // RCLCPP_INFO(nh_->get_logger(), "pos: %f %f %f %f", position[0], position[1], position[2], position[5]);
         oP = dronepidp->pid_control(goalPoint[0], position[0]);
         oR = dronepidr->pid_control(goalPoint[1], position[1]);
         oC = dronepidc->pid_control(goalPoint[2], position[2]);
@@ -206,7 +209,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
         if(oScale<1)
         {
             oScale = 1;
-            oY = dronepidy->pid_control(goalPoint[3], position[3]);
+            oY = dronepidy->pid_control(goalPoint[3], position[5]);
             
         }else
         {
@@ -223,7 +226,7 @@ void Drone::execute(const std::shared_ptr<rclcpp_action::ServerGoalHandle
         request2->cmd = s;
         auto result2 = controllerClient_->async_send_request(request2);
         res = result2.get()->res;
-        if(feedbackInterval == 15)
+        if(feedbackInterval == 30)
         {
             feedback->set__distance((goalPoint-position.block<4, 1>(0, 0)).norm());
             goal_handle->publish_feedback(feedback);
@@ -245,7 +248,7 @@ void Drone::shutDown(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::
 {
     auto request2 = std::make_shared<droneinterfaces::srv::DroneController::Request>();
     request2->cmd = "q";
-    request2->ip = ip;
+    request2->ip = request->ip;
     auto result = controllerClient_->async_send_request(request2);
     RCLCPP_INFO(nh_->get_logger(), "Send cmd: %s\n", request2->cmd.c_str());
     auto res = result.get()->res;
