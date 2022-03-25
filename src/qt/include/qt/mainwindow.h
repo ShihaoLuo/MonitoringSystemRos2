@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #pragma once
 
+#include <iostream>
+#include <fstream>
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <opencv2/core/core.hpp>
@@ -36,6 +38,7 @@
 #include <QSlider>
 #include <ctime>
 #include "planning.h"
+#include <sys/stat.h>
 // #include "Eigen/Dense"
 
 QT_BEGIN_NAMESPACE
@@ -95,17 +98,25 @@ public slots:
     void saveImg1();
     void saveImg2();
     void startTracking();
+    void path1go();
+    void path2go();
+    void clearpath1();
+    void clearpath2();
+    void startlog1();
+    void startlog2();
     // void slam();
 
 private:
+    std::shared_ptr<std::ofstream> logP1, logP2, logT1, logT2;
+    std::vector<std::array<float, 4UL>> path1, path2;
     std::shared_ptr<QTimer> timer1_, timer2_;
     std::shared_ptr<Planning> planner_;
     float dTD, dDD;
-    bool trackingFlag = false;
+    bool trackingFlag = false, logFlag1 = false, logFlag2 = false;
     bool recordFlag1 = false, recordFlag2 = false;
     time_t curr_time1, curr_time2;
 	tm *curr_tm1, *curr_tm2;
-	char time_string1[100], time_string2[100];
+	char time_string1[50], time_string2[50], log_root_string[50], log_t1_string[50], log_t2_string[50];
     // Eigen::Matrix4f intrinsicMatrix, TCW1, TCW2;
     // CameraAndPhyPointTransformer *targetPosition;
     // Eigen::Matrix<float, 4, 1>  predictResult1, predictResult2;
@@ -153,6 +164,8 @@ private:
     void targetLocationCallback(const droneinterfaces::msg::TargetLocation::SharedPtr msg);
     void spin();
     void tracking();
+    void path1tracking();
+    void path2tracking();
     // void checkDrones();
 
     std::string ip1 = "192.168.50.100";

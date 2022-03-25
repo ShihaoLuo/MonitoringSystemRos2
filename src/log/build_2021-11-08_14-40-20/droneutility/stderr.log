@@ -1,7 +1,0 @@
-make[2]: *** 没有规则可制作目标“/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/DBoW2/lib/libDBoW2.so”，由“drone” 需求。 停止。
-make[1]: *** [CMakeFiles/Makefile2:80：CMakeFiles/drone.dir/all] 错误 2
-make[1]: *** 正在等待未完成的任务....
-make[2]: *** 没有规则可制作目标“/home/jakeluo/Documents/ORBSLAM_MapSave/Thirdparty/DBoW2/lib/libDBoW2.so”，由“dronemanager” 需求。 停止。
-make[2]: *** 正在等待未完成的任务....
-make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

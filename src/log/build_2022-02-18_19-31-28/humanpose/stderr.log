@@ -1,5 +1,0 @@
-  File "/home/jakeluo/Documents/MonitoringSystemRos2/src/install/humanpose/lib/python3.8/site-packages/humanpose/networks/fcn16s.py", line 60
-    return torch.from_numpy(weight).float()
-    ^
-SyntaxError: 'return' outside function
-

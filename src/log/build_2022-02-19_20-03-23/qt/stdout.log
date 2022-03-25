@@ -1,7 +1,0 @@
-[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
-[ 12%] Built target gui_autogen
-[35m[1mScanning dependencies of target gui[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/gui.dir/include/qt/moc_mainwindow.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/gui.dir/src/2DMovementKalmanFilter.cpp.o[0m
-[ 62%] [32mBuilding CXX object CMakeFiles/gui.dir/src/main.cpp.o[0m

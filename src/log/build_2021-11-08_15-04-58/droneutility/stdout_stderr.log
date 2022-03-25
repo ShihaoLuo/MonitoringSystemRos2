@@ -1,9 +1,0 @@
-[ 50%] [32m[1mLinking CXX executable dronemanager[0m
-[ 50%] [32m[1mLinking CXX executable drone[0m
-[ 75%] Built target drone
-/usr/bin/ld: CMakeFiles/dronemanager.dir/src/droneManager.cpp.o: in function `dronenamespace::DroneManager::recvVideoThread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
-/home/jakeluo/Documents/MonitoringSystemRos2/src/droneutility/src/droneManager.cpp:155: undefined reference to `ORB_SLAM2::System::System(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ORB_SLAM2::System::eSensor, bool)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/dronemanager.dir/build.make:179：dronemanager] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:107：CMakeFiles/dronemanager.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

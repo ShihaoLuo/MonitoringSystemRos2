@@ -1,9 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In member function ‘[01m[Kstd::array<float, 4> Planning::getNewPosition(float, float, float, float, float, float, float)[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:77:105:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kz1[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-   77 | t, 4UL> Planning::getNewPosition(float tx, float ty, float tz, float x1, float y1, [01;35m[Kfloat z1[m[K, float d)
-      |                                                                                    [01;35m[K~~~~~~^~[m[K
-
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:[m[K In member function ‘[01m[Kstd::array<float, 5> Planning::getCircleIntersection(float, float, float, float, float, float)[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/planning.cpp:75:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
-   75 | [01;35m[K}[m[K
-      | [01;35m[K^[m[K

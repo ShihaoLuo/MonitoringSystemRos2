@@ -5,6 +5,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    time(&curr_time1);
+    curr_tm1 = localtime(&curr_time1);
+    strftime(log_root_string, 50, "log/%Y-%B-%d-%T/", curr_tm1);
+    int result = mkdir(log_root_string, 0777);
     // int location[2] = {0, 0};
     // kalmanFilterH1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
     // kalmanFilterN1 = new TwoDMovementKalmanFilter(1.0/24.0, location, 100, 4000, 10);
@@ -147,7 +151,169 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtonSaveImg1, SIGNAL(clicked()), this, SLOT(saveImg1()));
     connect(ui->pushButtonSaveImg2, SIGNAL(clicked()), this, SLOT(saveImg2()));
     connect(ui->pushButtontracking, SIGNAL(clicked()), this, SLOT(startTracking()));
+    connect(ui->pushButtonpathclear1, SIGNAL(clicked()), this, SLOT(clearpath1()));
+    connect(ui->pushButtonpathclear2, SIGNAL(clicked()), this, SLOT(clearpath2()));
+    connect(ui->pushButtonpath1, SIGNAL(clicked()), this, SLOT(path1go()));
+    connect(ui->pushButtonpath2, SIGNAL(clicked()), this, SLOT(path2go()));
+    connect(ui->pushButtonlog1, SIGNAL(clicked()), this, SLOT(startlog1()));
+    connect(ui->pushButtonlog2, SIGNAL(clicked()), this, SLOT(startlog2()));
     // connect(ui->pushButtonslam, SIGNAL(clicked()), this, SLOT(slam()));
+}
+
+void MainWindow::startlog1()
+{
+    if (logFlag1)
+    {
+        logFlag1 = !logFlag1;
+        ui->plainTextEdit1->insertPlainText("\nlogFlag1 off");
+        ui->pushButtonlog1->setStyleSheet("");
+        logP1->close();
+        logT1->close();
+    }
+    else{
+        char tmp[50];
+        logFlag1 = !logFlag1;
+        ui->plainTextEdit1->insertPlainText("\nlogFlag1 on");
+        ui->pushButtonlog1->setStyleSheet("background-color: rgb(0, 100, 30)");
+        time(&curr_time1);
+        curr_tm1 = localtime(&curr_time1);
+        strftime(tmp, 50, "T1-%Y-%B-%d-%T/", curr_tm1);
+        strcpy(log_t1_string, (std::string(log_root_string)+tmp).c_str());
+        int result = mkdir(log_t1_string, 0777);
+        logP1 = std::make_shared<std::ofstream>(std::string(log_t1_string)+"position_t1.txt");
+        logT1 = std::make_shared<std::ofstream>(std::string(log_t1_string)+"targetlocation_t1.txt");
+    }
+
+}
+
+void MainWindow::startlog2()
+{
+    if (logFlag2)
+    {
+        logFlag2 = !logFlag2;
+        ui->plainTextEdit2->insertPlainText("\nlogFlag2 off");
+        ui->pushButtonlog2->setStyleSheet("");
+        logP2->close();
+        logT2->close();
+    }
+    else{
+        char tmp[50];
+        logFlag2 = !logFlag2;
+        ui->plainTextEdit2->insertPlainText("\nlogFlag2 on");
+        ui->pushButtonlog2->setStyleSheet("background-color: rgb(0, 100, 30)");
+        time(&curr_time2);
+        curr_tm2 = localtime(&curr_time2);
+        strftime(tmp, 50, "T2-%Y-%B-%d-%T/", curr_tm2);
+        strcpy(log_t2_string, (std::string(log_root_string)+tmp).c_str());
+        int result = mkdir(log_t2_string, 0777);
+        logP2 = std::make_shared<std::ofstream>(std::string(log_t2_string)+"position_t2.txt");
+        logT2 = std::make_shared<std::ofstream>(std::string(log_t2_string)+"targetlocation_t2.txt");
+    }
+
+}
+
+void MainWindow::path1go()
+{
+    std::thread trackingThread(std::bind(&MainWindow::path1tracking, this));
+    trackingThread.detach();
+}
+
+void MainWindow::path2go()
+{
+    std::thread trackingThread(std::bind(&MainWindow::path2tracking, this));
+    trackingThread.detach();
+}
+
+void MainWindow::path1tracking()
+{
+    int i = 0;
+    rclcpp::Rate loop_rate(100);
+    while(path1.size() > 0)
+    {
+        goalPosition1 = path1[i];
+        sendGoal1();
+        while(1)
+        {
+            float d = (p1[0]-goalPosition1[0])*(p1[0]-goalPosition1[0])+(p1[1]-goalPosition1[1])*(p1[1]-goalPosition1[1]);
+            // std::cout<<"d1:"<<d<<std::endl;
+            if(d<10000 || path1.size() == 0)
+            {
+                break;
+            }
+            loop_rate.sleep();
+        }
+        cancelGoal1();
+        i++;
+        if(i>=path1.size())
+        {
+            i=0;
+        }
+        if(path1.size() == 0)
+        {
+            break;
+        }
+    }
+    // std::cout<<"path1: ";
+    // for(auto it : path1)
+    // {
+    //     for (const auto& e : it) 
+    //     {
+    //         std::cout << e << " ";
+    //     }
+    //     std::cout<<"--";
+    // }
+    // std::cout<<"\n";
+}
+
+void MainWindow::path2tracking()
+{
+    int i = 0;
+    rclcpp::Rate loop_rate(100);
+    while(path2.size() > 0)
+    {
+        goalPosition2 = path2[i];
+        sendGoal2();
+        while(1)
+        {
+            float d = (p2[0]-goalPosition2[0])*(p2[0]-goalPosition2[0])+(p2[1]-goalPosition2[1])*(p2[1]-goalPosition2[1]);
+            // std::cout<<"d2:"<<d<<std::endl;
+            if(d<10000 || path2.size() == 0)
+            {
+                break;
+            }
+            loop_rate.sleep();
+        }
+        cancelGoal2();
+        i++;
+        if(i>=path2.size())
+        {
+            i=0;
+        }
+        if(path1.size() == 0)
+        {
+            break;
+        }
+    }
+    // std::cout<<"path2: ";
+    // for(auto it : path2)
+    // {
+    //     for (const auto& e : it) 
+    //     {
+    //         std::cout << e << " ";
+    //     }
+    //     std::cout<<"--";
+    // }
+    // std::cout<<"\n";
+}
+
+void MainWindow::clearpath1()
+{
+    path1.clear();
+}
+
+void MainWindow::clearpath2()
+{
+    path2.clear();
 }
 
 void MainWindow::startTracking()
@@ -239,6 +405,10 @@ void MainWindow::targetLocationCallback(const droneinterfaces::msg::TargetLocati
 {
     targetLocation = msg->location;
     ttime = msg->time;
+    if(logFlag1)
+    {
+        *logT1 << ttime<<":"<<targetLocation[0] <<" "<<targetLocation[1]<<" "<<targetLocation[2]<<" "<<targetLocation[5]<<"\n";
+    }
 }
 
 void MainWindow::saveImg1()
@@ -349,6 +519,9 @@ void MainWindow::disableAllButton1()
     ui->dial1->setDisabled(true);
     ui->verticalSlider1->setDisabled(true);
     ui->pushButtonSaveImg1->setDisabled(true);
+    ui->pushButtonpathclear1->setDisabled(true);
+    ui->pushButtonpath1->setDisabled(true);
+    ui->pushButtonlog1->setDisabled(true);
     // ui->pushButtonslam->setDisabled(true);
 }
 
@@ -367,6 +540,9 @@ void MainWindow::disableAllButton2()
     ui->dial2->setDisabled(true);
     ui->verticalSlider2->setDisabled(true);
     ui->pushButtonSaveImg2->setDisabled(true);
+    ui->pushButtonpathclear2->setDisabled(true);
+    ui->pushButtonpath2->setDisabled(true);
+    ui->pushButtonlog2->setDisabled(true);
 }
 
 void MainWindow::enableAllButton1()
@@ -386,6 +562,9 @@ void MainWindow::enableAllButton1()
     ui->verticalSlider1->setEnabled(true);
     // ui->pushButtonslam->setEnabled(true);
     ui->pushButtonSaveImg1->setEnabled(true);
+    ui->pushButtonpath1->setEnabled(true);
+    ui->pushButtonpathclear1->setEnabled(true);
+    ui->pushButtonlog1->setEnabled(true);
 }
 
 void MainWindow::enableAllButton2()
@@ -403,6 +582,9 @@ void MainWindow::enableAllButton2()
     ui->dial2->setEnabled(true);
     ui->verticalSlider2->setEnabled(true);
     ui->pushButtonSaveImg2->setEnabled(true);
+    ui->pushButtonpath2->setEnabled(true);
+    ui->pushButtonpathclear2->setEnabled(true);
+    ui->pushButtonlog2->setEnabled(true);
 }
 
 void MainWindow::droneShutDown1()
@@ -733,12 +915,14 @@ void MainWindow::mousePressEvent(QMouseEvent* event)
             goalPosition1[1] = goalPosition[1];
             QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
             ui->lineEditt1goal->setText(tmp);
+            path1.push_back(goalPosition1);
         } else if(goalPointFlag==2)
         {
             goalPosition2[0] = goalPosition[0];
             goalPosition2[1] = goalPosition[1];
             QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
             ui->lineEditt2goal->setText(tmp);
+            path2.push_back(goalPosition2);
         }
     }
 }
@@ -747,19 +931,11 @@ void MainWindow::positionCallback1(const droneinterfaces::msg::PositionArray::Sh
 {
     p1 = msg->position;
     ptime1 = msg->time;
-    // memcpy(TCW1.data(), msg->tcw.data(), 64);
-    // targetPosition->setProjectMatrix(TCW1);
-    // std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
-    // auto result = targetPosition->getCameraPoint(tmp);
-    // std::cout<<"camera point1:"<<result[0]<<" "<<result[1]<<std::endl;
-    // tmp = {1200.f, 600.f, 1800.f, 1.f};
-    // result = targetPosition->getCameraPoint(tmp);
-    // std::cout<<"camera point2:"<<result[0]<<" "<<result[1]<<std::endl;
-    // tmp = {1800.f, 0.f, 1800.f, 1.f};
-    // result = targetPosition->getCameraPoint(tmp);
-    // std::cout<<"camera point3:"<<result[0]<<" "<<result[1]<<std::endl;
-    // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
-    // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p1[0], p1[1], p1[2], p1[3], ms.count(), ptime1);
+    if(logFlag1)
+    {
+        *logP1 << ptime1<<":"<<p1[0] <<" "<<p1[1]<<" "<<p1[2]<<" "<<p1[5]<<"\n";
+    }
+
 }
 
 void MainWindow::positionCallback2(const droneinterfaces::msg::PositionArray::SharedPtr msg)
@@ -767,14 +943,12 @@ void MainWindow::positionCallback2(const droneinterfaces::msg::PositionArray::Sh
 
     p2 = msg->position;
     ptime2 = msg->time;
-    // memcpy(TCW2.data(), msg->tcw.data(), 56);
-    // targetPosition->setProjectMatrix(TCW2);
-    // std::array<float, 4UL> tmp = {1200.f, 0.f, 1800.f, 1.f};
-    // auto result = targetPosition->getCameraPoint(tmp);
-    // std::cout<<"camera point:"<<result[0]<<" "<<result[1]<<std::endl;
-    // auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
-    // RCLCPP_INFO(nh_->get_logger(), "%f %f %f %f at time: %d with timelog: %d\n", p2[0], p2[1], p2[2], p2[3], ms.count(), ptime1);
+    if(logFlag2)
+    {
+        *logP2 << ptime2<<":"<<p2[0] <<" "<<p2[1]<<" "<<p2[2]<<" "<<p2[5]<<"\n";
+    }
 }
+    
 
 void MainWindow::clickButtondown1001()
 {
@@ -1145,6 +1319,30 @@ void MainWindow::spin()
     cv::Mat tmp = im.clone();
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     // std::cout<<"tt"<<(ms - ptime1)<<std::endl;
+    int size = path1.size();
+    for(int i = 0; i<size; i++)
+    {
+        if(i < size - 1)
+        {
+            cv::line(tmp, cv::Point(-path1[i+1][1]/20.f+300.f, -path1[i+1][0]/20.f+300.f), 
+            cv::Point(-path1[i][1]/20.f+300.f, -path1[i][0]/20.f+300.f),  cv::Scalar(150, 100, 0),
+            4);
+        }else{
+            cv::circle(tmp, cv::Point(-path1[i][1]/20.f+300.f, -path1[i][0]/20.f+300.f), 4, cv::Scalar(150, 100, 0), cv::FILLED);
+        }
+    }
+    size = path2.size();
+    for(int i = 0; i<size; i++)
+    {
+        if(i < size - 1)
+        {
+            cv::line(tmp, cv::Point(-path2[i][1]/20.f+300.f, -path2[i][0]/20.f+300.f), 
+            cv::Point(-path2[i+1][1]/20.f+300.f, -path2[i+1][0]/20.f+300.f),  cv::Scalar(0, 100, 150),
+            4);
+        }else{
+            cv::circle(tmp, cv::Point(-path2[i][1]/20.f+300.f, -path2[i][0]/20.f+300.f), 4, cv::Scalar(0, 100, 150), cv::FILLED);
+        }
+    }
     if(trackingFlag)
     {
         dTD = ui->lineEdittdistanceTD->text().toFloat();

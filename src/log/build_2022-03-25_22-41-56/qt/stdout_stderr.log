@@ -1,0 +1,43 @@
+[ 12%] [34m[1mAutomatic MOC and UIC for target gui[0m
+[ 12%] Built target gui_autogen
+[35m[1mScanning dependencies of target gui[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/gui.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:11:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kresult[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   11 |     int [01;35m[Kresult[m[K = mkdir(log_root_string, 0777);
+      |         [01;35m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::startlog1()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:182:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kresult[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  182 |         int [01;35m[Kresult[m[K = mkdir(log_t1_string, 0777);
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::startlog2()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:208:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kresult[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  208 |         int [01;35m[Kresult[m[K = mkdir(log_t2_string, 0777);
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::path1tracking()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:247:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::array<float, 4> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  247 |         if([01;35m[Ki>=path1.size()[m[K)
+      |            [01;35m[K~^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::path2tracking()[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:288:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::array<float, 4> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  288 |         if([01;35m[Ki>=path2.size()[m[K)
+      |            [01;35m[K~^~~~~~~~~~~~~~[m[K
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In lambda function:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:374:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  374 | this]([01;35m[Kstd::shared_ptr<action_msgs::srv::CancelGoal_Response> res[m[K)
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In lambda function:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:391:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  391 | this]([01;35m[Kstd::shared_ptr<action_msgs::srv::CancelGoal_Response> res[m[K)
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:852:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  852 | [01;35m[Knst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[ 37%] [32m[1mLinking CXX executable gui[0m
+[100%] Built target gui
+-- Install configuration: ""
+-- Installing: /home/jakeluo/Documents/MonitoringSystemRos2/src/install/qt/share/qt/package.dsv

@@ -1,4 +1,0 @@
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::feedback_callback(rclcpp_action::ClientGoalHandle<droneinterfaces::action::GoPoint>::SharedPtr, std::shared_ptr<const droneinterfaces::action::GoPoint_Feedback_<std::allocator<void> > >)[m[K’:
-[01m[K/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp:501:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-  501 |     [01;35m[Kconst std::shared_ptr<const droneinterfaces::action::GoPoint::Feedback> feedback[m[K)
-      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K

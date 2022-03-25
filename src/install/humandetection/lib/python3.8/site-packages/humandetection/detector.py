@@ -85,7 +85,7 @@ class Detector:
 
 class HumanPose(Node):
     def __init__(self, name, predicter):
-        super().__init__('humanbox')
+        super().__init__(name+"_HumanBox")
         self.subscription = self.create_subscription(
             FrameArray,
             name+"_Framearray",

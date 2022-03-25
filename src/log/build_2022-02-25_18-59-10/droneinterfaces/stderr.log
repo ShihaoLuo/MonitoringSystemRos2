@@ -1,4 +1,0 @@
-interrupted
-make[2]: *** [CMakeFiles/ament_cmake_python_build_droneinterfaces_egg.dir/build.make:57: CMakeFiles/ament_cmake_python_build_droneinterfaces_egg] 中断
-make[1]: *** [CMakeFiles/Makefile2:361: CMakeFiles/ament_cmake_python_build_droneinterfaces_egg.dir/all] 中断
-make: *** [Makefile:141: all] 中断
