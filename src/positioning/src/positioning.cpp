@@ -33,6 +33,7 @@ Positioning::Positioning()
         1,
         std::bind(&Positioning::positionCallback2, this, std::placeholders::_1), opt2);
     targetLocationPublisher_ = nh_->create_publisher<droneinterfaces::msg::TargetLocation>("targetLocation", 1);
+    targetLocationPublisher2_ = nh_->create_publisher<droneinterfaces::msg::TargetLocation>("targetLocation2", 1);
     timer_ = nh_->create_wall_timer(
         50ms,
         std::bind(&Positioning::getKalmanTargetPosition, this),
@@ -80,15 +81,15 @@ void Positioning::getTargetPosition()
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     // std::cout<<"period:"<<ms-oldtime<<std::endl;
     // oldtime = ms;
-    if(ms - ptime1 < 100)
+    if(ms - ptime1 < 45)
     {
-        if(ms - ptime2 < 100)
+        if(ms - ptime2 < 45)
         {
             if(humanBox1[0]==-1 || humanBox2[0]==-1)
             {
-                targetLocation_.time = ms;
-                memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
-                targetLocationPublisher_ -> publish(targetLocation_);
+                targetLocation2_.time = ms;
+                memcpy(targetLocation2_.location.data(), defaultLostLocation.data(), 12);
+                targetLocationPublisher2_ -> publish(targetLocation2_);
             }
             else
             {
@@ -107,27 +108,27 @@ void Positioning::getTargetPosition()
                     pm2, 
                     pp1,
                     pp2,
-                    *worldPoint);
-                (*worldPoint) = (*worldPoint) / worldPoint->at<float>(3, 0);
-                memcpy(targetWorldPoint.data(), worldPoint->data, 12);
-                targetLocation_.time = ms;
-                memcpy(targetLocation_.location.data(), targetWorldPoint.data(), 12);
+                    *worldPoint2);
+                (*worldPoint2) = (*worldPoint2) / worldPoint2->at<float>(3, 0);
+                memcpy(targetWorldPoint2.data(), worldPoint2->data, 12);
+                targetLocation2_.time = ms;
+                memcpy(targetLocation2_.location.data(), targetWorldPoint2.data(), 12);
                 // std::cout<<"worldpoint:"<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2]<<" "<<std::endl;
-                targetLocationPublisher_ -> publish(targetLocation_);
+                targetLocationPublisher2_ -> publish(targetLocation2_);
             }
         }
         else
         {
             targetLocation_.time = ms;
-            memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
-            targetLocationPublisher_ -> publish(targetLocation_);
+            memcpy(targetLocation2_.location.data(), defaultLostLocation.data(), 12);
+            targetLocationPublisher2_ -> publish(targetLocation2_);
         }
     }
     else
     {
-        targetLocation_.time = ms;
-        memcpy(targetLocation_.location.data(), defaultLostLocation.data(), 12);
-        targetLocationPublisher_ -> publish(targetLocation_);
+        targetLocation2_.time = ms;
+        memcpy(targetLocation2_.location.data(), defaultLostLocation.data(), 12);
+        targetLocationPublisher2_ -> publish(targetLocation2_);
     }
 }
 
@@ -147,6 +148,7 @@ void Positioning::getKalmanTargetPosition()
                 targetLocation_.location[0] = tmp(0, 0);
                 targetLocation_.location[1] = tmp(2, 0);
                 targetLocation_.location[2] = tmp(4, 0);
+                targetLocation_.time = ms;
                 // memcpy(targetLocation_.location.data(), tmp.data(), 12);
                 // targetLocationPublisher_ -> publish(targetLocation_);
             }
@@ -180,6 +182,10 @@ void Positioning::getKalmanTargetPosition()
                 // targetWorldPoint[2] /= targetWorldPoint[3];
                 // std::cout<<targetWorldPoint[0]<<" "<<targetWorldPoint[1]<<" "<<targetWorldPoint[2];
                 targetLocation_.time = ms;
+                memcpy(targetLocation_.location.data(), targetWorldPoint.data(), 12);
+                // std::cout<<"1"<<std::endl;
+                targetLocationPublisher2_ -> publish(targetLocation_);
+                // std::cout<<"2"<<std::endl;
                 kalmanFilter_->update(targetWorldPoint);
                 auto tmp = kalmanFilter_->predict();
                 // memcpy(targetLocation_.location.data(), tmp.data(), 12);
@@ -187,6 +193,7 @@ void Positioning::getKalmanTargetPosition()
                 targetLocation_.location[0] = tmp(0, 0);
                 targetLocation_.location[1] = tmp(2, 0);
                 targetLocation_.location[2] = tmp(4, 0);
+                
             }
         }
         else
@@ -200,6 +207,7 @@ void Positioning::getKalmanTargetPosition()
             targetLocation_.location[0] = tmp(0, 0);
             targetLocation_.location[1] = tmp(2, 0);
             targetLocation_.location[2] = tmp(4, 0);
+            targetLocation_.time = ms;
         }
     }
     else
@@ -213,6 +221,7 @@ void Positioning::getKalmanTargetPosition()
         targetLocation_.location[0] = tmp(0, 0);
         targetLocation_.location[1] = tmp(2, 0);
         targetLocation_.location[2] = tmp(4, 0);
+        targetLocation_.time = ms;
     }
     targetLocationPublisher_ -> publish(targetLocation_);
 }

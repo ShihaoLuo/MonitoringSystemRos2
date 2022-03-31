@@ -49,8 +49,8 @@ void ThreeDMovementKalmanFilter::initial(
         powf(samplingTime, 3.0)/2*accRandVar, powf(samplingTime, 2.0)*accRandVar, 0, 0, 0, 0,
         0, 0, powf(samplingTime, 4.0)/4*accRandVar, powf(samplingTime, 3.0)/2*accRandVar, 0, 0,
         0, 0, powf(samplingTime, 3.0)/2*accRandVar, powf(samplingTime, 2.0)*accRandVar, 0, 0, 
-        0, 0, 0, 0, powf(samplingTime, 4.0)/4*accRandVar, powf(samplingTime, 3.0)/2*accRandVar,
-        0, 0, 0, 0, powf(samplingTime, 3.0)/2*accRandVar, powf(samplingTime, 2.0)*accRandVar;
+        0, 0, 0, 0, powf(samplingTime, 4.0)/4*(accRandVar/100), powf(samplingTime, 3.0)/2*(accRandVar/100),
+        0, 0, 0, 0, powf(samplingTime, 3.0)/2*(accRandVar/100), powf(samplingTime, 2.0)*(accRandVar/100);
     observationMatrix << 
         1, 0, 0, 0, 0, 0, 
         0, 0, 1, 0, 0, 0,

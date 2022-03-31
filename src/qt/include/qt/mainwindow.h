@@ -145,7 +145,7 @@ private:
     rclcpp::Subscription<droneinterfaces::msg::FrameArray>::SharedPtr frameSubscription1_, frameSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::PositionArray>::SharedPtr positionSubscription1_, positionSubscription2_;
     rclcpp::Subscription<droneinterfaces::msg::HumanBox>::SharedPtr humanBoxSubscription1_, humanBoxSubscription2_;
-    rclcpp::Subscription<droneinterfaces::msg::TargetLocation>::SharedPtr targetLocationSubscription_;
+    rclcpp::Subscription<droneinterfaces::msg::TargetLocation>::SharedPtr targetLocationSubscription_, targetLocationSubscription2_;
     rclcpp::Client<droneinterfaces::srv::DroneController>::SharedPtr controllerClient_;
     rclcpp::Client<droneinterfaces::srv::DronePoolStatus>::SharedPtr dronePoolStatusClient_;
     rclcpp::Client<droneinterfaces::srv::DroneShutDown>::SharedPtr droneShutDownClient1_;
@@ -162,6 +162,7 @@ private:
     void humanboxCallback1(const droneinterfaces::msg::HumanBox::SharedPtr msg);
     void humanboxCallback2(const droneinterfaces::msg::HumanBox::SharedPtr msg);
     void targetLocationCallback(const droneinterfaces::msg::TargetLocation::SharedPtr msg);
+    void targetLocationCallback2(const droneinterfaces::msg::TargetLocation::SharedPtr msg);
     void spin();
     void tracking();
     void path1tracking();
@@ -176,8 +177,8 @@ private:
     QScrollBar *plaintext2scrollbar;
     std::array<float, 6UL> p1= {-10000, -10000, -10000, 0, 0, 0}, p2= {-10000, -10000, -10000, 0, 0, 0};
     std::array<float, 4UL> goalPosition1 = {0,0,1800,0}, goalPosition2 = {0,0,1800,0}, goalPosition;
-    std::array<float, 3UL> targetLocation = {-10000, -10000, -10000};
-    int64_t ptime1=0, ptime2=0, ttime=0, trackingtime=0;
+    std::array<float, 3UL> targetLocation = {-10000, -10000, -10000}, targetLocation2 = {-10000, -10000, -10000};;
+    int64_t ptime1=0, ptime2=0, ttime=0, ttime2=0,trackingtime=0;
     std::shared_ptr<droneinterfaces::srv::DronePoolStatus_Request>  dronePoolStatusRequest;
     // std::shared_ptr<droneinterfaces::srv::GoToPoint_Request>  goToPointRequest;
     int goalPointFlag = 0;

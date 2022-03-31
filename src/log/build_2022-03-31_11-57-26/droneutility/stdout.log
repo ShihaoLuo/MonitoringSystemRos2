@@ -1,0 +1,6 @@
+[35m[1mScanning dependencies of target drone[0m
+[ 20%] [32m[1mLinking CXX executable dronemanager[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/drone.dir/src/drone.cpp.o[0m
+[ 60%] Built target dronemanager
+[ 80%] [32m[1mLinking CXX executable drone[0m
+[100%] Built target drone

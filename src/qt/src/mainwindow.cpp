@@ -86,6 +86,10 @@ MainWindow::MainWindow(QWidget *parent)
         "targetLocation",
         1,
         std::bind(&MainWindow::targetLocationCallback, this, std::placeholders::_1), opt6);
+    targetLocationSubscription2_ = nh_->create_subscription<droneinterfaces::msg::TargetLocation>(
+        "targetLocation2",
+        1,
+        std::bind(&MainWindow::targetLocationCallback2, this, std::placeholders::_1), opt6);
     controllerClient_ = nh_->create_client<droneinterfaces::srv::DroneController>("DroneController");
     droneShutDownClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_ShutDown");
     droneConnectClient1_ = nh_->create_client<droneinterfaces::srv::DroneShutDown>("t1_Connect");
@@ -169,6 +173,7 @@ void MainWindow::startlog1()
         ui->pushButtonlog1->setStyleSheet("");
         logP1->close();
         logT1->close();
+        logT2->close();
     }
     else{
         char tmp[50];
@@ -182,6 +187,7 @@ void MainWindow::startlog1()
         int result = mkdir(log_t1_string, 0777);
         logP1 = std::make_shared<std::ofstream>(std::string(log_t1_string)+"position_t1.txt");
         logT1 = std::make_shared<std::ofstream>(std::string(log_t1_string)+"targetlocation_t1.txt");
+        logT2 = std::make_shared<std::ofstream>(std::string(log_t1_string)+"targetlocation2_t1.txt");
     }
 
 }
@@ -207,7 +213,7 @@ void MainWindow::startlog2()
         strcpy(log_t2_string, (std::string(log_root_string)+tmp).c_str());
         int result = mkdir(log_t2_string, 0777);
         logP2 = std::make_shared<std::ofstream>(std::string(log_t2_string)+"position_t2.txt");
-        logT2 = std::make_shared<std::ofstream>(std::string(log_t2_string)+"targetlocation_t2.txt");
+        // logT2 = std::make_shared<std::ofstream>(std::string(log_t2_string)+"targetlocation_t2.txt");
     }
 
 }
@@ -227,16 +233,16 @@ void MainWindow::path2go()
 void MainWindow::path1tracking()
 {
     int i = 0;
-    rclcpp::Rate loop_rate(100);
+    rclcpp::Rate loop_rate(50);
     while(path1.size() > 0)
     {
         goalPosition1 = path1[i];
         sendGoal1();
         while(1)
         {
-            float d = (p1[0]-goalPosition1[0])*(p1[0]-goalPosition1[0])+(p1[1]-goalPosition1[1])*(p1[1]-goalPosition1[1]);
+            float d = (p1[0]-goalPosition1[0])*(p1[0]-goalPosition1[0])+(p1[1]-goalPosition1[1])*(p1[1]-goalPosition1[1])+(p1[2]-goalPosition1[2])*(p1[2]-goalPosition1[2]);
             // std::cout<<"d1:"<<d<<std::endl;
-            if(d<10000 || path1.size() == 0)
+            if(d<40000 || path1.size() == 0)
             {
                 break;
             }
@@ -268,16 +274,16 @@ void MainWindow::path1tracking()
 void MainWindow::path2tracking()
 {
     int i = 0;
-    rclcpp::Rate loop_rate(100);
+    rclcpp::Rate loop_rate(50);
     while(path2.size() > 0)
     {
         goalPosition2 = path2[i];
         sendGoal2();
         while(1)
         {
-            float d = (p2[0]-goalPosition2[0])*(p2[0]-goalPosition2[0])+(p2[1]-goalPosition2[1])*(p2[1]-goalPosition2[1]);
+            float d = (p2[0]-goalPosition2[0])*(p2[0]-goalPosition2[0])+(p2[1]-goalPosition2[1])*(p2[1]-goalPosition2[1])+(p2[2]-goalPosition2[2])*(p2[2]-goalPosition2[2]);
             // std::cout<<"d2:"<<d<<std::endl;
-            if(d<10000 || path2.size() == 0)
+            if(d<40000 || path2.size() == 0)
             {
                 break;
             }
@@ -407,7 +413,17 @@ void MainWindow::targetLocationCallback(const droneinterfaces::msg::TargetLocati
     ttime = msg->time;
     if(logFlag1)
     {
-        *logT1 << ttime<<":"<<targetLocation[0] <<" "<<targetLocation[1]<<" "<<targetLocation[2]<<" "<<targetLocation[5]<<"\n";
+        *logT1 << ttime<<" "<<targetLocation[0] <<" "<<targetLocation[1]<<" "<<targetLocation[2]<<" "<<targetLocation[5]<<"\n";
+    }
+}
+
+void MainWindow::targetLocationCallback2(const droneinterfaces::msg::TargetLocation::SharedPtr msg)
+{
+    targetLocation2 = msg->location;
+    ttime2 = msg->time;
+    if(logFlag1)
+    {
+        *logT2 << ttime2<<" "<<targetLocation2[0] <<" "<<targetLocation2[1]<<" "<<targetLocation2[2]<<" "<<targetLocation2[5]<<"\n";
     }
 }
 
@@ -907,22 +923,62 @@ void MainWindow::mousePressEvent(QMouseEvent* event)
     goalPosition[1] = -(p.x() - 2290)*20;
     goalPosition[0] = -(p.y() - 350)*20;
     goalPosition[2] = 1800;
-    if(-6000<=goalPosition[0] && goalPosition[0]<=6000 && -6000<=goalPosition[1] && goalPosition[1]<=6000)
+    if(event->button() & Qt::LeftButton)
+    {
+        if(-6000<=goalPosition[0] && goalPosition[0]<=6000 && -6000<=goalPosition[1] && goalPosition[1]<=6000)
+        {
+            if(goalPointFlag==1)
+            {
+                goalPosition1[0] = goalPosition[0];
+                goalPosition1[1] = goalPosition[1];
+                goalPosition1[0] = roundf(goalPosition1[0]/100.0)*100.0;
+                goalPosition1[1] = roundf(goalPosition1[1]/100.0)*100.0;
+                QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
+                ui->lineEditt1goal->setText(tmp);
+                path1.push_back(goalPosition1);
+            } else if(goalPointFlag==2)
+            {
+                goalPosition2[0] = goalPosition[0];
+                goalPosition2[1] = goalPosition[1];
+                goalPosition2[0] = roundf(goalPosition2[0]/100.0)*100.0;
+                goalPosition2[1] = roundf(goalPosition2[1]/100.0)*100.0;
+                QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
+                ui->lineEditt2goal->setText(tmp);
+                path2.push_back(goalPosition2);
+            }
+        }
+    }else if(event->button() & Qt::RightButton)
     {
         if(goalPointFlag==1)
-        {
-            goalPosition1[0] = goalPosition[0];
-            goalPosition1[1] = goalPosition[1];
-            QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
-            ui->lineEditt1goal->setText(tmp);
-            path1.push_back(goalPosition1);
+        {   
+            path1.pop_back();
+            if(path1.size() > 0)
+            {
+                goalPosition1 = path1[path1.size() - 1];
+                QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
+                ui->lineEditt1goal->setText(tmp);
+            }else if(path1.size() == 0)
+            {
+                goalPosition1[0] = 0.f;
+                goalPosition1[1] = 0.f;
+                QString tmp = QString::number(goalPosition1[0])+" "+QString::number(goalPosition1[1])+"\n";
+                ui->lineEditt1goal->setText(tmp);
+            }
         } else if(goalPointFlag==2)
         {
-            goalPosition2[0] = goalPosition[0];
-            goalPosition2[1] = goalPosition[1];
-            QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
-            ui->lineEditt2goal->setText(tmp);
-            path2.push_back(goalPosition2);
+            path2.pop_back();
+            if(path2.size() > 0)
+            {
+                goalPosition2 = path2[path2.size() - 1];
+                QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
+                ui->lineEditt2goal->setText(tmp);
+            }else if(path2.size() == 0)
+            {
+                goalPosition2[0] = 0.f;
+                goalPosition2[1] = 0.f;
+                QString tmp = QString::number(goalPosition2[0])+" "+QString::number(goalPosition2[1])+"\n";
+                ui->lineEditt2goal->setText(tmp);
+            }
         }
     }
 }
@@ -933,7 +989,7 @@ void MainWindow::positionCallback1(const droneinterfaces::msg::PositionArray::Sh
     ptime1 = msg->time;
     if(logFlag1)
     {
-        *logP1 << ptime1<<":"<<p1[0] <<" "<<p1[1]<<" "<<p1[2]<<" "<<p1[5]<<"\n";
+        *logP1 << ptime1<<" "<<p1[0] <<" "<<p1[1]<<" "<<p1[2]<<" "<<p1[5]<<"\n";
     }
 
 }
@@ -945,7 +1001,7 @@ void MainWindow::positionCallback2(const droneinterfaces::msg::PositionArray::Sh
     ptime2 = msg->time;
     if(logFlag2)
     {
-        *logP2 << ptime2<<":"<<p2[0] <<" "<<p2[1]<<" "<<p2[2]<<" "<<p2[5]<<"\n";
+        *logP2 << ptime2<<" "<<p2[0] <<" "<<p2[1]<<" "<<p2[2]<<" "<<p2[5]<<"\n";
     }
 }
     
