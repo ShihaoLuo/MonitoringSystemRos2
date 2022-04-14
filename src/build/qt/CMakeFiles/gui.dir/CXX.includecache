@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/jakeluo/Documents/MonitoringSystemRos2/src/build/qt/include/qt/moc_mainwindow.cpp
+../../../../qt/include/qt/mainwindow.h
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/go_point__builder.hpp
 droneinterfaces/action/detail/go_point__struct.hpp
 /home/jakeluo/Documents/MonitoringSystemRos2/src/install/droneinterfaces/include/droneinterfaces/action/detail/droneinterfaces/action/detail/go_point__struct.hpp
@@ -644,6 +652,12 @@ ctime
 planning.h
 /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/include/qt/planning.h
 sys/stat.h
+-
+
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/main.cpp
+mainwindow.h
+/home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.h
+QApplication
 -
 
 /home/jakeluo/Documents/MonitoringSystemRos2/src/qt/src/mainwindow.cpp

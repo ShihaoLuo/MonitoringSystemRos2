@@ -14,10 +14,30 @@ Drone::Drone(const char* name_, const char* ip_)
     callbackgroup4 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     auto opt3 = rclcpp::PublisherOptions();
     opt3.callback_group = callbackgroup3;
+    //------------------0215 map//
+    // float angleX = 9.5f;
+    // float angleY = 8.f;
+    // float angleZ = 0.5f;
+    // W_Z_offset = 1714.f;
+    // W_Y_offset = -1240.f+93.f;
+    // W_X_offset = 335.f+161.f;
+    // scale = 1425.18f;
+    //-------------------0215 map//
+
+    //------------------0414 map//
+    float angleX = 12.f;
+    float angleY = 7.f;
+    float angleZ = 0.5f;
+    W_Z_offset = 1790.f;
+    W_Y_offset = 0.f;
+    W_X_offset = -36.f;
+    scale = 3896.1f;
+    //-------------------0414 map//
+
     // callbackgroup3 = nh_->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
-    TcalX << 1,0,0,0, 0,cos(9.5*3.1415926/180),-sin(9.5*3.1415926/180),0, 0,sin(9.5*3.1415926/180),cos(9.5*3.1415926/180),0, 0,0,0,1;
-    TcalY << cos(8.*3.1415926/180),0,sin(8.*3.1415926/180), 0, 0,1,0,0, -sin(8.*3.1415926/180),0,cos(8.*3.1415926/180),0, 0,0,0,1;
-    TcalZ << cos(0.5*3.1415926/180),-sin(0.5*3.1415926/180),0,0, sin(0.5*3.1415926/180),cos(0.5*3.1415926/180),0,0, 0,0,1,0, 0,0,0,1;
+    TcalX << 1,0,0,0, 0,cos(angleX*3.1415926/180),-sin(angleX*3.1415926/180),0, 0,sin(angleX*3.1415926/180),cos(angleX*3.1415926/180),0, 0,0,0,1;
+    TcalY << cos(angleY*3.1415926/180),0,sin(angleY*3.1415926/180), 0, 0,1,0,0, -sin(angleY*3.1415926/180),0,cos(angleY*3.1415926/180),0, 0,0,0,1;
+    TcalZ << cos(angleZ*3.1415926/180),-sin(angleZ*3.1415926/180),0,0, sin(angleZ*3.1415926/180),cos(angleZ*3.1415926/180),0,0, 0,0,1,0, 0,0,0,1;
     TFcalW <<0, -1, 0, 0,  0 , 0, -1, 0,  1, 0, 0, 0,   0, 0, 0,1; 
     goToPointActionServer_ = rclcpp_action::create_server<droneinterfaces::action::GoPoint>(
         nh_->get_node_base_interface(),
@@ -123,18 +143,18 @@ void Drone::connect(const std::shared_ptr<droneinterfaces::srv::DroneShutDown::R
         pose = pSlam->TrackMonocular(im, tframe_);
         if(bReuseMap)
         {
-            osmap->mapLoad("0215.yaml");
+            osmap->mapLoad("0414.yaml");
             pSlam -> ActivateLocalizationMode();
         }
         // pSlam -> DeactivateLocalizationMode();
         dronepidp = new PID(0.03, 0.0005, 0.002);
-        dronepidp->setLimits(-30.0, 30.0);
+        dronepidp->setLimits(-25.0, 25.0);
         dronepidr = new PID(0.03, 0.0005, 0.002);
-        dronepidr->setLimits(-30.0, 30.0);
+        dronepidr->setLimits(-25.0, 25.0);
         dronepidc = new PID(0.05, 0.0007, 0.001);
-        dronepidc->setLimits(-30.0, 30.0);
+        dronepidc->setLimits(-25.0, 25.0);
         dronepidy = new PID(50, 0.3, 0.15);
-        dronepidy->setLimits(-40.0, 40.0);
+        dronepidy->setLimits(-25.0, 25.0);
         dronepidy->setIntergralLimits(-100, 100);
         response->set__res(true);
     }else{
@@ -283,8 +303,19 @@ void Drone::frameCallback(const droneinterfaces::msg::FrameArray::SharedPtr msg)
         TWC(2, 3) += W_Z_offset;
         TCW = TWC.inverse();
         sleep(1/100);
-        Eigen::Vector3f ea = TFcalC.block<3, 3>(0, 0).eulerAngles(2, 1, 0);
-        position << TWC(0,3), TWC(1,3), TWC(2,3), -ea[2], ea[0], -ea[1];
+        Eigen::Vector3f ea = TFcalC.block<3, 3>(0, 0).eulerAngles(2, 1, 0);//0215MAP
+        position << TWC(0,3), TWC(1,3), TWC(2,3), -ea[2], ea[0], -ea[1];//0215MAP
+        if(position[5] > 3.14159/2 )
+        {
+            position[5] = 3.14159 - position[5];
+        }
+        if(position[5] < -3.14159/2 )
+        {
+            position[5] = -3.14159 - position[5];
+        }
+        // RCLCPP_INFO(nh_->get_logger(), "0:%f, 1: %f, 2: %f, 3: %f ", ea[0], ea[1], ea[2], atan2f32(-TFcalC(2, 0), sqrtf32(TFcalC(2, 1)*TFcalC(2, 1)+TFcalC(2, 2)*TFcalC(2, 2))));
+        // std::cout<< "TWC:" << TWC<<std::endl;
+        // std::cout<< "TCW:"<< TCW<<std::endl;
         // std::cout<<"Position:"<<position<<std::endl;
         // position *= scale;
         // position(0) += 360;

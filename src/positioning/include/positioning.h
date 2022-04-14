@@ -11,7 +11,7 @@
 
 #define INITIALUNCERTAINTY 500
 #define ACCRANDVAR  90000 //huamn walking speed Mean=680mm/s, std = 300mm/s, 
-#define MEASUREMENTERRORSTD 300
+#define MEASUREMENTERRORSTD 300*7
 
 using namespace std::chrono_literals;
 
